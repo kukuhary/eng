@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Database files
+*.db
+*.sqbpro
+
+# Temporary files
+tmp_words_*.txt

@@ -1,17 +1,4 @@
-import EXAMPLES from './examples.json';
-
-export interface Word {
-  id: string;
-  word: string;
-  pos: string;
-  meaning: string;
-  level: 'middle' | 'high' | 'advanced';
-  status: 'new' | 'learning' | 'mastered';
-  createdAt: number;
-  examples?: { en: string; ko: string; }[] | any;
-}
-
-const SEED_WORDS_RAW: Omit<Word, 'id' | 'status' | 'createdAt'>[] = [
+[
   {
     "word": "a",
     "pos": "a.",
@@ -40,12 +27,7 @@ const SEED_WORDS_RAW: Omit<Word, 'id' | 'status' | 'createdAt'>[] = [
     "word": "abort",
     "pos": "v.",
     "meaning": "유산하다",
-    "level": "middle",
-    "examples": [
-      { "en": "The mission was aborted.", "ko": "임무가 중단되었다." },
-      { "en": "The pilot had to abort the takeoff.", "ko": "조종사는 이륙을 중단해야 했다." },
-      { "en": "They decided to abort the project.", "ko": "그들은 프로젝트를 중단하기로 결정했다." }
-    ]
+    "level": "middle"
   },
   {
     "word": "about",
@@ -18005,9 +17987,4 @@ const SEED_WORDS_RAW: Omit<Word, 'id' | 'status' | 'createdAt'>[] = [
     "meaning": "동물원",
     "level": "advanced"
   }
-];
-
-export const SEED_WORDS = SEED_WORDS_RAW.map(sw => ({
-  ...sw,
-  examples: (EXAMPLES as any)[sw.word] || sw.examples
-}));
+]

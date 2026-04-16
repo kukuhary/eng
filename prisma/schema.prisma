@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Word {
+  id        String    @id @default(cuid())
+  word      String    @unique
+  pos       String
+  meaning   String
+  level     String    // middle, high, advanced
+  status    String    @default("new") // new, learning, mastered
+  createdAt DateTime  @default(now())
+  examples  Example[]
+}
+
+model Example {
+  id        String @id @default(cuid())
+  en        String
+  ko        String
+  wordId    String
+  word      Word   @relation(fields: [wordId], references: [id], onDelete: Cascade)
+}
