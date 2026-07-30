@@ -38,98 +38,100 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="glass" style={{
-      margin: '0.5rem',
-      padding: '0.75rem 1rem',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      position: 'sticky',
-      top: '0.5rem',
-      zIndex: 100,
-    }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-        <div style={{ fontSize: '1.3rem', fontWeight: 'bold', color: 'var(--primary)' }}>
-          VocaPro
-        </div>
-        {currentUser ? (
-          <button 
-            onClick={handleLogout}
-            style={{
-              background: 'rgba(239, 68, 68, 0.1)',
-              border: '1px solid rgba(239, 68, 68, 0.3)',
-              color: '#ef4444',
-              fontSize: '0.75rem',
-              padding: '0.2rem 0.5rem',
-              borderRadius: '6px',
-              cursor: 'pointer',
-              fontWeight: '600',
-              transition: 'all 0.2s',
-              marginLeft: '0.5rem',
-              lineHeight: '1.2',
-              textAlign: 'center',
-            }}
-          >
-            {currentUser}
-            <br />
-            로그아웃
-          </button>
-        ) : (
-          <button 
-            onClick={() => setShowLoginModal(true)}
-            style={{
-              background: 'rgba(56, 189, 248, 0.1)',
-              border: '1px solid rgba(56, 189, 248, 0.3)',
-              color: 'var(--primary)',
-              fontSize: '0.8rem',
-              padding: '0.3rem 0.6rem',
-              borderRadius: '6px',
-              cursor: 'pointer',
-              fontWeight: '600',
-              transition: 'all 0.2s',
-              marginLeft: '0.5rem',
-            }}
-          >
-            로그인
-          </button>
-        )}
-      </div>
-      <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-        {navItems.map((item) => {
-          const isDisabled = item.href === '/study' && !currentUser;
-          if (isDisabled) {
-            return (
-              <span
-                key={item.href}
-                style={{
-                  color: 'rgba(255, 255, 255, 0.2)',
-                  cursor: 'not-allowed',
-                  fontSize: '1rem',
-                  fontWeight: '400',
-                  pointerEvents: 'none'
-                }}
-                title="로그인이 필요합니다"
-              >
-                {item.name}
-              </span>
-            );
-          }
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
+    <>
+      <nav className="glass" style={{
+        margin: '0.5rem',
+        padding: '0.75rem 1rem',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        position: 'sticky',
+        top: '0.5rem',
+        zIndex: 100,
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <div style={{ fontSize: '1.3rem', fontWeight: 'bold', color: 'var(--primary)' }}>
+            VocaPro
+          </div>
+          {currentUser ? (
+            <button 
+              onClick={handleLogout}
               style={{
-                color: pathname === item.href ? 'var(--primary)' : 'var(--foreground)',
-                textDecoration: 'none',
-                fontWeight: pathname === item.href ? '600' : '400',
-                transition: 'color 0.2s',
+                background: 'rgba(239, 68, 68, 0.1)',
+                border: '1px solid rgba(239, 68, 68, 0.3)',
+                color: '#ef4444',
+                fontSize: '0.75rem',
+                padding: '0.2rem 0.5rem',
+                borderRadius: '6px',
+                cursor: 'pointer',
+                fontWeight: '600',
+                transition: 'all 0.2s',
+                marginLeft: '0.5rem',
+                lineHeight: '1.2',
+                textAlign: 'center',
               }}
             >
-              {item.name}
-            </Link>
-          );
-        })}
-      </div>
+              {currentUser}
+              <br />
+              로그아웃
+            </button>
+          ) : (
+            <button 
+              onClick={() => setShowLoginModal(true)}
+              style={{
+                background: 'rgba(56, 189, 248, 0.1)',
+                border: '1px solid rgba(56, 189, 248, 0.3)',
+                color: 'var(--primary)',
+                fontSize: '0.8rem',
+                padding: '0.3rem 0.6rem',
+                borderRadius: '6px',
+                cursor: 'pointer',
+                fontWeight: '600',
+                transition: 'all 0.2s',
+                marginLeft: '0.5rem',
+              }}
+            >
+              로그인
+            </button>
+          )}
+        </div>
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+          {navItems.map((item) => {
+            const isDisabled = item.href === '/study' && !currentUser;
+            if (isDisabled) {
+              return (
+                <span
+                  key={item.href}
+                  style={{
+                    color: 'rgba(255, 255, 255, 0.2)',
+                    cursor: 'not-allowed',
+                    fontSize: '1rem',
+                    fontWeight: '400',
+                    pointerEvents: 'none'
+                  }}
+                  title="로그인이 필요합니다"
+                >
+                  {item.name}
+                </span>
+              );
+            }
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                style={{
+                  color: pathname === item.href ? 'var(--primary)' : 'var(--foreground)',
+                  textDecoration: 'none',
+                  fontWeight: pathname === item.href ? '600' : '400',
+                  transition: 'color 0.2s',
+                }}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
+        </div>
+      </nav>
 
       {showLoginModal && (
         <div style={{
@@ -198,6 +200,6 @@ export default function Navbar() {
           </div>
         </div>
       )}
-    </nav>
+    </>
   );
 }
