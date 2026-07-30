@@ -1,7 +1,30 @@
 import Database from 'better-sqlite3';
 import path from 'path';
 
-const dbPath = path.join(process.cwd(), 'voca.db');
+import fs from 'fs';
+
+const isVercel = process.env.VERCEL === '1';
+let dbPath: string;
+
+if (isVercel) {
+  dbPath = '/tmp/voca.db';
+  const seedPath = path.join(process.cwd(), 'voca-seed.db');
+  
+  if (!fs.existsSync(dbPath)) {
+    try {
+      if (fs.existsSync(seedPath)) {
+        fs.copyFileSync(seedPath, dbPath);
+      } else {
+        fs.writeFileSync(dbPath, '');
+      }
+    } catch (e) {
+      console.error('Failed to copy seed database to /tmp:', e);
+    }
+  }
+} else {
+  dbPath = path.join(process.cwd(), 'voca.db');
+}
+
 const db = new Database(dbPath);
 
 // Initialize tables
