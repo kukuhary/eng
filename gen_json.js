@@ -41,11 +41,28 @@ allWords = allWords.filter(item => {
   return !duplicate;
 });
 
+const en_US = require('./node_modules/ipa-dict/lib/en_US.js');
+
 const wordsWithLevels = allWords.map((item, index) => {
   let level = 'middle';
   if (index > 800 && index <= 2000) level = 'high';
   if (index > 2000) level = 'advanced';
-  return { ...item, level };
+
+  // Look up pronunciation
+  const normalizedWord = item.word.toLowerCase().trim();
+  const ipaArray = en_US.get(normalizedWord);
+  let pronunciation = '';
+  if (ipaArray && ipaArray.length > 0) {
+    pronunciation = ipaArray.map(x => x.trim()).join(', ');
+  } else {
+    const cleanWord = normalizedWord.replace(/[^a-z]/g, '');
+    const cleanIpa = en_US.get(cleanWord);
+    if (cleanIpa && cleanIpa.length > 0) {
+      pronunciation = cleanIpa.map(x => x.trim()).join(', ');
+    }
+  }
+
+  return { ...item, level, pronunciation };
 });
 
 fs.writeFileSync('c:/antGra/eng/lib/seedWords.json', JSON.stringify(wordsWithLevels, null, 2));

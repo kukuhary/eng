@@ -36,7 +36,8 @@ db.exec(`
     meaning TEXT NOT NULL,
     level TEXT NOT NULL,
     status TEXT DEFAULT 'new',
-    createdAt INTEGER NOT NULL
+    createdAt INTEGER NOT NULL,
+    pronunciation TEXT
   );
 
   CREATE TABLE IF NOT EXISTS examples (
@@ -50,5 +51,12 @@ db.exec(`
   CREATE INDEX IF NOT EXISTS idx_words_word ON words(word);
   CREATE INDEX IF NOT EXISTS idx_examples_wordId ON examples(wordId);
 `);
+
+// Run migration to add pronunciation column to existing database if it doesn't exist
+try {
+  db.exec(`ALTER TABLE words ADD COLUMN pronunciation TEXT`);
+} catch (e) {
+  // column might already exist, ignore error
+}
 
 export default db;

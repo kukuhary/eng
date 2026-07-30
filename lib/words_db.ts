@@ -9,6 +9,7 @@ export interface DBWord {
   status: 'new' | 'learning' | 'mastered';
   createdAt: number;
   examples?: { en: string; ko: string; }[];
+  pronunciation?: string;
 }
 
 export function getAllWords(): DBWord[] {
@@ -41,16 +42,36 @@ export function updateWordStatus(id: string, status: string): boolean {
   return result.changes > 0;
 }
 
-export function addWord(word: Omit<DBWord, 'id' | 'status' | 'createdAt'>): DBWord {
+export async function addWord(word: Omit<DBWord, 'id' | 'status' | 'createdAt'>): Promise<DBWord> {
   const id = `user-${Date.now()}`;
   const createdAt = Date.now();
   const status = 'new';
 
+  // Look up pronunciation automatically if not provided
+  let pronunciation = word.pronunciation || '';
+  if (!pronunciation) {
+    try {
+      const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word.word.trim())}`);
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data) && data.length > 0) {
+          pronunciation = data[0].phonetic || '';
+          if (!pronunciation && data[0].phonetics) {
+            const found = data[0].phonetics.find((p: any) => p.text);
+            if (found) pronunciation = found.text;
+          }
+        }
+      }
+    } catch (e) {
+      console.error('Failed to fetch pronunciation in words_db.ts:', e);
+    }
+  }
+
   const insert = db.transaction(() => {
     db.prepare(`
-      INSERT INTO words (id, word, pos, meaning, level, status, createdAt)
-      VALUES (?, ?, ?, ?, ?, ?, ?)
-    `).run(id, word.word, word.pos, word.meaning, word.level, status, createdAt);
+      INSERT INTO words (id, word, pos, meaning, level, status, createdAt, pronunciation)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    `).run(id, word.word, word.pos, word.meaning, word.level, status, createdAt, pronunciation);
 
     if (word.examples && word.examples.length > 0) {
       const insertEx = db.prepare(`
@@ -62,7 +83,7 @@ export function addWord(word: Omit<DBWord, 'id' | 'status' | 'createdAt'>): DBWo
       });
     }
 
-    return { id, ...word, status: status as DBWord['status'], createdAt };
+    return { id, ...word, status: status as DBWord['status'], createdAt, pronunciation };
   });
 
   return insert() as DBWord;

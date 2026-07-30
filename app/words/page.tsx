@@ -86,9 +86,16 @@ export default function WordsPage() {
           {words.map(w => (
             <div key={w.id} className="glass" style={{ padding: '1rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', border: `1px solid ${getPosColor(w.pos)}` }}>
               <div>
-                <span style={{ fontSize: '1.2rem', fontWeight: 'bold', marginRight: '0.5rem' }}>{w.word}</span>
-                <span style={{ color: getPosColor(w.pos), fontStyle: 'italic', marginRight: '1rem', fontSize: '0.9rem', fontWeight: '500' }}>{w.pos}</span>
-                <span style={{ color: 'var(--secondary)' }}>{w.meaning}</span>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
+                  <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{w.word}</span>
+                  <span style={{ color: getPosColor(w.pos), fontStyle: 'italic', fontSize: '0.9rem', fontWeight: '500' }}>{w.pos}</span>
+                </div>
+                {w.pronunciation && (
+                  <div style={{ fontSize: '0.9rem', color: '#a1a1aa', fontFamily: 'monospace', margin: '0.1rem 0 0.3rem 0' }}>
+                    {w.pronunciation}
+                  </div>
+                )}
+                <div style={{ color: 'var(--secondary)' }}>{w.meaning}</div>
               </div>
               <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
                 <span style={{ 

@@ -9,6 +9,7 @@ export interface Word {
   status: 'new' | 'learning' | 'mastered';
   createdAt: number;
   examples?: { en: string; ko: string; }[] | any;
+  pronunciation?: string;
 }
 
 const SEED_WORDS_RAW: any[] = [
@@ -16,17994 +17,20987 @@ const SEED_WORDS_RAW: any[] = [
     "word": "a",
     "pos": "a.",
     "meaning": "하나의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈeɪ/, /ə/"
   },
   {
     "word": "abandon",
     "pos": "v.",
     "meaning": "버리다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈbændən/"
   },
   {
     "word": "able",
     "pos": "a.",
     "meaning": "할 수 있는",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈeɪbəɫ/"
   },
   {
     "word": "aboard",
     "pos": "ad.",
     "meaning": "배로",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈbɔɹd/"
   },
   {
     "word": "abort",
     "pos": "v.",
     "meaning": "유산하다",
     "level": "middle",
-    "examples": [
-      { "en": "The mission was aborted.", "ko": "임무가 중단되었다." },
-      { "en": "The pilot had to abort the takeoff.", "ko": "조종사는 이륙을 중단해야 했다." },
-      { "en": "They decided to abort the project.", "ko": "그들은 프로젝트를 중단하기로 결정했다." }
-    ]
+    "pronunciation": "/əˈbɔɹt/"
   },
   {
     "word": "about",
     "pos": "n.",
     "meaning": "-에 대하여",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈbaʊt/"
   },
   {
     "word": "above",
     "pos": "v.",
     "meaning": "-보다 위에",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈbəv/"
   },
   {
     "word": "abroad",
     "pos": "ad.",
     "meaning": "외국으로",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈbɹɔd/"
   },
   {
     "word": "absent",
     "pos": "a.",
     "meaning": "부재의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæbsənt/"
   },
   {
     "word": "absolute",
     "pos": "a.",
     "meaning": "절대의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæbsəˌɫut/"
   },
   {
     "word": "absorb",
     "pos": "v.",
     "meaning": "흡수하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əbˈzɔɹb/"
   },
   {
     "word": "abstract",
     "pos": "a.",
     "meaning": "추상적인",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæbˌstɹækt/, /æbˈstɹækt/"
   },
   {
     "word": "absurd",
     "pos": "a.",
     "meaning": "불합리한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əbˈsɝd/"
   },
   {
     "word": "abundant",
     "pos": "a.",
     "meaning": "풍부한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈbəndənt/"
   },
   {
     "word": "abuse",
     "pos": "n.",
     "meaning": "남용",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əbˈjus/, /əbˈjuz/"
   },
   {
     "word": "academy",
     "pos": "n.",
     "meaning": "학술원",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈkædəmi/"
   },
   {
     "word": "accelerate",
     "pos": "v.",
     "meaning": "가속하다 속도가 가해지다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ækˈsɛɫɝˌeɪt/"
   },
   {
     "word": "accent",
     "pos": "n.",
     "meaning": "액센트",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈækˌsɛnt/, /əkˈsɛnt/"
   },
   {
     "word": "accept",
     "pos": "v.",
     "meaning": "받아들이다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ækˈsɛpt/, /əkˈsɛpt/"
   },
   {
     "word": "access",
     "pos": "n.",
     "meaning": "접근",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈækˌsɛs/"
   },
   {
     "word": "accident",
     "pos": "n.",
     "meaning": "뜻밖의 사건",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæksədənt/"
   },
   {
     "word": "accommodate",
     "pos": "v.",
     "meaning": "수용하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈkɑməˌdeɪt/"
   },
   {
     "word": "accompany",
     "pos": "v.",
     "meaning": "동반하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈkəmpəni/"
   },
   {
     "word": "accomplish",
     "pos": "v.",
     "meaning": "이루다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈkɑmpɫɪʃ/"
   },
   {
     "word": "accord",
     "pos": "v.",
     "meaning": "일치하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈkɔɹd/"
   },
   {
     "word": "account",
     "pos": "v.",
     "meaning": "설명하다 계산",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈkaʊnt/"
   },
   {
     "word": "accumulate",
     "pos": "v.",
     "meaning": "축적하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əkˈjumjəˌɫeɪt/"
   },
   {
     "word": "accurate",
     "pos": "a.",
     "meaning": "정확한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈækjɝət/"
   },
   {
     "word": "accuse",
     "pos": "v.",
     "meaning": "고발하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əkˈjuz/"
   },
   {
     "word": "achieve",
     "pos": "v.",
     "meaning": "성취하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈtʃiv/"
   },
   {
     "word": "acid",
     "pos": "n.",
     "meaning": "산 신",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæsəd/"
   },
   {
     "word": "acknowledge",
     "pos": "v.",
     "meaning": "인정하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ækˈnɑɫɪdʒ/"
   },
   {
     "word": "acquaint",
     "pos": "v.",
     "meaning": "알리다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈkweɪnt/"
   },
   {
     "word": "acquire",
     "pos": "v.",
     "meaning": "얻다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈkwaɪɝ/"
   },
   {
     "word": "acquisition",
     "pos": "n.",
     "meaning": "획득",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌækwəˈzɪʃən/"
   },
   {
     "word": "across",
     "pos": "n.",
     "meaning": "가로질러",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈkɹɔs/"
   },
   {
     "word": "act vi",
     "pos": "v.",
     "meaning": "행동하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": ""
   },
   {
     "word": "activate",
     "pos": "v.",
     "meaning": "활동적으로 하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæktəˌveɪt/"
   },
   {
     "word": "actual",
     "pos": "a.",
     "meaning": "현실의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈækʃəɫ/, /ˈæktʃəwəɫ/"
   },
   {
     "word": "acute",
     "pos": "a.",
     "meaning": "날카로운",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əkˈjut/"
   },
   {
     "word": "adapt",
     "pos": "v.",
     "meaning": "적용시키다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈdæpt/"
   },
   {
     "word": "add",
     "pos": "v.",
     "meaning": "추가하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæd/"
   },
   {
     "word": "addict",
     "pos": "v.",
     "meaning": "열중하게 하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæˌdɪkt/, /əˈdɪkt/"
   },
   {
     "word": "address",
     "pos": "v.",
     "meaning": "말을 걸다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæˌdɹɛs/, /əˈdɹɛs/"
   },
   {
     "word": "adequate",
     "pos": "a.",
     "meaning": "충분한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈædəˌkweɪt/, /ˈædəkwət/"
   },
   {
     "word": "adjust",
     "pos": "v.",
     "meaning": "맞추다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈdʒəst/"
   },
   {
     "word": "administer",
     "pos": "v.",
     "meaning": "관리하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ədˈmɪnəstɝ/"
   },
   {
     "word": "admire",
     "pos": "v.",
     "meaning": "감복하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ædˈmaɪɹ/"
   },
   {
     "word": "admission",
     "pos": "n.",
     "meaning": "입장",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ædˈmɪʃən/, /ədˈmɪʃən/"
   },
   {
     "word": "admit",
     "pos": "v.",
     "meaning": "받아들이다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ədˈmɪt/"
   },
   {
     "word": "adolescent",
     "pos": "a.",
     "meaning": "청년기의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌædəˈɫɛsənt/, /ˌædoʊˈɫɛsənt/"
   },
   {
     "word": "adopt",
     "pos": "v.",
     "meaning": "채용하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈdɑpt/"
   },
   {
     "word": "adult",
     "pos": "a.",
     "meaning": "성인",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈædəɫt/, /əˈdəɫt/"
   },
   {
     "word": "advance",
     "pos": "v.",
     "meaning": "나아가다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ədˈvæns/"
   },
   {
     "word": "advantage",
     "pos": "n.",
     "meaning": "유리한 입장",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ædˈvæntɪdʒ/"
   },
   {
     "word": "adventure",
     "pos": "v.",
     "meaning": "모험 모험하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ædˈvɛntʃɝ/, /ədˈvɛntʃɝ/"
   },
   {
     "word": "adverse",
     "pos": "a.",
     "meaning": "거꾸로의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈædˌvɝs/, /ædˈvɝs/, /ədˈvɝs/"
   },
   {
     "word": "advertize",
     "pos": "v.",
     "meaning": "광고하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": ""
   },
   {
     "word": "advise",
     "pos": "v.",
     "meaning": "충고하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ædˈvaɪz/, /ədˈvaɪz/"
   },
   {
     "word": "advocate",
     "pos": "n.",
     "meaning": "변호사",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈædvəˌkeɪt/, /ˈædvəkət/"
   },
   {
     "word": "aesthetic",
     "pos": "a.",
     "meaning": "미적인",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ɛsˈθɛtɪk/"
   },
   {
     "word": "affair",
     "pos": "n.",
     "meaning": "일",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈfɛɹ/"
   },
   {
     "word": "affect",
     "pos": "v.",
     "meaning": "영향을 주다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈfɛkt/"
   },
   {
     "word": "affection",
     "pos": "n.",
     "meaning": "애정",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈfɛkʃən/"
   },
   {
     "word": "affiliate",
     "pos": "v.",
     "meaning": "회원으로 가입시키다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈfɪɫiˌeɪt/, /əˈfɪɫiət/"
   },
   {
     "word": "afford",
     "pos": "v.",
     "meaning": "여유가 있다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈfɔɹd/"
   },
   {
     "word": "afraid",
     "pos": "n.",
     "meaning": "두려워하여",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈfɹeɪd/"
   },
   {
     "word": "after",
     "pos": "n.",
     "meaning": "후에",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæftɝ/"
   },
   {
     "word": "afternoon",
     "pos": "n.",
     "meaning": "오후",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌæftɝˈnun/"
   },
   {
     "word": "again",
     "pos": "n.",
     "meaning": "다시",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈɡeɪn/, /əˈɡɛn/"
   },
   {
     "word": "against",
     "pos": "n.",
     "meaning": "…에 반대하여",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈɡeɪnst/, /əˈɡɛnst/"
   },
   {
     "word": "age",
     "pos": "n.",
     "meaning": "연령",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈeɪdʒ/"
   },
   {
     "word": "agency",
     "pos": "n.",
     "meaning": "기능",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈeɪdʒənsi/"
   },
   {
     "word": "agenda",
     "pos": "n.",
     "meaning": "안건",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈdʒɛndə/"
   },
   {
     "word": "agent",
     "pos": "a.",
     "meaning": "대리인",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈeɪdʒənt/"
   },
   {
     "word": "aggressive",
     "pos": "a.",
     "meaning": "침략적인",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈɡɹɛsɪv/"
   },
   {
     "word": "ago",
     "pos": "n.",
     "meaning": "이전에",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈɡoʊ/"
   },
   {
     "word": "agree",
     "pos": "v.",
     "meaning": "동의하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈɡɹi/"
   },
   {
     "word": "agriculture",
     "pos": "n.",
     "meaning": "농업",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæɡɹɪˌkəɫtʃɝ/"
   },
   {
     "word": "ahead",
     "pos": "n.",
     "meaning": "전방에",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈhɛd/"
   },
   {
     "word": "aid",
     "pos": "v.",
     "meaning": "도와 주다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈeɪd/"
   },
   {
     "word": "aim",
     "pos": "v.",
     "meaning": "겨누다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈeɪm/"
   },
   {
     "word": "air",
     "pos": "n.",
     "meaning": "공기",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɛɹ/"
   },
   {
     "word": "airplane",
     "pos": "n.",
     "meaning": "비행기",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɛɹˌpɫeɪn/"
   },
   {
     "word": "aircraft",
     "pos": "n.",
     "meaning": "항공기",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɛɹˌkɹæft/"
   },
   {
     "word": "airline",
     "pos": "n.",
     "meaning": "정기항공",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɛɹˌɫaɪn/"
   },
   {
     "word": "airport",
     "pos": "n.",
     "meaning": "공항",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɛɹˌpɔɹt/"
   },
   {
     "word": "aisle",
     "pos": "n.",
     "meaning": "측면복도",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈaɪəɫ/, /ˈaɪɫ/"
   },
   {
     "word": "alert",
     "pos": "a.",
     "meaning": "빈틈없는",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈɫɝt/"
   },
   {
     "word": "alien",
     "pos": "a.",
     "meaning": "외국의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈeɪɫiən/"
   },
   {
     "word": "alike",
     "pos": "a.",
     "meaning": "비슷한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈɫaɪk/"
   },
   {
     "word": "alive",
     "pos": "a.",
     "meaning": "살아있는",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈɫaɪv/"
   },
   {
     "word": "all",
     "pos": "n.",
     "meaning": "모든",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɔɫ/"
   },
   {
     "word": "allocate",
     "pos": "v.",
     "meaning": "할당하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæɫəˌkeɪt/"
   },
   {
     "word": "allow",
     "pos": "v.",
     "meaning": "허락하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈɫaʊ/"
   },
   {
     "word": "ally",
     "pos": "v.",
     "meaning": "동맹하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæɫaɪ/, /əˈɫaɪ/"
   },
   {
     "word": "almost",
     "pos": "a.",
     "meaning": "거의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɔɫˌmoʊst/"
   },
   {
     "word": "alone",
     "pos": "n.",
     "meaning": "다만 홀로(혼자서)",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈɫoʊn/"
   },
   {
     "word": "along",
     "pos": "n.",
     "meaning": "-을 따라",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈɫɔŋ/"
   },
   {
     "word": "alongside",
     "pos": "n.",
     "meaning": "-의 곁에",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈɫɔŋˈsaɪd/"
   },
   {
     "word": "aloud",
     "pos": "ad.",
     "meaning": "큰 소리로",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈɫaʊd/"
   },
   {
     "word": "already",
     "pos": "n.",
     "meaning": "이미",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ɔˈɹɛdi/, /ɔɫˈɹɛdi/"
   },
   {
     "word": "alright",
     "pos": "n.",
     "meaning": "더할나위없이",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌɔɫˈɹaɪt/"
   },
   {
     "word": "also",
     "pos": "a.",
     "meaning": "-도 또한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɔɫsoʊ/"
   },
   {
     "word": "alter",
     "pos": "v.",
     "meaning": "바꾸다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɔɫtɝ/"
   },
   {
     "word": "alternative",
     "pos": "n.",
     "meaning": "어느 한쪽의 양자택일",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ɔɫˈtɝnətɪv/"
   },
   {
     "word": "although",
     "pos": "n.",
     "meaning": "비록 -일지라도",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌɔɫˈðoʊ/"
   },
   {
     "word": "altogether",
     "pos": "n.",
     "meaning": "전혀",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌɔɫtəˈɡɛðɝ/"
   },
   {
     "word": "always",
     "pos": "n.",
     "meaning": "늘",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɔɫˌweɪz/, /ˈɔɫwiz/"
   },
   {
     "word": "A.M.",
     "pos": "n.",
     "meaning": "오전",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌeɪˈɛm/"
   },
   {
     "word": "amaze",
     "pos": "v.",
     "meaning": "깜짝 놀라게 하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈmeɪz/"
   },
   {
     "word": "ambassador",
     "pos": "n.",
     "meaning": "대사",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/æmˈbæsədɝ/"
   },
   {
     "word": "ambition",
     "pos": "n.",
     "meaning": "야심",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/æmˈbɪʃən/"
   },
   {
     "word": "among",
     "pos": "n.",
     "meaning": "-중에",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈməŋ/"
   },
   {
     "word": "amount",
     "pos": "v.",
     "meaning": "(금액이)-이 되다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈmaʊnt/"
   },
   {
     "word": "amplify",
     "pos": "v.",
     "meaning": "확대하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæmpɫəˌfaɪ/"
   },
   {
     "word": "amuse",
     "pos": "v.",
     "meaning": "재미나게 하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əmˈjuz/"
   },
   {
     "word": "analyze",
     "pos": "v.",
     "meaning": "분해하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈænəˌɫaɪz/"
   },
   {
     "word": "anchor",
     "pos": "n.",
     "meaning": "닻",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæŋkɝ/"
   },
   {
     "word": "ancient",
     "pos": "a.",
     "meaning": "옛날의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈeɪnʃənt/, /ˈeɪntʃənt/"
   },
   {
     "word": "and",
     "pos": "n.",
     "meaning": "및",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈænd/, /ənd/"
   },
   {
     "word": "angel",
     "pos": "n.",
     "meaning": "천사",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈeɪndʒəɫ/"
   },
   {
     "word": "anger",
     "pos": "n.",
     "meaning": "성",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæŋɡɝ/"
   },
   {
     "word": "angle",
     "pos": "n.",
     "meaning": "각",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæŋɡəɫ/"
   },
   {
     "word": "animal",
     "pos": "n.",
     "meaning": "동물",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈænəməɫ/"
   },
   {
     "word": "anniversary",
     "pos": "a.",
     "meaning": "기념일 예년의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌænəˈvɝsɝi/"
   },
   {
     "word": "announce",
     "pos": "v.",
     "meaning": "알리다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈnaʊns/"
   },
   {
     "word": "annoy",
     "pos": "v.",
     "meaning": "귀찮게 하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈnɔɪ/"
   },
   {
     "word": "annual",
     "pos": "a.",
     "meaning": "일년의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈænjuəɫ/"
   },
   {
     "word": "another",
     "pos": "n.",
     "meaning": "또 하나",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈnəðɝ/"
   },
   {
     "word": "answer",
     "pos": "n.",
     "meaning": "대답",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈænsɝ/"
   },
   {
     "word": "ant",
     "pos": "n.",
     "meaning": "개미",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈænt/"
   },
   {
     "word": "anticipate",
     "pos": "v.",
     "meaning": "예기하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ænˈtɪsəˌpeɪt/"
   },
   {
     "word": "anxiety",
     "pos": "n.",
     "meaning": "근심",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/æŋˈzaɪəti/"
   },
   {
     "word": "anxious",
     "pos": "a.",
     "meaning": "걱정되는",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæŋkʃəs/, /ˈæŋʃəs/"
   },
   {
     "word": "any",
     "pos": "n.",
     "meaning": "어떤",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɛni/"
   },
   {
     "word": "apart",
     "pos": "n.",
     "meaning": "떨어져서",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈpɑɹt/"
   },
   {
     "word": "apology",
     "pos": "n.",
     "meaning": "사과",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈpɑɫəˌdʒi/"
   },
   {
     "word": "apparent",
     "pos": "a.",
     "meaning": "명백한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈpɛɹənt/"
   },
   {
     "word": "appeal",
     "pos": "v.",
     "meaning": "간청하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈpiɫ/"
   },
   {
     "word": "appear",
     "pos": "v.",
     "meaning": "나타나다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈpɪɹ/"
   },
   {
     "word": "apple",
     "pos": "n.",
     "meaning": "사과",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæpəɫ/"
   },
   {
     "word": "applicant",
     "pos": "n.",
     "meaning": "지원자",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæpɫɪkənt/"
   },
   {
     "word": "apply",
     "pos": "v.",
     "meaning": "(물건을)대다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈpɫaɪ/"
   },
   {
     "word": "appoint",
     "pos": "v.",
     "meaning": "지정하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈpɔɪnt/"
   },
   {
     "word": "appreciate",
     "pos": "v.",
     "meaning": "감상하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈpɹiʃiˌeɪt/"
   },
   {
     "word": "approach",
     "pos": "v.",
     "meaning": "다가가다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈpɹoʊtʃ/"
   },
   {
     "word": "appropriate",
     "pos": "a.",
     "meaning": "적당한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈpɹoʊpɹiˌeɪt/, /əˈpɹoʊpɹiət/"
   },
   {
     "word": "approve",
     "pos": "v.",
     "meaning": "시인하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈpɹuv/"
   },
   {
     "word": "approximate",
     "pos": "a.",
     "meaning": "어림셈의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈpɹɑksəˌmeɪt/, /əˈpɹɑksəmət/"
   },
   {
     "word": "architect",
     "pos": "n.",
     "meaning": "건축가",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɑɹkəˌtɛkt/"
   },
   {
     "word": "architecture",
     "pos": "n.",
     "meaning": "건축",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɑɹkəˌtɛktʃɝ/"
   },
   {
     "word": "archive",
     "pos": "n.",
     "meaning": "기록보관소",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɑɹˌkaɪv/"
   },
   {
     "word": "area",
     "pos": "a.",
     "meaning": "면적",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɛɹiə/"
   },
   {
     "word": "argue",
     "pos": "v.",
     "meaning": "논하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɑɹɡju/"
   },
   {
     "word": "arise",
     "pos": "v.",
     "meaning": "생기다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ɝˈaɪz/"
   },
   {
     "word": "arm",
     "pos": "n.",
     "meaning": "팔",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɑɹm/"
   },
   {
     "word": "army",
     "pos": "n.",
     "meaning": "육군",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɑɹmi/"
   },
   {
     "word": "around",
     "pos": "n.",
     "meaning": "사방에",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ɝˈaʊn/, /ɝˈaʊnd/"
   },
   {
     "word": "arrange",
     "pos": "v.",
     "meaning": "가지런히 하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ɝˈeɪndʒ/"
   },
   {
     "word": "arrest",
     "pos": "v.",
     "meaning": "체포하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ɝˈɛst/"
   },
   {
     "word": "arrive",
     "pos": "v.",
     "meaning": "도착하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ɝˈaɪv/"
   },
   {
     "word": "arrow",
     "pos": "n.",
     "meaning": "화살",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæɹoʊ/, /ˈɛɹoʊ/"
   },
   {
     "word": "art",
     "pos": "n.",
     "meaning": "예술",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɑɹt/"
   },
   {
     "word": "article",
     "pos": "n.",
     "meaning": "물품",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɑɹtəkəɫ/, /ˈɑɹtɪkəɫ/"
   },
   {
     "word": "artificial",
     "pos": "a.",
     "meaning": "인공의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌɑɹtəˈfɪʃəɫ/"
   },
   {
     "word": "as",
     "pos": "ad.",
     "meaning": "-와 같은 정도로",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæz/, /ˈɛz/"
   },
   {
     "word": "ash",
     "pos": "n.",
     "meaning": "회",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæʃ/"
   },
   {
     "word": "aside",
     "pos": "n.",
     "meaning": "곁에",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈsaɪd/"
   },
   {
     "word": "ask",
     "pos": "v.",
     "meaning": "묻다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæsk/"
   },
   {
     "word": "asleep",
     "pos": "n.",
     "meaning": "잠들은",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈsɫip/"
   },
   {
     "word": "aspect",
     "pos": "n.",
     "meaning": "관점",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæsˌpɛkt/"
   },
   {
     "word": "aspire",
     "pos": "v.",
     "meaning": "열망하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈspaɪɹ/"
   },
   {
     "word": "assault",
     "pos": "n.",
     "meaning": "습격",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈsɔɫt/"
   },
   {
     "word": "assemble",
     "pos": "v.",
     "meaning": "모으다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈsɛmbəɫ/"
   },
   {
     "word": "assert",
     "pos": "v.",
     "meaning": "단언하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈsɝt/"
   },
   {
     "word": "assess",
     "pos": "v.",
     "meaning": "(세금 등을)사정하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈsɛs/"
   },
   {
     "word": "asset",
     "pos": "n.",
     "meaning": "자산",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæˌsɛt/"
   },
   {
     "word": "assign",
     "pos": "v.",
     "meaning": "할당하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈsaɪn/"
   },
   {
     "word": "assist",
     "pos": "v.",
     "meaning": "돕다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈsɪst/"
   },
   {
     "word": "associate",
     "pos": "v.",
     "meaning": "연상하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈsoʊsiˌeɪt/, /əˈsoʊsiət/, /əˈsoʊʃiˌeɪt/, /əˈsoʊʃiət/"
   },
   {
     "word": "assume",
     "pos": "v.",
     "meaning": "취하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈsum/"
   },
   {
     "word": "assure",
     "pos": "v.",
     "meaning": "보증하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈʃʊɹ/"
   },
   {
     "word": "astonish",
     "pos": "v.",
     "meaning": "놀라게 하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈstɑnɪʃ/"
   },
   {
     "word": "at",
     "pos": "n.",
     "meaning": "-에서",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæt/"
   },
   {
     "word": "athlete",
     "pos": "n.",
     "meaning": "운동가",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈæθˌɫit/"
   },
   {
     "word": "atmosphere",
     "pos": "n.",
     "meaning": "대기",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈætməsˌfɪɹ/"
   },
   {
     "word": "atom",
     "pos": "n.",
     "meaning": "원자",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈætəm/"
   },
   {
     "word": "attach",
     "pos": "v.",
     "meaning": "붙이다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈtætʃ/"
   },
   {
     "word": "attack",
     "pos": "v.",
     "meaning": "공격하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈtæk/"
   },
   {
     "word": "attain",
     "pos": "v.",
     "meaning": "이르다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈteɪn/"
   },
   {
     "word": "attempt",
     "pos": "v.",
     "meaning": "시도하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈtɛmpt/"
   },
   {
     "word": "attend",
     "pos": "v.",
     "meaning": "출석하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈtɛnd/"
   },
   {
     "word": "attention",
     "pos": "a.",
     "meaning": "주의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈtɛnʃən/"
   },
   {
     "word": "attitude",
     "pos": "n.",
     "meaning": "태도",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈætəˌtud/"
   },
   {
     "word": "attorney",
     "pos": "n.",
     "meaning": "변호사",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈtɝni/"
   },
   {
     "word": "attract",
     "pos": "v.",
     "meaning": "끌어 당기다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈtɹækt/"
   },
   {
     "word": "attribute",
     "pos": "n.",
     "meaning": "속성",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈætɹəbˌjut/, /əˈtɹɪbˌjut/"
   },
   {
     "word": "auction",
     "pos": "n.",
     "meaning": "경매",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɑkʃən/, /ˈɔkʃən/"
   },
   {
     "word": "audience",
     "pos": "n.",
     "meaning": "청중",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɑdiəns/, /ˈɔdiəns/"
   },
   {
     "word": "aunt",
     "pos": "n.",
     "meaning": "아주머니",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈænt/, /ˈɔnt/"
   },
   {
     "word": "authentic",
     "pos": "a.",
     "meaning": "진짜의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈθɛnɪk/, /əˈθɛntɪk/, /ɔˈθɛnɪk/, /ɔˈθɛntɪk/"
   },
   {
     "word": "author",
     "pos": "n.",
     "meaning": "저자",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɔθɝ/"
   },
   {
     "word": "autobiography",
     "pos": "n.",
     "meaning": "자서전",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌɔtəbaɪˈɑɡɹəfi/"
   },
   {
     "word": "automatic",
     "pos": "a.",
     "meaning": "자동의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌɔtəˈmætɪk/, /ˌɔtoʊˈmætɪk/"
   },
   {
     "word": "automobile",
     "pos": "a.",
     "meaning": "자동차 자동차의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɔtəmoʊˌbiɫ/, /ˌɔtəmoʊˈbiɫ/"
   },
   {
     "word": "available",
     "pos": "a.",
     "meaning": "쓸모있는",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈveɪɫəbəɫ/"
   },
   {
     "word": "avenue",
     "pos": "n.",
     "meaning": "가로수길",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈævəˌnu/"
   },
   {
     "word": "average",
     "pos": "n.",
     "meaning": "평균",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈævɝɪdʒ/, /ˈævɹədʒ/, /ˈævɹɪdʒ/"
   },
   {
     "word": "avoid",
     "pos": "v.",
     "meaning": "피하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈvɔɪd/"
   },
   {
     "word": "await",
     "pos": "v.",
     "meaning": "기다리다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈweɪt/"
   },
   {
     "word": "awake",
     "pos": "v.",
     "meaning": "깨우다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈweɪk/"
   },
   {
     "word": "award",
     "pos": "n.",
     "meaning": "상",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈwɔɹd/"
   },
   {
     "word": "aware",
     "pos": "a.",
     "meaning": "알고 있는",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈwɛɹ/"
   },
   {
     "word": "away",
     "pos": "n.",
     "meaning": "떨어져서",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/əˈweɪ/"
   },
   {
     "word": "awesome",
     "pos": "n.",
     "meaning": "무서운",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɑsəm/, /ˈɔsəm/"
   },
   {
     "word": "awful",
     "pos": "n.",
     "meaning": "두려운",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɑfəɫ/, /ˈɔfəɫ/"
   },
   {
     "word": "awkward",
     "pos": "a.",
     "meaning": "어색한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈɑkwɝd/, /ˈɔkwɝd/"
   },
   {
     "word": "baby",
     "pos": "n.",
     "meaning": "갓난아이, 막내 관심사, 골치아픈 일,",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbeɪbi/"
   },
   {
     "word": "back",
     "pos": "n.",
     "meaning": "등",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbæk/"
   },
   {
     "word": "background",
     "pos": "n.",
     "meaning": "배경",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbækˌɡɹaʊnd/"
   },
   {
     "word": "bad",
     "pos": "n.",
     "meaning": "나쁜",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbæd/"
   },
   {
     "word": "bake",
     "pos": "v.",
     "meaning": "굽다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbeɪk/"
   },
   {
     "word": "balance",
     "pos": "n.",
     "meaning": "균형",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbæɫəns/"
   },
   {
     "word": "ball",
     "pos": "n.",
     "meaning": "공",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɔɫ/"
   },
   {
     "word": "balloon",
     "pos": "n.",
     "meaning": "기구",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/bəˈɫun/"
   },
   {
     "word": "ban",
     "pos": "n.",
     "meaning": "금지",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbæn/"
   },
   {
     "word": "band",
     "pos": "n.",
     "meaning": "그룹",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbænd/"
   },
   {
     "word": "bang",
     "pos": "n.",
     "meaning": "강타",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbæŋ/"
   },
   {
     "word": "bank",
     "pos": "n.",
     "meaning": "둑",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbæŋk/"
   },
   {
     "word": "bankrupt",
     "pos": "n.",
     "meaning": "파산자",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbæŋkɹəpt/"
   },
   {
     "word": "bar",
     "pos": "n.",
     "meaning": "막대기",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɑɹ/"
   },
   {
     "word": "bare",
     "pos": "n.",
     "meaning": "벌거벗은",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɛɹ/"
   },
   {
     "word": "bargain",
     "pos": "n.",
     "meaning": "매매",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɑɹɡən/, /ˈbɑɹɡɪn/"
   },
   {
     "word": "bark",
     "pos": "v.",
     "meaning": "짖다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɑɹk/"
   },
   {
     "word": "barn",
     "pos": "n.",
     "meaning": "헛간",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɑɹn/"
   },
   {
     "word": "barrier",
     "pos": "n.",
     "meaning": "장벽",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbæɹiɝ/, /ˈbɛɹiɝ/"
   },
   {
     "word": "base",
     "pos": "n.",
     "meaning": "기초",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbeɪs/"
   },
   {
     "word": "baseball",
     "pos": "n.",
     "meaning": "야구",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbeɪsˈbɔɫ/"
   },
   {
     "word": "basic",
     "pos": "a.",
     "meaning": "기본의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbeɪsɪk/"
   },
   {
     "word": "basis",
     "pos": "n.",
     "meaning": "기초",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbeɪsəs/, /ˈbeɪsɪs/"
   },
   {
     "word": "basket",
     "pos": "n.",
     "meaning": "바구니",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbæskət/"
   },
   {
     "word": "basketball",
     "pos": "n.",
     "meaning": "농구",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbæskətˌbɔɫ/"
   },
   {
     "word": "bath",
     "pos": "n.",
     "meaning": "목욕",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbæθ/"
   },
   {
     "word": "bathroom",
     "pos": "n.",
     "meaning": "욕실",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbæˌθɹum/"
   },
   {
     "word": "battery",
     "pos": "n.",
     "meaning": "전지",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbætɝi/"
   },
   {
     "word": "battle",
     "pos": "n.",
     "meaning": "전투",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbætəɫ/"
   },
   {
     "word": "bay",
     "pos": "n.",
     "meaning": "만",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbeɪ/"
   },
   {
     "word": "be",
     "pos": "v.",
     "meaning": "-이다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbi/, /bi/"
   },
   {
     "word": "beach",
     "pos": "n.",
     "meaning": "해안",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbitʃ/"
   },
   {
     "word": "beam",
     "pos": "n.",
     "meaning": "광선",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbim/"
   },
   {
     "word": "bean",
     "pos": "n.",
     "meaning": "콩",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbin/"
   },
   {
     "word": "bear",
     "pos": "v.",
     "meaning": "나르다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɛɹ/"
   },
   {
     "word": "beard",
     "pos": "n.",
     "meaning": "턱수염",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɪɹd/"
   },
   {
     "word": "beast",
     "pos": "n.",
     "meaning": "짐승",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbist/"
   },
   {
     "word": "beat",
     "pos": "v.",
     "meaning": "치다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbit/"
   },
   {
     "word": "beauty",
     "pos": "n.",
     "meaning": "아름다움",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbjuti/"
   },
   {
     "word": "because",
     "pos": "n.",
     "meaning": "왜냐하면",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/bɪˈkɑz/, /bɪˈkəz/, /bɪˈkɔz/, /bɪkəz/"
   },
   {
     "word": "become",
     "pos": "v.",
     "meaning": "-이 되다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/bɪˈkəm/"
   },
   {
     "word": "bed",
     "pos": "n.",
     "meaning": "침대",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɛd/"
   },
   {
     "word": "bedroom",
     "pos": "a.",
     "meaning": "침실 성적인",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɛˌdɹum/"
   },
   {
     "word": "bee",
     "pos": "n.",
     "meaning": "꿀벌",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbi/"
   },
   {
     "word": "beef",
     "pos": "n.",
     "meaning": "쇠고기",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbif/"
   },
   {
     "word": "beer",
     "pos": "n.",
     "meaning": "맥주",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɪɹ/"
   },
   {
     "word": "before",
     "pos": "n.",
     "meaning": "앞에",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌbiˈfɔɹ/, /bɪˈfɔɹ/"
   },
   {
     "word": "beg",
     "pos": "v.",
     "meaning": "청하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɛɡ/"
   },
   {
     "word": "begin",
     "pos": "v.",
     "meaning": "시작하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/bɪˈɡɪn/"
   },
   {
     "word": "behalf",
     "pos": "n.",
     "meaning": "위함",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/bɪˈhæf/"
   },
   {
     "word": "behave",
     "pos": "v.",
     "meaning": "행동하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/bɪˈheɪv/"
   },
   {
     "word": "behavior",
     "pos": "n.",
     "meaning": "행동",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/bɪˈheɪvjɝ/"
   },
   {
     "word": "behind",
     "pos": "n.",
     "meaning": "뒤에",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/bɪˈhaɪnd/"
   },
   {
     "word": "believe",
     "pos": "v.",
     "meaning": "믿다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/bɪˈɫiv/"
   },
   {
     "word": "bell",
     "pos": "n.",
     "meaning": "종",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɛɫ/"
   },
   {
     "word": "belong",
     "pos": "v.",
     "meaning": "속하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/bɪˈɫɔŋ/"
   },
   {
     "word": "below",
     "pos": "n.",
     "meaning": "아래에",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/biˈɫoʊ/, /bɪˈɫoʊ/"
   },
   {
     "word": "bend",
     "pos": "v.",
     "meaning": "구부리다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɛnd/"
   },
   {
     "word": "beneath",
     "pos": "n.",
     "meaning": "-의 바로 아래에",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/bɪˈniθ/"
   },
   {
     "word": "benefit",
     "pos": "n.",
     "meaning": "이익",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɛnəfɪt/"
   },
   {
     "word": "berry",
     "pos": "n.",
     "meaning": "액과",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɛɹi/"
   },
   {
     "word": "beside",
     "pos": "n.",
     "meaning": "-의 곁에",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌbiˈsaɪd/, /bɪˈsaɪd/"
   },
   {
     "word": "bet",
     "pos": "v.",
     "meaning": "걸다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɛt/"
   },
   {
     "word": "betray",
     "pos": "v.",
     "meaning": "배반하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/bɪˈtɹeɪ/"
   },
   {
     "word": "between",
     "pos": "n.",
     "meaning": "-의 사이에 사이에",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/bitˈwin/, /bɪtˈwin/"
   },
   {
     "word": "beyond",
     "pos": "n.",
     "meaning": "저편에",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌbiˈɔnd/, /bɪˈɑnd/, /bɪˈɔnd/"
   },
   {
     "word": "bias",
     "pos": "n.",
     "meaning": "치우침",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbaɪəs/"
   },
   {
     "word": "bible",
     "pos": "n.",
     "meaning": "성서, 성경",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbaɪbəɫ/"
   },
   {
     "word": "bicycle",
     "pos": "v.",
     "meaning": "자전거 자전거를 타다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbaɪsɪkəɫ/"
   },
   {
     "word": "big",
     "pos": "n.",
     "meaning": "큰",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɪɡ/"
   },
   {
     "word": "bill",
     "pos": "n.",
     "meaning": "계산서",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɪɫ/"
   },
   {
     "word": "billion",
     "pos": "n.",
     "meaning": "10 억",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɪɫjən/"
   },
   {
     "word": "bin",
     "pos": "n.",
     "meaning": "궤",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɪn/"
   },
   {
     "word": "bind",
     "pos": "v.",
     "meaning": "매다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbaɪnd/"
   },
   {
     "word": "biography",
     "pos": "n.",
     "meaning": "전기",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/baɪˈɑɡɹəfi/"
   },
   {
     "word": "biology",
     "pos": "n.",
     "meaning": "생물학",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/baɪˈɑɫədʒi/"
   },
   {
     "word": "bird",
     "pos": "n.",
     "meaning": "새",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɝd/"
   },
   {
     "word": "birth",
     "pos": "n.",
     "meaning": "출생",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɝθ/"
   },
   {
     "word": "birthday",
     "pos": "n.",
     "meaning": "생일",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɝθˌdeɪ/"
   },
   {
     "word": "bishop",
     "pos": "n.",
     "meaning": "주교",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɪʃəp/"
   },
   {
     "word": "bit bite",
     "pos": "n.",
     "meaning": "의 과거(분사) 작은 조각",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": ""
   },
   {
     "word": "bite",
     "pos": "v.",
     "meaning": "물다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbaɪt/"
   },
   {
     "word": "bitter",
     "pos": "n.",
     "meaning": "쓴",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɪtɝ/"
   },
   {
     "word": "black",
     "pos": "n.",
     "meaning": "검은",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɫæk/"
   },
   {
     "word": "blame",
     "pos": "v.",
     "meaning": "책망하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɫeɪm/"
   },
   {
     "word": "blank",
     "pos": "n.",
     "meaning": "공백",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɫæŋk/"
   },
   {
     "word": "blanket",
     "pos": "n.",
     "meaning": "담요",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɫæŋkət/, /ˈbɫæŋkɪt/"
   },
   {
     "word": "blast",
     "pos": "n.",
     "meaning": "돌풍",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɫæst/"
   },
   {
     "word": "blend",
     "pos": "v.",
     "meaning": "혼합하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɫɛnd/"
   },
   {
     "word": "bless",
     "pos": "v.",
     "meaning": "축복하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɫɛs/"
   },
   {
     "word": "blind",
     "pos": "n.",
     "meaning": "눈먼",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɫaɪnd/"
   },
   {
     "word": "blink",
     "pos": "v.",
     "meaning": "(눈을)깜빡거리다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɫɪŋk/"
   },
   {
     "word": "block",
     "pos": "n.",
     "meaning": "덩어리",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɫɑk/"
   },
   {
     "word": "blonde",
     "pos": "n.",
     "meaning": "(살결이 흰)금발의 여성",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɫɑnd/"
   },
   {
     "word": "blood",
     "pos": "n.",
     "meaning": "피",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɫəd/"
   },
   {
     "word": "bloom",
     "pos": "n.",
     "meaning": "쇳덩이",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɫum/"
   },
   {
     "word": "blossom",
     "pos": "n.",
     "meaning": "(과수의)꽃",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɫɑsəm/"
   },
   {
     "word": "blow",
     "pos": "n.",
     "meaning": "강타",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɫoʊ/"
   },
   {
     "word": "blue",
     "pos": "n.",
     "meaning": "푸른",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɫu/"
   },
   {
     "word": "board",
     "pos": "n.",
     "meaning": "널빤지",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɔɹd/"
   },
   {
     "word": "boat",
     "pos": "n.",
     "meaning": "배",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈboʊt/"
   },
   {
     "word": "body",
     "pos": "n.",
     "meaning": "신체",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɑdi/"
   },
   {
     "word": "boil",
     "pos": "v.",
     "meaning": "끓다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɔɪɫ/"
   },
   {
     "word": "bold",
     "pos": "a.",
     "meaning": "대담한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈboʊɫd/"
   },
   {
     "word": "bomb",
     "pos": "v.",
     "meaning": "폭탄 폭격하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɑm/, /ˈbɔm/"
   },
   {
     "word": "bond",
     "pos": "n.",
     "meaning": "결속",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɑnd/"
   },
   {
     "word": "bone",
     "pos": "n.",
     "meaning": "뼈",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈboʊn/"
   },
   {
     "word": "book",
     "pos": "n.",
     "meaning": "책",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbʊk/"
   },
   {
     "word": "boom",
     "pos": "n.",
     "meaning": "굉음",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbum/"
   },
   {
     "word": "boost",
     "pos": "n.",
     "meaning": "뒤를 밀기",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbust/"
   },
   {
     "word": "boot",
     "pos": "n.",
     "meaning": "목이 긴 구두",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbut/"
   },
   {
     "word": "border",
     "pos": "n.",
     "meaning": "가장자리",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɔɹdɝ/"
   },
   {
     "word": "bore",
     "pos": "n.",
     "meaning": "고조",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɔɹ/"
   },
   {
     "word": "borrow",
     "pos": "v.",
     "meaning": "빌다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɑˌɹoʊ/"
   },
   {
     "word": "boss",
     "pos": "n.",
     "meaning": "두목",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɑs/, /ˈbɔs/"
   },
   {
     "word": "both",
     "pos": "a.",
     "meaning": "쌍방의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈboʊθ/"
   },
   {
     "word": "bother",
     "pos": "v.",
     "meaning": "괴롭히다 근심하다 귀찮음",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɑðɝ/"
   },
   {
     "word": "bottle",
     "pos": "n.",
     "meaning": "병",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɑtəɫ/"
   },
   {
     "word": "bottom",
     "pos": "n.",
     "meaning": "밑바닥",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɑtəm/"
   },
   {
     "word": "bounce",
     "pos": "v.",
     "meaning": "뛰어오르다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbaʊns/"
   },
   {
     "word": "boundary",
     "pos": "n.",
     "meaning": "경계",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbaʊndɝi/, /ˈbaʊndɹi/"
   },
   {
     "word": "bow",
     "pos": "n.",
     "meaning": "절",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbaʊ/, /ˈboʊ/"
   },
   {
     "word": "bowl",
     "pos": "n.",
     "meaning": "사발",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈboʊɫ/"
   },
   {
     "word": "boy",
     "pos": "n.",
     "meaning": "소년",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɔɪ/"
   },
   {
     "word": "brain",
     "pos": "n.",
     "meaning": "뇌",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹeɪn/"
   },
   {
     "word": "brake",
     "pos": "n.",
     "meaning": "브레이크",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹeɪk/"
   },
   {
     "word": "branch",
     "pos": "n.",
     "meaning": "가지",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹæntʃ/"
   },
   {
     "word": "brand",
     "pos": "n.",
     "meaning": "상표",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹænd/"
   },
   {
     "word": "brave",
     "pos": "a.",
     "meaning": "용감한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹeɪv/"
   },
   {
     "word": "bread",
     "pos": "n.",
     "meaning": "빵",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹɛd/"
   },
   {
     "word": "break",
     "pos": "v.",
     "meaning": "부수다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹeɪk/"
   },
   {
     "word": "breakfast",
     "pos": "n.",
     "meaning": "아침밥",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹɛkfəst/"
   },
   {
     "word": "breast",
     "pos": "n.",
     "meaning": "가슴",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹɛst/"
   },
   {
     "word": "breathe",
     "pos": "v.",
     "meaning": "숨쉬다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹið/"
   },
   {
     "word": "breed",
     "pos": "v.",
     "meaning": "기르다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹid/"
   },
   {
     "word": "breeze",
     "pos": "n.",
     "meaning": "미풍",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹiz/"
   },
   {
     "word": "brew",
     "pos": "v.",
     "meaning": "양조하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹu/"
   },
   {
     "word": "brick",
     "pos": "n.",
     "meaning": "벽돌",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹɪk/"
   },
   {
     "word": "bride",
     "pos": "n.",
     "meaning": "신부",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹaɪd/"
   },
   {
     "word": "bridge",
     "pos": "n.",
     "meaning": "다리",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹɪdʒ/"
   },
   {
     "word": "brief",
     "pos": "a.",
     "meaning": "단시간의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹif/"
   },
   {
     "word": "bright",
     "pos": "n.",
     "meaning": "밝은",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹaɪt/"
   },
   {
     "word": "brilliant",
     "pos": "a.",
     "meaning": "빛나는",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹɪɫjənt/"
   },
   {
     "word": "bring",
     "pos": "v.",
     "meaning": "가져오다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹɪŋ/"
   },
   {
     "word": "broad",
     "pos": "n.",
     "meaning": "(폭이)넓은",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹɔd/"
   },
   {
     "word": "broadcast",
     "pos": "v.",
     "meaning": "방송하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹɔdˌkæst/"
   },
   {
     "word": "brother",
     "pos": "n.",
     "meaning": "형제",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹəðɝ/"
   },
   {
     "word": "brown",
     "pos": "n.",
     "meaning": "갈색의 갈색",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹaʊn/"
   },
   {
     "word": "brush",
     "pos": "n.",
     "meaning": "솔",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹəʃ/"
   },
   {
     "word": "brute",
     "pos": "n.",
     "meaning": "야수 짐승같은",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɹut/"
   },
   {
     "word": "bubble",
     "pos": "v.",
     "meaning": "거품 거품이 일다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbəbəɫ/"
   },
   {
     "word": "budget",
     "pos": "n.",
     "meaning": "예산",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbədʒɪt/"
   },
   {
     "word": "bug",
     "pos": "n.",
     "meaning": "벌레",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbəɡ/"
   },
   {
     "word": "build",
     "pos": "v.",
     "meaning": "짓다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɪɫd/"
   },
   {
     "word": "bulk",
     "pos": "n.",
     "meaning": "부피",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbəɫk/"
   },
   {
     "word": "bull",
     "pos": "n.",
     "meaning": "황소",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbʊɫ/"
   },
   {
     "word": "bullet",
     "pos": "n.",
     "meaning": "탄환",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbʊɫət/"
   },
   {
     "word": "bully",
     "pos": "n.",
     "meaning": "약한 자를 못살게 구는 자",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbʊɫi/"
   },
   {
     "word": "bump",
     "pos": "v.",
     "meaning": "충돌 부딪치다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbəmp/"
   },
   {
     "word": "bunch",
     "pos": "n.",
     "meaning": "송이",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbəntʃ/"
   },
   {
     "word": "bundle",
     "pos": "n.",
     "meaning": "다발",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbəndəɫ/"
   },
   {
     "word": "burden",
     "pos": "n.",
     "meaning": "후렴",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɝdən/"
   },
   {
     "word": "burn",
     "pos": "n.",
     "meaning": "시내",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɝn/"
   },
   {
     "word": "burst",
     "pos": "v.",
     "meaning": "파열하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɝst/"
   },
   {
     "word": "bury",
     "pos": "v.",
     "meaning": "묻다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɛɹi/"
   },
   {
     "word": "bush",
     "pos": "n.",
     "meaning": "덤불",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbʊʃ/"
   },
   {
     "word": "business",
     "pos": "n.",
     "meaning": "직업",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɪznəs/, /ˈbɪznɪs/"
   },
   {
     "word": "busy",
     "pos": "n.",
     "meaning": "바쁜",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbɪzi/"
   },
   {
     "word": "but",
     "pos": "n.",
     "meaning": "그러나 다만 (-을)제외하고",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbət/"
   },
   {
     "word": "butcher",
     "pos": "a.",
     "meaning": "정육점주인",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbʊtʃɝ/"
   },
   {
     "word": "button",
     "pos": "v.",
     "meaning": "단추 단추를 채우다 단추로 채워지다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbətən/"
   },
   {
     "word": "buy",
     "pos": "v.",
     "meaning": "사다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbaɪ/"
   },
   {
     "word": "buzz",
     "pos": "n.",
     "meaning": "윙윙거리는 소리",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbəz/"
   },
   {
     "word": "by",
     "pos": "n.",
     "meaning": "곁에",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈbaɪ/"
   },
   {
     "word": "cab",
     "pos": "n.",
     "meaning": "택시",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkæb/"
   },
   {
     "word": "cabin",
     "pos": "n.",
     "meaning": "선실",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkæbən/"
   },
   {
     "word": "cable",
     "pos": "n.",
     "meaning": "해저전신",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkeɪbəɫ/"
   },
   {
     "word": "cage",
     "pos": "n.",
     "meaning": "새장",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkeɪdʒ/"
   },
   {
     "word": "calculate",
     "pos": "v.",
     "meaning": "계산하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkæɫkjəˌɫeɪt/"
   },
   {
     "word": "calendar",
     "pos": "n.",
     "meaning": "달력",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkæɫəndɝ/"
   },
   {
     "word": "call",
     "pos": "v.",
     "meaning": "부르다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɔɫ/"
   },
   {
     "word": "calm",
     "pos": "a.",
     "meaning": "평온한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑɫm/, /ˈkɑm/"
   },
   {
     "word": "can",
     "pos": "v.",
     "meaning": "au-할 수 있다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkæn/, /kən/"
   },
   {
     "word": "cancel",
     "pos": "v.",
     "meaning": "취소하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkænsəɫ/"
   },
   {
     "word": "cancer",
     "pos": "n.",
     "meaning": "암",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkænsɝ/"
   },
   {
     "word": "candidate",
     "pos": "n.",
     "meaning": "지원자",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkændədeɪt/, /ˈkænədɪt/"
   },
   {
     "word": "candy",
     "pos": "n.",
     "meaning": "사탕과자",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkændi/"
   },
   {
     "word": "canvas",
     "pos": "n.",
     "meaning": "돛베",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkænvəs/"
   },
   {
     "word": "cap",
     "pos": "n.",
     "meaning": "모자",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkæp/"
   },
   {
     "word": "capable",
     "pos": "a.",
     "meaning": "할 수 있는",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkeɪpəbəɫ/"
   },
   {
     "word": "cape",
     "pos": "n.",
     "meaning": "곶",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkeɪp/"
   },
   {
     "word": "capital",
     "pos": "a.",
     "meaning": "수위의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkæpətəɫ/, /ˈkæpɪtəɫ/"
   },
   {
     "word": "captain",
     "pos": "n.",
     "meaning": "우두머리(chief)",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkæptən/"
   },
   {
     "word": "caption",
     "pos": "n.",
     "meaning": "표제",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkæpʃən/"
   },
   {
     "word": "capture",
     "pos": "n.",
     "meaning": "붙잡다(=catch)",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkæptʃɝ/"
   },
   {
     "word": "car",
     "pos": "n.",
     "meaning": "자동차",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑɹ/"
   },
   {
     "word": "care",
     "pos": "n.",
     "meaning": "걱정",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɛɹ/"
   },
   {
     "word": "career",
     "pos": "n.",
     "meaning": "경력",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kɝˈɪɹ/"
   },
   {
     "word": "carrot",
     "pos": "n.",
     "meaning": "당근",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkæɹət/, /ˈkɛɹət/"
   },
   {
     "word": "carry",
     "pos": "v.",
     "meaning": "나르다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkæɹi/, /ˈkɛɹi/"
   },
   {
     "word": "cart",
     "pos": "n.",
     "meaning": "(2 륜)짐마차",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑɹt/"
   },
   {
     "word": "carve",
     "pos": "v.",
     "meaning": "조각하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑɹv/"
   },
   {
     "word": "case",
     "pos": "n.",
     "meaning": "경우",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkeɪs/"
   },
   {
     "word": "cash",
     "pos": "v.",
     "meaning": "현금 현금으로 바꾸다 현금의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkæʃ/"
   },
   {
     "word": "cast",
     "pos": "v.",
     "meaning": "던지다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkæst/"
   },
   {
     "word": "castle",
     "pos": "n.",
     "meaning": "성",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkæsəɫ/"
   },
   {
     "word": "casual",
     "pos": "a.",
     "meaning": "우연한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkæʒəwəɫ/, /ˈkæʒwəɫ/"
   },
   {
     "word": "cat",
     "pos": "n.",
     "meaning": "고양이",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkæt/"
   },
   {
     "word": "catch",
     "pos": "v.",
     "meaning": "붙잡다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkætʃ/"
   },
   {
     "word": "category",
     "pos": "n.",
     "meaning": "범주",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkætəˌɡɔɹi/"
   },
   {
     "word": "cater",
     "pos": "v.",
     "meaning": "음식물을 마련하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkeɪtɝ/"
   },
   {
     "word": "cathedral",
     "pos": "n.",
     "meaning": "대성당",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəˈθidɹəɫ/"
   },
   {
     "word": "cattle",
     "pos": "n.",
     "meaning": "소",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkætəɫ/"
   },
   {
     "word": "causal",
     "pos": "a.",
     "meaning": "원인의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɔzəɫ/"
   },
   {
     "word": "cause",
     "pos": "a.",
     "meaning": "원인",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑz/, /ˈkɔz/"
   },
   {
     "word": "caution",
     "pos": "n.",
     "meaning": "조심",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑʃən/, /ˈkɔʃən/"
   },
   {
     "word": "cave",
     "pos": "v.",
     "meaning": "동굴 굴을 파다 꺼지다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkeɪv/"
   },
   {
     "word": "cease",
     "pos": "v.",
     "meaning": "그만두다 그치다 중지",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈsis/"
   },
   {
     "word": "ceiling",
     "pos": "n.",
     "meaning": "천장",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈsiɫɪŋ/"
   },
   {
     "word": "celebrate",
     "pos": "v.",
     "meaning": "경축하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈsɛɫəˌbɹeɪt/"
   },
   {
     "word": "celebrity",
     "pos": "n.",
     "meaning": "명성",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/səˈɫɛbɹɪti/"
   },
   {
     "word": "cell",
     "pos": "n.",
     "meaning": "작은 방",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈsɛɫ/"
   },
   {
     "word": "censor",
     "pos": "n.",
     "meaning": "검열관",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈsɛnsɝ/"
   },
   {
     "word": "century",
     "pos": "n.",
     "meaning": "1 세기",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈsɛntʃɝi/"
   },
   {
     "word": "certain",
     "pos": "a.",
     "meaning": "확신하는",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈsɝtən/"
   },
   {
     "word": "certificate",
     "pos": "n.",
     "meaning": "증명서",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/sɝˈtɪfɪkət/"
   },
   {
     "word": "chain",
     "pos": "n.",
     "meaning": "사슬",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃeɪn/"
   },
   {
     "word": "chair",
     "pos": "n.",
     "meaning": "의장",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃɛɹ/"
   },
   {
     "word": "chairman",
     "pos": "n.",
     "meaning": "의장",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃɛɹmən/"
   },
   {
     "word": "challenge",
     "pos": "n.",
     "meaning": "도전",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃæɫəndʒ/"
   },
   {
     "word": "chamber",
     "pos": "n.",
     "meaning": "방",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃeɪmbɝ/"
   },
   {
     "word": "chance",
     "pos": "n.",
     "meaning": "우연",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃæns/"
   },
   {
     "word": "change",
     "pos": "n.",
     "meaning": "변화",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃeɪndʒ/"
   },
   {
     "word": "chaos",
     "pos": "n.",
     "meaning": "혼돈",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkeɪɑs/"
   },
   {
     "word": "character",
     "pos": "n.",
     "meaning": "인격",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɛɹɪktɝ/"
   },
   {
     "word": "characteristic",
     "pos": "a.",
     "meaning": "특유한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌkɛɹəktɝˈɪstɪk/"
   },
   {
     "word": "charge",
     "pos": "n.",
     "meaning": "요금",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃɑɹdʒ/"
   },
   {
     "word": "charity",
     "pos": "n.",
     "meaning": "자비",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃɛɹɪti/"
   },
   {
     "word": "charm",
     "pos": "n.",
     "meaning": "매력",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃɑɹm/"
   },
   {
     "word": "chase",
     "pos": "v.",
     "meaning": "쫓다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃeɪs/"
   },
   {
     "word": "chat",
     "pos": "n.",
     "meaning": "잡담",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃæt/"
   },
   {
     "word": "cheap",
     "pos": "n.",
     "meaning": "값싼",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃip/"
   },
   {
     "word": "check",
     "pos": "n.",
     "meaning": "방해",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃɛk/"
   },
   {
     "word": "cheek",
     "pos": "n.",
     "meaning": "볼",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃik/"
   },
   {
     "word": "cheer",
     "pos": "n.",
     "meaning": "갈채",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃɪɹ/"
   },
   {
     "word": "chef",
     "pos": "n.",
     "meaning": "쿡",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈʃɛf/"
   },
   {
     "word": "chemical",
     "pos": "a.",
     "meaning": "화학의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɛməkəɫ/, /ˈkɛmɪkəɫ/"
   },
   {
     "word": "chemistry",
     "pos": "n.",
     "meaning": "화학",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɛməstɹi/, /ˈkɛmɪstɹi/"
   },
   {
     "word": "chest",
     "pos": "n.",
     "meaning": "가슴팍",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃɛst/"
   },
   {
     "word": "chew",
     "pos": "v.",
     "meaning": "씹다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃu/"
   },
   {
     "word": "chief",
     "pos": "n.",
     "meaning": "우두머리",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃif/"
   },
   {
     "word": "child",
     "pos": "n.",
     "meaning": "아이",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃaɪɫd/"
   },
   {
     "word": "chill",
     "pos": "n.",
     "meaning": "차가움",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃɪɫ/"
   },
   {
     "word": "chin",
     "pos": "v.",
     "meaning": "턱(끝) 턱에 대다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃɪn/"
   },
   {
     "word": "chip",
     "pos": "n.",
     "meaning": "(나무)토막",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃɪp/"
   },
   {
     "word": "choir",
     "pos": "n.",
     "meaning": "(교회의)성가대",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkwaɪɝ/"
   },
   {
     "word": "choose",
     "pos": "v.",
     "meaning": "고르다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃuz/"
   },
   {
     "word": "chop",
     "pos": "v.",
     "meaning": "(도끼 등으로)자르다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃɑp/"
   },
   {
     "word": "chorus",
     "pos": "n.",
     "meaning": "합창",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɔɹəs/"
   },
   {
     "word": "chronic",
     "pos": "a.",
     "meaning": "만성의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹɑnɪk/"
   },
   {
     "word": "church",
     "pos": "n.",
     "meaning": "교회",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈtʃɝtʃ/"
   },
   {
     "word": "cigarette",
     "pos": "n.",
     "meaning": "궐련",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌsɪɡɝˈɛt/"
   },
   {
     "word": "cinema",
     "pos": "n.",
     "meaning": "영화관",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈsɪnəmə/"
   },
   {
     "word": "circle",
     "pos": "n.",
     "meaning": "원",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈsɝkəɫ/"
   },
   {
     "word": "circulate",
     "pos": "v.",
     "meaning": "순환하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈsɝkjəˌɫeɪt/"
   },
   {
     "word": "circumstance",
     "pos": "n.",
     "meaning": "환경",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈsɝkəmˌstæns/"
   },
   {
     "word": "cite",
     "pos": "n.",
     "meaning": "인용하다(quote)",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈsaɪt/"
   },
   {
     "word": "citizen",
     "pos": "n.",
     "meaning": "시민",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈsɪtəzən/, /ˈsɪtɪzən/"
   },
   {
     "word": "city",
     "pos": "n.",
     "meaning": "도시",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈsɪti/"
   },
   {
     "word": "civil",
     "pos": "a.",
     "meaning": "시민의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈsɪvəɫ/"
   },
   {
     "word": "claim",
     "pos": "v.",
     "meaning": "요구하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫeɪm/"
   },
   {
     "word": "clap",
     "pos": "n.",
     "meaning": "짝짝",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫæp/"
   },
   {
     "word": "clarify",
     "pos": "v.",
     "meaning": "맑게 하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫɛɹəˌfaɪ/"
   },
   {
     "word": "clash",
     "pos": "v.",
     "meaning": "충돌하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫæʃ/"
   },
   {
     "word": "class",
     "pos": "n.",
     "meaning": "계급",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫæs/"
   },
   {
     "word": "classic",
     "pos": "a.",
     "meaning": "고전의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫæsɪk/"
   },
   {
     "word": "classify",
     "pos": "v.",
     "meaning": "분류하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫæsəˌfaɪ/"
   },
   {
     "word": "classroom",
     "pos": "n.",
     "meaning": "교실",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫæsˌɹum/"
   },
   {
     "word": "clause",
     "pos": "n.",
     "meaning": "조항",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫɔz/"
   },
   {
     "word": "clay",
     "pos": "n.",
     "meaning": "찰흙",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫeɪ/"
   },
   {
     "word": "clean",
     "pos": "a.",
     "meaning": "청결한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫin/"
   },
   {
     "word": "clear",
     "pos": "n.",
     "meaning": "맑은",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫɪɹ/"
   },
   {
     "word": "clerk",
     "pos": "n.",
     "meaning": "서기",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫɝk/"
   },
   {
     "word": "clever",
     "pos": "a.",
     "meaning": "영리한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫɛvɝ/"
   },
   {
     "word": "client",
     "pos": "a.",
     "meaning": "소송의뢰인",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫaɪənt/"
   },
   {
     "word": "cliff",
     "pos": "n.",
     "meaning": "절벽",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫɪf/"
   },
   {
     "word": "climate",
     "pos": "n.",
     "meaning": "기후",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫaɪmət/, /ˈkɫaɪmɪt/"
   },
   {
     "word": "climb",
     "pos": "v.",
     "meaning": "기어 오르다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫaɪm/"
   },
   {
     "word": "cling",
     "pos": "v.",
     "meaning": "밀착하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫɪŋ/"
   },
   {
     "word": "clinic",
     "pos": "n.",
     "meaning": "병원",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫɪnɪk/"
   },
   {
     "word": "clip",
     "pos": "v.",
     "meaning": "가위로 자르다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫɪp/"
   },
   {
     "word": "clock",
     "pos": "n.",
     "meaning": "시계",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫɑk/"
   },
   {
     "word": "close",
     "pos": "v.",
     "meaning": "닫다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫoʊs/, /ˈkɫoʊz/"
   },
   {
     "word": "cloth",
     "pos": "n.",
     "meaning": "천",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫɔθ/"
   },
   {
     "word": "cloud",
     "pos": "n.",
     "meaning": "구름",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫaʊd/"
   },
   {
     "word": "club",
     "pos": "n.",
     "meaning": "클럽",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫəb/"
   },
   {
     "word": "clue",
     "pos": "n.",
     "meaning": "단서",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫu/"
   },
   {
     "word": "cluster",
     "pos": "n.",
     "meaning": "떼",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɫəstɝ/"
   },
   {
     "word": "coach",
     "pos": "n.",
     "meaning": "역마차",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkoʊtʃ/"
   },
   {
     "word": "coal",
     "pos": "n.",
     "meaning": "석탄",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkoʊɫ/"
   },
   {
     "word": "coast",
     "pos": "n.",
     "meaning": "연안",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkoʊst/"
   },
   {
     "word": "code",
     "pos": "n.",
     "meaning": "법전",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkoʊd/"
   },
   {
     "word": "coin",
     "pos": "n.",
     "meaning": "화폐",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɔɪn/"
   },
   {
     "word": "coincide",
     "pos": "v.",
     "meaning": "일치하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌkoʊɪnˈsaɪd/"
   },
   {
     "word": "cold",
     "pos": "n.",
     "meaning": "추운",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkoʊɫd/"
   },
   {
     "word": "collaborate",
     "pos": "v.",
     "meaning": "공동으로 일하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəˈɫæbɝˌeɪt/"
   },
   {
     "word": "collapse",
     "pos": "n.",
     "meaning": "붕괴",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəˈɫæps/"
   },
   {
     "word": "collar",
     "pos": "n.",
     "meaning": "칼라",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑɫɝ/"
   },
   {
     "word": "colleague",
     "pos": "n.",
     "meaning": "동료",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑɫiɡ/"
   },
   {
     "word": "collect",
     "pos": "v.",
     "meaning": "모으다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəˈɫɛkt/"
   },
   {
     "word": "college",
     "pos": "n.",
     "meaning": "단과대학",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑɫɪdʒ/"
   },
   {
     "word": "colony",
     "pos": "n.",
     "meaning": "식민지",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑɫəni/"
   },
   {
     "word": "color",
     "pos": "v.",
     "meaning": "착색하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkəɫɝ/, /ˈkɔɫɝ/"
   },
   {
     "word": "column",
     "pos": "n.",
     "meaning": "(신문 등의)난",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑɫəm/"
   },
   {
     "word": "combat",
     "pos": "v.",
     "meaning": "격투하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑmbæt/, /kəmˈbæt/"
   },
   {
     "word": "combine",
     "pos": "v.",
     "meaning": "결합하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑmbaɪn/, /kəmˈbaɪn/"
   },
   {
     "word": "come",
     "pos": "v.",
     "meaning": "오다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkəm/"
   },
   {
     "word": "comedy",
     "pos": "n.",
     "meaning": "희극",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑmədi/"
   },
   {
     "word": "comfort",
     "pos": "n.",
     "meaning": "위안",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkəmfɝt/"
   },
   {
     "word": "command",
     "pos": "v.",
     "meaning": "명령하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəˈmænd/"
   },
   {
     "word": "commence",
     "pos": "v.",
     "meaning": "시작하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəˈmɛns/"
   },
   {
     "word": "comment",
     "pos": "n.",
     "meaning": "논평",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑmɛnt/"
   },
   {
     "word": "commerce",
     "pos": "n.",
     "meaning": "상업",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑmɝs/"
   },
   {
     "word": "commission",
     "pos": "n.",
     "meaning": "위임",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəˈmɪʃən/"
   },
   {
     "word": "commit",
     "pos": "v.",
     "meaning": "위탁하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəˈmɪt/"
   },
   {
     "word": "committee",
     "pos": "n.",
     "meaning": "위원회",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəˈmɪti/"
   },
   {
     "word": "commodity",
     "pos": "n.",
     "meaning": "상품",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəˈmɑdəti/"
   },
   {
     "word": "communicate",
     "pos": "v.",
     "meaning": "알리다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəmˈjunəˌkeɪt/"
   },
   {
     "word": "communist",
     "pos": "n.",
     "meaning": "공산주의자",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑmjənəst/"
   },
   {
     "word": "community",
     "pos": "n.",
     "meaning": "공동생활체",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəmˈjunəti/, /kəmˈjunɪti/"
   },
   {
     "word": "companion",
     "pos": "n.",
     "meaning": "동료",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəmˈpænjən/"
   },
   {
     "word": "company",
     "pos": "n.",
     "meaning": "교제",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkəmpəˌni/"
   },
   {
     "word": "compare",
     "pos": "v.",
     "meaning": "비교하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəmˈpɛɹ/"
   },
   {
     "word": "compatible",
     "pos": "a.",
     "meaning": "양립할 수 있는",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəmˈpætəbəɫ/"
   },
   {
     "word": "compel",
     "pos": "v.",
     "meaning": "억지로 -시키다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəmˈpɛɫ/"
   },
   {
     "word": "compensate",
     "pos": "v.",
     "meaning": "배상하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑmpənˌseɪt/"
   },
   {
     "word": "compete",
     "pos": "v.",
     "meaning": "경쟁하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəmˈpit/"
   },
   {
     "word": "competent",
     "pos": "a.",
     "meaning": "능력있는",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑmpətɪnt/"
   },
   {
     "word": "compile",
     "pos": "v.",
     "meaning": "편찬하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəmˈpaɪɫ/"
   },
   {
     "word": "complain",
     "pos": "v.",
     "meaning": "불평하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəmˈpɫeɪn/"
   },
   {
     "word": "complement",
     "pos": "n.",
     "meaning": "보완하는 것",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑmpɫəmənt/"
   },
   {
     "word": "complete",
     "pos": "v.",
     "meaning": "완성하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəmˈpɫit/"
   },
   {
     "word": "complex",
     "pos": "n.",
     "meaning": "합성물",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑmpɫɛks/, /kəmˈpɫɛks/"
   },
   {
     "word": "complicate",
     "pos": "v.",
     "meaning": "복잡하게 하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑmpɫəˌkeɪt/"
   },
   {
     "word": "component",
     "pos": "n.",
     "meaning": "구성하는 성분",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəmˈpoʊnənt/"
   },
   {
     "word": "compose",
     "pos": "v.",
     "meaning": "구성하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəmˈpoʊz/"
   },
   {
     "word": "compound",
     "pos": "v.",
     "meaning": "성분 등을 혼합하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑmpaʊnd/, /kəmˈpaʊnd/"
   },
   {
     "word": "comprehensive",
     "pos": "a.",
     "meaning": "이해력있는",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌkɑmpɹiˈhɛnsɪv/"
   },
   {
     "word": "comprise",
     "pos": "v.",
     "meaning": "포함하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəmˈpɹaɪz/"
   },
   {
     "word": "compromise",
     "pos": "v.",
     "meaning": "타협 타협하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑmpɹəˌmaɪz/"
   },
   {
     "word": "compulsory",
     "pos": "a.",
     "meaning": "의무적인",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəmˈpəɫsɝi/"
   },
   {
     "word": "conceal",
     "pos": "v.",
     "meaning": "숨기다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈsiɫ/"
   },
   {
     "word": "conceive",
     "pos": "v.",
     "meaning": "상상하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈsiv/"
   },
   {
     "word": "concentrate",
     "pos": "v.",
     "meaning": "집중하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑnsənˌtɹeɪt/"
   },
   {
     "word": "concept",
     "pos": "n.",
     "meaning": "개념",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑnsɛpt/"
   },
   {
     "word": "concern",
     "pos": "v.",
     "meaning": "관계하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈsɝn/"
   },
   {
     "word": "concert",
     "pos": "n.",
     "meaning": "연주회",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑnsɝt/, /kənˈsɝt/"
   },
   {
     "word": "conclude",
     "pos": "v.",
     "meaning": "결정하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈkɫud/"
   },
   {
     "word": "concrete",
     "pos": "n.",
     "meaning": "구체적인 응고물",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑnkɹit/, /kənˈkɹit/"
   },
   {
     "word": "condemn",
     "pos": "v.",
     "meaning": "나무라다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈdɛm/"
   },
   {
     "word": "condition",
     "pos": "n.",
     "meaning": "조건",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈdɪʃən/"
   },
   {
     "word": "conduct",
     "pos": "v.",
     "meaning": "행위 이끌다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑndəkt/, /kɑnˈdəkt/"
   },
   {
     "word": "confer",
     "pos": "v.",
     "meaning": "주다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈfɝ/"
   },
   {
     "word": "confess",
     "pos": "v.",
     "meaning": "실토하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈfɛs/"
   },
   {
     "word": "confident",
     "pos": "a.",
     "meaning": "확신하는",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑnfədənt/"
   },
   {
     "word": "confine",
     "pos": "n.",
     "meaning": "국경",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈfaɪn/"
   },
   {
     "word": "confirm",
     "pos": "v.",
     "meaning": "확인하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈfɝm/"
   },
   {
     "word": "conflict",
     "pos": "n.",
     "meaning": "투쟁",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑnfɫɪkt/, /kənˈfɫɪkt/"
   },
   {
     "word": "conform",
     "pos": "v.",
     "meaning": "일치시키다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈfɔɹm/"
   },
   {
     "word": "confront",
     "pos": "v.",
     "meaning": "직면하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈfɹənt/"
   },
   {
     "word": "confuse",
     "pos": "v.",
     "meaning": "혼란시키다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈfjuz/"
   },
   {
     "word": "congratulate",
     "pos": "v.",
     "meaning": "축하하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈɡɹætʃəˌɫeɪt/"
   },
   {
     "word": "congress",
     "pos": "a.",
     "meaning": "회의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑŋɡɹəs/"
   },
   {
     "word": "connect",
     "pos": "v.",
     "meaning": "잇다 이어지다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kəˈnɛkt/"
   },
   {
     "word": "conscience",
     "pos": "n.",
     "meaning": "양심",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑnʃəns/"
   },
   {
     "word": "conscious",
     "pos": "a.",
     "meaning": "의식적인",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑnʃəs/"
   },
   {
     "word": "consensus",
     "pos": "n.",
     "meaning": "(의견 등의)일치",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈsɛnsəs/"
   },
   {
     "word": "consent",
     "pos": "v.",
     "meaning": "승낙하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈsɛnt/"
   },
   {
     "word": "conserve",
     "pos": "v.",
     "meaning": "보존하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈsɝv/"
   },
   {
     "word": "consider",
     "pos": "v.",
     "meaning": "숙고하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈsɪdɝ/"
   },
   {
     "word": "consist",
     "pos": "v.",
     "meaning": "-으로 이루어지다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈsɪst/"
   },
   {
     "word": "consistent",
     "pos": "a.",
     "meaning": "시종일관한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈsɪstənt/"
   },
   {
     "word": "constant",
     "pos": "a.",
     "meaning": "불변의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑnstənt/"
   },
   {
     "word": "constitute",
     "pos": "v.",
     "meaning": "구성하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑnstəˌtut/"
   },
   {
     "word": "constrain",
     "pos": "v.",
     "meaning": "강제하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈstɹeɪn/"
   },
   {
     "word": "construct",
     "pos": "v.",
     "meaning": "건조하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑnstɹəkt/, /kənˈstɹəkt/"
   },
   {
     "word": "consult",
     "pos": "v.",
     "meaning": "상의하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈsəɫt/"
   },
   {
     "word": "consume",
     "pos": "v.",
     "meaning": "소비하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈsum/"
   },
   {
     "word": "contact",
     "pos": "n.",
     "meaning": "접촉",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑnˌtækt/"
   },
   {
     "word": "contain",
     "pos": "v.",
     "meaning": "내포하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈteɪn/"
   },
   {
     "word": "contemporary",
     "pos": "a.",
     "meaning": "현대의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈtɛmpɝˌɛɹi/"
   },
   {
     "word": "contend",
     "pos": "v.",
     "meaning": "싸우다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈtɛnd/"
   },
   {
     "word": "content",
     "pos": "n.",
     "meaning": "만족하여",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑntɛnt/, /kənˈtɛnt/"
   },
   {
     "word": "contest",
     "pos": "v.",
     "meaning": "겨루다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑntɛst/, /kənˈtɛst/"
   },
   {
     "word": "context",
     "pos": "n.",
     "meaning": "문맥",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑntɛkst/"
   },
   {
     "word": "continent",
     "pos": "a.",
     "meaning": "자제심이 있는",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑntənənt/"
   },
   {
     "word": "continue",
     "pos": "v.",
     "meaning": "계속하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈtɪnju/"
   },
   {
     "word": "contract",
     "pos": "n.",
     "meaning": "계약",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑnˌtɹækt/, /kənˈtɹækt/"
   },
   {
     "word": "contradict",
     "pos": "v.",
     "meaning": "반박하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌkɑntɹəˈdɪkt/"
   },
   {
     "word": "contrary",
     "pos": "ad.",
     "meaning": "반대의 반대 거꾸로",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑntɹɛɹi/, /kənˈtɹɛɹi/"
   },
   {
     "word": "contrast",
     "pos": "n.",
     "meaning": "대조",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑntɹæst/, /kənˈtɹæst/"
   },
   {
     "word": "contribute",
     "pos": "v.",
     "meaning": "기부하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈtɹɪbjut/"
   },
   {
     "word": "control",
     "pos": "v.",
     "meaning": "억제하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈtɹoʊɫ/"
   },
   {
     "word": "controversy",
     "pos": "n.",
     "meaning": "논쟁",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑntɹəˌvɝsi/"
   },
   {
     "word": "convenient",
     "pos": "a.",
     "meaning": "편리한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈvinjənt/"
   },
   {
     "word": "convention",
     "pos": "n.",
     "meaning": "관례",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈvɛnʃən/"
   },
   {
     "word": "conversation",
     "pos": "n.",
     "meaning": "회화",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌkɑnvɝˈseɪʃən/"
   },
   {
     "word": "convert",
     "pos": "v.",
     "meaning": "바꾸다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑnvɝt/, /kənˈvɝt/"
   },
   {
     "word": "convey",
     "pos": "v.",
     "meaning": "나르다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈveɪ/"
   },
   {
     "word": "convict",
     "pos": "v.",
     "meaning": "유죄로 판결하다 죄수",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑnvɪkt/, /kənˈvɪkt/"
   },
   {
     "word": "convince",
     "pos": "v.",
     "meaning": "확신시키다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kənˈvɪns/"
   },
   {
     "word": "cook",
     "pos": "v.",
     "meaning": "요리하다 요리사",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkʊk/"
   },
   {
     "word": "cookie",
     "pos": "n.",
     "meaning": "쿠키",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkʊki/"
   },
   {
     "word": "cool",
     "pos": "a.",
     "meaning": "서늘한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkuɫ/"
   },
   {
     "word": "cooperate",
     "pos": "v.",
     "meaning": "협동하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkwɑpɝˌeɪt/, /koʊˈɑpɝˌeɪt/"
   },
   {
     "word": "coordinate",
     "pos": "a.",
     "meaning": "동격의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/koʊˈɔɹdəˌneɪt/, /koʊˈɔɹdənət/"
   },
   {
     "word": "cop",
     "pos": "n.",
     "meaning": "순경",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑp/"
   },
   {
     "word": "cope",
     "pos": "n.",
     "meaning": "코우프(성직자의 긴 겉옷)",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkoʊp/"
   },
   {
     "word": "copy",
     "pos": "n.",
     "meaning": "사본",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑpi/"
   },
   {
     "word": "copyright",
     "pos": "n.",
     "meaning": "판권",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑpiˌɹaɪt/"
   },
   {
     "word": "cord",
     "pos": "n.",
     "meaning": "밧줄",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɔɹd/"
   },
   {
     "word": "core",
     "pos": "n.",
     "meaning": "핵심",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɔɹ/"
   },
   {
     "word": "corn",
     "pos": "n.",
     "meaning": "티눈",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɔɹn/"
   },
   {
     "word": "corner",
     "pos": "n.",
     "meaning": "모퉁이",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɔɹnɝ/"
   },
   {
     "word": "corporate",
     "pos": "a.",
     "meaning": "법인조직의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɔɹpɝət/, /ˈkɔɹpɹət/"
   },
   {
     "word": "correct",
     "pos": "n.",
     "meaning": "옳은",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kɝˈɛkt/"
   },
   {
     "word": "correspond",
     "pos": "v.",
     "meaning": "일치하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌkɔɹəˈspɑnd/"
   },
   {
     "word": "corridor",
     "pos": "n.",
     "meaning": "복도",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɔɹədɝ/, /ˈkɔɹɪdɝ/"
   },
   {
     "word": "corrupt",
     "pos": "a.",
     "meaning": "타락한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kɝˈəpt/"
   },
   {
     "word": "cost",
     "pos": "n.",
     "meaning": "가격",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑst/, /ˈkɔst/"
   },
   {
     "word": "costume",
     "pos": "n.",
     "meaning": "복장",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑstum/, /kɑˈstum/"
   },
   {
     "word": "cottage",
     "pos": "n.",
     "meaning": "시골집",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑtədʒ/, /ˈkɑtɪdʒ/"
   },
   {
     "word": "cotton",
     "pos": "n.",
     "meaning": "목화",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑtən/, /ˈkɔtən/"
   },
   {
     "word": "couch",
     "pos": "n.",
     "meaning": "침대",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkaʊtʃ/"
   },
   {
     "word": "cough",
     "pos": "v.",
     "meaning": "기침 기침을 하다 기침을 하여 -을 뱉어내다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑf/, /ˈkɔf/"
   },
   {
     "word": "could aucan",
     "pos": "n.",
     "meaning": "의 과거",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": ""
   },
   {
     "word": "council",
     "pos": "a.",
     "meaning": "회의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkaʊnsəɫ/"
   },
   {
     "word": "counsel",
     "pos": "n.",
     "meaning": "의논",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkaʊnsəɫ/"
   },
   {
     "word": "count",
     "pos": "n.",
     "meaning": "계산",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkaʊnt/"
   },
   {
     "word": "counter",
     "pos": "n.",
     "meaning": "계산하는 person",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkaʊntɝ/"
   },
   {
     "word": "counterpart",
     "pos": "n.",
     "meaning": "부본",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkaʊntɝˌpɑɹt/"
   },
   {
     "word": "country",
     "pos": "n.",
     "meaning": "나라",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkəntɹi/"
   },
   {
     "word": "countryside",
     "pos": "n.",
     "meaning": "시골",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkəntɹiˌsaɪd/"
   },
   {
     "word": "county",
     "pos": "n.",
     "meaning": "주",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkaʊni/, /ˈkaʊnti/"
   },
   {
     "word": "couple",
     "pos": "n.",
     "meaning": "한 쌍",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkəpəɫ/"
   },
   {
     "word": "courage",
     "pos": "n.",
     "meaning": "용기",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɝədʒ/, /ˈkɝɪdʒ/"
   },
   {
     "word": "cousin",
     "pos": "n.",
     "meaning": "사촌",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkəzən/"
   },
   {
     "word": "cover",
     "pos": "v.",
     "meaning": "덮다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkəvɝ/"
   },
   {
     "word": "cow",
     "pos": "v.",
     "meaning": "위협하다 암소",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkaʊ/"
   },
   {
     "word": "cowboy",
     "pos": "n.",
     "meaning": "목동",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkaʊˌbɔɪ/"
   },
   {
     "word": "crack",
     "pos": "v.",
     "meaning": "찰싹 소리내다 금가다 날카로운소리",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹæk/"
   },
   {
     "word": "craft",
     "pos": "n.",
     "meaning": "솜씨",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹæft/"
   },
   {
     "word": "crash",
     "pos": "n.",
     "meaning": "도산",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹæʃ/"
   },
   {
     "word": "crawl",
     "pos": "v.",
     "meaning": "네발로 기다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹɔɫ/"
   },
   {
     "word": "crazy",
     "pos": "n.",
     "meaning": "미친",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹeɪzi/"
   },
   {
     "word": "create",
     "pos": "v.",
     "meaning": "창조하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kɹiˈeɪt/"
   },
   {
     "word": "creature",
     "pos": "n.",
     "meaning": "창조물",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹitʃɝ/"
   },
   {
     "word": "credible",
     "pos": "a.",
     "meaning": "믿을 수 있는",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹɛdəbəɫ/"
   },
   {
     "word": "credit",
     "pos": "n.",
     "meaning": "신용",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹɛdət/, /ˈkɹɛdɪt/"
   },
   {
     "word": "creek",
     "pos": "n.",
     "meaning": "시내",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹik/"
   },
   {
     "word": "creep",
     "pos": "v.",
     "meaning": "기다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹip/"
   },
   {
     "word": "crew",
     "pos": "n.",
     "meaning": "승무원",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹu/"
   },
   {
     "word": "cricket",
     "pos": "n.",
     "meaning": "크리켓",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹɪkət/, /ˈkɹɪkɪt/"
   },
   {
     "word": "crime",
     "pos": "n.",
     "meaning": "범죄",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹaɪm/"
   },
   {
     "word": "criminal",
     "pos": "a.",
     "meaning": "죄의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹɪmənəɫ/"
   },
   {
     "word": "crisis",
     "pos": "n.",
     "meaning": "위기",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹaɪsəs/"
   },
   {
     "word": "crisp",
     "pos": "a.",
     "meaning": "파삭파삭한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹɪsp/"
   },
   {
     "word": "criteria criterion",
     "pos": "n.",
     "meaning": "의 복수형",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": ""
   },
   {
     "word": "critic",
     "pos": "n.",
     "meaning": "비평가",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹɪtɪk/"
   },
   {
     "word": "criticize",
     "pos": "v.",
     "meaning": "비평하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹɪtɪˌsaɪz/"
   },
   {
     "word": "criticism",
     "pos": "n.",
     "meaning": "비평",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹɪtɪˌsɪzəm/"
   },
   {
     "word": "crop",
     "pos": "n.",
     "meaning": "수확",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹɑp/"
   },
   {
     "word": "cross",
     "pos": "n.",
     "meaning": "십자형",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹɔs/"
   },
   {
     "word": "crowd",
     "pos": "n.",
     "meaning": "군중",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹaʊd/"
   },
   {
     "word": "crown",
     "pos": "n.",
     "meaning": "왕관",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹaʊn/"
   },
   {
     "word": "crucial",
     "pos": "a.",
     "meaning": "결정적인",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹuʃəɫ/"
   },
   {
     "word": "cruel",
     "pos": "a.",
     "meaning": "잔인한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹuəɫ/, /ˈkɹuɫ/"
   },
   {
     "word": "cruise",
     "pos": "v.",
     "meaning": "순항하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹuz/"
   },
   {
     "word": "crush",
     "pos": "v.",
     "meaning": "눌러 부수다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹəʃ/"
   },
   {
     "word": "cry",
     "pos": "v.",
     "meaning": "소리치다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹaɪ/"
   },
   {
     "word": "crystal",
     "pos": "n.",
     "meaning": "수정",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɹɪstəɫ/"
   },
   {
     "word": "cultivate",
     "pos": "v.",
     "meaning": "경작하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkəɫtəˌveɪt/"
   },
   {
     "word": "culture",
     "pos": "n.",
     "meaning": "문화",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkəɫtʃɝ/"
   },
   {
     "word": "cupboard",
     "pos": "n.",
     "meaning": "찬장",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkəbɝd/"
   },
   {
     "word": "cure",
     "pos": "n.",
     "meaning": "치료",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkjʊɹ/"
   },
   {
     "word": "curious",
     "pos": "n.",
     "meaning": "이상스러운",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkjʊɹiəs/"
   },
   {
     "word": "curl",
     "pos": "v.",
     "meaning": "곱슬머리 머리털을 지지다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɝɫ/"
   },
   {
     "word": "currency",
     "pos": "n.",
     "meaning": "통용",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɝənsi/"
   },
   {
     "word": "current",
     "pos": "a.",
     "meaning": "유행의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɑɹənt/, /ˈkɝənt/, /ˈkɝnt/"
   },
   {
     "word": "curriculum",
     "pos": "n.",
     "meaning": "과목",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/kɝˈɪkjəɫəm/"
   },
   {
     "word": "curry",
     "pos": "v.",
     "meaning": "카레요리 카레로 맛을 내다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkəɹi/, /ˈkɝi/"
   },
   {
     "word": "curse",
     "pos": "n.",
     "meaning": "저주",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɝs/"
   },
   {
     "word": "curtain",
     "pos": "n.",
     "meaning": "커어튼",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɝtən/"
   },
   {
     "word": "curve",
     "pos": "n.",
     "meaning": "곡선",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkɝv/"
   },
   {
     "word": "custody",
     "pos": "n.",
     "meaning": "보호",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkəstədi/"
   },
   {
     "word": "custom",
     "pos": "n.",
     "meaning": "습관",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkəstəm/"
   },
   {
     "word": "customer",
     "pos": "n.",
     "meaning": "고객",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkəstəmɝ/"
   },
   {
     "word": "cut",
     "pos": "v.",
     "meaning": "베다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkət/"
   },
   {
     "word": "cute",
     "pos": "n.",
     "meaning": "귀여운",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈkjut/"
   },
   {
     "word": "cycle",
     "pos": "n.",
     "meaning": "순환",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈsaɪkəɫ/"
   },
   {
     "word": "cynical",
     "pos": "a.",
     "meaning": "냉소적인",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈsɪnɪkəɫ/"
   },
   {
     "word": "dad",
     "pos": "n.",
     "meaning": "아빠",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdæd/"
   },
   {
     "word": "dairy",
     "pos": "n.",
     "meaning": "낙농장",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛɹi/"
   },
   {
     "word": "dam",
     "pos": "n.",
     "meaning": "댐",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdæm/"
   },
   {
     "word": "damage",
     "pos": "n.",
     "meaning": "손해",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdæmədʒ/, /ˈdæmɪdʒ/"
   },
   {
     "word": "damp",
     "pos": "v.",
     "meaning": "축축한 습기 적시다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdæmp/"
   },
   {
     "word": "dance",
     "pos": "n.",
     "meaning": "댄스",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdæns/"
   },
   {
     "word": "danger",
     "pos": "n.",
     "meaning": "위험",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdeɪndʒɝ/"
   },
   {
     "word": "dare au",
     "pos": "v.",
     "meaning": "감히 -하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": ""
   },
   {
     "word": "dark",
     "pos": "n.",
     "meaning": "어두운",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɑɹk/"
   },
   {
     "word": "darling",
     "pos": "n.",
     "meaning": "귀여운",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɑɹɫɪŋ/"
   },
   {
     "word": "dash",
     "pos": "n.",
     "meaning": "돌진",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdæʃ/"
   },
   {
     "word": "database",
     "pos": "n.",
     "meaning": "데이터베이스",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdætəˌbeɪs/, /ˈdeɪtəˌbeɪs/"
   },
   {
     "word": "date",
     "pos": "n.",
     "meaning": "날짜",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdeɪt/"
   },
   {
     "word": "daughter",
     "pos": "n.",
     "meaning": "딸",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɔtɝ/"
   },
   {
     "word": "dawn",
     "pos": "v.",
     "meaning": "새벽 날이 새다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɔn/"
   },
   {
     "word": "day",
     "pos": "n.",
     "meaning": "낮",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdeɪ/"
   },
   {
     "word": "dead",
     "pos": "n.",
     "meaning": "죽은",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛd/"
   },
   {
     "word": "deal",
     "pos": "n.",
     "meaning": "양",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdiɫ/"
   },
   {
     "word": "death",
     "pos": "n.",
     "meaning": "죽음",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛθ/"
   },
   {
     "word": "debate",
     "pos": "v.",
     "meaning": "토론 토론하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dəˈbeɪt/"
   },
   {
     "word": "debt",
     "pos": "n.",
     "meaning": "빚",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛt/"
   },
   {
     "word": "decade",
     "pos": "n.",
     "meaning": "10 년간",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛkeɪd/, /dɛˈkeɪd/"
   },
   {
     "word": "decay",
     "pos": "v.",
     "meaning": "쇠퇴하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈkeɪ/"
   },
   {
     "word": "decent",
     "pos": "n.",
     "meaning": "점잖은",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdisənt/"
   },
   {
     "word": "decide",
     "pos": "v.",
     "meaning": "결정하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌdɪˈsaɪd/"
   },
   {
     "word": "decision",
     "pos": "n.",
     "meaning": "결정",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈsɪʒən/"
   },
   {
     "word": "deck",
     "pos": "n.",
     "meaning": "갑판",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛk/"
   },
   {
     "word": "declare",
     "pos": "v.",
     "meaning": "선언하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈkɫɛɹ/"
   },
   {
     "word": "decline",
     "pos": "v.",
     "meaning": "기울다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈkɫaɪn/"
   },
   {
     "word": "decorate",
     "pos": "v.",
     "meaning": "장식하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛkɝˌeɪt/"
   },
   {
     "word": "decrease",
     "pos": "v.",
     "meaning": "감소하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdiˌkɹis/, /dɪˈkɹis/"
   },
   {
     "word": "dedicate",
     "pos": "v.",
     "meaning": "봉납하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛdəˌkeɪt/"
   },
   {
     "word": "deep",
     "pos": "n.",
     "meaning": "깊은",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdip/"
   },
   {
     "word": "defeat",
     "pos": "n.",
     "meaning": "패배",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈfit/"
   },
   {
     "word": "defense",
     "pos": "n.",
     "meaning": "방어",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈfɛns/"
   },
   {
     "word": "defend",
     "pos": "v.",
     "meaning": "방어하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈfɛnd/"
   },
   {
     "word": "defendant",
     "pos": "a.",
     "meaning": "피고 피고의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈfɛndənt/"
   },
   {
     "word": "deficiency",
     "pos": "n.",
     "meaning": "결핍",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈfɪʃənsi/"
   },
   {
     "word": "deficit",
     "pos": "n.",
     "meaning": "결손",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛfəsət/"
   },
   {
     "word": "define",
     "pos": "v.",
     "meaning": "정의하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈfaɪn/"
   },
   {
     "word": "definite",
     "pos": "a.",
     "meaning": "일정한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛfənət/"
   },
   {
     "word": "degrade",
     "pos": "v.",
     "meaning": "지위를 낮추다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈɡɹeɪd/"
   },
   {
     "word": "degree",
     "pos": "n.",
     "meaning": "도",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈɡɹi/"
   },
   {
     "word": "delay",
     "pos": "v.",
     "meaning": "늦추다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈɫeɪ/"
   },
   {
     "word": "delegate",
     "pos": "v.",
     "meaning": "파견하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛɫəˌɡeɪt/, /ˈdɛɫəɡət/"
   },
   {
     "word": "delete",
     "pos": "v.",
     "meaning": "삭제하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈɫit/"
   },
   {
     "word": "deliberate",
     "pos": "v.",
     "meaning": "숙고하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈɫɪbɝˌeɪt/, /dɪˈɫɪbɝət/, /dɪˈɫɪbɹət/"
   },
   {
     "word": "delicate",
     "pos": "a.",
     "meaning": "미묘한",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛɫəkət/"
   },
   {
     "word": "delicious",
     "pos": "a.",
     "meaning": "맛있는",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈɫɪʃəs/"
   },
   {
     "word": "delight",
     "pos": "v.",
     "meaning": "즐겁게하다 즐거워하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈɫaɪt/"
   },
   {
     "word": "deliver",
     "pos": "v.",
     "meaning": "인도하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈɫɪvɝ/"
   },
   {
     "word": "demand",
     "pos": "v.",
     "meaning": "요구하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈmænd/"
   },
   {
     "word": "democracy",
     "pos": "a.",
     "meaning": "민주주의",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈmɑkɹəsi/"
   },
   {
     "word": "democrat",
     "pos": "n.",
     "meaning": "민주주의자",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛməˌkɹæt/"
   },
   {
     "word": "demon",
     "pos": "n.",
     "meaning": "악마",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdimən/"
   },
   {
     "word": "demonstrate",
     "pos": "v.",
     "meaning": "증명하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛmənˌstɹeɪt/"
   },
   {
     "word": "dense",
     "pos": "n.",
     "meaning": "짙은",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛns/"
   },
   {
     "word": "dentist",
     "pos": "n.",
     "meaning": "치과의사",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛnɪst/, /ˈdɛntəst/, /ˈdɛntɪst/"
   },
   {
     "word": "deny",
     "pos": "v.",
     "meaning": "부정하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈnaɪ/"
   },
   {
     "word": "department",
     "pos": "n.",
     "meaning": "부",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈpɑɹtmənt/"
   },
   {
     "word": "departure",
     "pos": "n.",
     "meaning": "출발",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈpɑɹtʃɝ/"
   },
   {
     "word": "depend",
     "pos": "v.",
     "meaning": "좌우되다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈpɛnd/"
   },
   {
     "word": "dependence",
     "pos": "n.",
     "meaning": "종속",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈpɛndəns/"
   },
   {
     "word": "depict",
     "pos": "v.",
     "meaning": "묘사하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈpɪkt/"
   },
   {
     "word": "deposit",
     "pos": "n.",
     "meaning": "예금",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dəˈpɑzɪt/, /dɪˈpɑzət/"
   },
   {
     "word": "depress",
     "pos": "v.",
     "meaning": "억압하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈpɹɛs/"
   },
   {
     "word": "deprive",
     "pos": "v.",
     "meaning": "빼앗다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈpɹaɪv/"
   },
   {
     "word": "derive",
     "pos": "v.",
     "meaning": "이끌어 내다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɝˈaɪv/"
   },
   {
     "word": "descend",
     "pos": "v.",
     "meaning": "내려오다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈsɛnd/"
   },
   {
     "word": "describe",
     "pos": "v.",
     "meaning": "기술하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪsˈkɹaɪb/"
   },
   {
     "word": "description",
     "pos": "n.",
     "meaning": "서술",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪsˈkɹɪpʃən/"
   },
   {
     "word": "desert",
     "pos": "v.",
     "meaning": "버리다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛzɝt/, /dɪˈzɝt/"
   },
   {
     "word": "deserve",
     "pos": "v.",
     "meaning": "-할 만하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈzɝv/"
   },
   {
     "word": "design",
     "pos": "a.",
     "meaning": "디자인",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈzaɪn/"
   },
   {
     "word": "designate",
     "pos": "v.",
     "meaning": "가리키다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛzəɡˌneɪt/, /ˈdɛzɪɡˌneɪt/"
   },
   {
     "word": "desire",
     "pos": "v.",
     "meaning": "바라다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈzaɪɝ/"
   },
   {
     "word": "desk",
     "pos": "n.",
     "meaning": "책상",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛsk/"
   },
   {
     "word": "despair",
     "pos": "v.",
     "meaning": "절망하다",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈspɛɹ/"
   },
   {
     "word": "desperate",
     "pos": "a.",
     "meaning": "절망적인",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛspɝɪt/, /ˈdɛspɹɪt/"
   },
   {
     "word": "despite",
     "pos": "n.",
     "meaning": "-에도 불구하고 모욕",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/dɪˈspaɪt/"
   },
   {
     "word": "destination",
     "pos": "n.",
     "meaning": "목적지",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˌdɛstəˈneɪʃən/, /ˌdɛstɪˈneɪʃən/"
   },
   {
     "word": "destiny",
     "pos": "n.",
     "meaning": "운명",
-    "level": "middle"
+    "level": "middle",
+    "pronunciation": "/ˈdɛstəni/"
   },
   {
     "word": "destroy",
     "pos": "v.",
     "meaning": "파괴하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈstɹɔɪ/"
   },
   {
     "word": "destruction",
     "pos": "n.",
     "meaning": "파괴",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈstɹəkʃən/"
   },
   {
     "word": "detach",
     "pos": "v.",
     "meaning": "분리하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɪˌtætʃ/, /diˈtætʃ/"
   },
   {
     "word": "detail",
     "pos": "n.",
     "meaning": "상설",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈditeɪɫ/, /dɪˈteɪɫ/"
   },
   {
     "word": "detect",
     "pos": "v.",
     "meaning": "간파하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈtɛkt/"
   },
   {
     "word": "determine",
     "pos": "v.",
     "meaning": "결정하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dəˈtɝmən/, /dɪˈtɝmən/"
   },
   {
     "word": "develop",
     "pos": "v.",
     "meaning": "발달하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈvɛɫəp/"
   },
   {
     "word": "device",
     "pos": "n.",
     "meaning": "고안",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈvaɪs/"
   },
   {
     "word": "devil",
     "pos": "n.",
     "meaning": "악마",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɛvəɫ/"
   },
   {
     "word": "devise",
     "pos": "v.",
     "meaning": "고안하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈvaɪs/, /dɪˈvaɪz/"
   },
   {
     "word": "devote",
     "pos": "v.",
     "meaning": "바치다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈvoʊt/"
   },
   {
     "word": "diabetes",
     "pos": "n.",
     "meaning": "당뇨병",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌdaɪəˈbitiz/"
   },
   {
     "word": "dialogue",
     "pos": "n.",
     "meaning": "대화",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdaɪəˌɫɔɡ/"
   },
   {
     "word": "diary",
     "pos": "n.",
     "meaning": "일기",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdaɪɝi/, /ˈdaɪɹi/"
   },
   {
     "word": "dictate",
     "pos": "v.",
     "meaning": "받아쓰게 하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɪkˌteɪt/, /dɪkˈteɪt/"
   },
   {
     "word": "dictionary",
     "pos": "n.",
     "meaning": "사전",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɪkʃəˌnɛɹi/"
   },
   {
     "word": "die",
     "pos": "v.",
     "meaning": "죽다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdaɪ/"
   },
   {
     "word": "different",
     "pos": "n.",
     "meaning": "다른",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɪfɝənt/, /ˈdɪfɹənt/"
   },
   {
     "word": "difficult",
     "pos": "a.",
     "meaning": "곤란한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɪfəkəɫt/"
   },
   {
     "word": "dig",
     "pos": "v.",
     "meaning": "파다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɪɡ/"
   },
   {
     "word": "dignity",
     "pos": "n.",
     "meaning": "위엄",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɪɡnəti/"
   },
   {
     "word": "dimension",
     "pos": "n.",
     "meaning": "치수",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈmɛnʃən/"
   },
   {
     "word": "diminish",
     "pos": "v.",
     "meaning": "감소하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈmɪnɪʃ/"
   },
   {
     "word": "dine",
     "pos": "v.",
     "meaning": "저녁식사를 하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdaɪn/"
   },
   {
     "word": "dinner",
     "pos": "n.",
     "meaning": "정찬",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɪnɝ/"
   },
   {
     "word": "dip",
     "pos": "v.",
     "meaning": "담그다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɪp/"
   },
   {
     "word": "diplomat",
     "pos": "n.",
     "meaning": "외교관",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɪpɫəˌmæt/"
   },
   {
     "word": "direct",
     "pos": "v.",
     "meaning": "지도하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/daɪˈɹɛkt/, /dɝˈɛkt/, /dɪˈɹɛkt/"
   },
   {
     "word": "dirty",
     "pos": "n.",
     "meaning": "더러운",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɝti/"
   },
   {
     "word": "disabled",
     "pos": "a.",
     "meaning": "불구가 된",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈseɪbəɫd/"
   },
   {
     "word": "disadvantage",
     "pos": "n.",
     "meaning": "불리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌdɪsədˈvænɪdʒ/, /ˌdɪsədˈvæntɪdʒ/"
   },
   {
     "word": "disagree",
     "pos": "v.",
     "meaning": "일치하지 않다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪsəˈɡɹi/"
   },
   {
     "word": "disappear",
     "pos": "v.",
     "meaning": "안보이게 되다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌdɪsəˈpiɹ/, /ˌdɪsəˈpɪɹ/"
   },
   {
     "word": "disappoint",
     "pos": "v.",
     "meaning": "실망시키다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌdɪsəˈpɔɪnt/"
   },
   {
     "word": "disaster",
     "pos": "n.",
     "meaning": "천재",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈzæstɝ/"
   },
   {
     "word": "discharge",
     "pos": "v.",
     "meaning": "짐을부리다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɪsˌtʃɑɹdʒ/, /dɪsˈtʃɑɹdʒ/"
   },
   {
     "word": "discipline",
     "pos": "n.",
     "meaning": "훈련",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɪsəpɫən/"
   },
   {
     "word": "disclose",
     "pos": "v.",
     "meaning": "나타내다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈskɫoʊz/"
   },
   {
     "word": "discount",
     "pos": "a.",
     "meaning": "할인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɪskaʊnt/, /dɪˈskaʊnt/"
   },
   {
     "word": "discourse",
     "pos": "n.",
     "meaning": "강연",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɪskɔɹs/"
   },
   {
     "word": "discover",
     "pos": "v.",
     "meaning": "발견하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈskəvɝ/"
   },
   {
     "word": "discriminate",
     "pos": "v.",
     "meaning": "분별하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪsˈkɹɪməˌneɪt/"
   },
   {
     "word": "discuss",
     "pos": "v.",
     "meaning": "토론하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈskəs/"
   },
   {
     "word": "disease",
     "pos": "n.",
     "meaning": "병",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈziz/"
   },
   {
     "word": "disgust",
     "pos": "v.",
     "meaning": "불쾌하게 하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪsˈɡəst/"
   },
   {
     "word": "dish",
     "pos": "n.",
     "meaning": "접시",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɪʃ/"
   },
   {
     "word": "dismiss",
     "pos": "v.",
     "meaning": "떠나게 하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪsˈmɪs/"
   },
   {
     "word": "disorder",
     "pos": "n.",
     "meaning": "난잡",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈsɔɹdɝ/"
   },
   {
     "word": "displace",
     "pos": "v.",
     "meaning": "바꾸어놓다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪsˈpɫeɪs/"
   },
   {
     "word": "display",
     "pos": "v.",
     "meaning": "보이다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪsˈpɫeɪ/"
   },
   {
     "word": "dispose",
     "pos": "v.",
     "meaning": "배열하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈspoʊz/"
   },
   {
     "word": "dispute",
     "pos": "v.",
     "meaning": "논쟁하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈspjut/"
   },
   {
     "word": "disrupt",
     "pos": "v.",
     "meaning": "분열시키다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪsˈɹəpt/"
   },
   {
     "word": "distant",
     "pos": "n.",
     "meaning": "떨어진",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɪstənt/"
   },
   {
     "word": "distort",
     "pos": "v.",
     "meaning": "찌그러뜨리다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈstɔɹt/"
   },
   {
     "word": "distract",
     "pos": "v.",
     "meaning": "전환시키다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈstɹækt/"
   },
   {
     "word": "distribute",
     "pos": "v.",
     "meaning": "분배하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈstɹɪbjut/"
   },
   {
     "word": "district",
     "pos": "n.",
     "meaning": "지구",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɪstɹɪkt/"
   },
   {
     "word": "disturb",
     "pos": "v.",
     "meaning": "교란하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈstɝb/"
   },
   {
     "word": "dive",
     "pos": "v.",
     "meaning": "뛰어들다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdaɪv/"
   },
   {
     "word": "diverse",
     "pos": "a.",
     "meaning": "다양한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/daɪˈvɝs/, /dɪˈvɝs/"
   },
   {
     "word": "divide",
     "pos": "v.",
     "meaning": "나누다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈvaɪd/"
   },
   {
     "word": "divine",
     "pos": "a.",
     "meaning": "신의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈvaɪn/"
   },
   {
     "word": "divorce",
     "pos": "n.",
     "meaning": "이혼",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dɪˈvɔɹs/"
   },
   {
     "word": "do",
     "pos": "v.",
     "meaning": "하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdu/"
   },
   {
     "word": "doctor",
     "pos": "n.",
     "meaning": "박사",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɑktɝ/, /ˈdɔktɝ/"
   },
   {
     "word": "document",
     "pos": "n.",
     "meaning": "서류",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɑkjəmɛnt/, /ˈdɑkjumɛnt/"
   },
   {
     "word": "dog",
     "pos": "n.",
     "meaning": "개",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɔɡ/"
   },
   {
     "word": "doll",
     "pos": "n.",
     "meaning": "인형",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɑɫ/"
   },
   {
     "word": "dolphin",
     "pos": "n.",
     "meaning": "돌고래",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɑɫfən/"
   },
   {
     "word": "domain",
     "pos": "n.",
     "meaning": "영토",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/doʊˈmeɪn/"
   },
   {
     "word": "domestic",
     "pos": "a.",
     "meaning": "가정의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dəˈmɛstɪk/"
   },
   {
     "word": "dominant",
     "pos": "a.",
     "meaning": "우세한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɑmənənt/"
   },
   {
     "word": "donate",
     "pos": "v.",
     "meaning": "증여하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdoʊˌneɪt/"
   },
   {
     "word": "door",
     "pos": "n.",
     "meaning": "문",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɔɹ/"
   },
   {
     "word": "dose",
     "pos": "v.",
     "meaning": "1 회복용량 투약하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdoʊs/"
   },
   {
     "word": "dot",
     "pos": "n.",
     "meaning": "점",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɑt/"
   },
   {
     "word": "double",
     "pos": "a.",
     "meaning": "2 배의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdəbəɫ/"
   },
   {
     "word": "doubt",
     "pos": "n.",
     "meaning": "의심",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdaʊt/"
   },
   {
     "word": "down",
     "pos": "ad.",
     "meaning": "아래로",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdaʊn/"
   },
   {
     "word": "dozen",
     "pos": "n.",
     "meaning": "1 다스",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdəzən/"
   },
   {
     "word": "draft",
     "pos": "n.",
     "meaning": "초고",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɹæft/"
   },
   {
     "word": "drag",
     "pos": "v.",
     "meaning": "끌다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɹæɡ/"
   },
   {
     "word": "drain",
     "pos": "v.",
     "meaning": "배수하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɹeɪn/"
   },
   {
     "word": "draw",
     "pos": "v.",
     "meaning": "당기다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɹɔ/"
   },
   {
     "word": "drawer",
     "pos": "n.",
     "meaning": "제도사",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɹɔɹ/"
   },
   {
     "word": "dread",
     "pos": "v.",
     "meaning": "두려워하다 두려움",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɹɛd/"
   },
   {
     "word": "dream",
     "pos": "n.",
     "meaning": "꿈",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɹim/"
   },
   {
     "word": "drink",
     "pos": "v.",
     "meaning": "마시다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɹɪŋk/"
   },
   {
     "word": "drive",
     "pos": "v.",
     "meaning": "운전하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɹaɪv/"
   },
   {
     "word": "drop",
     "pos": "n.",
     "meaning": "방울",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɹɑp/, /ˈdɹɔp/"
   },
   {
     "word": "drown",
     "pos": "v.",
     "meaning": "물에빠뜨리다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɹaʊn/"
   },
   {
     "word": "drug",
     "pos": "n.",
     "meaning": "약제",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɹəɡ/"
   },
   {
     "word": "dry",
     "pos": "n.",
     "meaning": "마른",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɹaɪ/"
   },
   {
     "word": "dual",
     "pos": "a.",
     "meaning": "둘의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈduəɫ/, /ˈduɫ/"
   },
   {
     "word": "duck",
     "pos": "v.",
     "meaning": "머리를 물 속에 쑥 쳐박다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdək/"
   },
   {
     "word": "due",
     "pos": "a.",
     "meaning": "지급기일이 된",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdju/, /ˈdu/"
   },
   {
     "word": "dull",
     "pos": "a.",
     "meaning": "둔한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdəɫ/"
   },
   {
     "word": "dump",
     "pos": "v.",
     "meaning": "내버리다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdəmp/"
   },
   {
     "word": "during",
     "pos": "n.",
     "meaning": "-동안에",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdɝɪŋ/, /ˈdjʊɹɪŋ/, /ˈdʊɹɪŋ/"
   },
   {
     "word": "dust",
     "pos": "n.",
     "meaning": "먼지",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdəst/"
   },
   {
     "word": "duty",
     "pos": "n.",
     "meaning": "의무",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdjuti/, /ˈduti/"
   },
   {
     "word": "dwell",
     "pos": "v.",
     "meaning": "거주하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdwɛɫ/"
   },
   {
     "word": "dynamic",
     "pos": "a.",
     "meaning": "동적인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/daɪˈnæmɪk/"
   },
   {
     "word": "each",
     "pos": "a.",
     "meaning": "각각의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈitʃ/"
   },
   {
     "word": "eager",
     "pos": "a.",
     "meaning": "열심인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈiɡɝ/"
   },
   {
     "word": "ear",
     "pos": "n.",
     "meaning": "귀",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈiɹ/, /ˈɪɹ/"
   },
   {
     "word": "early",
     "pos": "n.",
     "meaning": "이른",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɝɫi/"
   },
   {
     "word": "earn",
     "pos": "v.",
     "meaning": "일하여 벌다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɝn/"
   },
   {
     "word": "earth",
     "pos": "n.",
     "meaning": "지구",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɝθ/"
   },
   {
     "word": "ease",
     "pos": "n.",
     "meaning": "안락",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈiz/"
   },
   {
     "word": "east",
     "pos": "ad.",
     "meaning": "동쪽 동쪽의 동쪽으로",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈist/"
   },
   {
     "word": "easy",
     "pos": "n.",
     "meaning": "쉬운",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈizi/"
   },
   {
     "word": "eat",
     "pos": "v.",
     "meaning": "먹다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈit/"
   },
   {
     "word": "economy",
     "pos": "n.",
     "meaning": "절약",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/iˈkɑnəmi/, /ɪˈkɑnəmi/"
   },
   {
     "word": "edge",
     "pos": "n.",
     "meaning": "끝머리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛdʒ/"
   },
   {
     "word": "edit",
     "pos": "v.",
     "meaning": "편집하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛdət/"
   },
   {
     "word": "educate",
     "pos": "v.",
     "meaning": "교육하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛdʒəˌkeɪt/, /ˈɛdʒjuˌkeɪt/"
   },
   {
     "word": "effect",
     "pos": "n.",
     "meaning": "결과",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈifɛkt/, /əˈfɛkt/, /ɪˈfɛkt/"
   },
   {
     "word": "effective",
     "pos": "a.",
     "meaning": "효과적인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈifɛktɪv/, /ɪˈfɛktɪv/"
   },
   {
     "word": "efficient",
     "pos": "a.",
     "meaning": "능률적인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪˈfɪʃənt/"
   },
   {
     "word": "effort",
     "pos": "n.",
     "meaning": "노력",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛfɝt/"
   },
   {
     "word": "egg",
     "pos": "n.",
     "meaning": "알",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛɡ/"
   },
   {
     "word": "either",
     "pos": "a.",
     "meaning": "어느 하나의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈaɪðɝ/, /ˈiðɝ/"
   },
   {
     "word": "elaborate",
     "pos": "a.",
     "meaning": "공들인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪˈɫæbɝˌeɪt/, /ɪˈɫæbɹət/"
   },
   {
     "word": "elect",
     "pos": "v.",
     "meaning": "선거하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪˈɫɛkt/"
   },
   {
     "word": "electric",
     "pos": "a.",
     "meaning": "전기의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪˈɫɛktɹɪk/"
   },
   {
     "word": "electronic",
     "pos": "a.",
     "meaning": "전자(학)의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪˌɫɛkˈtɹɑnɪk/"
   },
   {
     "word": "elegant",
     "pos": "a.",
     "meaning": "우아한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛɫəɡənt/"
   },
   {
     "word": "element",
     "pos": "n.",
     "meaning": "요소",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛɫəmənt/"
   },
   {
     "word": "elementary",
     "pos": "a.",
     "meaning": "기본의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɛɫəˈmɛntɝɹi/, /ˌɛɫəˈmɛntɹi/, /ˌɛɫəˈmɛntʃɹi/"
   },
   {
     "word": "elephant",
     "pos": "n.",
     "meaning": "코끼리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛɫəfənt/"
   },
   {
     "word": "eliminate",
     "pos": "v.",
     "meaning": "제거하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪˈɫɪməˌneɪt/"
   },
   {
     "word": "else",
     "pos": "n.",
     "meaning": "그 밖에",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛɫs/"
   },
   {
     "word": "embarrass",
     "pos": "v.",
     "meaning": "난처하게 하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪmˈbɛɹəs/"
   },
   {
     "word": "embassy",
     "pos": "n.",
     "meaning": "대사관",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛmbəsi/"
   },
   {
     "word": "embrace",
     "pos": "v.",
     "meaning": "포옹하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɛmˈbɹeɪs/, /ɪmˈbɹeɪs/"
   },
   {
     "word": "emerge",
     "pos": "v.",
     "meaning": "나오다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈimɝdʒ/, /ɪˈmɝdʒ/"
   },
   {
     "word": "emergency",
     "pos": "n.",
     "meaning": "비상사태",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈimɝdʒənsi/, /ɪˈmɝdʒənsi/"
   },
   {
     "word": "emit",
     "pos": "v.",
     "meaning": "방사하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪˈmɪt/"
   },
   {
     "word": "emotion",
     "pos": "n.",
     "meaning": "감정",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈiˌmoʊʃən/, /ɪˈmoʊʃən/"
   },
   {
     "word": "emphasis",
     "pos": "n.",
     "meaning": "강조",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛmfəsəs/, /ˈɛmfəsɪs/"
   },
   {
     "word": "empire",
     "pos": "n.",
     "meaning": "제국",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛmpaɪɝ/"
   },
   {
     "word": "employ",
     "pos": "v.",
     "meaning": "고용하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɛmˈpɫɔɪ/, /ɪmˈpɫɔɪ/"
   },
   {
     "word": "empty",
     "pos": "n.",
     "meaning": "빈",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛmpti/, /ˈɛmti/"
   },
   {
     "word": "enclose",
     "pos": "v.",
     "meaning": "에워싸다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪnˈkɫoʊz/"
   },
   {
     "word": "encounter",
     "pos": "n.",
     "meaning": "조우",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪnˈkaʊnɝ/, /ɪnˈkaʊntɝ/"
   },
   {
     "word": "encourage",
     "pos": "v.",
     "meaning": "용기를 돋우다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɛnˈkɝɪdʒ/, /ɪnˈkɝədʒ/"
   },
   {
     "word": "end",
     "pos": "n.",
     "meaning": "끝",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛnd/"
   },
   {
     "word": "endure",
     "pos": "v.",
     "meaning": "견디다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɛnˈdjʊɹ/, /ɪnˈdʊɹ/"
   },
   {
     "word": "enemy",
     "pos": "a.",
     "meaning": "적",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛnəmi/"
   },
   {
     "word": "enforce",
     "pos": "v.",
     "meaning": "실시하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɛnˈfɔɹs/"
   },
   {
     "word": "engage",
     "pos": "v.",
     "meaning": "약속하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɛnˈɡeɪdʒ/"
   },
   {
     "word": "engine",
     "pos": "n.",
     "meaning": "엔진",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛndʒən/, /ˈɪndʒən/"
   },
   {
     "word": "engineer",
     "pos": "n.",
     "meaning": "기사",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛndʒəˈnɪɹ/"
   },
   {
     "word": "enhance",
     "pos": "v.",
     "meaning": "향상하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɛnˈhæns/"
   },
   {
     "word": "enjoy",
     "pos": "v.",
     "meaning": "즐기다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɛnˈdʒɔɪ/, /ɪnˈdʒɔɪ/"
   },
   {
     "word": "enormous",
     "pos": "a.",
     "meaning": "거대한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/iˈnɔɹməs/, /iˈnɔɹmɪs/, /ɪˈnɔɹməs/, /ɪˈnɔɹmɪs/"
   },
   {
     "word": "enough",
     "pos": "a.",
     "meaning": "충분한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/iˈnəf/, /ɪˈnəf/"
   },
   {
     "word": "enroll",
     "pos": "v.",
     "meaning": "명부에 올리다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɛnˈɹoʊɫ/, /ɪnˈɹoʊɫ/"
   },
   {
     "word": "ensure",
     "pos": "v.",
     "meaning": "-을 책임지다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɛnˈʃʊɹ/, /ɪnˈʃʊɹ/"
   },
   {
     "word": "enter",
     "pos": "v.",
     "meaning": "들어가다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛnɝ/, /ˈɛntɝ/"
   },
   {
     "word": "enterprise",
     "pos": "n.",
     "meaning": "기획",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛnɝˌpɹaɪz/, /ˈɛntɝˌpɹaɪz/"
   },
   {
     "word": "entertain",
     "pos": "v.",
     "meaning": "즐겁게 하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɛnɝˈteɪn/, /ˌɛntɝˈteɪn/"
   },
   {
     "word": "enthusiastic",
     "pos": "a.",
     "meaning": "열심인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪnˌθuziˈæstɪk/"
   },
   {
     "word": "entire",
     "pos": "a.",
     "meaning": "전체의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪnˈtaɪɝ/"
   },
   {
     "word": "entitle",
     "pos": "v.",
     "meaning": "자격을 주다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɛnˈtaɪtəɫ/, /ɪnˈtaɪtəɫ/"
   },
   {
     "word": "entry",
     "pos": "n.",
     "meaning": "들어감",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛntɹi/"
   },
   {
     "word": "envelope",
     "pos": "n.",
     "meaning": "봉투",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛnvəˌɫoʊp/"
   },
   {
     "word": "environment",
     "pos": "n.",
     "meaning": "환경",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪnˈvaɪɹənmənt/"
   },
   {
     "word": "envy",
     "pos": "n.",
     "meaning": "질투",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛnvi/"
   },
   {
     "word": "episode",
     "pos": "n.",
     "meaning": "삽화",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛpəˌsoʊd/, /ˈɛpɪˌsoʊd/"
   },
   {
     "word": "equal",
     "pos": "n.",
     "meaning": "같은",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈikwəɫ/"
   },
   {
     "word": "equate",
     "pos": "v.",
     "meaning": "같게하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪˈkweɪt/"
   },
   {
     "word": "equipment",
     "pos": "n.",
     "meaning": "장비",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪˈkwɪpmənt/"
   },
   {
     "word": "era",
     "pos": "n.",
     "meaning": "시대",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛɹə/, /ˈɪɹə/"
   },
   {
     "word": "eraser",
     "pos": "n.",
     "meaning": "지우는 person",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/iˈɹeɪsɝ/, /ɪˈɹeɪsɝ/"
   },
   {
     "word": "erect",
     "pos": "n.",
     "meaning": "똑바로 선",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪˈɹɛkt/"
   },
   {
     "word": "error",
     "pos": "n.",
     "meaning": "잘못",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛɹɝ/"
   },
   {
     "word": "escape",
     "pos": "v.",
     "meaning": "도망하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪˈskeɪp/"
   },
   {
     "word": "escort",
     "pos": "v.",
     "meaning": "호위하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛskɔɹt/, /ɛˈskɔɹt/"
   },
   {
     "word": "especially",
     "pos": "ad.",
     "meaning": "특히",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/əˈspɛʃəɫi/, /əˈspɛʃɫi/"
   },
   {
     "word": "essential",
     "pos": "a.",
     "meaning": "본질적인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɛˈsɛnʃəɫ/, /iˈsɛnʃəɫ/"
   },
   {
     "word": "establish",
     "pos": "v.",
     "meaning": "확립하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪˈstæbɫɪʃ/"
   },
   {
     "word": "estate",
     "pos": "n.",
     "meaning": "토지",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪˈsteɪt/"
   },
   {
     "word": "estimate",
     "pos": "v.",
     "meaning": "어림잡다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛstəˌmeɪt/, /ˈɛstəmət/"
   },
   {
     "word": "etc",
     "pos": "n.",
     "meaning": "등등",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɛtˈsɛtɝə/"
   },
   {
     "word": "ethical",
     "pos": "a.",
     "meaning": "도덕상의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛθɪkəɫ/"
   },
   {
     "word": "ethnic",
     "pos": "a.",
     "meaning": "인종의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛθnɪk/"
   },
   {
     "word": "evacuate",
     "pos": "v.",
     "meaning": "비우다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/iˈvækjəˌeɪt/, /ɪˈvækjəˌeɪt/"
   },
   {
     "word": "evaluate",
     "pos": "v.",
     "meaning": "평가하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/iˈvæɫjuˌeɪt/, /ɪˈvæɫjuˌeɪt/"
   },
   {
     "word": "eve",
     "pos": "n.",
     "meaning": "저녁, 밤",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈiv/"
   },
   {
     "word": "even",
     "pos": "n.",
     "meaning": "-조차",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈivɪn/"
   },
   {
     "word": "evening",
     "pos": "n.",
     "meaning": "저녁",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈivnɪŋ/"
   },
   {
     "word": "eventually",
     "pos": "n.",
     "meaning": "결국",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/iˈvɛnʃəɫi/, /iˈvɛntʃəwəɫi/, /ɪˈvɛnʃəɫi/, /ɪˈvɛntʃəwəɫi/"
   },
   {
     "word": "ever",
     "pos": "n.",
     "meaning": "이전에",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛvɝ/"
   },
   {
     "word": "every",
     "pos": "n.",
     "meaning": "모든",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛvɝi/, /ˈɛvɹi/"
   },
   {
     "word": "evident",
     "pos": "a.",
     "meaning": "명백한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛvədənt/"
   },
   {
     "word": "evil",
     "pos": "a.",
     "meaning": "사악한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈivəɫ/"
   },
   {
     "word": "evolution",
     "pos": "n.",
     "meaning": "진화",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɛvəˈɫuʃən/, /ˌɛvoʊˈɫuʃən/, /ˌivəˈɫuʃən/, /ˌivoʊˈɫuʃən/"
   },
   {
     "word": "evolve",
     "pos": "v.",
     "meaning": "진화하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/iˈvɑɫv/, /ɪˈvɑɫv/"
   },
   {
     "word": "exact",
     "pos": "a.",
     "meaning": "정확한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪɡˈzækt/"
   },
   {
     "word": "exaggerate",
     "pos": "v.",
     "meaning": "과장하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪɡˈzædʒɝˌeɪt/"
   },
   {
     "word": "exam",
     "pos": "n.",
     "meaning": "시험",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪɡˈzæm/"
   },
   {
     "word": "examine",
     "pos": "v.",
     "meaning": "시험하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪɡˈzæmɪn/"
   },
   {
     "word": "example",
     "pos": "n.",
     "meaning": "보기",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪɡˈzæmpəɫ/"
   },
   {
     "word": "exceed",
     "pos": "v.",
     "meaning": "넘다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪkˈsid/"
   },
   {
     "word": "excellent",
     "pos": "a.",
     "meaning": "우수한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛksəɫənt/"
   },
   {
     "word": "except",
     "pos": "v.",
     "meaning": "-을 제외하고는 제외하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪkˈsɛpt/"
   },
   {
     "word": "excess",
     "pos": "n.",
     "meaning": "초과",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛkˌsɛs/, /ɪkˈsɛs/"
   },
   {
     "word": "exchange",
     "pos": "v.",
     "meaning": "교환하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪksˈtʃeɪndʒ/"
   },
   {
     "word": "excite",
     "pos": "v.",
     "meaning": "흥분시키다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪkˈsaɪt/"
   },
   {
     "word": "exclude",
     "pos": "v.",
     "meaning": "배척하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪkˈskɫud/"
   },
   {
     "word": "exclusive",
     "pos": "a.",
     "meaning": "배타적인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪkˈskɫusɪv/"
   },
   {
     "word": "excuse",
     "pos": "n.",
     "meaning": "변명",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪkˈskjus/, /ɪkˈskjuz/"
   },
   {
     "word": "executive",
     "pos": "a.",
     "meaning": "집행의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪɡˈzɛkjətɪv/"
   },
   {
     "word": "exercise",
     "pos": "n.",
     "meaning": "운동",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛksɝˌsaɪz/"
   },
   {
     "word": "exhaust",
     "pos": "v.",
     "meaning": "다 써버리다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪɡˈzɔst/"
   },
   {
     "word": "exhibit",
     "pos": "v.",
     "meaning": "보이다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪɡˈzɪbɪt/"
   },
   {
     "word": "exist",
     "pos": "v.",
     "meaning": "존재하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪɡˈzɪst/"
   },
   {
     "word": "exit",
     "pos": "n.",
     "meaning": "출구",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛɡzɪt/, /ˈɛksət/"
   },
   {
     "word": "exotic",
     "pos": "a.",
     "meaning": "외국의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪɡˈzɑtɪk/"
   },
   {
     "word": "expand",
     "pos": "v.",
     "meaning": "펴다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪkˈspænd/"
   },
   {
     "word": "expect",
     "pos": "v.",
     "meaning": "기대하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪkˈspɛkt/"
   },
   {
     "word": "expense",
     "pos": "n.",
     "meaning": "지출",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪkˈspɛns/"
   },
   {
     "word": "expensive",
     "pos": "a.",
     "meaning": "비용이 드는",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪkˈspɛnsɪv/"
   },
   {
     "word": "experience",
     "pos": "n.",
     "meaning": "경험",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪkˈspɪɹiəns/"
   },
   {
     "word": "experiment",
     "pos": "n.",
     "meaning": "실험",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪkˈspɛɹəmənt/"
   },
   {
     "word": "expert",
     "pos": "n.",
     "meaning": "숙련가",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛkspɝt/"
   },
   {
     "word": "expertise",
     "pos": "n.",
     "meaning": "대가의 의견",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɛkspɝˈtiz/"
   },
   {
     "word": "explain",
     "pos": "v.",
     "meaning": "설명하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪksˈpɫeɪn/"
   },
   {
     "word": "explicit",
     "pos": "a.",
     "meaning": "명백한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪksˈpɫɪsət/"
   },
   {
     "word": "explode",
     "pos": "v.",
     "meaning": "폭발시키다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪksˈpɫoʊd/"
   },
   {
     "word": "explore",
     "pos": "v.",
     "meaning": "탐험하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪksˈpɫɔɹ/"
   },
   {
     "word": "export",
     "pos": "v.",
     "meaning": "수출하다 수출",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛkspɔɹt/"
   },
   {
     "word": "expose",
     "pos": "v.",
     "meaning": "쐬다, 드러내다, 맞히다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪkˈspoʊz/"
   },
   {
     "word": "express",
     "pos": "v.",
     "meaning": "발표하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪksˈpɹɛs/"
   },
   {
     "word": "extend",
     "pos": "v.",
     "meaning": "뻗다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪkˈstɛnd/"
   },
   {
     "word": "extent",
     "pos": "n.",
     "meaning": "넓이",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪkˈstɛnt/"
   },
   {
     "word": "external",
     "pos": "a.",
     "meaning": "외부의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪkˈstɝnəɫ/"
   },
   {
     "word": "extinct",
     "pos": "n.",
     "meaning": "꺼진",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪkˈstɪŋkt/"
   },
   {
     "word": "extra",
     "pos": "a.",
     "meaning": "가외의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛkstɹə/"
   },
   {
     "word": "extract",
     "pos": "v.",
     "meaning": "뽑아내다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛkˌstɹækt/, /ɪkˈstɹækt/"
   },
   {
     "word": "extraordinary",
     "pos": "a.",
     "meaning": "이상한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɛkstɹəˈɔɹdəˌnɛɹi/, /ɪkˈstɹɔɹdəˌnɛɹi/"
   },
   {
     "word": "extreme",
     "pos": "a.",
     "meaning": "극단의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɛkˈstɹim/"
   },
   {
     "word": "eye",
     "pos": "n.",
     "meaning": "눈",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈaɪ/"
   },
   {
     "word": "eyebrow",
     "pos": "n.",
     "meaning": "눈썹",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈaɪˌbɹaʊ/"
   },
   {
     "word": "fabric",
     "pos": "n.",
     "meaning": "천",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfæbɹɪk/"
   },
   {
     "word": "face",
     "pos": "n.",
     "meaning": "얼굴",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfeɪs/"
   },
   {
     "word": "facilitate",
     "pos": "v.",
     "meaning": "쉽게하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/fəˈsɪɫəˌteɪt/"
   },
   {
     "word": "facility",
     "pos": "n.",
     "meaning": "쉬움",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/fəˈsɪɫɪti/"
   },
   {
     "word": "fact",
     "pos": "n.",
     "meaning": "사실",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfækt/"
   },
   {
     "word": "factor",
     "pos": "n.",
     "meaning": "요소",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfæktɝ/"
   },
   {
     "word": "factory",
     "pos": "n.",
     "meaning": "공장",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfæktɝi/"
   },
   {
     "word": "faculty",
     "pos": "n.",
     "meaning": "능력",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfækəɫti/"
   },
   {
     "word": "fade",
     "pos": "v.",
     "meaning": "바래다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfeɪd/"
   },
   {
     "word": "fail",
     "pos": "v.",
     "meaning": "실패하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfeɪɫ/"
   },
   {
     "word": "faint",
     "pos": "v.",
     "meaning": "기절하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfeɪnt/"
   },
   {
     "word": "fair",
     "pos": "a.",
     "meaning": "공평한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɛɹ/"
   },
   {
     "word": "faith",
     "pos": "n.",
     "meaning": "신용",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfeɪθ/"
   },
   {
     "word": "fall",
     "pos": "v.",
     "meaning": "떨어지다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɑɫ/, /ˈfɔɫ/"
   },
   {
     "word": "FALSE",
     "pos": "n.",
     "meaning": "거짓",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɔɫs/"
   },
   {
     "word": "fame",
     "pos": "n.",
     "meaning": "명성",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfeɪm/"
   },
   {
     "word": "familiar",
     "pos": "a.",
     "meaning": "친한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/fəˈmɪɫjɝ/"
   },
   {
     "word": "family",
     "pos": "n.",
     "meaning": "가족",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfæməɫi/, /ˈfæmɫi/"
   },
   {
     "word": "famous",
     "pos": "a.",
     "meaning": "유명한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfeɪməs/"
   },
   {
     "word": "fan",
     "pos": "n.",
     "meaning": "(영화 등의)팬",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfæn/"
   },
   {
     "word": "fancy",
     "pos": "n.",
     "meaning": "공상",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfænsi/"
   },
   {
     "word": "fantastic",
     "pos": "a.",
     "meaning": "환상적인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/fænˈtæstɪk/"
   },
   {
     "word": "far",
     "pos": "n.",
     "meaning": "멀리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɑɹ/"
   },
   {
     "word": "fare",
     "pos": "n.",
     "meaning": "요금",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɛɹ/"
   },
   {
     "word": "farm",
     "pos": "n.",
     "meaning": "농장",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɑɹm/"
   },
   {
     "word": "fascinate",
     "pos": "v.",
     "meaning": "황홀케 하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfæsəˌneɪt/"
   },
   {
     "word": "fast",
     "pos": "n.",
     "meaning": "빠른",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfæst/"
   },
   {
     "word": "fasten",
     "pos": "v.",
     "meaning": "단단히 고정시키다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfæsən/"
   },
   {
     "word": "fat",
     "pos": "n.",
     "meaning": "살찐",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfæt/"
   },
   {
     "word": "fatal",
     "pos": "a.",
     "meaning": "치명적인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfeɪtəɫ/"
   },
   {
     "word": "fate",
     "pos": "n.",
     "meaning": "숙명",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfeɪt/"
   },
   {
     "word": "father",
     "pos": "n.",
     "meaning": "아버지",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɑðɝ/"
   },
   {
     "word": "fault",
     "pos": "n.",
     "meaning": "결점",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɔɫt/"
   },
   {
     "word": "favor",
     "pos": "a.",
     "meaning": "호의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfeɪvɝ/"
   },
   {
     "word": "favorite",
     "pos": "n.",
     "meaning": "마음에 드는 좋아하는 물건",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfeɪvɝɪt/, /ˈfeɪvɹət/"
   },
   {
     "word": "fear",
     "pos": "n.",
     "meaning": "두려움",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɪɹ/"
   },
   {
     "word": "feature",
     "pos": "n.",
     "meaning": "얼굴의 생김새",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfitʃɝ/"
   },
   {
     "word": "federal",
     "pos": "a.",
     "meaning": "연방의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɛdɝəɫ/, /ˈfɛdɹəɫ/"
   },
   {
     "word": "fee",
     "pos": "n.",
     "meaning": "요금",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfi/"
   },
   {
     "word": "feed",
     "pos": "v.",
     "meaning": "음식(먹이)을 주다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfid/"
   },
   {
     "word": "feel",
     "pos": "v.",
     "meaning": "만져보다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfiɫ/"
   },
   {
     "word": "fellow",
     "pos": "n.",
     "meaning": "동무",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɛɫoʊ/"
   },
   {
     "word": "female",
     "pos": "n.",
     "meaning": "여성",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfiˌmeɪɫ/"
   },
   {
     "word": "ferry",
     "pos": "n.",
     "meaning": "나루터",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɛɹi/"
   },
   {
     "word": "fertile",
     "pos": "a.",
     "meaning": "비옥한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɝtəɫ/, /fɝˈtaɪɫ/"
   },
   {
     "word": "fever",
     "pos": "n.",
     "meaning": "열",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfivɝ/"
   },
   {
     "word": "few",
     "pos": "a.",
     "meaning": "소수의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfju/"
   },
   {
     "word": "fiber",
     "pos": "n.",
     "meaning": "섬유",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfaɪbɝ/"
   },
   {
     "word": "field",
     "pos": "n.",
     "meaning": "들",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfiɫd/"
   },
   {
     "word": "fierce",
     "pos": "a.",
     "meaning": "흉포한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɪɹs/"
   },
   {
     "word": "fight",
     "pos": "n.",
     "meaning": "싸움",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfaɪt/"
   },
   {
     "word": "figure",
     "pos": "n.",
     "meaning": "모습",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɪɡjɝ/"
   },
   {
     "word": "file",
     "pos": "n.",
     "meaning": "종이끼우개",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfaɪɫ/"
   },
   {
     "word": "fill",
     "pos": "v.",
     "meaning": "가득 채우다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɪɫ/"
   },
   {
     "word": "filter",
     "pos": "v.",
     "meaning": "여과기 여과하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɪɫtɝ/"
   },
   {
     "word": "final",
     "pos": "a.",
     "meaning": "최후의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfaɪnəɫ/"
   },
   {
     "word": "finance",
     "pos": "n.",
     "meaning": "재정",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfaɪˌnæns/, /fəˈnæns/, /fɪˈnæns/"
   },
   {
     "word": "find",
     "pos": "v.",
     "meaning": "발견하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfaɪnd/"
   },
   {
     "word": "fine",
     "pos": "a.",
     "meaning": "훌륭한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfaɪn/"
   },
   {
     "word": "finger",
     "pos": "v.",
     "meaning": "손가락 손가락을 대다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɪŋɡɝ/"
   },
   {
     "word": "finish",
     "pos": "v.",
     "meaning": "끝내다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɪnɪʃ/"
   },
   {
     "word": "finite",
     "pos": "a.",
     "meaning": "한정되어 있는",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfaɪˌnaɪt/"
   },
   {
     "word": "fire",
     "pos": "n.",
     "meaning": "불",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfaɪɝ/, /ˈfaɪɹ/"
   },
   {
     "word": "firm",
     "pos": "n.",
     "meaning": "굳은",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɝm/"
   },
   {
     "word": "fish",
     "pos": "n.",
     "meaning": "물고기",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɪʃ/"
   },
   {
     "word": "fist",
     "pos": "n.",
     "meaning": "주먹",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɪst/"
   },
   {
     "word": "fit",
     "pos": "a.",
     "meaning": "맞는",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɪt/"
   },
   {
     "word": "fix",
     "pos": "v.",
     "meaning": "고정시키다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɪks/"
   },
   {
     "word": "flag",
     "pos": "n.",
     "meaning": "기",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫæɡ/"
   },
   {
     "word": "flame",
     "pos": "n.",
     "meaning": "불꽃",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫeɪm/"
   },
   {
     "word": "flash",
     "pos": "n.",
     "meaning": "번쩍임",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫæʃ/"
   },
   {
     "word": "flat",
     "pos": "a.",
     "meaning": "편평한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫæt/"
   },
   {
     "word": "flavor",
     "pos": "n.",
     "meaning": "(독특한)맛",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫeɪvɝ/"
   },
   {
     "word": "flaw",
     "pos": "n.",
     "meaning": "금",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫɔ/"
   },
   {
     "word": "flee",
     "pos": "v.",
     "meaning": "달아나다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫi/"
   },
   {
     "word": "flesh",
     "pos": "n.",
     "meaning": "살",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫɛʃ/"
   },
   {
     "word": "flexible",
     "pos": "n.",
     "meaning": "구부리기 쉬운",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫɛksəbəɫ/"
   },
   {
     "word": "flight",
     "pos": "n.",
     "meaning": "날기",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫaɪt/"
   },
   {
     "word": "flip",
     "pos": "v.",
     "meaning": "튀기다 홱 움직이다 튀기기",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫɪp/"
   },
   {
     "word": "float",
     "pos": "v.",
     "meaning": "뜨다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫoʊt/"
   },
   {
     "word": "flock",
     "pos": "n.",
     "meaning": "무리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫɑk/"
   },
   {
     "word": "flood",
     "pos": "n.",
     "meaning": "홍수",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫəd/"
   },
   {
     "word": "floor",
     "pos": "n.",
     "meaning": "마룻바닥",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫɔɹ/"
   },
   {
     "word": "flourish",
     "pos": "v.",
     "meaning": "번창하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫɝɪʃ/"
   },
   {
     "word": "flow",
     "pos": "v.",
     "meaning": "흐르다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫoʊ/"
   },
   {
     "word": "flower",
     "pos": "n.",
     "meaning": "꽃",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫaʊɝ/"
   },
   {
     "word": "fluid",
     "pos": "a.",
     "meaning": "유동성의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫuəd/, /ˈfɫuɪd/"
   },
   {
     "word": "flush",
     "pos": "v.",
     "meaning": "왈칵흐르다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫəʃ/"
   },
   {
     "word": "fly",
     "pos": "v.",
     "meaning": "날다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɫaɪ/"
   },
   {
     "word": "focus",
     "pos": "n.",
     "meaning": "초점",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfoʊkəs/, /ˈfoʊkɪs/"
   },
   {
     "word": "fog",
     "pos": "n.",
     "meaning": "안개",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɑɡ/, /ˈfɔɡ/"
   },
   {
     "word": "fold",
     "pos": "n.",
     "meaning": "주름",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfoʊɫd/"
   },
   {
     "word": "folk",
     "pos": "n.",
     "meaning": "사람들",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfoʊk/"
   },
   {
     "word": "follow",
     "pos": "v.",
     "meaning": "쫓다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɑɫoʊ/"
   },
   {
     "word": "fond",
     "pos": "a.",
     "meaning": "좋아하는",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɑnd/"
   },
   {
     "word": "food",
     "pos": "n.",
     "meaning": "음식",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfud/"
   },
   {
     "word": "fool",
     "pos": "n.",
     "meaning": "바보",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfuɫ/"
   },
   {
     "word": "foot",
     "pos": "n.",
     "meaning": "발",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfʊt/"
   },
   {
     "word": "football",
     "pos": "n.",
     "meaning": "축구",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfʊtˌbɔɫ/"
   },
   {
     "word": "for",
     "pos": "n.",
     "meaning": "대신에",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɔɹ/, /fɝ/, /fɹɝ/"
   },
   {
     "word": "forbid",
     "pos": "v.",
     "meaning": "금하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/fɝˈbɪd/, /fɔˈbɪd/"
   },
   {
     "word": "force",
     "pos": "n.",
     "meaning": "힘",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɔɹs/"
   },
   {
     "word": "forecast",
     "pos": "n.",
     "meaning": "예상",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɔɹˌkæst/"
   },
   {
     "word": "forehead",
     "pos": "n.",
     "meaning": "이마",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɔɹhɛd/"
   },
   {
     "word": "foreign",
     "pos": "a.",
     "meaning": "외국의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɑɹən/, /ˈfɔɹən/"
   },
   {
     "word": "forest",
     "pos": "n.",
     "meaning": "숲",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɔɹəst/, /ˈfɔɹɪst/"
   },
   {
     "word": "forever",
     "pos": "ad.",
     "meaning": "영원히",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/fɝˈɛvɝ/"
   },
   {
     "word": "forget",
     "pos": "v.",
     "meaning": "잊다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/fɝˈɡɛt/, /fɔɹˈɡɛt/"
   },
   {
     "word": "forgive",
     "pos": "v.",
     "meaning": "용서하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/fɝˈɡɪv/, /fɔɹˈɡɪv/"
   },
   {
     "word": "form",
     "pos": "n.",
     "meaning": "모양",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɔɹm/"
   },
   {
     "word": "formal",
     "pos": "a.",
     "meaning": "형식상의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɔɹməɫ/"
   },
   {
     "word": "format",
     "pos": "n.",
     "meaning": "(서적의)체제",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɔɹˌmæt/"
   },
   {
     "word": "formation",
     "pos": "n.",
     "meaning": "형성",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/fɔɹˈmeɪʃən/"
   },
   {
     "word": "former",
     "pos": "a.",
     "meaning": "이전의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɔɹmɝ/"
   },
   {
     "word": "formula",
     "pos": "n.",
     "meaning": "공식",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɔɹmjəɫə/"
   },
   {
     "word": "forth",
     "pos": "ad.",
     "meaning": "앞으로",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɔɹθ/"
   },
   {
     "word": "fortunate",
     "pos": "n.",
     "meaning": "운좋은",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɔɹtʃənət/, /ˈfɔɹtʃunət/"
   },
   {
     "word": "fortune",
     "pos": "n.",
     "meaning": "운",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɔɹtʃən/, /ˈfɔɹtʃun/"
   },
   {
     "word": "forum",
     "pos": "n.",
     "meaning": "공개토론회",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɔɹəm/"
   },
   {
     "word": "forward",
     "pos": "n.",
     "meaning": "앞쪽에",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɔɹwɝd/"
   },
   {
     "word": "foster",
     "pos": "v.",
     "meaning": "기르다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɑstɝ/"
   },
   {
     "word": "foundation",
     "pos": "n.",
     "meaning": "기초",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/faʊnˈdeɪʃən/"
   },
   {
     "word": "fountain",
     "pos": "n.",
     "meaning": "샘",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfaʊntən/"
   },
   {
     "word": "fox",
     "pos": "n.",
     "meaning": "교활한 person",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɑks/"
   },
   {
     "word": "fraction",
     "pos": "n.",
     "meaning": "분수",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɹækʃən/"
   },
   {
     "word": "frame",
     "pos": "n.",
     "meaning": "구조",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɹeɪm/"
   },
   {
     "word": "framework",
     "pos": "n.",
     "meaning": "뼈대",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɹeɪmˌwɝk/"
   },
   {
     "word": "frankly",
     "pos": "ad.",
     "meaning": "솔직히",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɹæŋkɫi/"
   },
   {
     "word": "free",
     "pos": "a.",
     "meaning": "자유로운",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɹi/"
   },
   {
     "word": "freeze",
     "pos": "v.",
     "meaning": "얼다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɹiz/"
   },
   {
     "word": "frequent",
     "pos": "a.",
     "meaning": "빈번한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɹiˌkwɛnt/, /ˈfɹikwənt/"
   },
   {
     "word": "fresh",
     "pos": "a.",
     "meaning": "새로운",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɹɛʃ/"
   },
   {
     "word": "friend",
     "pos": "n.",
     "meaning": "친구",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɹɛnd/"
   },
   {
     "word": "fright",
     "pos": "n.",
     "meaning": "(갑자기 엄습하는)공포",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɹaɪt/"
   },
   {
     "word": "frog",
     "pos": "n.",
     "meaning": "개구리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɹɑɡ/"
   },
   {
     "word": "from",
     "pos": "n.",
     "meaning": "(분리,이탈,출발점,기점)-로 부터",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɹəm/"
   },
   {
     "word": "front",
     "pos": "n.",
     "meaning": "정면",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɹənt/"
   },
   {
     "word": "frost",
     "pos": "n.",
     "meaning": "서리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɹɔst/"
   },
   {
     "word": "frown",
     "pos": "v.",
     "meaning": "눈살을 찌푸리다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɹaʊn/"
   },
   {
     "word": "fruit",
     "pos": "n.",
     "meaning": "과일",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɹut/"
   },
   {
     "word": "frustrate",
     "pos": "v.",
     "meaning": "(계획 등을)좌절시키다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɹəsˌtɹeɪt/"
   },
   {
     "word": "fry",
     "pos": "v.",
     "meaning": "기름으로 튀기다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɹaɪ/"
   },
   {
     "word": "fuel",
     "pos": "n.",
     "meaning": "연료",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfjuəɫ/, /ˈfjuɫ/"
   },
   {
     "word": "fulfil",
     "pos": "v.",
     "meaning": "이행하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/fʊɫˈfɪɫ/"
   },
   {
     "word": "full",
     "pos": "n.",
     "meaning": "가득찬",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfʊɫ/"
   },
   {
     "word": "fun",
     "pos": "n.",
     "meaning": "즐거운 생각",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfən/"
   },
   {
     "word": "function",
     "pos": "n.",
     "meaning": "기능",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfəŋkʃən/"
   },
   {
     "word": "fund",
     "pos": "n.",
     "meaning": "기금",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfənd/"
   },
   {
     "word": "fundamental",
     "pos": "a.",
     "meaning": "기초(기준)의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌfəndəˈmɛnəɫ/, /ˌfəndəˈmɛntəɫ/"
   },
   {
     "word": "funeral",
     "pos": "n.",
     "meaning": "장사",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfjunɝəɫ/"
   },
   {
     "word": "fur",
     "pos": "n.",
     "meaning": "모피",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɝ/"
   },
   {
     "word": "furious",
     "pos": "a.",
     "meaning": "노하여 펄펄뛰는",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfjʊɹiəs/"
   },
   {
     "word": "furnish",
     "pos": "v.",
     "meaning": "공급하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɝnɪʃ/"
   },
   {
     "word": "furniture",
     "pos": "n.",
     "meaning": "가구",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɝnɪtʃɝ/"
   },
   {
     "word": "furthermore",
     "pos": "n.",
     "meaning": "더우기",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɝðɝˌmɔɹ/"
   },
   {
     "word": "fuse",
     "pos": "n.",
     "meaning": "신관",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfjuz/"
   },
   {
     "word": "future",
     "pos": "n.",
     "meaning": "미래",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfjutʃɝ/"
   },
   {
     "word": "gain",
     "pos": "v.",
     "meaning": "얻다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡeɪn/"
   },
   {
     "word": "gamble",
     "pos": "v.",
     "meaning": "도박하다 도박 도박해서 잃다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡæmbəɫ/"
   },
   {
     "word": "gang",
     "pos": "n.",
     "meaning": "한 떼",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡæŋ/"
   },
   {
     "word": "gap",
     "pos": "n.",
     "meaning": "갈라진 틈",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡæp/"
   },
   {
     "word": "garage",
     "pos": "n.",
     "meaning": "차고",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɡɝˈɑʒ/"
   },
   {
     "word": "garden",
     "pos": "n.",
     "meaning": "뜰",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɑɹdən/"
   },
   {
     "word": "gasoline",
     "pos": "n.",
     "meaning": "가솔린",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡæsəˌɫin/"
   },
   {
     "word": "gate",
     "pos": "n.",
     "meaning": "문",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡeɪt/"
   },
   {
     "word": "gather",
     "pos": "v.",
     "meaning": "그러모으다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡæðɝ/"
   },
   {
     "word": "gaze",
     "pos": "v.",
     "meaning": "지켜보다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡeɪz/"
   },
   {
     "word": "gear",
     "pos": "n.",
     "meaning": "톱니바퀴",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɪɹ/"
   },
   {
     "word": "gender",
     "pos": "n.",
     "meaning": "성",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒɛndɝ/"
   },
   {
     "word": "gene",
     "pos": "n.",
     "meaning": "유전(인)자",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒin/"
   },
   {
     "word": "general",
     "pos": "a.",
     "meaning": "일반적인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒɛnɝəɫ/, /ˈdʒɛnɹəɫ/"
   },
   {
     "word": "generate",
     "pos": "v.",
     "meaning": "낳다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒɛnɝˌeɪt/"
   },
   {
     "word": "generation",
     "pos": "n.",
     "meaning": "일대",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌdʒɛnɝˈeɪʃən/"
   },
   {
     "word": "generous",
     "pos": "a.",
     "meaning": "광대한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒɛnɝəs/"
   },
   {
     "word": "genius",
     "pos": "n.",
     "meaning": "천재",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒinjəs/"
   },
   {
     "word": "genre",
     "pos": "n.",
     "meaning": "유형",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈʒɑnɹə/"
   },
   {
     "word": "gentle",
     "pos": "a.",
     "meaning": "온화한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒɛnəɫ/, /ˈdʒɛntəɫ/"
   },
   {
     "word": "gentleman",
     "pos": "n.",
     "meaning": "신사",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒɛnəɫmən/, /ˈdʒɛntəɫmən/"
   },
   {
     "word": "genuine",
     "pos": "a.",
     "meaning": "진짜의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒɛnˈjuˌwaɪn/, /ˈdʒɛnjəwən/"
   },
   {
     "word": "geography",
     "pos": "n.",
     "meaning": "지리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dʒiˈɑɡɹəfi/"
   },
   {
     "word": "geology",
     "pos": "n.",
     "meaning": "지질학",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dʒiˈɑɫədʒi/"
   },
   {
     "word": "gesture",
     "pos": "n.",
     "meaning": "몸짓",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒɛstʃɝ/"
   },
   {
     "word": "get",
     "pos": "v.",
     "meaning": "얻다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɛt/, /ˈɡɪt/"
   },
   {
     "word": "ghost",
     "pos": "n.",
     "meaning": "유령",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡoʊst/"
   },
   {
     "word": "giant",
     "pos": "a.",
     "meaning": "거인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒaɪənt/"
   },
   {
     "word": "gift",
     "pos": "n.",
     "meaning": "선물",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɪft/"
   },
   {
     "word": "giraffe",
     "pos": "n.",
     "meaning": "기린",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dʒɝˈæf/"
   },
   {
     "word": "girl",
     "pos": "n.",
     "meaning": "소녀",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɝɫ/"
   },
   {
     "word": "give",
     "pos": "v.",
     "meaning": "주다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɪv/"
   },
   {
     "word": "glad",
     "pos": "n.",
     "meaning": "기쁜",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɫæd/"
   },
   {
     "word": "glance",
     "pos": "n.",
     "meaning": "흘긋 봄",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɫæns/"
   },
   {
     "word": "glare",
     "pos": "n.",
     "meaning": "번쩍이는 빛",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɫɛɹ/"
   },
   {
     "word": "glass",
     "pos": "n.",
     "meaning": "유리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɫæs/"
   },
   {
     "word": "glimpse",
     "pos": "n.",
     "meaning": "흘끗 봄",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɫɪmps/"
   },
   {
     "word": "global",
     "pos": "a.",
     "meaning": "공모양의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɫoʊbəɫ/"
   },
   {
     "word": "glory",
     "pos": "n.",
     "meaning": "영광",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɫɔɹi/"
   },
   {
     "word": "glove",
     "pos": "n.",
     "meaning": "장갑",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɫəv/"
   },
   {
     "word": "glow",
     "pos": "v.",
     "meaning": "타다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɫoʊ/"
   },
   {
     "word": "glue",
     "pos": "n.",
     "meaning": "아교",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɫu/"
   },
   {
     "word": "go",
     "pos": "v.",
     "meaning": "가다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡoʊ/"
   },
   {
     "word": "goal",
     "pos": "n.",
     "meaning": "결승점",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡoʊɫ/"
   },
   {
     "word": "goat",
     "pos": "n.",
     "meaning": "염소",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡoʊt/"
   },
   {
     "word": "god",
     "pos": "n.",
     "meaning": "신",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɑd/"
   },
   {
     "word": "gold",
     "pos": "n.",
     "meaning": "금",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡoʊɫd/"
   },
   {
     "word": "good",
     "pos": "n.",
     "meaning": "좋은",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡʊd/, /ɡɪd/"
   },
   {
     "word": "goodbye",
     "pos": "n.",
     "meaning": "안녕히 가세요",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɡʊdˈbaɪ/"
   },
   {
     "word": "goods",
     "pos": "n.",
     "meaning": "상품",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡʊdz/"
   },
   {
     "word": "gorgeous",
     "pos": "a.",
     "meaning": "호화로운",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɔɹdʒəs/"
   },
   {
     "word": "govern",
     "pos": "v.",
     "meaning": "다스리다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡəvɝn/"
   },
   {
     "word": "grab",
     "pos": "n.",
     "meaning": "붙잡다(=snatch)",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹæb/"
   },
   {
     "word": "grace",
     "pos": "n.",
     "meaning": "은총",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹeɪs/"
   },
   {
     "word": "grade",
     "pos": "n.",
     "meaning": "등급",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹeɪd/"
   },
   {
     "word": "gradual",
     "pos": "a.",
     "meaning": "점차적인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹædʒuəɫ/"
   },
   {
     "word": "graduate",
     "pos": "v.",
     "meaning": "학위를 수여하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹædʒəˌweɪt/, /ˈɡɹædʒəwət/, /ˈɡɹædʒuˌeɪt/, /ˈɡɹædʒuwət/"
   },
   {
     "word": "grain",
     "pos": "n.",
     "meaning": "곡물",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹeɪn/"
   },
   {
     "word": "grand",
     "pos": "a.",
     "meaning": "위대한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹænd/"
   },
   {
     "word": "grandfather",
     "pos": "n.",
     "meaning": "할아버지",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹænˌfɑðɝ/, /ˈɡɹændˌfɑðɝ/"
   },
   {
     "word": "grant",
     "pos": "v.",
     "meaning": "받아들이다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹænt/"
   },
   {
     "word": "grape",
     "pos": "n.",
     "meaning": "포도",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹeɪp/"
   },
   {
     "word": "graphic",
     "pos": "a.",
     "meaning": "그려 놓은 듯한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹæfɪk/"
   },
   {
     "word": "grasp",
     "pos": "v.",
     "meaning": "붙잡다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹæsp/"
   },
   {
     "word": "grass",
     "pos": "n.",
     "meaning": "풀밭",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹæs/"
   },
   {
     "word": "grateful",
     "pos": "a.",
     "meaning": "고맙게 생각하는",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹeɪtfəɫ/"
   },
   {
     "word": "grave",
     "pos": "n.",
     "meaning": "무덤",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹeɪv/"
   },
   {
     "word": "great",
     "pos": "n.",
     "meaning": "커다란",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹeɪt/"
   },
   {
     "word": "greed",
     "pos": "n.",
     "meaning": "탐욕",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹid/"
   },
   {
     "word": "green",
     "pos": "n.",
     "meaning": "초록색",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹin/"
   },
   {
     "word": "greet",
     "pos": "v.",
     "meaning": "인사하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹit/"
   },
   {
     "word": "grey",
     "pos": "a.",
     "meaning": "회색의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹeɪ/"
   },
   {
     "word": "grief",
     "pos": "n.",
     "meaning": "심한 슬픔(deep sorrow)",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹif/"
   },
   {
     "word": "grip",
     "pos": "n.",
     "meaning": "잡기",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹɪp/"
   },
   {
     "word": "grocery",
     "pos": "n.",
     "meaning": "식품잡화류",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹoʊsɝi/, /ˈɡɹoʊsɹi/"
   },
   {
     "word": "gross",
     "pos": "a.",
     "meaning": "총계의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹoʊs/"
   },
   {
     "word": "ground",
     "pos": "n.",
     "meaning": "땅",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹaʊnd/"
   },
   {
     "word": "group",
     "pos": "n.",
     "meaning": "집단",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹup/"
   },
   {
     "word": "grow",
     "pos": "v.",
     "meaning": "성장하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɹoʊ/"
   },
   {
     "word": "guarantee",
     "pos": "v.",
     "meaning": "보증하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɡɛɹənˈti/"
   },
   {
     "word": "guardian",
     "pos": "n.",
     "meaning": "보호자",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɑɹdiən/"
   },
   {
     "word": "guess",
     "pos": "v.",
     "meaning": "추측(짐작)하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɛs/"
   },
   {
     "word": "guest",
     "pos": "n.",
     "meaning": "손님",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɛst/"
   },
   {
     "word": "guide",
     "pos": "v.",
     "meaning": "이끌다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡaɪd/"
   },
   {
     "word": "guideline",
     "pos": "n.",
     "meaning": "지침",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡaɪdˌɫaɪn/"
   },
   {
     "word": "guilty",
     "pos": "n.",
     "meaning": "죄지은",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡɪɫti/"
   },
   {
     "word": "gulf",
     "pos": "n.",
     "meaning": "만",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡəɫf/"
   },
   {
     "word": "gun",
     "pos": "n.",
     "meaning": "총",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡən/"
   },
   {
     "word": "guy",
     "pos": "n.",
     "meaning": "녀석",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɡaɪ/"
   },
   {
     "word": "gymnasium",
     "pos": "n.",
     "meaning": "실내체조장",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dʒɪmˈneɪziəm/"
   },
   {
     "word": "habit",
     "pos": "n.",
     "meaning": "습관",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhæbət/"
   },
   {
     "word": "habitat",
     "pos": "n.",
     "meaning": "(동물의)자연번식지",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhæbəˌtæt/"
   },
   {
     "word": "hair",
     "pos": "n.",
     "meaning": "털",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɛɹ/"
   },
   {
     "word": "half",
     "pos": "n.",
     "meaning": "반",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhæf/"
   },
   {
     "word": "hall",
     "pos": "n.",
     "meaning": "회관",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɔɫ/"
   },
   {
     "word": "halt",
     "pos": "v.",
     "meaning": "멈춰서다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɔɫt/"
   },
   {
     "word": "hammer",
     "pos": "n.",
     "meaning": "망치",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhæmɝ/"
   },
   {
     "word": "hand",
     "pos": "n.",
     "meaning": "손",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhænd/"
   },
   {
     "word": "handicap",
     "pos": "n.",
     "meaning": "불리한 조건",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhændiˌkæp/"
   },
   {
     "word": "handle",
     "pos": "n.",
     "meaning": "손잡이",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhændəɫ/"
   },
   {
     "word": "handsome",
     "pos": "n.",
     "meaning": "얼굴(자태)이 잘생긴",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhænsəm/"
   },
   {
     "word": "hang",
     "pos": "v.",
     "meaning": "걸다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhæŋ/"
   },
   {
     "word": "happen",
     "pos": "v.",
     "meaning": "(사건 등이)일어나다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhæpən/"
   },
   {
     "word": "happy",
     "pos": "a.",
     "meaning": "행운의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhæpi/"
   },
   {
     "word": "harbor",
     "pos": "n.",
     "meaning": "항구",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɑɹbɝ/"
   },
   {
     "word": "hard",
     "pos": "a.",
     "meaning": "단단한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɑɹd/"
   },
   {
     "word": "hardly",
     "pos": "v.",
     "meaning": "거의 -아니다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɑɹdɫi/"
   },
   {
     "word": "harm",
     "pos": "n.",
     "meaning": "해",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɑɹm/"
   },
   {
     "word": "harsh",
     "pos": "n.",
     "meaning": "거친",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɑɹʃ/"
   },
   {
     "word": "harvest",
     "pos": "n.",
     "meaning": "수확",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɑɹvəst/"
   },
   {
     "word": "haste",
     "pos": "n.",
     "meaning": "급함",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈheɪst/"
   },
   {
     "word": "hat",
     "pos": "v.",
     "meaning": "(테있는)모자 모자를 씌우다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhæt/"
   },
   {
     "word": "hate",
     "pos": "v.",
     "meaning": "미워하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈheɪt/"
   },
   {
     "word": "haunt",
     "pos": "v.",
     "meaning": "자주가다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɔnt/"
   },
   {
     "word": "have",
     "pos": "v.",
     "meaning": "가지(고 있)다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhæv/"
   },
   {
     "word": "hazard",
     "pos": "n.",
     "meaning": "위험",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhæzɝd/"
   },
   {
     "word": "he",
     "pos": "n.",
     "meaning": "(3 인칭단수 남성)그",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhi/"
   },
   {
     "word": "head",
     "pos": "n.",
     "meaning": "머리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɛd/"
   },
   {
     "word": "headache",
     "pos": "n.",
     "meaning": "두통",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɛˌdeɪk/"
   },
   {
     "word": "headquarters",
     "pos": "n.",
     "meaning": "본부",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɛdˌkɔɹtɝz/, /ˈhɛdˌkwɔɹtɝz/"
   },
   {
     "word": "heal",
     "pos": "v.",
     "meaning": "고치다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhiɫ/"
   },
   {
     "word": "health",
     "pos": "n.",
     "meaning": "건강",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɛɫθ/"
   },
   {
     "word": "hear",
     "pos": "v.",
     "meaning": "듣다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhiɹ/"
   },
   {
     "word": "heart",
     "pos": "n.",
     "meaning": "심장",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɑɹt/"
   },
   {
     "word": "heat",
     "pos": "n.",
     "meaning": "열",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhit/"
   },
   {
     "word": "heaven",
     "pos": "n.",
     "meaning": "하늘",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɛvən/"
   },
   {
     "word": "heavy",
     "pos": "n.",
     "meaning": "무거운",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɛvi/"
   },
   {
     "word": "heel",
     "pos": "n.",
     "meaning": "발뒤꿈치",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhiɫ/"
   },
   {
     "word": "height",
     "pos": "n.",
     "meaning": "높이",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhaɪt/"
   },
   {
     "word": "heir",
     "pos": "a.",
     "meaning": "상속인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɛɹ/"
   },
   {
     "word": "helicopter",
     "pos": "n.",
     "meaning": "헬리콥터",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɛɫɪˌkɑptɝ/"
   },
   {
     "word": "hell",
     "pos": "n.",
     "meaning": "지옥",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɛɫ/"
   },
   {
     "word": "hello",
     "pos": "n.",
     "meaning": "여보",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/həˈɫoʊ/, /hɛˈɫoʊ/"
   },
   {
     "word": "help",
     "pos": "v.",
     "meaning": "돕다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɛɫp/"
   },
   {
     "word": "hence",
     "pos": "ad.",
     "meaning": "그러므로",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɛns/"
   },
   {
     "word": "here",
     "pos": "n.",
     "meaning": "여기에",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhiɹ/"
   },
   {
     "word": "heritage",
     "pos": "n.",
     "meaning": "세습 재산",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɛɹətədʒ/, /ˈhɛɹɪtɪdʒ/"
   },
   {
     "word": "hero",
     "pos": "n.",
     "meaning": "영웅",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhiɹoʊ/, /ˈhɪɹoʊ/"
   },
   {
     "word": "hesitate",
     "pos": "v.",
     "meaning": "주저하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɛzəˌteɪt/"
   },
   {
     "word": "hide",
     "pos": "v.",
     "meaning": "감추다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhaɪd/"
   },
   {
     "word": "high",
     "pos": "n.",
     "meaning": "높은",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhaɪ/"
   },
   {
     "word": "highway",
     "pos": "n.",
     "meaning": "대도",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhaɪˌweɪ/"
   },
   {
     "word": "hill",
     "pos": "n.",
     "meaning": "언덕, 낮은 산 인도 고지",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɪɫ/"
   },
   {
     "word": "hip",
     "pos": "n.",
     "meaning": "엉덩이",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɪp/"
   },
   {
     "word": "hire",
     "pos": "v.",
     "meaning": "고용하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhaɪɝ/, /ˈhaɪɹ/"
   },
   {
     "word": "history",
     "pos": "n.",
     "meaning": "역사",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɪstɝi/, /ˈhɪstɹi/"
   },
   {
     "word": "hit",
     "pos": "v.",
     "meaning": "명중하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɪt/"
   },
   {
     "word": "hobby",
     "pos": "n.",
     "meaning": "취미",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɑbi/"
   },
   {
     "word": "hold",
     "pos": "v.",
     "meaning": "손에 갖고 있다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhoʊɫd/"
   },
   {
     "word": "hole",
     "pos": "n.",
     "meaning": "구멍",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhoʊɫ/"
   },
   {
     "word": "holiday",
     "pos": "n.",
     "meaning": "휴일",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɑɫəˌdeɪ/, /ˈhɑɫɪˌdeɪ/"
   },
   {
     "word": "holy",
     "pos": "a.",
     "meaning": "신성한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhoʊɫi/"
   },
   {
     "word": "home",
     "pos": "n.",
     "meaning": "가정",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhoʊm/"
   },
   {
     "word": "homework",
     "pos": "n.",
     "meaning": "숙제",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhoʊmˌwɝk/"
   },
   {
     "word": "honest",
     "pos": "a.",
     "meaning": "정직한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɑnəst/"
   },
   {
     "word": "honey",
     "pos": "n.",
     "meaning": "벌꿀",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhəni/"
   },
   {
     "word": "honor",
     "pos": "n.",
     "meaning": "명예",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɑnɝ/"
   },
   {
     "word": "hook",
     "pos": "n.",
     "meaning": "갈고리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhʊk/"
   },
   {
     "word": "hope",
     "pos": "n.",
     "meaning": "희망",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhoʊp/"
   },
   {
     "word": "horizon",
     "pos": "n.",
     "meaning": "지평선",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/hɝˈaɪzən/"
   },
   {
     "word": "horn",
     "pos": "n.",
     "meaning": "뿔",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɔɹn/"
   },
   {
     "word": "horror",
     "pos": "n.",
     "meaning": "공포",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɔɹɝ/"
   },
   {
     "word": "horse",
     "pos": "n.",
     "meaning": "말",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɔɹs/"
   },
   {
     "word": "hospital",
     "pos": "n.",
     "meaning": "병완",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɑˌspɪtəɫ/"
   },
   {
     "word": "host",
     "pos": "n.",
     "meaning": "주인, 집주인 노릇, 호스트",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhoʊst/"
   },
   {
     "word": "hostage",
     "pos": "n.",
     "meaning": "볼모",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɑstɪdʒ/"
   },
   {
     "word": "hostile",
     "pos": "a.",
     "meaning": "반대하는",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɑstəɫ/, /hɑˈstaɪɫ/"
   },
   {
     "word": "hot",
     "pos": "n.",
     "meaning": "뜨거운",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɑt/"
   },
   {
     "word": "hour",
     "pos": "n.",
     "meaning": "시간",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈaʊɝ/, /ˈaʊɹ/"
   },
   {
     "word": "house",
     "pos": "n.",
     "meaning": "집",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhaʊs/"
   },
   {
     "word": "household",
     "pos": "n.",
     "meaning": "가족",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhaʊsˌhoʊɫd/"
   },
   {
     "word": "how",
     "pos": "ad.",
     "meaning": "어떻게",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhaʊ/"
   },
   {
     "word": "however",
     "pos": "n.",
     "meaning": "아무리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌhaʊˈɛvɝ/"
   },
   {
     "word": "hug",
     "pos": "v.",
     "meaning": "꼭 껴안다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhəɡ/"
   },
   {
     "word": "huge",
     "pos": "a.",
     "meaning": "거대한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhjudʒ/, /ˈjudʒ/"
   },
   {
     "word": "human",
     "pos": "a.",
     "meaning": "인간의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhjumən/, /ˈjumən/"
   },
   {
     "word": "humor",
     "pos": "n.",
     "meaning": "유우머",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhjumɝ/"
   },
   {
     "word": "hundred",
     "pos": "a.",
     "meaning": "100 100 의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhəndɝd/, /ˈhəndɹəd/, /ˈhəndɹɪd/, /ˈhənɝd/"
   },
   {
     "word": "hungry",
     "pos": "n.",
     "meaning": "배고픈",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhəŋɡɹi/"
   },
   {
     "word": "hunt",
     "pos": "v.",
     "meaning": "사냥하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhənt/"
   },
   {
     "word": "hurry",
     "pos": "v.",
     "meaning": "서두르다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɝi/"
   },
   {
     "word": "hurt",
     "pos": "v.",
     "meaning": "상처내다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhɝt/"
   },
   {
     "word": "husband",
     "pos": "v.",
     "meaning": "남편 절약하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhəzbənd/"
   },
   {
     "word": "hut",
     "pos": "n.",
     "meaning": "오두막",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈhət/"
   },
   {
     "word": "hypothesis",
     "pos": "n.",
     "meaning": "가설",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/haɪˈpɑθəsəs/"
   },
   {
     "word": "I",
     "pos": "n.",
     "meaning": "나는, 내가",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈaɪ/"
   },
   {
     "word": "ice",
     "pos": "n.",
     "meaning": "얼음",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈaɪs/"
   },
   {
     "word": "idea",
     "pos": "n.",
     "meaning": "관념",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/aɪˈdiə/"
   },
   {
     "word": "ideal",
     "pos": "n.",
     "meaning": "이상",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/aɪˈdiɫ/"
   },
   {
     "word": "identical",
     "pos": "a.",
     "meaning": "아주 동일한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/aɪˈdɛntɪkəɫ/"
   },
   {
     "word": "identify",
     "pos": "v.",
     "meaning": "동일시하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/aɪˈdɛntəˌfaɪ/"
   },
   {
     "word": "ideology",
     "pos": "n.",
     "meaning": "공리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌaɪdiˈɑɫədʒi/"
   },
   {
     "word": "if",
     "pos": "n.",
     "meaning": "만일 -이라면",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪf/, /ɪf/"
   },
   {
     "word": "ignore",
     "pos": "v.",
     "meaning": "무시하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪɡˈnɔɹ/"
   },
   {
     "word": "ill",
     "pos": "n.",
     "meaning": "병든",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪɫ/"
   },
   {
     "word": "illusion",
     "pos": "n.",
     "meaning": "환영",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪˈɫuʒən/"
   },
   {
     "word": "illustrate",
     "pos": "v.",
     "meaning": "설명하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪɫəˌstɹeɪt/"
   },
   {
     "word": "imagine",
     "pos": "v.",
     "meaning": "상상하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪˈmædʒən/"
   },
   {
     "word": "imitate",
     "pos": "v.",
     "meaning": "흉내내다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪməˌteɪt/"
   },
   {
     "word": "immediate",
     "pos": "a.",
     "meaning": "직접의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪˈmiˌdiət/"
   },
   {
     "word": "immense",
     "pos": "a.",
     "meaning": "무한한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪˈmɛns/"
   },
   {
     "word": "immigrate",
     "pos": "v.",
     "meaning": "이주하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪməˌɡɹeɪt/"
   },
   {
     "word": "immune",
     "pos": "a.",
     "meaning": "면역성의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪmˈjun/"
   },
   {
     "word": "impact",
     "pos": "n.",
     "meaning": "충격",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪmpækt/, /ˌɪmˈpækt/"
   },
   {
     "word": "imperial",
     "pos": "a.",
     "meaning": "제국의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪmˈpɪɹiəɫ/"
   },
   {
     "word": "implement",
     "pos": "n.",
     "meaning": "기구",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪmpɫəmənt/"
   },
   {
     "word": "imply",
     "pos": "v.",
     "meaning": "함축하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪmˈpɫaɪ/"
   },
   {
     "word": "import",
     "pos": "v.",
     "meaning": "수입하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪmˌpɔɹt/, /ˌɪmˈpɔɹt/"
   },
   {
     "word": "important",
     "pos": "a.",
     "meaning": "중요한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪmˈpɔɹtənt/"
   },
   {
     "word": "impose",
     "pos": "v.",
     "meaning": "부과하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪmˈpoʊz/"
   },
   {
     "word": "impress",
     "pos": "v.",
     "meaning": "인상지우다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪmˌpɹɛs/, /ˌɪmˈpɹɛs/"
   },
   {
     "word": "improve",
     "pos": "v.",
     "meaning": "개선하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪmˈpɹuv/"
   },
   {
     "word": "in",
     "pos": "n.",
     "meaning": "-속에",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪn/, /ɪn/"
   },
   {
     "word": "incentive",
     "pos": "a.",
     "meaning": "자극적인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈsɛnɪv/, /ˌɪnˈsɛntɪv/"
   },
   {
     "word": "incident",
     "pos": "n.",
     "meaning": "사건",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnsədənt/"
   },
   {
     "word": "incline",
     "pos": "v.",
     "meaning": "기울이다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnkɫaɪn/, /ˌɪnˈkɫaɪn/"
   },
   {
     "word": "include",
     "pos": "v.",
     "meaning": "포함하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈkɫud/"
   },
   {
     "word": "income",
     "pos": "n.",
     "meaning": "수입",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnˌkəm/"
   },
   {
     "word": "incorporate",
     "pos": "v.",
     "meaning": "합동시키다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈkɔɹpɝˌeɪt/"
   },
   {
     "word": "increase",
     "pos": "v.",
     "meaning": "늘다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnˌkɹis/, /ˌɪnˈkɹis/"
   },
   {
     "word": "incredible",
     "pos": "a.",
     "meaning": "믿을 수 없는",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈkɹɛdəbəɫ/"
   },
   {
     "word": "indeed",
     "pos": "ad.",
     "meaning": "참으로",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈdid/"
   },
   {
     "word": "independent",
     "pos": "a.",
     "meaning": "독립한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪndɪˈpɛndənt/"
   },
   {
     "word": "index",
     "pos": "a.",
     "meaning": "색인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪndɛks/"
   },
   {
     "word": "indicate",
     "pos": "v.",
     "meaning": "지적하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪndəˌkeɪt/"
   },
   {
     "word": "individual",
     "pos": "a.",
     "meaning": "개인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪndəˈvɪdʒəwəɫ/"
   },
   {
     "word": "induce",
     "pos": "v.",
     "meaning": "꾀다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈdus/"
   },
   {
     "word": "industry",
     "pos": "n.",
     "meaning": "공업",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪndəstɹi/"
   },
   {
     "word": "inevitable",
     "pos": "a.",
     "meaning": "피할 수 없는",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪˈnɛvətəbəɫ/"
   },
   {
     "word": "infant",
     "pos": "n.",
     "meaning": "유아",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnfənt/"
   },
   {
     "word": "infect",
     "pos": "v.",
     "meaning": "감염시키다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈfɛkt/"
   },
   {
     "word": "infer",
     "pos": "v.",
     "meaning": "추론하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈfɝ/"
   },
   {
     "word": "inflate",
     "pos": "v.",
     "meaning": "부풀게 하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪnˈfɫeɪt/"
   },
   {
     "word": "influence",
     "pos": "n.",
     "meaning": "영향력",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnfɫuəns/"
   },
   {
     "word": "inform",
     "pos": "v.",
     "meaning": "알리다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈfɔɹm/"
   },
   {
     "word": "informal",
     "pos": "a.",
     "meaning": "비공식의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈfɔɹməɫ/"
   },
   {
     "word": "ingredient",
     "pos": "n.",
     "meaning": "성분",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈɡɹidiənt/"
   },
   {
     "word": "inhabit",
     "pos": "v.",
     "meaning": "살다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈhæbət/"
   },
   {
     "word": "inherent",
     "pos": "a.",
     "meaning": "생태의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɪnˈhɛɹənt/, /ɪnˈhɪɹənt/"
   },
   {
     "word": "inhibit",
     "pos": "v.",
     "meaning": "금하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈhɪbət/"
   },
   {
     "word": "initial",
     "pos": "a.",
     "meaning": "처음의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪˈnɪʃəɫ/"
   },
   {
     "word": "initiate",
     "pos": "v.",
     "meaning": "시작하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪˈnɪʃiˌeɪt/"
   },
   {
     "word": "inject",
     "pos": "v.",
     "meaning": "주사하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈdʒɛkt/"
   },
   {
     "word": "injure",
     "pos": "v.",
     "meaning": "해치다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪndʒɝ/"
   },
   {
     "word": "inn",
     "pos": "n.",
     "meaning": "여인숙",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪn/"
   },
   {
     "word": "innocent",
     "pos": "a.",
     "meaning": "무구한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnəsənt/"
   },
   {
     "word": "innovate",
     "pos": "v.",
     "meaning": "새롭게 하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnəˌveɪt/, /ˈɪnoʊˌveɪt/"
   },
   {
     "word": "input",
     "pos": "n.",
     "meaning": "투입",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnˌpʊt/"
   },
   {
     "word": "inquire",
     "pos": "v.",
     "meaning": "묻다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈkwaɪɹ/"
   },
   {
     "word": "insect",
     "pos": "n.",
     "meaning": "충",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnˌsɛkt/"
   },
   {
     "word": "insert",
     "pos": "v.",
     "meaning": "끼워넣다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnˌsɝt/, /ˌɪnˈsɝt/"
   },
   {
     "word": "inside",
     "pos": "n.",
     "meaning": "안쪽",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnˌsaɪd/, /ˌɪnˈsaɪd/"
   },
   {
     "word": "insight",
     "pos": "n.",
     "meaning": "통찰(력)",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnˌsaɪt/"
   },
   {
     "word": "insist",
     "pos": "v.",
     "meaning": "주장하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈsɪst/"
   },
   {
     "word": "inspect",
     "pos": "v.",
     "meaning": "검사하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈspɛkt/"
   },
   {
     "word": "inspire",
     "pos": "v.",
     "meaning": "영감을 주다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈspaɪɹ/"
   },
   {
     "word": "install",
     "pos": "v.",
     "meaning": "설치하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈstɔɫ/"
   },
   {
     "word": "instance",
     "pos": "n.",
     "meaning": "실례",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnstəns/"
   },
   {
     "word": "instant",
     "pos": "a.",
     "meaning": "즉시의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnstənt/"
   },
   {
     "word": "instead",
     "pos": "n.",
     "meaning": "그 대신에",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈstɛd/"
   },
   {
     "word": "instinct",
     "pos": "n.",
     "meaning": "본능",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnstɪŋkt/"
   },
   {
     "word": "institute",
     "pos": "v.",
     "meaning": "만들다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnstəˌtut/"
   },
   {
     "word": "instruct",
     "pos": "v.",
     "meaning": "가르치다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈstɹəkt/"
   },
   {
     "word": "instrument",
     "pos": "n.",
     "meaning": "기구",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnstɹəmənt/"
   },
   {
     "word": "insult",
     "pos": "v.",
     "meaning": "모욕하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnˌsəɫt/, /ˌɪnˈsəɫt/"
   },
   {
     "word": "insure",
     "pos": "v.",
     "meaning": "보증하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈʃʊɹ/"
   },
   {
     "word": "integrate",
     "pos": "v.",
     "meaning": "통합하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnəˌɡɹeɪt/, /ˈɪntəˌɡɹeɪt/"
   },
   {
     "word": "intellectual",
     "pos": "a.",
     "meaning": "지적인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnəˈɫɛktʃuəɫ/, /ˌɪntəˈɫɛktʃuəɫ/"
   },
   {
     "word": "intelligent",
     "pos": "a.",
     "meaning": "지적인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈtɛɫədʒənt/"
   },
   {
     "word": "intend",
     "pos": "v.",
     "meaning": "-할 작정이다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈtɛnd/"
   },
   {
     "word": "intense",
     "pos": "a.",
     "meaning": "강렬한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈtɛns/"
   },
   {
     "word": "intent",
     "pos": "n.",
     "meaning": "의향",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈtɛnt/"
   },
   {
     "word": "interact",
     "pos": "v.",
     "meaning": "서로 작용하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnɝˈækt/, /ˌɪntɝˈækt/"
   },
   {
     "word": "interest",
     "pos": "n.",
     "meaning": "흥미",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪntɝəst/, /ˈɪntɝɪst/, /ˈɪntɹəst/, /ˈɪntɹɪst/"
   },
   {
     "word": "interfere",
     "pos": "v.",
     "meaning": "간섭하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnɝˈfɪɹ/, /ˌɪntɝˈfɪɹ/"
   },
   {
     "word": "intermediate",
     "pos": "n.",
     "meaning": "중간의 중간물",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnɝˈmidiɪt/, /ˌɪntɝˈmidiɪt/"
   },
   {
     "word": "internal",
     "pos": "a.",
     "meaning": "내부의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈtɝnəɫ/"
   },
   {
     "word": "international",
     "pos": "a.",
     "meaning": "국제적인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnɝˈnæʃənəɫ/, /ˌɪntɝˈnæʃənəɫ/"
   },
   {
     "word": "interpret",
     "pos": "v.",
     "meaning": "해석하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈtɝpɹət/"
   },
   {
     "word": "interrupt",
     "pos": "v.",
     "meaning": "훼방놓다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪntɝˈəpt/"
   },
   {
     "word": "interval",
     "pos": "n.",
     "meaning": "간격",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪntɝvəɫ/"
   },
   {
     "word": "intervene",
     "pos": "v.",
     "meaning": "사이에 들다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪntɝˈvin/"
   },
   {
     "word": "intimate",
     "pos": "a.",
     "meaning": "친밀한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪnəmət/, /ˈɪntəˌmeɪt/, /ˈɪntəmət/"
   },
   {
     "word": "into",
     "pos": "ad.",
     "meaning": "-안으로",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪntu/, /ɪnˈtu/, /ɪntə/"
   },
   {
     "word": "intrigue",
     "pos": "n.",
     "meaning": "음모",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪntɹiɡ/, /ˌɪnˈtɹiɡ/"
   },
   {
     "word": "introduce",
     "pos": "v.",
     "meaning": "안으로 들이다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪntɹəˈdus/, /ˌɪntɹoʊˈdus/"
   },
   {
     "word": "invade",
     "pos": "v.",
     "meaning": "침입하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈveɪd/"
   },
   {
     "word": "invent",
     "pos": "v.",
     "meaning": "발명하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈvɛnt/"
   },
   {
     "word": "invest",
     "pos": "v.",
     "meaning": "투자하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈvɛst/"
   },
   {
     "word": "investigate",
     "pos": "v.",
     "meaning": "조사하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈvɛstəˌɡeɪt/"
   },
   {
     "word": "invite",
     "pos": "v.",
     "meaning": "초대하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈvaɪt/"
   },
   {
     "word": "involve",
     "pos": "v.",
     "meaning": "말아넣다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɪnˈvɑɫv/"
   },
   {
     "word": "iron",
     "pos": "n.",
     "meaning": "쇠",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈaɪɝn/"
   },
   {
     "word": "irony",
     "pos": "n.",
     "meaning": "반어",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈaɪɹəni/"
   },
   {
     "word": "irritate",
     "pos": "v.",
     "meaning": "노하게 하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪɹɪˌteɪt/"
   },
   {
     "word": "island",
     "pos": "n.",
     "meaning": "섬",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈaɪɫənd/"
   },
   {
     "word": "isolate",
     "pos": "v.",
     "meaning": "고립시키다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈaɪsəˌɫeɪt/"
   },
   {
     "word": "it",
     "pos": "n.",
     "meaning": "그것은",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɪt/, /ɪt/"
   },
   {
     "word": "item",
     "pos": "n.",
     "meaning": "조항",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈaɪtəm/"
   },
   {
     "word": "jail",
     "pos": "n.",
     "meaning": "교도소",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒeɪɫ/"
   },
   {
     "word": "jar",
     "pos": "n.",
     "meaning": "(아가리가 넓은)항아리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒɑɹ/"
   },
   {
     "word": "jaw",
     "pos": "n.",
     "meaning": "턱",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒɔ/"
   },
   {
     "word": "jeans",
     "pos": "n.",
     "meaning": "청바지",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒinz/"
   },
   {
     "word": "jet",
     "pos": "n.",
     "meaning": "(가스등의)분출",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒɛt/"
   },
   {
     "word": "job",
     "pos": "n.",
     "meaning": "일",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒɑb/, /ˈdʒoʊb/"
   },
   {
     "word": "jog",
     "pos": "v.",
     "meaning": "살짝 밀다 덜커덕 움직이다 고르지 않음",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒɑɡ/"
   },
   {
     "word": "join",
     "pos": "v.",
     "meaning": "결합하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒɔɪn/"
   },
   {
     "word": "joint",
     "pos": "n.",
     "meaning": "이음매",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒɔɪnt/"
   },
   {
     "word": "joke",
     "pos": "n.",
     "meaning": "농담",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒoʊk/"
   },
   {
     "word": "journal",
     "pos": "n.",
     "meaning": "일간신문",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒɝnəɫ/"
   },
   {
     "word": "journey",
     "pos": "n.",
     "meaning": "여행",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒɝni/"
   },
   {
     "word": "joy",
     "pos": "n.",
     "meaning": "즐거움",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒɔɪ/"
   },
   {
     "word": "judge",
     "pos": "n.",
     "meaning": "재판관",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒədʒ/"
   },
   {
     "word": "judicial",
     "pos": "a.",
     "meaning": "사법의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/dʒuˈdɪʃəɫ/"
   },
   {
     "word": "junior",
     "pos": "n.",
     "meaning": "손아래사람",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒunjɝ/"
   },
   {
     "word": "jury",
     "pos": "n.",
     "meaning": "배심",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒʊɹi/"
   },
   {
     "word": "just",
     "pos": "n.",
     "meaning": "올바른",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒəst/, /dʒɪst/"
   },
   {
     "word": "justice",
     "pos": "a.",
     "meaning": "정의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒəstəs/, /ˈdʒəstɪs/"
   },
   {
     "word": "justify",
     "pos": "v.",
     "meaning": "옳다고 하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈdʒəstəˌfaɪ/"
   },
   {
     "word": "keen",
     "pos": "a.",
     "meaning": "날카로운",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈkin/"
   },
   {
     "word": "keep",
     "pos": "v.",
     "meaning": "계속하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈkip/"
   },
   {
     "word": "key",
     "pos": "n.",
     "meaning": "열쇠",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈki/"
   },
   {
     "word": "kick",
     "pos": "v.",
     "meaning": "걷어차다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈkɪk/"
   },
   {
     "word": "kid",
     "pos": "n.",
     "meaning": "아이",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈkɪd/"
   },
   {
     "word": "kill",
     "pos": "v.",
     "meaning": "죽이다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈkɪɫ/"
   },
   {
     "word": "kind",
     "pos": "a.",
     "meaning": "친절한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈkaɪnd/"
   },
   {
     "word": "king",
     "pos": "n.",
     "meaning": "왕",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈkɪŋ/"
   },
   {
     "word": "kit",
     "pos": "n.",
     "meaning": "연장통",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈkɪt/"
   },
   {
     "word": "kitchen",
     "pos": "n.",
     "meaning": "부엌",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈkɪtʃən/"
   },
   {
     "word": "knee",
     "pos": "n.",
     "meaning": "무릎",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈni/"
   },
   {
     "word": "knife",
     "pos": "n.",
     "meaning": "나이프",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnaɪf/"
   },
   {
     "word": "knight",
     "pos": "n.",
     "meaning": "(중세의)기사",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnaɪt/"
   },
   {
     "word": "knock",
     "pos": "v.",
     "meaning": "치다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɑk/"
   },
   {
     "word": "knot",
     "pos": "n.",
     "meaning": "매듭(=tie)",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɑt/"
   },
   {
     "word": "know",
     "pos": "v.",
     "meaning": "알다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnoʊ/"
   },
   {
     "word": "label",
     "pos": "n.",
     "meaning": "라벨",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫeɪbəɫ/"
   },
   {
     "word": "labor",
     "pos": "n.",
     "meaning": "노동",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫeɪbɝ/"
   },
   {
     "word": "laboratory",
     "pos": "n.",
     "meaning": "실험실",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫæbɹəˌtɔɹi/"
   },
   {
     "word": "lack",
     "pos": "n.",
     "meaning": "결핍",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫæk/"
   },
   {
     "word": "ladder",
     "pos": "n.",
     "meaning": "사닥다리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫædɝ/"
   },
   {
     "word": "lady",
     "pos": "a.",
     "meaning": "귀부인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫeɪdi/"
   },
   {
     "word": "lake",
     "pos": "n.",
     "meaning": "호수",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫeɪk/"
   },
   {
     "word": "lamb",
     "pos": "n.",
     "meaning": "어린 양",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫæm/"
   },
   {
     "word": "lamp",
     "pos": "n.",
     "meaning": "등",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫæmp/"
   },
   {
     "word": "land",
     "pos": "n.",
     "meaning": "뭍",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫænd/"
   },
   {
     "word": "landscape",
     "pos": "n.",
     "meaning": "풍경",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫænˌskeɪp/, /ˈɫændˌskeɪp/"
   },
   {
     "word": "lane",
     "pos": "n.",
     "meaning": "좁은길",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫeɪn/"
   },
   {
     "word": "language",
     "pos": "n.",
     "meaning": "언어",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫæŋɡwədʒ/, /ˈɫæŋɡwɪdʒ/"
   },
   {
     "word": "lap",
     "pos": "n.",
     "meaning": "무릎",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫæp/"
   },
   {
     "word": "large",
     "pos": "n.",
     "meaning": "큰",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɑɹdʒ/"
   },
   {
     "word": "last",
     "pos": "v.",
     "meaning": "계속하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫæs/, /ˈɫæst/"
   },
   {
     "word": "late",
     "pos": "n.",
     "meaning": "늦은",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫeɪt/"
   },
   {
     "word": "latter",
     "pos": "a.",
     "meaning": "뒤쪽의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫætɝ/"
   },
   {
     "word": "laugh",
     "pos": "v.",
     "meaning": "(소리내어)웃다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫæf/"
   },
   {
     "word": "launch",
     "pos": "v.",
     "meaning": "진수시키다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɔntʃ/"
   },
   {
     "word": "laundry",
     "pos": "n.",
     "meaning": "세탁물",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɔndɹi/"
   },
   {
     "word": "law",
     "pos": "n.",
     "meaning": "법률",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɑ/, /ˈɫɔ/"
   },
   {
     "word": "lawn",
     "pos": "n.",
     "meaning": "잔디밭",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɔn/"
   },
   {
     "word": "lawyer",
     "pos": "n.",
     "meaning": "법률가",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɔɪɝ/, /ˈɫɔjɝ/"
   },
   {
     "word": "lay",
     "pos": "v.",
     "meaning": "눕히다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫeɪ/"
   },
   {
     "word": "layer",
     "pos": "n.",
     "meaning": "층",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫeɪɝ/"
   },
   {
     "word": "lazy",
     "pos": "n.",
     "meaning": "게으른",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫeɪzi/"
   },
   {
     "word": "lead",
     "pos": "v.",
     "meaning": "이끌다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɛd/, /ˈɫid/"
   },
   {
     "word": "leaf",
     "pos": "n.",
     "meaning": "잎",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫif/"
   },
   {
     "word": "leak",
     "pos": "n.",
     "meaning": "샘",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫik/"
   },
   {
     "word": "lean",
     "pos": "v.",
     "meaning": "기대다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫin/"
   },
   {
     "word": "leap",
     "pos": "v.",
     "meaning": "껑충 뛰다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫip/"
   },
   {
     "word": "learn",
     "pos": "v.",
     "meaning": "배우다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɝn/"
   },
   {
     "word": "lease",
     "pos": "n.",
     "meaning": "임대차",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫis/"
   },
   {
     "word": "leather",
     "pos": "n.",
     "meaning": "무두질한 가죽",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɛðɝ/"
   },
   {
     "word": "leave",
     "pos": "v.",
     "meaning": "남기고가다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫiv/"
   },
   {
     "word": "lecture",
     "pos": "a.",
     "meaning": "강의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɛktʃɝ/"
   },
   {
     "word": "left",
     "pos": "a.",
     "meaning": "왼쪽의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɛft/"
   },
   {
     "word": "leg",
     "pos": "n.",
     "meaning": "다리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɛɡ/"
   },
   {
     "word": "legal",
     "pos": "a.",
     "meaning": "법률상의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫiɡəɫ/"
   },
   {
     "word": "legend",
     "pos": "n.",
     "meaning": "전설",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɛdʒənd/"
   },
   {
     "word": "legislate",
     "pos": "v.",
     "meaning": "법률을 제정하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɛdʒɪˌsɫeɪt/"
   },
   {
     "word": "legitimate",
     "pos": "a.",
     "meaning": "합법의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɫəˈdʒɪtəmət/"
   },
   {
     "word": "leisure",
     "pos": "n.",
     "meaning": "틈",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɛʒɝ/, /ˈɫiʒɝ/"
   },
   {
     "word": "lend",
     "pos": "v.",
     "meaning": "빌리다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɛnd/"
   },
   {
     "word": "lesson",
     "pos": "n.",
     "meaning": "학과",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɛsən/"
   },
   {
     "word": "let",
     "pos": "v.",
     "meaning": "시키다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɛt/"
   },
   {
     "word": "letter",
     "pos": "n.",
     "meaning": "편지",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɛtɝ/"
   },
   {
     "word": "level",
     "pos": "a.",
     "meaning": "수평의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɛvəɫ/"
   },
   {
     "word": "liberal",
     "pos": "a.",
     "meaning": "자유주의의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɪˌbɝəɫ/"
   },
   {
     "word": "liberty",
     "pos": "n.",
     "meaning": "자유",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɪbɝˌti/"
   },
   {
     "word": "library",
     "pos": "n.",
     "meaning": "도서관",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫaɪbɹɛˌɹi/"
   },
   {
     "word": "license",
     "pos": "n.",
     "meaning": "면허",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫaɪsəns/"
   },
   {
     "word": "lid",
     "pos": "n.",
     "meaning": "뚜껑",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɪd/"
   },
   {
     "word": "lie",
     "pos": "v.",
     "meaning": "눕다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫaɪ/"
   },
   {
     "word": "lift",
     "pos": "v.",
     "meaning": "끌어올리다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɪft/"
   },
   {
     "word": "light",
     "pos": "n.",
     "meaning": "빛",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫaɪt/"
   },
   {
     "word": "like",
     "pos": "v.",
     "meaning": "좋아하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫaɪk/"
   },
   {
     "word": "likely",
     "pos": "a.",
     "meaning": "있을 법한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫaɪkɫi/"
   },
   {
     "word": "likewise",
     "pos": "ad.",
     "meaning": "같이, 마찬가지로",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫaɪˌkwaɪz/"
   },
   {
     "word": "limit",
     "pos": "n.",
     "meaning": "한계",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɪmət/"
   },
   {
     "word": "line",
     "pos": "n.",
     "meaning": "선",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫaɪn/"
   },
   {
     "word": "linguistic",
     "pos": "a.",
     "meaning": "말의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɫɪŋˈɡwɪstɪk/"
   },
   {
     "word": "link",
     "pos": "n.",
     "meaning": "사슬의 고리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɪŋk/"
   },
   {
     "word": "lion",
     "pos": "n.",
     "meaning": "사자",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫaɪən/"
   },
   {
     "word": "lip",
     "pos": "n.",
     "meaning": "입술",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɪp/"
   },
   {
     "word": "liquid",
     "pos": "n.",
     "meaning": "액체",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɪkwəd/, /ˈɫɪkwɪd/"
   },
   {
     "word": "list",
     "pos": "n.",
     "meaning": "일람표",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɪst/"
   },
   {
     "word": "listen",
     "pos": "v.",
     "meaning": "경청하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɪsən/"
   },
   {
     "word": "literal",
     "pos": "a.",
     "meaning": "문자의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɪtɝəɫ/"
   },
   {
     "word": "literature",
     "pos": "n.",
     "meaning": "문학",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɪtɝətʃɝ/"
   },
   {
     "word": "little",
     "pos": "n.",
     "meaning": "작은",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɪtəɫ/"
   },
   {
     "word": "live",
     "pos": "v.",
     "meaning": "살다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫaɪv/, /ˈɫɪv/"
   },
   {
     "word": "livingroom",
     "pos": "n.",
     "meaning": "거실",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɪvɪŋˌɹum/"
   },
   {
     "word": "load",
     "pos": "n.",
     "meaning": "짐",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫoʊd/"
   },
   {
     "word": "loan",
     "pos": "n.",
     "meaning": "대부",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫoʊn/"
   },
   {
     "word": "local",
     "pos": "a.",
     "meaning": "장소의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫoʊkəɫ/"
   },
   {
     "word": "locate",
     "pos": "v.",
     "meaning": "관청 등을 두다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫoʊˌkeɪt/"
   },
   {
     "word": "lock",
     "pos": "n.",
     "meaning": "자물쇠",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɑk/"
   },
   {
     "word": "log",
     "pos": "n.",
     "meaning": "통나무",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɔɡ/"
   },
   {
     "word": "logic",
     "pos": "n.",
     "meaning": "논리학",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɑdʒɪk/"
   },
   {
     "word": "lone",
     "pos": "a.",
     "meaning": "혼자의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫoʊn/"
   },
   {
     "word": "long",
     "pos": "n.",
     "meaning": "(길이,시간 등)긴",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɔŋ/"
   },
   {
     "word": "look",
     "pos": "v.",
     "meaning": "보다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫʊk/"
   },
   {
     "word": "loose",
     "pos": "n.",
     "meaning": "풀어진",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫus/"
   },
   {
     "word": "lose",
     "pos": "v.",
     "meaning": "잃다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫuz/"
   },
   {
     "word": "loss",
     "pos": "n.",
     "meaning": "잃음",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɔs/"
   },
   {
     "word": "lot",
     "pos": "n.",
     "meaning": "제비",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɑt/, /ˈɫɔt/"
   },
   {
     "word": "loud",
     "pos": "n.",
     "meaning": "시끄러운",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫaʊd/"
   },
   {
     "word": "lounge",
     "pos": "v.",
     "meaning": "빈둥거리다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫaʊndʒ/"
   },
   {
     "word": "love",
     "pos": "n.",
     "meaning": "사랑",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫəv/"
   },
   {
     "word": "low",
     "pos": "n.",
     "meaning": "낮은",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫoʊ/"
   },
   {
     "word": "loyal",
     "pos": "n.",
     "meaning": "충성스러운",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫɔɪəɫ/"
   },
   {
     "word": "luck",
     "pos": "n.",
     "meaning": "운",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫək/"
   },
   {
     "word": "lump",
     "pos": "n.",
     "meaning": "덩어리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫəmp/"
   },
   {
     "word": "lunch",
     "pos": "n.",
     "meaning": "점심",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫəntʃ/"
   },
   {
     "word": "luxury",
     "pos": "n.",
     "meaning": "사치",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɫəɡʒɝi/"
   },
   {
     "word": "machine",
     "pos": "n.",
     "meaning": "기계",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/məˈʃin/"
   },
   {
     "word": "mad",
     "pos": "n.",
     "meaning": "미친",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmæd/"
   },
   {
     "word": "magazine",
     "pos": "n.",
     "meaning": "잡지",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmæɡəˌzin/"
   },
   {
     "word": "magnet",
     "pos": "n.",
     "meaning": "자석",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmæɡnət/"
   },
   {
     "word": "magnificent",
     "pos": "a.",
     "meaning": "장대한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/mæɡˈnɪfəsənt/, /mæɡˈnɪfɪsənt/"
   },
   {
     "word": "mail",
     "pos": "n.",
     "meaning": "우편물",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmeɪɫ/"
   },
   {
     "word": "main",
     "pos": "a.",
     "meaning": "주요한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmeɪn/"
   },
   {
     "word": "maintain",
     "pos": "v.",
     "meaning": "계속하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/meɪnˈteɪn/"
   },
   {
     "word": "major",
     "pos": "a.",
     "meaning": "큰쪽의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmeɪdʒɝ/"
   },
   {
     "word": "majority",
     "pos": "n.",
     "meaning": "대다수",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/məˈdʒɔɹəti/"
   },
   {
     "word": "make",
     "pos": "v.",
     "meaning": "만들다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmeɪk/"
   },
   {
     "word": "male",
     "pos": "a.",
     "meaning": "남성의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmeɪɫ/"
   },
   {
     "word": "man",
     "pos": "n.",
     "meaning": "남자",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmæn/"
   },
   {
     "word": "manage",
     "pos": "v.",
     "meaning": "관리하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmænədʒ/, /ˈmænɪdʒ/"
   },
   {
     "word": "manifest",
     "pos": "v.",
     "meaning": "명백히 하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmænəˌfɛst/"
   },
   {
     "word": "manipulate",
     "pos": "v.",
     "meaning": "(손으로)다루다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/məˈnɪpjəˌɫeɪt/"
   },
   {
     "word": "manner",
     "pos": "n.",
     "meaning": "방법",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmænɝ/"
   },
   {
     "word": "manufacture",
     "pos": "v.",
     "meaning": "제조하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌmænjəˈfæktʃɝ/"
   },
   {
     "word": "many",
     "pos": "n.",
     "meaning": "많은",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɛni/"
   },
   {
     "word": "map",
     "pos": "n.",
     "meaning": "지도",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmæp/"
   },
   {
     "word": "margin",
     "pos": "n.",
     "meaning": "가장자리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɑɹdʒən/"
   },
   {
     "word": "marine",
     "pos": "a.",
     "meaning": "바다의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/mɝˈin/"
   },
   {
     "word": "mark",
     "pos": "n.",
     "meaning": "표",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɑɹk/"
   },
   {
     "word": "marry",
     "pos": "v.",
     "meaning": "결혼하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɛɹi/"
   },
   {
     "word": "marvel",
     "pos": "n.",
     "meaning": "경이",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɑɹvəɫ/"
   },
   {
     "word": "mass",
     "pos": "n.",
     "meaning": "덩어리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmæs/"
   },
   {
     "word": "master",
     "pos": "n.",
     "meaning": "장",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmæstɝ/"
   },
   {
     "word": "match",
     "pos": "n.",
     "meaning": "성냥",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmætʃ/"
   },
   {
     "word": "mate",
     "pos": "n.",
     "meaning": "상대",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmeɪt/"
   },
   {
     "word": "material",
     "pos": "n.",
     "meaning": "원료",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/məˈtɪɹiəɫ/"
   },
   {
     "word": "mathematics",
     "pos": "n.",
     "meaning": "수학",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌmæθəˈmætɪks/"
   },
   {
     "word": "matter",
     "pos": "n.",
     "meaning": "물질",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmætɝ/"
   },
   {
     "word": "mature",
     "pos": "n.",
     "meaning": "익은",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/məˈtʃʊɹ/, /mətˈjʊɹ/"
   },
   {
     "word": "maximum",
     "pos": "n.",
     "meaning": "최고점",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmæksəməm/"
   },
   {
     "word": "may",
     "pos": "n.",
     "meaning": "5 월 청춘, 인생의 봄 산사나무, 아가위나무",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmeɪ/"
   },
   {
     "word": "maybe",
     "pos": "n.",
     "meaning": "아마",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmeɪbi/"
   },
   {
     "word": "mayor",
     "pos": "n.",
     "meaning": "시장",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmeɪɝ/"
   },
   {
     "word": "meal",
     "pos": "n.",
     "meaning": "식사",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmiɫ/"
   },
   {
     "word": "mean",
     "pos": "v.",
     "meaning": "의미하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmin/"
   },
   {
     "word": "meantime",
     "pos": "n.",
     "meaning": "그동안 그 사이에",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈminˌtaɪm/"
   },
   {
     "word": "meanwhile",
     "pos": "n.",
     "meaning": "그동안",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈminˌwaɪɫ/"
   },
   {
     "word": "measure",
     "pos": "v.",
     "meaning": "재다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɛʒɝ/"
   },
   {
     "word": "meat",
     "pos": "n.",
     "meaning": "(식용짐승의)고기",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmit/"
   },
   {
     "word": "mechanic",
     "pos": "n.",
     "meaning": "직공",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/məˈkænɪk/, /mɪˈkænɪk/"
   },
   {
     "word": "mechanism",
     "pos": "n.",
     "meaning": "(기계)장치",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɛkəˌnɪzəm/"
   },
   {
     "word": "mediate",
     "pos": "v.",
     "meaning": "중재하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmidiˌeɪt/"
   },
   {
     "word": "medical",
     "pos": "a.",
     "meaning": "의학의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɛdəkəɫ/, /ˈmɛdɪkəɫ/"
   },
   {
     "word": "medicine",
     "pos": "n.",
     "meaning": "약",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɛdəsən/"
   },
   {
     "word": "medieval",
     "pos": "a.",
     "meaning": "중세(풍)의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/miˈdivəɫ/, /mɪˈdivəɫ/, /mɪdˈjivəɫ/"
   },
   {
     "word": "medium",
     "pos": "n.",
     "meaning": "중간",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmidiəm/"
   },
   {
     "word": "meet",
     "pos": "v.",
     "meaning": "-을 만나다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmit/"
   },
   {
     "word": "melt",
     "pos": "v.",
     "meaning": "녹다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɛɫt/"
   },
   {
     "word": "memory",
     "pos": "n.",
     "meaning": "기억",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɛmɝi/"
   },
   {
     "word": "mental",
     "pos": "a.",
     "meaning": "마음의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɛntəɫ/"
   },
   {
     "word": "mention",
     "pos": "v.",
     "meaning": "말하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɛnʃən/"
   },
   {
     "word": "merchant",
     "pos": "a.",
     "meaning": "상인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɝtʃənt/"
   },
   {
     "word": "merge",
     "pos": "v.",
     "meaning": "합병하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɝdʒ/"
   },
   {
     "word": "merit",
     "pos": "n.",
     "meaning": "장점",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɛɹət/"
   },
   {
     "word": "mess",
     "pos": "n.",
     "meaning": "혼란",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɛs/"
   },
   {
     "word": "metal",
     "pos": "n.",
     "meaning": "금속",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɛtəɫ/"
   },
   {
     "word": "method",
     "pos": "n.",
     "meaning": "방법",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɛθəd/"
   },
   {
     "word": "metropolitan",
     "pos": "n.",
     "meaning": "수도권(의)",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌmɛtɹəˈpɑɫətən/"
   },
   {
     "word": "microphone",
     "pos": "n.",
     "meaning": "확성기",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmaɪkɹəˌfoʊn/"
   },
   {
     "word": "microwave",
     "pos": "v.",
     "meaning": "극초단파 전자레인지로 요리하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmaɪkɹəˌweɪv/"
   },
   {
     "word": "middle",
     "pos": "a.",
     "meaning": "한복판의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɪdəɫ/"
   },
   {
     "word": "might",
     "pos": "n.",
     "meaning": "힘",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmaɪt/"
   },
   {
     "word": "migrate",
     "pos": "v.",
     "meaning": "이주하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmaɪˌɡɹeɪt/"
   },
   {
     "word": "mild",
     "pos": "a.",
     "meaning": "온후한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmaɪɫd/"
   },
   {
     "word": "military",
     "pos": "a.",
     "meaning": "군의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɪɫəˌtɛɹi/, /ˈmɪɫɪˌtɛɹi/"
   },
   {
     "word": "milk",
     "pos": "n.",
     "meaning": "젖",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɪɫk/"
   },
   {
     "word": "mill",
     "pos": "n.",
     "meaning": "멧돌",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɪɫ/"
   },
   {
     "word": "million",
     "pos": "n.",
     "meaning": "백만",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɪɫjən/"
   },
   {
     "word": "mind",
     "pos": "n.",
     "meaning": "마음",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmaɪnd/"
   },
   {
     "word": "miner",
     "pos": "n.",
     "meaning": "광산업자",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmaɪnɝ/"
   },
   {
     "word": "mineral",
     "pos": "n.",
     "meaning": "광물",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɪnɝəɫ/, /ˈmɪnɹəɫ/"
   },
   {
     "word": "minimal",
     "pos": "a.",
     "meaning": "최소(한도)의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɪnəməɫ/"
   },
   {
     "word": "minimum",
     "pos": "n.",
     "meaning": "최소 한도",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɪnəməm/"
   },
   {
     "word": "ministry",
     "pos": "n.",
     "meaning": "장관(목사)의 직(소임)",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɪnəstɹi/, /ˈmɪnɪstɹi/"
   },
   {
     "word": "minor",
     "pos": "a.",
     "meaning": "작은 편의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmaɪnɝ/"
   },
   {
     "word": "minute",
     "pos": "n.",
     "meaning": "분",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɪnət/, /maɪˈnut/, /maɪnˈjut/"
   },
   {
     "word": "miracle",
     "pos": "a.",
     "meaning": "기적",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɪɹəkəɫ/"
   },
   {
     "word": "mirror",
     "pos": "n.",
     "meaning": "거울",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɪɹɝ/"
   },
   {
     "word": "miss",
     "pos": "v.",
     "meaning": "미혼 여성 실수하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɪs/"
   },
   {
     "word": "missile",
     "pos": "n.",
     "meaning": "미사일",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɪsəɫ/"
   },
   {
     "word": "mission",
     "pos": "n.",
     "meaning": "사명",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɪʃən/"
   },
   {
     "word": "mistake",
     "pos": "v.",
     "meaning": "틀리다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/mɪˈsteɪk/"
   },
   {
     "word": "mix",
     "pos": "v.",
     "meaning": "섞다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɪks/"
   },
   {
     "word": "mobile",
     "pos": "n.",
     "meaning": "움직이기 쉬운",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmoʊbəɫ/"
   },
   {
     "word": "mock",
     "pos": "v.",
     "meaning": "조롱하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɑk/"
   },
   {
     "word": "mode",
     "pos": "n.",
     "meaning": "방법",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmoʊd/"
   },
   {
     "word": "moderate",
     "pos": "a.",
     "meaning": "절제하는",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɑdɝˌeɪt/, /ˈmɑdɝət/"
   },
   {
     "word": "modern",
     "pos": "a.",
     "meaning": "현대의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɑdɝn/"
   },
   {
     "word": "modest",
     "pos": "a.",
     "meaning": "겸손한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɑdəst/"
   },
   {
     "word": "modify",
     "pos": "v.",
     "meaning": "변경하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɑdəˌfaɪ/"
   },
   {
     "word": "moisture",
     "pos": "n.",
     "meaning": "습기",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɔɪstʃɝ/"
   },
   {
     "word": "molecule",
     "pos": "n.",
     "meaning": "분자",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɑɫəkˌjuɫ/"
   },
   {
     "word": "moment",
     "pos": "n.",
     "meaning": "순간",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmoʊmənt/"
   },
   {
     "word": "money",
     "pos": "n.",
     "meaning": "금전",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈməni/"
   },
   {
     "word": "monitor",
     "pos": "n.",
     "meaning": "충고자",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɑnətɝ/"
   },
   {
     "word": "monkey",
     "pos": "n.",
     "meaning": "원숭이",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈməŋki/"
   },
   {
     "word": "monster",
     "pos": "n.",
     "meaning": "괴물",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɑnstɝ/"
   },
   {
     "word": "month",
     "pos": "n.",
     "meaning": "월",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmənθ/"
   },
   {
     "word": "monument",
     "pos": "n.",
     "meaning": "기념비",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɑnjəmənt/, /ˈmɑnjumənt/"
   },
   {
     "word": "mood",
     "pos": "n.",
     "meaning": "(일시적인)기분",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmud/"
   },
   {
     "word": "moon",
     "pos": "n.",
     "meaning": "달",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmun/"
   },
   {
     "word": "moral",
     "pos": "a.",
     "meaning": "도덕의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɔɹəɫ/"
   },
   {
     "word": "moreover",
     "pos": "n.",
     "meaning": "그 위에",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/mɔˈɹoʊvɝ/"
   },
   {
     "word": "morning",
     "pos": "n.",
     "meaning": "아침",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɔɹnɪŋ/"
   },
   {
     "word": "mortal",
     "pos": "a.",
     "meaning": "죽을운명의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɔɹtəɫ/"
   },
   {
     "word": "mother",
     "pos": "n.",
     "meaning": "어머니",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈməðɝ/"
   },
   {
     "word": "motion",
     "pos": "n.",
     "meaning": "운동",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmoʊʃən/"
   },
   {
     "word": "motive",
     "pos": "n.",
     "meaning": "동기",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmoʊtɪv/"
   },
   {
     "word": "mount",
     "pos": "n.",
     "meaning": "산",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmaʊnt/"
   },
   {
     "word": "mountain",
     "pos": "n.",
     "meaning": "산",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmaʊntən/"
   },
   {
     "word": "mouse",
     "pos": "n.",
     "meaning": "새앙쥐",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmaʊs/"
   },
   {
     "word": "mouth",
     "pos": "n.",
     "meaning": "입",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmaʊθ/"
   },
   {
     "word": "move",
     "pos": "v.",
     "meaning": "움직이다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmuv/"
   },
   {
     "word": "movie",
     "pos": "n.",
     "meaning": "영화",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmuvi/"
   },
   {
     "word": "much",
     "pos": "n.",
     "meaning": "많은",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmətʃ/"
   },
   {
     "word": "mud",
     "pos": "n.",
     "meaning": "진흙",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈməd/"
   },
   {
     "word": "multiple",
     "pos": "a.",
     "meaning": "복합의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈməɫtəpəɫ/"
   },
   {
     "word": "multiply",
     "pos": "v.",
     "meaning": "늘리다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈməɫtəˌpɫaɪ/"
   },
   {
     "word": "murder",
     "pos": "a.",
     "meaning": "살인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɝdɝ/"
   },
   {
     "word": "muscle",
     "pos": "n.",
     "meaning": "근육",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈməsəɫ/"
   },
   {
     "word": "museum",
     "pos": "n.",
     "meaning": "박물관",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmjuziəm/, /mjuˈziəm/"
   },
   {
     "word": "mushroom",
     "pos": "n.",
     "meaning": "버섯",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈməʃɹum/"
   },
   {
     "word": "music",
     "pos": "n.",
     "meaning": "음악",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmjuzɪk/"
   },
   {
     "word": "must",
     "pos": "v.",
     "meaning": "-해야 한다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈməst/"
   },
   {
     "word": "mutual",
     "pos": "a.",
     "meaning": "상호의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmjutʃuəɫ/"
   },
   {
     "word": "myth",
     "pos": "n.",
     "meaning": "신화",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈmɪθ/"
   },
   {
     "word": "nail",
     "pos": "n.",
     "meaning": "손톱",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈneɪɫ/"
   },
   {
     "word": "naive",
     "pos": "a.",
     "meaning": "소박한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌnaɪˈiv/"
   },
   {
     "word": "naked",
     "pos": "n.",
     "meaning": "발가벗은",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈneɪkəd/"
   },
   {
     "word": "name",
     "pos": "n.",
     "meaning": "이름",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈneɪm/"
   },
   {
     "word": "nanny",
     "pos": "n.",
     "meaning": "유모",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnæni/"
   },
   {
     "word": "narrate",
     "pos": "v.",
     "meaning": "이야기하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɛˌɹeɪt/"
   },
   {
     "word": "narrow",
     "pos": "n.",
     "meaning": "좁은",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnæɹoʊ/, /ˈnɛɹoʊ/"
   },
   {
     "word": "nasty",
     "pos": "a.",
     "meaning": "불쾌한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnæsti/"
   },
   {
     "word": "nation",
     "pos": "n.",
     "meaning": "국가",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈneɪʃən/"
   },
   {
     "word": "native",
     "pos": "n.",
     "meaning": "타고난",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈneɪtɪv/"
   },
   {
     "word": "nature",
     "pos": "n.",
     "meaning": "자연",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈneɪtʃɝ/"
   },
   {
     "word": "navy",
     "pos": "n.",
     "meaning": "해군(력)",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈneɪvi/"
   },
   {
     "word": "near",
     "pos": "v.",
     "meaning": "가까이 -의 가까이에 가까운 접근하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɪɹ/"
   },
   {
     "word": "neat",
     "pos": "a.",
     "meaning": "산뜻한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnit/"
   },
   {
     "word": "necessary",
     "pos": "a.",
     "meaning": "필요한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɛsəˌsɛɹi/"
   },
   {
     "word": "neck",
     "pos": "n.",
     "meaning": "목",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɛk/"
   },
   {
     "word": "need",
     "pos": "n.",
     "meaning": "필요",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnid/"
   },
   {
     "word": "needle",
     "pos": "v.",
     "meaning": "바늘 바늘로 꿰매다 바느질하다 아슬아슬한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnidəɫ/"
   },
   {
     "word": "negative",
     "pos": "a.",
     "meaning": "부정적인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɛɡətɪv/"
   },
   {
     "word": "neglect",
     "pos": "v.",
     "meaning": "게을리 하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/nəˈɡɫɛkt/, /nɪˈɡɫɛkt/"
   },
   {
     "word": "negotiate",
     "pos": "v.",
     "meaning": "교섭하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/nəˈɡoʊʃiˌeɪt/, /nɪˈɡoʊʃiˌeɪt/"
   },
   {
     "word": "neighbor",
     "pos": "n.",
     "meaning": "이웃사람(나라)",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈneɪbɝ/"
   },
   {
     "word": "neither",
     "pos": "v.",
     "meaning": "(둘중)어느쪽도 -아니다 -도 아니다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnaɪðɝ/, /ˈniðɝ/"
   },
   {
     "word": "nephew",
     "pos": "n.",
     "meaning": "조카",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɛfju/"
   },
   {
     "word": "nervous",
     "pos": "a.",
     "meaning": "신경의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɝvəs/"
   },
   {
     "word": "nest",
     "pos": "n.",
     "meaning": "보금자리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɛst/"
   },
   {
     "word": "net",
     "pos": "n.",
     "meaning": "그물",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɛt/"
   },
   {
     "word": "network",
     "pos": "n.",
     "meaning": "그물세공",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɛtˌwɝk/"
   },
   {
     "word": "neutral",
     "pos": "a.",
     "meaning": "중립의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnutɹəɫ/"
   },
   {
     "word": "never",
     "pos": "v.",
     "meaning": "결코 -아니다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɛvɝ/"
   },
   {
     "word": "nevertheless",
     "pos": "n.",
     "meaning": "그럼에도 불구하고",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌnɛvɝðəˈɫɛs/"
   },
   {
     "word": "new",
     "pos": "a.",
     "meaning": "새로운",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnju/, /ˈnu/"
   },
   {
     "word": "newspaper",
     "pos": "n.",
     "meaning": "신문",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnuzˌpeɪpɝ/"
   },
   {
     "word": "next",
     "pos": "a.",
     "meaning": "다음의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɛks/, /ˈnɛkst/"
   },
   {
     "word": "nice",
     "pos": "n.",
     "meaning": "니스(프랑스 남부의 항구도시)",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnaɪs/, /ˈnis/"
   },
   {
     "word": "night",
     "pos": "n.",
     "meaning": "밤",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnaɪt/"
   },
   {
     "word": "nightmare",
     "pos": "n.",
     "meaning": "악몽",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnaɪtˌmɛɹ/"
   },
   {
     "word": "no",
     "pos": "a.",
     "meaning": "무의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnoʊ/"
   },
   {
     "word": "noble",
     "pos": "a.",
     "meaning": "고귀한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnoʊbəɫ/"
   },
   {
     "word": "nobody",
     "pos": "v.",
     "meaning": "아무도 -않다 하찮은 사람",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnoʊˌbɑˌdi/, /ˈnoʊbədi/"
   },
   {
     "word": "nod",
     "pos": "v.",
     "meaning": "끄덕이다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɑd/"
   },
   {
     "word": "noise",
     "pos": "n.",
     "meaning": "소리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɔɪz/"
   },
   {
     "word": "nominate",
     "pos": "v.",
     "meaning": "추천하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɑməˌneɪt/, /ˈnɑmənət/"
   },
   {
     "word": "none",
     "pos": "v.",
     "meaning": "아무도(조금도)-않다 조금도(결코)-않다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnən/"
   },
   {
     "word": "nonetheless",
     "pos": "n.",
     "meaning": "역시",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌnənðəˈɫɛs/"
   },
   {
     "word": "nonsense",
     "pos": "n.",
     "meaning": "허튼 소리",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɑnsɛns/"
   },
   {
     "word": "noon",
     "pos": "n.",
     "meaning": "정오",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnun/"
   },
   {
     "word": "nor",
     "pos": "v.",
     "meaning": "-도 또한-않다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɔɹ/"
   },
   {
     "word": "norm",
     "pos": "n.",
     "meaning": "표준",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɔɹm/"
   },
   {
     "word": "normal",
     "pos": "n.",
     "meaning": "표준(의)",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɔɹməɫ/"
   },
   {
     "word": "north",
     "pos": "n.",
     "meaning": "북, 북 쪽, 북부",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɔɹθ/"
   },
   {
     "word": "nose",
     "pos": "n.",
     "meaning": "코",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnoʊz/"
   },
   {
     "word": "not",
     "pos": "v.",
     "meaning": "아니다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɑt/"
   },
   {
     "word": "note",
     "pos": "n.",
     "meaning": "기록",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnoʊt/"
   },
   {
     "word": "nothing",
     "pos": "v.",
     "meaning": "아무것도 …없다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnəθɪŋ/"
   },
   {
     "word": "notice",
     "pos": "n.",
     "meaning": "통지, 통보",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnoʊtəs/, /ˈnoʊtɪs/"
   },
   {
     "word": "notion",
     "pos": "n.",
     "meaning": "n,관념",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnoʊʃən/"
   },
   {
     "word": "novel",
     "pos": "n.",
     "meaning": "소설",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɑvəɫ/"
   },
   {
     "word": "now",
     "pos": "n.",
     "meaning": "지금",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnaʊ/"
   },
   {
     "word": "nowadays",
     "pos": "a.",
     "meaning": "오늘날에는, 요즈음에는",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnaʊəˌdeɪz/"
   },
   {
     "word": "nowhere",
     "pos": "v.",
     "meaning": "아무데도 …없다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnoʊˌwɛɹ/, /ˈnoʊhˌwɛɹ/"
   },
   {
     "word": "nuclear",
     "pos": "a.",
     "meaning": "핵의, 핵을 형성하는 원자핵의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnukɫiɝ/"
   },
   {
     "word": "number",
     "pos": "n.",
     "meaning": "수",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnəmbɝ/"
   },
   {
     "word": "numerous",
     "pos": "v.",
     "meaning": "다 수의, 수많은, 셀 수 없이 많은",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnumɝəs/"
   },
   {
     "word": "nun",
     "pos": "n.",
     "meaning": "수녀 집비둘기의 일종",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnən/"
   },
   {
     "word": "nurse",
     "pos": "n.",
     "meaning": "유모",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnɝs/"
   },
   {
     "word": "nut",
     "pos": "n.",
     "meaning": "견과",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈnət/"
   },
   {
     "word": "oak",
     "pos": "n.",
     "meaning": "참나무",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈoʊk/"
   },
   {
     "word": "obey",
     "pos": "v.",
     "meaning": "따르다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/oʊˈbeɪ/"
   },
   {
     "word": "object",
     "pos": "n.",
     "meaning": "사물",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɑbdʒɛkt/, /əbˈdʒɛkt/"
   },
   {
     "word": "objective",
     "pos": "a.",
     "meaning": "객관적인",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/əbˈdʒɛktɪv/"
   },
   {
     "word": "oblige",
     "pos": "v.",
     "meaning": "(의무를)별수없이 -하게하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/əˈbɫaɪdʒ/"
   },
   {
     "word": "observe",
     "pos": "v.",
     "meaning": "관찰하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/əbˈzɝv/"
   },
   {
     "word": "obsess",
     "pos": "v.",
     "meaning": "늘러붙다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/əbˈsɛs/"
   },
   {
     "word": "obtain",
     "pos": "v.",
     "meaning": "얻다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/əbˈteɪn/"
   },
   {
     "word": "obvious",
     "pos": "a.",
     "meaning": "명백한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɑbviəs/"
   },
   {
     "word": "occasion",
     "pos": "n.",
     "meaning": "경우",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/əˈkeɪʒən/"
   },
   {
     "word": "occupation",
     "pos": "n.",
     "meaning": "일직업",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɑkjəˈpeɪʃən/"
   },
   {
     "word": "occupy",
     "pos": "v.",
     "meaning": "차지하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɑkjəˌpaɪ/"
   },
   {
     "word": "occur",
     "pos": "v.",
     "meaning": "일어나다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/əˈkɝ/"
   },
   {
     "word": "ocean",
     "pos": "n.",
     "meaning": "대양",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈoʊʃən/"
   },
   {
     "word": "odd",
     "pos": "a.",
     "meaning": "묘한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɑd/"
   },
   {
     "word": "of",
     "pos": "a.",
     "meaning": "출신의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈəv/"
   },
   {
     "word": "off",
     "pos": "n.",
     "meaning": "떨어져",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɔf/"
   },
   {
     "word": "offend",
     "pos": "v.",
     "meaning": "성나게 하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/əˈfɛnd/"
   },
   {
     "word": "offer",
     "pos": "v.",
     "meaning": "권하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɔfɝ/"
   },
   {
     "word": "office",
     "pos": "n.",
     "meaning": "임무",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɔfɪs/"
   },
   {
     "word": "officer",
     "pos": "n.",
     "meaning": "공무원",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɔfəsɝ/, /ˈɔfɪsɝ/"
   },
   {
     "word": "official",
     "pos": "n.",
     "meaning": "공무원",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/əˈfɪʃəɫ/"
   },
   {
     "word": "often",
     "pos": "n.",
     "meaning": "자주",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɔfən/, /ˈɔftən/"
   },
   {
     "word": "oil",
     "pos": "n.",
     "meaning": "기름",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɔɪɫ/"
   },
   {
     "word": "old",
     "pos": "n.",
     "meaning": "늙은",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈoʊɫd/"
   },
   {
     "word": "olive",
     "pos": "n.",
     "meaning": "올리브나무",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɑɫəv/, /ˈɑɫɪv/"
   },
   {
     "word": "on",
     "pos": "n.",
     "meaning": "위에",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɑn/, /ˈɔn/"
   },
   {
     "word": "once",
     "pos": "n.",
     "meaning": "한번",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈwəns/"
   },
   {
     "word": "one",
     "pos": "n.",
     "meaning": "하나(의)",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈwən/"
   },
   {
     "word": "only",
     "pos": "a.",
     "meaning": "유일한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈoʊnɫi/"
   },
   {
     "word": "open",
     "pos": "v.",
     "meaning": "열다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈoʊpən/"
   },
   {
     "word": "operate",
     "pos": "v.",
     "meaning": "움직이다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɑpɝˌeɪt/, /ˈɔpɝˌeɪt/"
   },
   {
     "word": "opinion",
     "pos": "n.",
     "meaning": "의견",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/əˈpɪnjən/"
   },
   {
     "word": "opportunity",
     "pos": "n.",
     "meaning": "기회",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌɑpɝˈtunəti/"
   },
   {
     "word": "oppose",
     "pos": "v.",
     "meaning": "반대하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/əˈpoʊz/"
   },
   {
     "word": "optimist",
     "pos": "n.",
     "meaning": "낙천가",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɑptəmɪst/"
   },
   {
     "word": "option",
     "pos": "n.",
     "meaning": "선택(권의 자유)",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɑpʃən/, /ˈɔpʃən/"
   },
   {
     "word": "or",
     "pos": "n.",
     "meaning": "혹은",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɔɹ/, /ɝ/"
   },
   {
     "word": "oral",
     "pos": "a.",
     "meaning": "구두의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɔɹəɫ/"
   },
   {
     "word": "orbit",
     "pos": "n.",
     "meaning": "궤도",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɔɹbət/"
   },
   {
     "word": "orchestra",
     "pos": "n.",
     "meaning": "관현악단",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɔɹkəstɹə/"
   },
   {
     "word": "order",
     "pos": "n.",
     "meaning": "순서",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɔɹdɝ/"
   },
   {
     "word": "ordinary",
     "pos": "a.",
     "meaning": "보통의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɔɹdəˌnɛɹi/"
   },
   {
     "word": "organ",
     "pos": "n.",
     "meaning": "(생물의)기관",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɔɹɡən/"
   },
   {
     "word": "organic",
     "pos": "a.",
     "meaning": "유기체의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ɔɹˈɡænɪk/"
   },
   {
     "word": "organize",
     "pos": "v.",
     "meaning": "조직하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɔɹɡəˌnaɪz/"
   },
   {
     "word": "orient",
     "pos": "v.",
     "meaning": "동양 동양의 동쪽으로 향하게 하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɔɹiˌɛnt/"
   },
   {
     "word": "origin",
     "pos": "n.",
     "meaning": "기원",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈɔɹədʒən/"
   },
   {
     "word": "other",
     "pos": "n.",
     "meaning": "다른 다른 것 그렇지 않고",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈəðɝ/"
   },
   {
     "word": "otherwise",
     "pos": "a.",
     "meaning": "딴 방법으로는",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈəðɝˌwaɪz/"
   },
   {
     "word": "ought au",
     "pos": "v.",
     "meaning": "해야만 하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": ""
   },
   {
     "word": "ounce",
     "pos": "n.",
     "meaning": "삵괭이",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈaʊns/"
   },
   {
     "word": "out",
     "pos": "ad.",
     "meaning": "밖으로",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈaʊt/"
   },
   {
     "word": "outcome",
     "pos": "n.",
     "meaning": "결과",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈaʊtˌkəm/"
   },
   {
     "word": "outline",
     "pos": "n.",
     "meaning": "윤곽",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈaʊtˌɫaɪn/"
   },
   {
     "word": "output",
     "pos": "n.",
     "meaning": "산출",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈaʊtˌpʊt/"
   },
   {
     "word": "outrage",
     "pos": "n.",
     "meaning": "불법(적인 행위)",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈaʊˌtɹeɪdʒ/"
   },
   {
     "word": "outstanding",
     "pos": "a.",
     "meaning": "눈에 띄는",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌaʊtˈstændɪŋ/"
   },
   {
     "word": "over",
     "pos": "n.",
     "meaning": "위쪽",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈoʊvɝ/"
   },
   {
     "word": "overall",
     "pos": "n.",
     "meaning": "포괄(전면)적인 덧옷",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈoʊvɝˌɔɫ/"
   },
   {
     "word": "overcome",
     "pos": "v.",
     "meaning": "이기다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈoʊvɝˌkəm/"
   },
   {
     "word": "overhead",
     "pos": "a.",
     "meaning": "머리위에 머리 위의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈoʊvɝˈhɛd/"
   },
   {
     "word": "overlap",
     "pos": "v.",
     "meaning": "겹치다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈoʊvɝˌɫæp/"
   },
   {
     "word": "overlook",
     "pos": "v.",
     "meaning": "내려다 보다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈoʊvɝˌɫʊk/"
   },
   {
     "word": "overnight",
     "pos": "a.",
     "meaning": "전날밤의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈoʊvɝˈnaɪt/"
   },
   {
     "word": "oversea",
     "pos": "a.",
     "meaning": "해외(로부터)의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌoʊvɝˈsi/"
   },
   {
     "word": "overwhelm",
     "pos": "v.",
     "meaning": "압도하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌoʊvɝˈwɛɫm/, /ˌoʊvɝhˈwɛɫm/"
   },
   {
     "word": "owe",
     "pos": "v.",
     "meaning": "지불할 의무가 있다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈoʊ/"
   },
   {
     "word": "own",
     "pos": "v.",
     "meaning": "자기자신의 소유하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈoʊn/"
   },
   {
     "word": "pace",
     "pos": "n.",
     "meaning": "한걸음",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpeɪs/"
   },
   {
     "word": "pack",
     "pos": "n.",
     "meaning": "꾸러미",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpæk/"
   },
   {
     "word": "packet",
     "pos": "n.",
     "meaning": "다발",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpækət/, /ˈpækɪt/"
   },
   {
     "word": "pad",
     "pos": "n.",
     "meaning": "(및에)덧대는 것",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpæd/"
   },
   {
     "word": "pain",
     "pos": "n.",
     "meaning": "고통",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpeɪn/"
   },
   {
     "word": "paint",
     "pos": "n.",
     "meaning": "도료",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpeɪnt/"
   },
   {
     "word": "pair",
     "pos": "n.",
     "meaning": "한쌍",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɛɹ/"
   },
   {
     "word": "palace",
     "pos": "n.",
     "meaning": "궁전",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpæɫəs/"
   },
   {
     "word": "pale",
     "pos": "a.",
     "meaning": "창백한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpeɪɫ/"
   },
   {
     "word": "palm",
     "pos": "n.",
     "meaning": "손바닥",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɑɫm/, /ˈpɑm/"
   },
   {
     "word": "pan",
     "pos": "v.",
     "meaning": "남비 사금 등을 남비로 가려내다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpæn/"
   },
   {
     "word": "panel",
     "pos": "n.",
     "meaning": "판벽널",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpænəɫ/"
   },
   {
     "word": "panic",
     "pos": "n.",
     "meaning": "돌연한공포",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpænɪk/"
   },
   {
     "word": "pants",
     "pos": "n.",
     "meaning": "바지",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpænts/"
   },
   {
     "word": "paper",
     "pos": "n.",
     "meaning": "종이",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpeɪpɝ/"
   },
   {
     "word": "paragraph",
     "pos": "n.",
     "meaning": "(문장의)절",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpæɹəˌɡɹæf/, /ˈpɛɹəˌɡɹæf/"
   },
   {
     "word": "parallel",
     "pos": "a.",
     "meaning": "평행의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɛɹəˌɫɛɫ/"
   },
   {
     "word": "pardon",
     "pos": "v.",
     "meaning": "용서하다 용서",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɑɹdən/"
   },
   {
     "word": "parent",
     "pos": "n.",
     "meaning": "어버이",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɛɹənt/"
   },
   {
     "word": "park",
     "pos": "n.",
     "meaning": "공원",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɑɹk/"
   },
   {
     "word": "parliament",
     "pos": "n.",
     "meaning": "의회",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɑɹɫəmənt/"
   },
   {
     "word": "part",
     "pos": "n.",
     "meaning": "부분",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɑɹt/"
   },
   {
     "word": "participate",
     "pos": "v.",
     "meaning": "참가하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/pɑɹˈtɪsəˌpeɪt/"
   },
   {
     "word": "particle",
     "pos": "n.",
     "meaning": "입자",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɑɹtəkəɫ/, /ˈpɑɹtɪkəɫ/"
   },
   {
     "word": "particular",
     "pos": "a.",
     "meaning": "특수한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌpɑˈtɪkjəɫɝ/, /pɝˈtɪkjəɫɝ/"
   },
   {
     "word": "pass",
     "pos": "v.",
     "meaning": "지나가다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpæs/"
   },
   {
     "word": "passage",
     "pos": "n.",
     "meaning": "통행, 통과",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpæsədʒ/, /ˈpæsɪdʒ/"
   },
   {
     "word": "passenger",
     "pos": "n.",
     "meaning": "승객",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpæsəndʒɝ/"
   },
   {
     "word": "passion",
     "pos": "n.",
     "meaning": "정열",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpæʃən/"
   },
   {
     "word": "passport",
     "pos": "n.",
     "meaning": "여권",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpæsˌpɔɹt/"
   },
   {
     "word": "past",
     "pos": "n.",
     "meaning": "과거",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpæst/"
   },
   {
     "word": "pat",
     "pos": "v.",
     "meaning": "톡톡 가볍게 치다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpæt/"
   },
   {
     "word": "patch",
     "pos": "n.",
     "meaning": "깁는 헝겊",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpætʃ/"
   },
   {
     "word": "patent",
     "pos": "a.",
     "meaning": "전매특허권 전매특허의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpætənt/"
   },
   {
     "word": "path",
     "pos": "n.",
     "meaning": "작은 길",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpæθ/"
   },
   {
     "word": "patient",
     "pos": "n.",
     "meaning": "인내심이 강한 환자",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpeɪʃənt/"
   },
   {
     "word": "patrol",
     "pos": "n.",
     "meaning": "순회",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/pəˈtɹoʊɫ/"
   },
   {
     "word": "pattern",
     "pos": "n.",
     "meaning": "모범",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpætɝn/"
   },
   {
     "word": "pause",
     "pos": "n.",
     "meaning": "중지",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɔz/"
   },
   {
     "word": "pave",
     "pos": "v.",
     "meaning": "(도로를)포장하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpeɪv/"
   },
   {
     "word": "pay",
     "pos": "v.",
     "meaning": "지불하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpeɪ/"
   },
   {
     "word": "peace",
     "pos": "n.",
     "meaning": "평화",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpis/"
   },
   {
     "word": "peak",
     "pos": "n.",
     "meaning": "(뾰족한)끝",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpik/"
   },
   {
     "word": "pear",
     "pos": "n.",
     "meaning": "서양배",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɛɹ/"
   },
   {
     "word": "peasant",
     "pos": "n.",
     "meaning": "농부",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɛzənt/"
   },
   {
     "word": "peel",
     "pos": "v.",
     "meaning": "껍질을 벗기다 벗어지다 껍질",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpiɫ/"
   },
   {
     "word": "peer",
     "pos": "n.",
     "meaning": "동료",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɪɹ/"
   },
   {
     "word": "penalty",
     "pos": "n.",
     "meaning": "벌",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɛnəɫti/"
   },
   {
     "word": "pencil",
     "pos": "v.",
     "meaning": "연필 연필로 쓰다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɛnsəɫ/"
   },
   {
     "word": "people",
     "pos": "n.",
     "meaning": "사람들",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpipəɫ/"
   },
   {
     "word": "pepper",
     "pos": "n.",
     "meaning": "고추",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɛpɝ/"
   },
   {
     "word": "per",
     "pos": "n.",
     "meaning": "-에 의하여",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɝ/"
   },
   {
     "word": "perceive",
     "pos": "v.",
     "meaning": "지각하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/pɝˈsiv/"
   },
   {
     "word": "perfect",
     "pos": "a.",
     "meaning": "완전한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɝˌfɪkt/, /pɝˈfɛkt/"
   },
   {
     "word": "perform",
     "pos": "v.",
     "meaning": "다하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/pɝˈfɔɹm/"
   },
   {
     "word": "perhaps",
     "pos": "n.",
     "meaning": "아마",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/pɝˈhæps/"
   },
   {
     "word": "period",
     "pos": "n.",
     "meaning": "시간",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɪɹiəd/"
   },
   {
     "word": "permanent",
     "pos": "a.",
     "meaning": "영구의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɝmənənt/"
   },
   {
     "word": "permit",
     "pos": "v.",
     "meaning": "허가하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɝˌmɪt/, /pɝˈmɪt/"
   },
   {
     "word": "persist",
     "pos": "v.",
     "meaning": "고집하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/pɝˈsɪst/"
   },
   {
     "word": "person",
     "pos": "n.",
     "meaning": "사람",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɝsən/"
   },
   {
     "word": "personality",
     "pos": "n.",
     "meaning": "개성",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌpɝsəˈnæɫɪti/"
   },
   {
     "word": "perspective",
     "pos": "n.",
     "meaning": "원근법의 원근 화법",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/pɝˈspɛktɪv/"
   },
   {
     "word": "persuade",
     "pos": "v.",
     "meaning": "설득하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/pɝˈsweɪd/"
   },
   {
     "word": "pet",
     "pos": "n.",
     "meaning": "애완동물",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɛt/"
   },
   {
     "word": "phase",
     "pos": "n.",
     "meaning": "국면",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfeɪz/"
   },
   {
     "word": "phenomenon",
     "pos": "n.",
     "meaning": "현상",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/fəˈnɑməˌnɑn/"
   },
   {
     "word": "philosophy",
     "pos": "n.",
     "meaning": "철학",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/fəˈɫɑsəfi/"
   },
   {
     "word": "photograph",
     "pos": "v.",
     "meaning": "사진 촬영하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfoʊtəˌɡɹæf/"
   },
   {
     "word": "phrase",
     "pos": "n.",
     "meaning": "구",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɹeɪz/"
   },
   {
     "word": "physical",
     "pos": "a.",
     "meaning": "물질의",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɪzɪkəɫ/"
   },
   {
     "word": "physics",
     "pos": "n.",
     "meaning": "물리학",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈfɪzɪks/"
   },
   {
     "word": "pick",
     "pos": "v.",
     "meaning": "따다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɪk/"
   },
   {
     "word": "picnic",
     "pos": "n.",
     "meaning": "소풍",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɪkˌnɪk/"
   },
   {
     "word": "picture",
     "pos": "n.",
     "meaning": "그림",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɪktʃɝ/"
   },
   {
     "word": "piece",
     "pos": "n.",
     "meaning": "한 조각",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpis/"
   },
   {
     "word": "pig",
     "pos": "n.",
     "meaning": "돼지",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɪɡ/"
   },
   {
     "word": "pile",
     "pos": "n.",
     "meaning": "쌓아 올린 것",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpaɪɫ/"
   },
   {
     "word": "pill",
     "pos": "n.",
     "meaning": "알약",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɪɫ/"
   },
   {
     "word": "pin",
     "pos": "v.",
     "meaning": "핀 핀으로 꽂다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɪn/"
   },
   {
     "word": "pinch",
     "pos": "v.",
     "meaning": "꼬집다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɪntʃ/"
   },
   {
     "word": "pine",
     "pos": "v.",
     "meaning": "소나무 수척해 지다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpaɪn/"
   },
   {
     "word": "pink",
     "pos": "n.",
     "meaning": "연분홍색",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɪŋk/"
   },
   {
     "word": "pioneer",
     "pos": "n.",
     "meaning": "개척자",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˌpaɪəˈnɪɹ/"
   },
   {
     "word": "pitch",
     "pos": "v.",
     "meaning": "던지다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɪtʃ/"
   },
   {
     "word": "pity",
     "pos": "n.",
     "meaning": "불쌍히 여김",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɪti/"
   },
   {
     "word": "place",
     "pos": "n.",
     "meaning": "장소",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɫeɪs/"
   },
   {
     "word": "plain",
     "pos": "a.",
     "meaning": "분명한",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɫeɪn/"
   },
   {
     "word": "plan",
     "pos": "n.",
     "meaning": "계획",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɫæn/"
   },
   {
     "word": "planet",
     "pos": "n.",
     "meaning": "행성",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɫænət/"
   },
   {
     "word": "plant",
     "pos": "n.",
     "meaning": "실물",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɫænt/"
   },
   {
     "word": "plate",
     "pos": "n.",
     "meaning": "판",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɫeɪt/"
   },
   {
     "word": "platform",
     "pos": "n.",
     "meaning": "단",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɫætˌfɔɹm/"
   },
   {
     "word": "play",
     "pos": "v.",
     "meaning": "놀다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɫeɪ/"
   },
   {
     "word": "pleasant",
     "pos": "n.",
     "meaning": "기분 좋은",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɫɛzənt/"
   },
   {
     "word": "please",
     "pos": "v.",
     "meaning": "기쁘게 하다",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɫiz/"
   },
   {
     "word": "pleasure",
     "pos": "n.",
     "meaning": "즐거움",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɫɛʒɝ/"
   },
   {
     "word": "plenty",
     "pos": "n.",
     "meaning": "많음",
-    "level": "high"
+    "level": "high",
+    "pronunciation": "/ˈpɫɛni/, /ˈpɫɛnti/"
   },
   {
     "word": "plot",
     "pos": "n.",
     "meaning": "음모",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɫɑt/"
   },
   {
     "word": "plus",
     "pos": "n.",
     "meaning": "더하기의 -외에",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɫəs/"
   },
   {
     "word": "P.M.",
     "pos": "n.",
     "meaning": "오후",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpiˈɛm/"
   },
   {
     "word": "pocket",
     "pos": "n.",
     "meaning": "포켓",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɑkət/"
   },
   {
     "word": "poem",
     "pos": "n.",
     "meaning": "시",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpoʊəm/"
   },
   {
     "word": "poet",
     "pos": "a.",
     "meaning": "시인",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpoʊət/"
   },
   {
     "word": "point",
     "pos": "n.",
     "meaning": "점",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɔɪnt/"
   },
   {
     "word": "poison",
     "pos": "n.",
     "meaning": "독",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɔɪzən/"
   },
   {
     "word": "polar",
     "pos": "a.",
     "meaning": "남극의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpoʊɫɝ/"
   },
   {
     "word": "pole",
     "pos": "n.",
     "meaning": "폴란드사람",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpoʊɫ/"
   },
   {
     "word": "police",
     "pos": "v.",
     "meaning": "경찰 경비하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pəˈɫis/"
   },
   {
     "word": "policy",
     "pos": "n.",
     "meaning": "정책",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɑɫəsi/"
   },
   {
     "word": "polish",
     "pos": "v.",
     "meaning": "닦다, 갈다, 윤내다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɑɫɪʃ/, /ˈpoʊɫɪʃ/"
   },
   {
     "word": "polite",
     "pos": "a.",
     "meaning": "공손한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pəˈɫaɪt/"
   },
   {
     "word": "politics",
     "pos": "n.",
     "meaning": "정치",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɑɫəˌtɪks/"
   },
   {
     "word": "poll",
     "pos": "n.",
     "meaning": "투표",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpoʊɫ/"
   },
   {
     "word": "pollute -",
     "pos": "v.",
     "meaning": "을 더럽히다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pəˈɫut/"
   },
   {
     "word": "pond",
     "pos": "n.",
     "meaning": "못, 연못",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɑnd/"
   },
   {
     "word": "pool",
     "pos": "n.",
     "meaning": "판돈",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpuɫ/"
   },
   {
     "word": "poor",
     "pos": "a.",
     "meaning": "가난한 부족한, 불충분한, 빈약한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpuɹ/"
   },
   {
     "word": "pop",
     "pos": "n.",
     "meaning": "팝",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɑp/"
   },
   {
     "word": "pope",
     "pos": "n.",
     "meaning": "로마 교황 최고 권위자로 자처하는 사람",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpoʊp/"
   },
   {
     "word": "popular",
     "pos": "a.",
     "meaning": "민중 의, 대중의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɑpjəɫɝ/"
   },
   {
     "word": "population",
     "pos": "n.",
     "meaning": "인구",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌpɑpjəˈɫeɪʃən/"
   },
   {
     "word": "pork",
     "pos": "n.",
     "meaning": "돼지고기",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɔɹk/"
   },
   {
     "word": "port",
     "pos": "n.",
     "meaning": "항구, 항만, 상항",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɔɹt/"
   },
   {
     "word": "portion",
     "pos": "n.",
     "meaning": "일부, 부분",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɔɹʃən/"
   },
   {
     "word": "portrait",
     "pos": "n.",
     "meaning": "초상",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɔɹtɹət/"
   },
   {
     "word": "pose",
     "pos": "n.",
     "meaning": "자세, 포즈 마음가짐 꾸민 태도",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpoʊz/"
   },
   {
     "word": "position",
     "pos": "n.",
     "meaning": "위치",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pəˈzɪʃən/"
   },
   {
     "word": "positive",
     "pos": "a.",
     "meaning": "명확한, 의문의 여지가 없는, 부정할 수 없는",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɑzətɪv/"
   },
   {
     "word": "possess",
     "pos": "v.",
     "meaning": "소유하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pəˈzɛs/"
   },
   {
     "word": "possible",
     "pos": "a.",
     "meaning": "가능한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɑsəbəɫ/"
   },
   {
     "word": "post",
     "pos": "n.",
     "meaning": "기둥",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpoʊst/"
   },
   {
     "word": "poster",
     "pos": "n.",
     "meaning": "포스터",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpoʊstɝ/"
   },
   {
     "word": "pot",
     "pos": "n.",
     "meaning": "단지",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɑt/"
   },
   {
     "word": "potato",
     "pos": "n.",
     "meaning": "감자",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pəˈteɪˌtoʊ/"
   },
   {
     "word": "potential",
     "pos": "a.",
     "meaning": "가능한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pəˈtɛnʃəɫ/"
   },
   {
     "word": "pour",
     "pos": "v.",
     "meaning": "따르다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɔɹ/"
   },
   {
     "word": "powder",
     "pos": "n.",
     "meaning": "가루",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpaʊdɝ/"
   },
   {
     "word": "power",
     "pos": "n.",
     "meaning": "힘",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpaʊɝ/"
   },
   {
     "word": "practical",
     "pos": "a.",
     "meaning": "실제의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹæktəkəɫ/, /ˈpɹæktɪkəɫ/"
   },
   {
     "word": "practice",
     "pos": "n.",
     "meaning": "연습",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹæktəs/, /ˈpɹæktɪs/"
   },
   {
     "word": "praise",
     "pos": "n.",
     "meaning": "칭찬",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹeɪz/"
   },
   {
     "word": "pray",
     "pos": "v.",
     "meaning": "빌다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹeɪ/"
   },
   {
     "word": "preach",
     "pos": "v.",
     "meaning": "설교하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹitʃ/"
   },
   {
     "word": "precede -",
     "pos": "v.",
     "meaning": "에 앞서다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹɪˈsid/"
   },
   {
     "word": "precious",
     "pos": "n.",
     "meaning": "비싼",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɛʃəs/"
   },
   {
     "word": "precise",
     "pos": "a.",
     "meaning": "정확한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹiˈsaɪs/, /pɹɪˈsaɪs/"
   },
   {
     "word": "predator",
     "pos": "n.",
     "meaning": "약탈자",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɛdətɝ/"
   },
   {
     "word": "predict",
     "pos": "v.",
     "meaning": "예연하다, 예보하다 예언하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹiˈdɪkt/, /pɹɪˈdɪkt/"
   },
   {
     "word": "prefer",
     "pos": "n.",
     "meaning": "오히려 …을 좋아하다,",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹəˈfɝ/, /pɹiˈfɝ/, /pɹɪˈfɝ/"
   },
   {
     "word": "pregnant",
     "pos": "a.",
     "meaning": "임신한 충만한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɛɡnənt/"
   },
   {
     "word": "prejudice",
     "pos": "n.",
     "meaning": "편견, 선입관",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɛdʒədɪs/"
   },
   {
     "word": "premier",
     "pos": "n.",
     "meaning": "국무 총리, 수상",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹɛˈmɪɹ/, /pɹiˈmɪɹ/"
   },
   {
     "word": "premium",
     "pos": "n.",
     "meaning": "할증금, 액면 초과액, 프리미엄",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹimiəm/"
   },
   {
     "word": "prepare",
     "pos": "v.",
     "meaning": "준비하 다, 마련하다, 채비를 갖추다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹiˈpɛɹ/"
   },
   {
     "word": "prescribe",
     "pos": "v.",
     "meaning": "명령하다, 지령하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹəsˈkɹaɪb/, /pɹisˈkɹaɪb/"
   },
   {
     "word": "presence",
     "pos": "n.",
     "meaning": "존재, 현존, 실재 출석, 임석, 참석",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɛzəns/"
   },
   {
     "word": "present",
     "pos": "a.",
     "meaning": "있는, 존재하는",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɛzənt/, /pɝˈzɛnt/, /pɹiˈzɛnt/"
   },
   {
     "word": "preserve",
     "pos": "v.",
     "meaning": "보호하다, 지키다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹəˈzɝv/, /pɹiˈzɝv/, /pɹɪˈzɝv/"
   },
   {
     "word": "president",
     "pos": "n.",
     "meaning": "대통령 회장",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɛzəˌdɛnt/, /ˈpɹɛzɪdənt/"
   },
   {
     "word": "press",
     "pos": "v.",
     "meaning": "강제로 모집하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɛs/"
   },
   {
     "word": "presume",
     "pos": "v.",
     "meaning": "가정하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹɪˈzum/"
   },
   {
     "word": "pretend",
     "pos": "v.",
     "meaning": "핑계삼다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹiˈtɛnd/"
   },
   {
     "word": "pretty",
     "pos": "a.",
     "meaning": "예쁜, 귀여운, 참 한, 조촐한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɪti/"
   },
   {
     "word": "prevail",
     "pos": "v.",
     "meaning": "이기다, 극복하다, 압도하다 우세하다, 보급되다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹiˈveɪɫ/, /pɹɪˈveɪɫ/"
   },
   {
     "word": "prevent",
     "pos": "v.",
     "meaning": "막다, 방해하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹiˈvɛnt/, /pɹɪˈvɛnt/"
   },
   {
     "word": "previous",
     "pos": "a.",
     "meaning": "앞의, 이전의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹiviəs/"
   },
   {
     "word": "prey",
     "pos": "n.",
     "meaning": "먹이",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹeɪ/"
   },
   {
     "word": "price",
     "pos": "n.",
     "meaning": "값, 가격, 대가, 정가",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹaɪs/"
   },
   {
     "word": "pride",
     "pos": "n.",
     "meaning": "자존심",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹaɪd/"
   },
   {
     "word": "priest",
     "pos": "n.",
     "meaning": "성직자",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹist/"
   },
   {
     "word": "primary",
     "pos": "a.",
     "meaning": "첫째의, 제 1 위의, 수위의 초등의, 초보의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹaɪˌmɛɹi/"
   },
   {
     "word": "prime",
     "pos": "a.",
     "meaning": "수위의, 최초의, 원시적인",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹaɪm/"
   },
   {
     "word": "primitive",
     "pos": "a.",
     "meaning": "원시의, 초기의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɪmətɪv/, /ˈpɹɪmɪtɪv/"
   },
   {
     "word": "prince",
     "pos": "n.",
     "meaning": "왕자, 태자, 세자, 대군",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɪns/"
   },
   {
     "word": "principal",
     "pos": "a.",
     "meaning": "주요한, 주된, 제일의, 앞장서는",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɪnsəpəɫ/"
   },
   {
     "word": "principle",
     "pos": "n.",
     "meaning": "원리, 원칙, 법칙, 공리",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɪnsəpəɫ/"
   },
   {
     "word": "print",
     "pos": "v.",
     "meaning": "인쇄하다, 프린트하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɪnt/"
   },
   {
     "word": "prior",
     "pos": "a.",
     "meaning": "이전의, 앞의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹaɪɝ/"
   },
   {
     "word": "prison",
     "pos": "n.",
     "meaning": "교도소",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɪzən/"
   },
   {
     "word": "privacy",
     "pos": "n.",
     "meaning": "남의 눈을 피함, 은거, 은둔, 은퇴 생활 사생활",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹaɪvəsi/"
   },
   {
     "word": "private",
     "pos": "a.",
     "meaning": "사적인, 사사로운, 개인에 속한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹaɪvət/"
   },
   {
     "word": "privilege",
     "pos": "n.",
     "meaning": "특권, 특전, 특별 취급",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɪvɪɫədʒ/, /ˈpɹɪvɪɫɪdʒ/, /ˈpɹɪvɫədʒ/, /ˈpɹɪvɫɪdʒ/"
   },
   {
     "word": "prize",
     "pos": "n.",
     "meaning": "상, 포상, 우등상, 선행상",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹaɪz/"
   },
   {
     "word": "probably",
     "pos": "n.",
     "meaning": "아마, 십중팔구",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɑbəˌbɫi/, /ˈpɹɑbɫi/"
   },
   {
     "word": "problem",
     "pos": "n.",
     "meaning": "문제",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɑbɫəm/"
   },
   {
     "word": "procedure",
     "pos": "n.",
     "meaning": "진행, 경과 절차",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹəˈsidʒɝ/, /pɹoʊˈsidʒɝ/"
   },
   {
     "word": "proceed",
     "pos": "v.",
     "meaning": "나아가다, 가다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɝˈsid/, /pɹəˈsid/, /pɹoʊˈsid/"
   },
   {
     "word": "process",
     "pos": "n.",
     "meaning": "진행, 작용",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɑˌsɛs/, /ˈpɹɔˌsɛs/"
   },
   {
     "word": "produce",
     "pos": "n.",
     "meaning": "생산하다, 산출하다, 생기게 하다,",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹoʊdus/, /pɹəˈdus/"
   },
   {
     "word": "profession",
     "pos": "n.",
     "meaning": "직업 공언, 선언, 고백",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹəˈfɛʃən/"
   },
   {
     "word": "professor",
     "pos": "n.",
     "meaning": "교수",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹəˈfɛsɝ/"
   },
   {
     "word": "profile",
     "pos": "n.",
     "meaning": "옆 얼굴, 반면상 인물 소개 태도, 자세",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹoʊˌfaɪɫ/"
   },
   {
     "word": "profit",
     "pos": "n.",
     "meaning": "이익, 이득, 벌이",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɑfət/, /ˈpɹɑfɪt/"
   },
   {
     "word": "profound",
     "pos": "a.",
     "meaning": "깊은, 심원한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹoʊˈfaʊnd/"
   },
   {
     "word": "progress",
     "pos": "n.",
     "meaning": "진행, 전진, 진척 진보, 향상, 발달, 발전",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɑˌɡɹɛs/, /pɹəˈɡɹɛs/, /pɹoʊˈɡɹɛs/"
   },
   {
     "word": "prohibit",
     "pos": "v.",
     "meaning": "금하다, 금지하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹoʊˈhɪbət/"
   },
   {
     "word": "prominent",
     "pos": "a.",
     "meaning": "두드러진, 돌기한, 양각된 현저한, 탁월한, 중요한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɑmənənt/"
   },
   {
     "word": "promise",
     "pos": "n.",
     "meaning": "약속, 서약, 계약",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɑməs/"
   },
   {
     "word": "promote",
     "pos": "v.",
     "meaning": "승진시키다 진행시키다,",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹəˈmoʊt/"
   },
   {
     "word": "prompt",
     "pos": "a.",
     "meaning": "재빠른, 신속한, 즉시 …하는",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɑmpt/"
   },
   {
     "word": "pronounce",
     "pos": "v.",
     "meaning": "발음하다, 음독하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹəˈnaʊns/"
   },
   {
     "word": "proof",
     "pos": "n.",
     "meaning": "증명",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹuf/"
   },
   {
     "word": "proper",
     "pos": "a.",
     "meaning": "고유의, 독특한, 본연의, 특유한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɑpɝ/"
   },
   {
     "word": "property",
     "pos": "n.",
     "meaning": "재산, 자산",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɑpɝti/"
   },
   {
     "word": "proportion",
     "pos": "n.",
     "meaning": "비율, 비 균형, 조화",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹəˈpɔɹʃən/"
   },
   {
     "word": "propose",
     "pos": "v.",
     "meaning": "제의하다, 제출하다 추천하다, 지명하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹəˈpoʊz/"
   },
   {
     "word": "prospect",
     "pos": "n.",
     "meaning": "전망, 조망, 경치",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɑspɛkt/"
   },
   {
     "word": "prosper",
     "pos": "v.",
     "meaning": "번영하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɑspɝ/"
   },
   {
     "word": "protect",
     "pos": "v.",
     "meaning": "보호하다, 막다, 지키다, 비호하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹəˈtɛkt/"
   },
   {
     "word": "protein",
     "pos": "n.",
     "meaning": "IG1s",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹoʊˌtin/"
   },
   {
     "word": "protest",
     "pos": "v.",
     "meaning": "단언하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹoʊˌtɛst/, /pɹəˈtɛst/"
   },
   {
     "word": "proud",
     "pos": "a.",
     "meaning": "뽐내는, 자랑하는 자긍하는, 영광 으로 여기는",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹaʊd/"
   },
   {
     "word": "prove",
     "pos": "v.",
     "meaning": "시험하다, 실험하다, 경험하다, 시험해 보다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹuv/"
   },
   {
     "word": "provide",
     "pos": "v.",
     "meaning": "준비하다, 미리 …에 대비하다 규정하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹəˈvaɪd/"
   },
   {
     "word": "province",
     "pos": "n.",
     "meaning": "주, 성, 도 범위, 영역, 분야",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɹɑvəns/, /ˈpɹɑvɪns/"
   },
   {
     "word": "provoke",
     "pos": "v.",
     "meaning": "화나게 하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɹəˈvoʊk/"
   },
   {
     "word": "psychology",
     "pos": "n.",
     "meaning": "심리학",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/saɪˈkɑɫədʒi/"
   },
   {
     "word": "pub",
     "pos": "n.",
     "meaning": "펍",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpəb/"
   },
   {
     "word": "public",
     "pos": "n.",
     "meaning": "심리, 심리 상태",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpəbɫɪk/"
   },
   {
     "word": "publish",
     "pos": "v.",
     "meaning": "발표 하다, 널리 알리다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpəbɫɪʃ/"
   },
   {
     "word": "pull",
     "pos": "v.",
     "meaning": "끌다, 당기다, 끌어 당기다, 잡아 끌다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpʊɫ/"
   },
   {
     "word": "pump",
     "pos": "n.",
     "meaning": "펌프스 댄스용 구두",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpəmp/"
   },
   {
     "word": "punch",
     "pos": "n.",
     "meaning": "주먹질, 펀치 힘, 활기",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpəntʃ/"
   },
   {
     "word": "punish",
     "pos": "v.",
     "meaning": "벌하다, 응징하다, 처형하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpənɪʃ/"
   },
   {
     "word": "pupil",
     "pos": "n.",
     "meaning": "흔히 국민학교 중학교 학생",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpjupəɫ/"
   },
   {
     "word": "puppy",
     "pos": "n.",
     "meaning": "강아지",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpəpi/"
   },
   {
     "word": "purchase",
     "pos": "v.",
     "meaning": "사다, 구입하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɝtʃəs/"
   },
   {
     "word": "pure",
     "pos": "a.",
     "meaning": "순수한 깨끗한, 순전한, 결백한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpjʊɹ/"
   },
   {
     "word": "purple",
     "pos": "a.",
     "meaning": "자줏빛의 새빨간 제왕의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɝpəɫ/"
   },
   {
     "word": "purpose",
     "pos": "a.",
     "meaning": "목적",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpɝpəs/"
   },
   {
     "word": "pursue",
     "pos": "v.",
     "meaning": "쫓다, 추적하다, 몰다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/pɝˈsu/"
   },
   {
     "word": "push",
     "pos": "v.",
     "meaning": "밀다, 밀치다, 밀어서 움직 이다, 밀어 내다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpʊʃ/"
   },
   {
     "word": "put",
     "pos": "v.",
     "meaning": "놓다, 두다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpʊt/"
   },
   {
     "word": "puzzle",
     "pos": "n.",
     "meaning": "당황, 혼란 괴롭히는 사람, 어려운 문제",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈpəzəɫ/"
   },
   {
     "word": "qualify",
     "pos": "v.",
     "meaning": "자격을 부여하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈkwɑɫəˌfaɪ/"
   },
   {
     "word": "quality",
     "pos": "n.",
     "meaning": "질",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈkwɑɫəti/"
   },
   {
     "word": "quantity",
     "pos": "n.",
     "meaning": "양",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈkwɑntəti/"
   },
   {
     "word": "quarter",
     "pos": "n.",
     "meaning": "1",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈkwɔɹtɝ/"
   },
   {
     "word": "queen",
     "pos": "n.",
     "meaning": "여왕",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈkwin/"
   },
   {
     "word": "question",
     "pos": "a.",
     "meaning": "물음, 질문, 질의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈkwɛstʃən/, /ˈkwɛʃən/"
   },
   {
     "word": "questionnaire",
     "pos": "n.",
     "meaning": "질문표",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌkwɛstʃəˈnɛɹ/"
   },
   {
     "word": "quick",
     "pos": "n.",
     "meaning": "빠른",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈkwɪk/"
   },
   {
     "word": "quiet",
     "pos": "a.",
     "meaning": "조용한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈkwaɪət/"
   },
   {
     "word": "quit (",
     "pos": "v.",
     "meaning": "의무,책임을)벗어난 떠나다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈkwɪt/"
   },
   {
     "word": "quite",
     "pos": "n.",
     "meaning": "아주",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈkwaɪt/"
   },
   {
     "word": "quote",
     "pos": "v.",
     "meaning": "인용하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈkwoʊt/"
   },
   {
     "word": "rabbit",
     "pos": "n.",
     "meaning": "집토끼",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹæbət/, /ˈɹæbɪt/"
   },
   {
     "word": "race",
     "pos": "n.",
     "meaning": "인종",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹeɪs/"
   },
   {
     "word": "racial",
     "pos": "a.",
     "meaning": "인종(상)의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹeɪʃəɫ/"
   },
   {
     "word": "rage",
     "pos": "n.",
     "meaning": "격노",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹeɪdʒ/"
   },
   {
     "word": "rail",
     "pos": "n.",
     "meaning": "가로장",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹeɪɫ/"
   },
   {
     "word": "rain",
     "pos": "n.",
     "meaning": "비",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹeɪn/"
   },
   {
     "word": "rainbow",
     "pos": "n.",
     "meaning": "무지개",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹeɪnˌboʊ/"
   },
   {
     "word": "raise",
     "pos": "v.",
     "meaning": "올리다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹeɪz/"
   },
   {
     "word": "rally",
     "pos": "v.",
     "meaning": "규합하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹæɫi/"
   },
   {
     "word": "random",
     "pos": "a.",
     "meaning": "닥치는 대로의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹændəm/"
   },
   {
     "word": "range",
     "pos": "n.",
     "meaning": "줄",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹeɪndʒ/"
   },
   {
     "word": "rank",
     "pos": "n.",
     "meaning": "열",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹæŋk/"
   },
   {
     "word": "rapid",
     "pos": "n.",
     "meaning": "빠른",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹæpəd/, /ˈɹæpɪd/"
   },
   {
     "word": "rare",
     "pos": "a.",
     "meaning": "희귀한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛɹ/"
   },
   {
     "word": "rat",
     "pos": "n.",
     "meaning": "쥐",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹæt/"
   },
   {
     "word": "rate",
     "pos": "n.",
     "meaning": "율",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹeɪt/"
   },
   {
     "word": "rather",
     "pos": "n.",
     "meaning": "오히려",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹæðɝ/, /ˈɹəðɝ/"
   },
   {
     "word": "rational",
     "pos": "a.",
     "meaning": "합리적인",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹæʃənəɫ/, /ˈɹæʃnəɫ/"
   },
   {
     "word": "raw",
     "pos": "a.",
     "meaning": "날것의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɑ/"
   },
   {
     "word": "reach",
     "pos": "v.",
     "meaning": "도착하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹitʃ/"
   },
   {
     "word": "react",
     "pos": "v.",
     "meaning": "반응을 나타내다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈækt/"
   },
   {
     "word": "read",
     "pos": "v.",
     "meaning": "읽다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛd/, /ˈɹid/"
   },
   {
     "word": "ready",
     "pos": "a.",
     "meaning": "준비가 된",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛdi/"
   },
   {
     "word": "real",
     "pos": "a.",
     "meaning": "실재하는",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹiɫ/"
   },
   {
     "word": "realize",
     "pos": "v.",
     "meaning": "깨닫다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹiəˌɫaɪz/"
   },
   {
     "word": "rear",
     "pos": "n.",
     "meaning": "뒤",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɪɹ/"
   },
   {
     "word": "reason",
     "pos": "n.",
     "meaning": "이성",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹizən/"
   },
   {
     "word": "rebel",
     "pos": "n.",
     "meaning": "반역자",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛbəɫ/, /ɹɪˈbɛɫ/"
   },
   {
     "word": "recall",
     "pos": "v.",
     "meaning": "되부르다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹiˌkɔɫ/, /ɹɪˈkɔɫ/"
   },
   {
     "word": "receipt",
     "pos": "n.",
     "meaning": "수령",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈsit/, /ɹɪˈsit/"
   },
   {
     "word": "receive",
     "pos": "v.",
     "meaning": "받다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹəˈsiv/, /ɹiˈsiv/, /ɹɪˈsiv/"
   },
   {
     "word": "recent",
     "pos": "a.",
     "meaning": "최근의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹisənt/"
   },
   {
     "word": "reception",
     "pos": "n.",
     "meaning": "받음",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈsɛpʃən/, /ɹɪˈsɛpʃən/"
   },
   {
     "word": "recipe",
     "pos": "n.",
     "meaning": "조리법",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛsəpi/"
   },
   {
     "word": "recognize",
     "pos": "v.",
     "meaning": "인정하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛkəɡˌnaɪz/"
   },
   {
     "word": "recommend",
     "pos": "v.",
     "meaning": "추천하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌɹɛkəˈmɛnd/"
   },
   {
     "word": "record",
     "pos": "v.",
     "meaning": "기록하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛkɝd/, /ɹəˈkɔɹd/, /ɹɪˈkɔɹd/"
   },
   {
     "word": "recover",
     "pos": "v.",
     "meaning": "되찾다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹɪˈkəvɝ/"
   },
   {
     "word": "recruit",
     "pos": "n.",
     "meaning": "신병",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹəˈkɹut/, /ɹiˈkɹut/, /ɹɪˈkɹut/"
   },
   {
     "word": "recycle",
     "pos": "v.",
     "meaning": "재생 이용하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈsaɪkəɫ/"
   },
   {
     "word": "red",
     "pos": "n.",
     "meaning": "붉은",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛd/"
   },
   {
     "word": "reduce",
     "pos": "v.",
     "meaning": "줄이다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹəˈdus/, /ɹiˈdus/, /ɹɪˈdus/"
   },
   {
     "word": "refer",
     "pos": "v.",
     "meaning": "조회시키다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹəˈfɝ/, /ɹɪˈfɝ/"
   },
   {
     "word": "refine",
     "pos": "v.",
     "meaning": "정제정련하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹəˈfaɪn/, /ɹɪˈfaɪn/"
   },
   {
     "word": "reflect",
     "pos": "v.",
     "meaning": "반사하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹɪˈfɫɛkt/"
   },
   {
     "word": "reform",
     "pos": "v.",
     "meaning": "개정(개혁)하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹəˈfɔɹm/, /ɹɪˈfɔɹm/"
   },
   {
     "word": "refrigerator",
     "pos": "n.",
     "meaning": "냉장고",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹəˈfɹɪdʒɝˌeɪtɝ/, /ɹɪˈfɹɪdʒɝˌeɪtɝ/"
   },
   {
     "word": "refuse",
     "pos": "v.",
     "meaning": "거절하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛfˌjuz/, /ɹəfˈjuz/, /ɹɪfˈjuz/"
   },
   {
     "word": "regard",
     "pos": "v.",
     "meaning": "주목해서 보다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹɪˈɡɑɹd/"
   },
   {
     "word": "region",
     "pos": "n.",
     "meaning": "지방",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹidʒən/"
   },
   {
     "word": "register",
     "pos": "n.",
     "meaning": "기록",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛdʒɪstɝ/"
   },
   {
     "word": "regret",
     "pos": "n.",
     "meaning": "유감",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹəˈɡɹɛt/, /ɹɪˈɡɹɛt/"
   },
   {
     "word": "regular",
     "pos": "a.",
     "meaning": "규칙적인",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹeɪɡjəɫɝ/, /ˈɹɛɡjəɫɝ/"
   },
   {
     "word": "regulate",
     "pos": "v.",
     "meaning": "규정하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛɡjəˌɫeɪt/"
   },
   {
     "word": "reinforce",
     "pos": "v.",
     "meaning": "보강하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌɹiɪnˈfɔɹs/"
   },
   {
     "word": "reject",
     "pos": "v.",
     "meaning": "거절하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹidʒɛkt/, /ɹɪˈdʒɛkt/"
   },
   {
     "word": "relate",
     "pos": "v.",
     "meaning": "이야기하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈɫeɪt/, /ɹɪˈɫeɪt/"
   },
   {
     "word": "relative",
     "pos": "n.",
     "meaning": "친척",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛɫətɪv/"
   },
   {
     "word": "relax",
     "pos": "v.",
     "meaning": "늦추다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈɫæks/, /ɹɪˈɫæks/"
   },
   {
     "word": "release",
     "pos": "v.",
     "meaning": "도와주다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈɫis/"
   },
   {
     "word": "relevant",
     "pos": "a.",
     "meaning": "관련된",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛɫəvənt/"
   },
   {
     "word": "relieve",
     "pos": "v.",
     "meaning": "구출하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈɫiv/, /ɹɪˈɫiv/"
   },
   {
     "word": "religion",
     "pos": "n.",
     "meaning": "종교",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈɫɪdʒən/, /ɹɪˈɫɪdʒən/"
   },
   {
     "word": "reluctant",
     "pos": "a.",
     "meaning": "마음이 내키지 않는",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈɫəktənt/, /ɹɪˈɫəktənt/"
   },
   {
     "word": "rely",
     "pos": "v.",
     "meaning": "믿다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈɫaɪ/, /ɹɪˈɫaɪ/"
   },
   {
     "word": "remain",
     "pos": "v.",
     "meaning": "남다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈmeɪn/, /ɹɪˈmeɪn/"
   },
   {
     "word": "remark",
     "pos": "v.",
     "meaning": "깨닫다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈmɑɹk/, /ɹɪˈmɑɹk/"
   },
   {
     "word": "remedy",
     "pos": "n.",
     "meaning": "치료",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛmədi/"
   },
   {
     "word": "remember",
     "pos": "v.",
     "meaning": "기억하고 있다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈmɛmbɝ/, /ɹɪˈmɛmbɝ/"
   },
   {
     "word": "remind",
     "pos": "v.",
     "meaning": "생각나게 하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈmaɪnd/"
   },
   {
     "word": "remote",
     "pos": "n.",
     "meaning": "먼",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈmoʊt/, /ɹɪˈmoʊt/"
   },
   {
     "word": "remove",
     "pos": "v.",
     "meaning": "옮기다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈmuv/"
   },
   {
     "word": "rent",
     "pos": "n.",
     "meaning": "지대",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛnt/"
   },
   {
     "word": "repair",
     "pos": "v.",
     "meaning": "수선(수정)하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹɪˈpɛɹ/"
   },
   {
     "word": "repeat",
     "pos": "v.",
     "meaning": "반복하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈpit/, /ɹɪˈpit/"
   },
   {
     "word": "replace",
     "pos": "v.",
     "meaning": "되돌려 놓다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌɹiˈpɫeɪs/, /ɝˈpɫeɪs/"
   },
   {
     "word": "reply",
     "pos": "v.",
     "meaning": "대답하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈpɫaɪ/, /ɹɪˈpɫaɪ/"
   },
   {
     "word": "report",
     "pos": "n.",
     "meaning": "보고",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈpɔɹt/, /ɹɪˈpɔɹt/"
   },
   {
     "word": "represent",
     "pos": "v.",
     "meaning": "표현(묘사)하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌɹɛpɹɪˈzɛnt/"
   },
   {
     "word": "republic",
     "pos": "n.",
     "meaning": "공화국",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈpəbɫək/, /ɹiˈpəbɫɪk/"
   },
   {
     "word": "reputation",
     "pos": "n.",
     "meaning": "평판",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌɹɛpjəˈteɪʃən/"
   },
   {
     "word": "request",
     "pos": "v.",
     "meaning": "부탁하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈkwɛst/, /ɹɪˈkwɛst/"
   },
   {
     "word": "require",
     "pos": "v.",
     "meaning": "요구하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌɹiˈkwaɪɝ/, /ɹiˈkwaɪɹ/, /ɹɪˈkwaɪɝ/"
   },
   {
     "word": "rescue",
     "pos": "v.",
     "meaning": "구하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛskju/"
   },
   {
     "word": "research",
     "pos": "n.",
     "meaning": "연구",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹisɝtʃ/, /ɹiˈsɝtʃ/"
   },
   {
     "word": "resemble",
     "pos": "v.",
     "meaning": "닮다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈzɛmbəɫ/, /ɹɪˈzɛmbəɫ/"
   },
   {
     "word": "reserve",
     "pos": "v.",
     "meaning": "따로 두다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈzɝv/, /ɹɪˈzɝv/"
   },
   {
     "word": "reside",
     "pos": "v.",
     "meaning": "거주하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈzaɪd/, /ɹɪˈzaɪd/"
   },
   {
     "word": "resign",
     "pos": "v.",
     "meaning": "사임하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈsaɪn/, /ɹiˈzaɪn/, /ɹɪˈzaɪn/"
   },
   {
     "word": "resist",
     "pos": "v.",
     "meaning": "저항하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈzɪst/, /ɹɪˈzɪst/"
   },
   {
     "word": "resolve",
     "pos": "v.",
     "meaning": "분해하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈzɑɫv/"
   },
   {
     "word": "resort (",
     "pos": "v.",
     "meaning": "자주)가다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈsɔɹt/, /ɹiˈzɔɹt/, /ɹɪˈzɔɹt/"
   },
   {
     "word": "resource",
     "pos": "n.",
     "meaning": "자원",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹisɔɹs/"
   },
   {
     "word": "respect",
     "pos": "v.",
     "meaning": "존경하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈspɛkt/, /ɹɪˈspɛkt/"
   },
   {
     "word": "respective",
     "pos": "a.",
     "meaning": "각각의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈspɛktɪv/, /ɹɪˈspɛktɪv/"
   },
   {
     "word": "respond",
     "pos": "v.",
     "meaning": "대답하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈspɑnd/, /ɹɪˈspɑnd/"
   },
   {
     "word": "responsible",
     "pos": "n.",
     "meaning": "책임을 져야할",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈspɑnsəbəɫ/"
   },
   {
     "word": "rest",
     "pos": "n.",
     "meaning": "휴식",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛst/"
   },
   {
     "word": "restaurant",
     "pos": "n.",
     "meaning": "요리점",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛsˌtɹɑnt/, /ˈɹɛstɝˌɑnt/"
   },
   {
     "word": "restore",
     "pos": "v.",
     "meaning": "반환하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹɪˈstɔɹ/"
   },
   {
     "word": "restrain",
     "pos": "v.",
     "meaning": "제지하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈstɹeɪn/"
   },
   {
     "word": "restrict",
     "pos": "v.",
     "meaning": "제한하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈstɹɪkt/"
   },
   {
     "word": "restroom",
     "pos": "n.",
     "meaning": "화장실",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛsˌtɹum/"
   },
   {
     "word": "result",
     "pos": "n.",
     "meaning": "결과",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈzəɫt/, /ɹɪˈzəɫt/"
   },
   {
     "word": "resume",
     "pos": "v.",
     "meaning": "다시 잡다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛzəˌmeɪ/, /ɹiˈzum/, /ɹɪˈzum/"
   },
   {
     "word": "retail",
     "pos": "n.",
     "meaning": "소매",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹiˌteɪɫ/"
   },
   {
     "word": "retain",
     "pos": "v.",
     "meaning": "보유하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈteɪn/, /ɹɪˈteɪn/"
   },
   {
     "word": "retire",
     "pos": "v.",
     "meaning": "퇴직하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌɹiˈtaɪɝ/, /ɹiˈtaɪɹ/, /ɹɪˈtaɪɹ/"
   },
   {
     "word": "retreat",
     "pos": "n.",
     "meaning": "후퇴",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈtɹit/"
   },
   {
     "word": "return",
     "pos": "v.",
     "meaning": "돌아가다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈtɝn/, /ɹɪˈtɝn/"
   },
   {
     "word": "reveal",
     "pos": "v.",
     "meaning": "나타내다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈviɫ/, /ɹɪˈviɫ/"
   },
   {
     "word": "revenge",
     "pos": "n.",
     "meaning": "복수",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈvɛndʒ/"
   },
   {
     "word": "reverse",
     "pos": "n.",
     "meaning": "역",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈvɝs/, /ɹɪˈvɝs/"
   },
   {
     "word": "review",
     "pos": "n.",
     "meaning": "재조사",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌɹivˈju/"
   },
   {
     "word": "revise",
     "pos": "v.",
     "meaning": "교정하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈvaɪz/, /ɹɪˈvaɪz/"
   },
   {
     "word": "revive",
     "pos": "v.",
     "meaning": "소생하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈvaɪv/, /ɹɪˈvaɪv/"
   },
   {
     "word": "revolution",
     "pos": "n.",
     "meaning": "혁명",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌɹɛvəˈɫuʃən/"
   },
   {
     "word": "reward",
     "pos": "n.",
     "meaning": "보수",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹiˈwɔɹd/, /ɹɪˈwɔɹd/"
   },
   {
     "word": "rhythm",
     "pos": "n.",
     "meaning": "율동",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɪðəm/"
   },
   {
     "word": "rice",
     "pos": "n.",
     "meaning": "쌀",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹaɪs/"
   },
   {
     "word": "rich",
     "pos": "a.",
     "meaning": "부자인",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɪtʃ/"
   },
   {
     "word": "rid",
     "pos": "v.",
     "meaning": "면하게하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɪd/"
   },
   {
     "word": "ride",
     "pos": "v.",
     "meaning": "타다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹaɪd/"
   },
   {
     "word": "ridiculous",
     "pos": "n.",
     "meaning": "어리석은",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹɪˈdɪkjəɫəs/"
   },
   {
     "word": "right",
     "pos": "n.",
     "meaning": "올바른",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹaɪt/"
   },
   {
     "word": "ring",
     "pos": "n.",
     "meaning": "고리",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɪŋ/"
   },
   {
     "word": "riot",
     "pos": "n.",
     "meaning": "폭동, 소요, 소동 야단법석, 다채로움,",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹaɪət/"
   },
   {
     "word": "rise",
     "pos": "v.",
     "meaning": "올리다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹaɪz/"
   },
   {
     "word": "risk",
     "pos": "v.",
     "meaning": "위험 걸다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɪsk/"
   },
   {
     "word": "rival",
     "pos": "v.",
     "meaning": "경쟁자 경쟁하는 경쟁하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹaɪvəɫ/"
   },
   {
     "word": "river",
     "pos": "n.",
     "meaning": "강",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɪvɝ/"
   },
   {
     "word": "road",
     "pos": "n.",
     "meaning": "길",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹoʊd/"
   },
   {
     "word": "roar",
     "pos": "v.",
     "meaning": "으르렁거리다 으르렁소리",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɔɹ/"
   },
   {
     "word": "roast",
     "pos": "v.",
     "meaning": "불에 쬐어 굽다 불고기 구운",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹoʊst/"
   },
   {
     "word": "rob",
     "pos": "v.",
     "meaning": "강탈하다, 약탈하다, 빼앗다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɑb/"
   },
   {
     "word": "rock",
     "pos": "n.",
     "meaning": "바위",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɑk/"
   },
   {
     "word": "rod",
     "pos": "n.",
     "meaning": "막대",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɑd/"
   },
   {
     "word": "role (",
     "pos": "n.",
     "meaning": "배우의)역",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹoʊɫ/"
   },
   {
     "word": "roll",
     "pos": "v.",
     "meaning": "구르다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹoʊɫ/"
   },
   {
     "word": "romantic",
     "pos": "a.",
     "meaning": "전기소설적인",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹoʊˈmæntɪk/"
   },
   {
     "word": "roof",
     "pos": "n.",
     "meaning": "지붕",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹuf/, /ˈɹʊf/"
   },
   {
     "word": "room",
     "pos": "n.",
     "meaning": "방",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹum/"
   },
   {
     "word": "root",
     "pos": "n.",
     "meaning": "뿌리",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹut/"
   },
   {
     "word": "rope",
     "pos": "n.",
     "meaning": "새끼",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹoʊp/"
   },
   {
     "word": "rot",
     "pos": "v.",
     "meaning": "썩다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɑt/"
   },
   {
     "word": "rough",
     "pos": "n.",
     "meaning": "거친",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹəf/"
   },
   {
     "word": "round",
     "pos": "n.",
     "meaning": "둥근 원 돌아서",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹaʊnd/"
   },
   {
     "word": "route",
     "pos": "n.",
     "meaning": "길",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹaʊt/, /ˈɹut/"
   },
   {
     "word": "routine",
     "pos": "n.",
     "meaning": "정해진 일",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ɹuˈtin/"
   },
   {
     "word": "row",
     "pos": "n.",
     "meaning": "줄",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹoʊ/"
   },
   {
     "word": "royal",
     "pos": "a.",
     "meaning": "왕의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɔɪəɫ/"
   },
   {
     "word": "rub",
     "pos": "v.",
     "meaning": "마찰하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹəb/"
   },
   {
     "word": "rubber",
     "pos": "n.",
     "meaning": "맛사지사",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹəbɝ/"
   },
   {
     "word": "rude",
     "pos": "a.",
     "meaning": "버릇없는",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹud/"
   },
   {
     "word": "ruin",
     "pos": "n.",
     "meaning": "파멸",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹuən/, /ˈɹuɪn/"
   },
   {
     "word": "rule",
     "pos": "n.",
     "meaning": "규칙",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹuɫ/"
   },
   {
     "word": "rumor",
     "pos": "n.",
     "meaning": "소문",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹumɝ/"
   },
   {
     "word": "run",
     "pos": "v.",
     "meaning": "달리다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹən/"
   },
   {
     "word": "rural",
     "pos": "a.",
     "meaning": "시골의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹʊɹəɫ/"
   },
   {
     "word": "rush",
     "pos": "v.",
     "meaning": "돌진하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹəʃ/"
   },
   {
     "word": "sack",
     "pos": "n.",
     "meaning": "마대",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsæk/"
   },
   {
     "word": "sacred",
     "pos": "a.",
     "meaning": "신성한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈseɪkɹəd/, /ˈseɪkɹɪd/"
   },
   {
     "word": "sacrifice",
     "pos": "n.",
     "meaning": "희생",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsækɹəˌfaɪs/"
   },
   {
     "word": "sad",
     "pos": "n.",
     "meaning": "슬픈",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsæd/"
   },
   {
     "word": "safe",
     "pos": "a.",
     "meaning": "안전한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈseɪf/"
   },
   {
     "word": "sail",
     "pos": "n.",
     "meaning": "돛",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈseɪɫ/"
   },
   {
     "word": "salary",
     "pos": "v.",
     "meaning": "봉급 봉급을 주다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsæɫɝi/"
   },
   {
     "word": "sale",
     "pos": "n.",
     "meaning": "판매",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈseɪɫ/"
   },
   {
     "word": "salon",
     "pos": "n.",
     "meaning": "객실",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/səˈɫɑn/"
   },
   {
     "word": "salt",
     "pos": "n.",
     "meaning": "소금",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɔɫt/"
   },
   {
     "word": "same",
     "pos": "n.",
     "meaning": "같은",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈseɪm/"
   },
   {
     "word": "sand",
     "pos": "n.",
     "meaning": "모래사장",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsænd/"
   },
   {
     "word": "satellite",
     "pos": "n.",
     "meaning": "위성",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsætəˌɫaɪt/"
   },
   {
     "word": "satisfy",
     "pos": "v.",
     "meaning": "만족시키다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsætəsˌfaɪ/, /ˈsætɪsˌfaɪ/"
   },
   {
     "word": "save",
     "pos": "v.",
     "meaning": "위험에서 구하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈseɪv/"
   },
   {
     "word": "say",
     "pos": "v.",
     "meaning": "말하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈseɪ/"
   },
   {
     "word": "scale",
     "pos": "n.",
     "meaning": "비늘(모양의 것)",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskeɪɫ/"
   },
   {
     "word": "scan",
     "pos": "v.",
     "meaning": "시의 운율을살피다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskæn/"
   },
   {
     "word": "scandal",
     "pos": "n.",
     "meaning": "추문",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskændəɫ/"
   },
   {
     "word": "scarce",
     "pos": "a.",
     "meaning": "부족한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskɛɹs/"
   },
   {
     "word": "scare",
     "pos": "v.",
     "meaning": "위협하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskɛɹ/"
   },
   {
     "word": "scatter",
     "pos": "v.",
     "meaning": "뿔뿔이 흩어 버리다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskætɝ/"
   },
   {
     "word": "scene",
     "pos": "n.",
     "meaning": "장면",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsin/"
   },
   {
     "word": "scheme",
     "pos": "n.",
     "meaning": "계획",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskim/"
   },
   {
     "word": "scholar",
     "pos": "n.",
     "meaning": "학자",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskɑɫɝ/"
   },
   {
     "word": "school",
     "pos": "n.",
     "meaning": "학교",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskuɫ/"
   },
   {
     "word": "science",
     "pos": "n.",
     "meaning": "과학",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsaɪəns/"
   },
   {
     "word": "scissors",
     "pos": "n.",
     "meaning": "가위",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪzɝz/"
   },
   {
     "word": "scold",
     "pos": "v.",
     "meaning": "꾸짖다 잔소리 심한 사람",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskoʊɫd/"
   },
   {
     "word": "scope",
     "pos": "n.",
     "meaning": "범위",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskoʊp/"
   },
   {
     "word": "score",
     "pos": "n.",
     "meaning": "득점",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskɔɹ/"
   },
   {
     "word": "scramble",
     "pos": "v.",
     "meaning": "기다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskɹæmbəɫ/"
   },
   {
     "word": "scratch",
     "pos": "v.",
     "meaning": "할퀴다, 할퀴어 상처 를 내다 긁다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskɹætʃ/"
   },
   {
     "word": "scream",
     "pos": "v.",
     "meaning": "비명을 지르다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskɹim/"
   },
   {
     "word": "screen",
     "pos": "n.",
     "meaning": "병풍",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskɹin/"
   },
   {
     "word": "screw",
     "pos": "n.",
     "meaning": "나사",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskɹu/"
   },
   {
     "word": "scrub (",
     "pos": "n.",
     "meaning": "관목의)숲",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskɹəb/"
   },
   {
     "word": "sculpture",
     "pos": "v.",
     "meaning": "조각 조각하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskəɫptʃɝ/"
   },
   {
     "word": "sea",
     "pos": "v.",
     "meaning": "바다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsi/"
   },
   {
     "word": "seal",
     "pos": "n.",
     "meaning": "인장",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsiɫ/"
   },
   {
     "word": "search",
     "pos": "v.",
     "meaning": "찾다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɝtʃ/"
   },
   {
     "word": "season",
     "pos": "n.",
     "meaning": "계절",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsizən/"
   },
   {
     "word": "seat",
     "pos": "n.",
     "meaning": "좌석",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsit/"
   },
   {
     "word": "secret",
     "pos": "a.",
     "meaning": "비밀의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsikɹət/, /ˈsikɹɪt/"
   },
   {
     "word": "secretary",
     "pos": "n.",
     "meaning": "비서",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɛkɹəˌtɛɹi/"
   },
   {
     "word": "sector",
     "pos": "n.",
     "meaning": "부채꼴",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɛktɝ/"
   },
   {
     "word": "secure",
     "pos": "a.",
     "meaning": "안전한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/sɪkˈjʊɹ/"
   },
   {
     "word": "see",
     "pos": "v.",
     "meaning": "보다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsi/"
   },
   {
     "word": "seed",
     "pos": "n.",
     "meaning": "씨앗",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsid/"
   },
   {
     "word": "seek",
     "pos": "v.",
     "meaning": "찾다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsik/"
   },
   {
     "word": "seem -",
     "pos": "v.",
     "meaning": "으로 보이다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsim/"
   },
   {
     "word": "seize",
     "pos": "v.",
     "meaning": "붙잡다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsiz/"
   },
   {
     "word": "select",
     "pos": "v.",
     "meaning": "고르다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/səˈɫɛkt/"
   },
   {
     "word": "self",
     "pos": "n.",
     "meaning": "자기",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɛɫf/"
   },
   {
     "word": "sell",
     "pos": "v.",
     "meaning": "팔다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɛɫ/"
   },
   {
     "word": "send",
     "pos": "v.",
     "meaning": "보내다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɛnd/"
   },
   {
     "word": "senior",
     "pos": "a.",
     "meaning": "연상의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsinjɝ/"
   },
   {
     "word": "sensation",
     "pos": "n.",
     "meaning": "감각",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/sɛnˈseɪʃən/"
   },
   {
     "word": "sense",
     "pos": "n.",
     "meaning": "감각",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɛns/"
   },
   {
     "word": "sensible",
     "pos": "a.",
     "meaning": "분별있는",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɛnsəbəɫ/"
   },
   {
     "word": "sentence",
     "pos": "n.",
     "meaning": "문장",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɛntəns/"
   },
   {
     "word": "sentiment",
     "pos": "n.",
     "meaning": "정서",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɛnəmənt/, /ˈsɛntəmənt/"
   },
   {
     "word": "separate",
     "pos": "a.",
     "meaning": "분리된",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɛpɝˌeɪt/, /ˈsɛpɝɪt/, /ˈsɛpɹət/"
   },
   {
     "word": "sequence",
     "pos": "n.",
     "meaning": "연속",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsikwəns/"
   },
   {
     "word": "series",
     "pos": "n.",
     "meaning": "연속",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪɹiz/"
   },
   {
     "word": "serious",
     "pos": "a.",
     "meaning": "진지한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪɹiəs/"
   },
   {
     "word": "serve",
     "pos": "v.",
     "meaning": "섬기다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɝv/"
   },
   {
     "word": "session",
     "pos": "n.",
     "meaning": "개회",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɛʃən/"
   },
   {
     "word": "settle",
     "pos": "v.",
     "meaning": "등받이가 높은 긴 의자 놓다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɛtəɫ/"
   },
   {
     "word": "several",
     "pos": "a.",
     "meaning": "수개의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɛvɝəɫ/, /ˈsɛvɹəɫ/"
   },
   {
     "word": "severe",
     "pos": "a.",
     "meaning": "호된",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/səˈvɪɹ/"
   },
   {
     "word": "sew",
     "pos": "v.",
     "meaning": "꿰매다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsoʊ/"
   },
   {
     "word": "sex",
     "pos": "n.",
     "meaning": "성",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɛks/"
   },
   {
     "word": "shade",
     "pos": "n.",
     "meaning": "그늘",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃeɪd/"
   },
   {
     "word": "shadow",
     "pos": "n.",
     "meaning": "그림자",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃæˌdoʊ/"
   },
   {
     "word": "shake",
     "pos": "v.",
     "meaning": "흔들어 움직이다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃeɪk/"
   },
   {
     "word": "shall au-",
     "pos": "v.",
     "meaning": "하겠다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": ""
   },
   {
     "word": "shallow",
     "pos": "v.",
     "meaning": "얕은 얕은 곳 얕아지다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃæɫoʊ/"
   },
   {
     "word": "shame",
     "pos": "n.",
     "meaning": "부끄럼",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃeɪm/"
   },
   {
     "word": "shape",
     "pos": "n.",
     "meaning": "모양",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃeɪp/"
   },
   {
     "word": "share",
     "pos": "n.",
     "meaning": "몫",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃɛɹ/"
   },
   {
     "word": "sharp",
     "pos": "a.",
     "meaning": "날카로운",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃɑɹp/"
   },
   {
     "word": "shave",
     "pos": "v.",
     "meaning": "깎다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃeɪv/"
   },
   {
     "word": "she",
     "pos": "a.",
     "meaning": "그녀는",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃi/"
   },
   {
     "word": "sheep",
     "pos": "n.",
     "meaning": "양",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃip/"
   },
   {
     "word": "sheet",
     "pos": "n.",
     "meaning": "깔천",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃit/"
   },
   {
     "word": "shelf",
     "pos": "n.",
     "meaning": "선반",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃɛɫf/"
   },
   {
     "word": "shell",
     "pos": "n.",
     "meaning": "겉껍질",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃɛɫ/"
   },
   {
     "word": "shelter",
     "pos": "n.",
     "meaning": "피난처",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃɛɫtɝ/"
   },
   {
     "word": "shield",
     "pos": "n.",
     "meaning": "방패",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃiɫd/"
   },
   {
     "word": "shift",
     "pos": "v.",
     "meaning": "옮기다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃɪft/"
   },
   {
     "word": "shine",
     "pos": "v.",
     "meaning": "빛나다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃaɪn/"
   },
   {
     "word": "ship",
     "pos": "n.",
     "meaning": "배",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃɪp/"
   },
   {
     "word": "shock",
     "pos": "n.",
     "meaning": "격돌",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃɑk/"
   },
   {
     "word": "shoe",
     "pos": "n.",
     "meaning": "구두",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃu/"
   },
   {
     "word": "shoot",
     "pos": "v.",
     "meaning": "쏘다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃut/"
   },
   {
     "word": "shop",
     "pos": "n.",
     "meaning": "상점",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃɑp/"
   },
   {
     "word": "shore",
     "pos": "n.",
     "meaning": "물가",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃɔɹ/"
   },
   {
     "word": "short",
     "pos": "n.",
     "meaning": "짧은",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃɔɹt/"
   },
   {
     "word": "should aushall",
     "pos": "n.",
     "meaning": "의 과거",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": ""
   },
   {
     "word": "shoulder",
     "pos": "n.",
     "meaning": "어깨",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃoʊɫdɝ/"
   },
   {
     "word": "shout",
     "pos": "v.",
     "meaning": "외치다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃaʊt/"
   },
   {
     "word": "show",
     "pos": "v.",
     "meaning": "보이다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃoʊ/"
   },
   {
     "word": "shower",
     "pos": "n.",
     "meaning": "소나기 빗발치듯 퍼붓다(쏟다)",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃaʊɝ/"
   },
   {
     "word": "shrink",
     "pos": "v.",
     "meaning": "줄어들다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃɹɪŋk/"
   },
   {
     "word": "shut",
     "pos": "v.",
     "meaning": "닫다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃət/"
   },
   {
     "word": "shy",
     "pos": "n.",
     "meaning": "수줍은",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃaɪ/"
   },
   {
     "word": "sick",
     "pos": "n.",
     "meaning": "병난",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪk/"
   },
   {
     "word": "side",
     "pos": "n.",
     "meaning": "쪽",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsaɪd/"
   },
   {
     "word": "sigh",
     "pos": "n.",
     "meaning": "한숨",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsaɪ/"
   },
   {
     "word": "sight",
     "pos": "n.",
     "meaning": "광경",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsaɪt/"
   },
   {
     "word": "sign",
     "pos": "n.",
     "meaning": "부호",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsaɪn/"
   },
   {
     "word": "significant",
     "pos": "a.",
     "meaning": "중요한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/səɡˈnɪfɪkənt/, /sɪɡˈnɪfɪkənt/"
   },
   {
     "word": "silent",
     "pos": "a.",
     "meaning": "조용한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsaɪɫənt/"
   },
   {
     "word": "silk",
     "pos": "n.",
     "meaning": "비단",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪɫk/"
   },
   {
     "word": "silly",
     "pos": "n.",
     "meaning": "어리석은 바보",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪɫi/"
   },
   {
     "word": "silver",
     "pos": "n.",
     "meaning": "은",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪɫvɝ/"
   },
   {
     "word": "similar",
     "pos": "a.",
     "meaning": "유사한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪməɫɝ/"
   },
   {
     "word": "simple",
     "pos": "a.",
     "meaning": "단일의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪmpəɫ/"
   },
   {
     "word": "simulate",
     "pos": "v.",
     "meaning": "흉내내다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪmjəˌɫeɪt/, /ˈsɪmjəɫət/"
   },
   {
     "word": "simultaneous",
     "pos": "n.",
     "meaning": "동시에 일어나는(존재하는)",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌsaɪməɫˈteɪniəs/"
   },
   {
     "word": "sin",
     "pos": "a.",
     "meaning": "사인",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪn/"
   },
   {
     "word": "since -",
     "pos": "n.",
     "meaning": "이래",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪns/"
   },
   {
     "word": "sing",
     "pos": "v.",
     "meaning": "노래하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪŋ/"
   },
   {
     "word": "single",
     "pos": "a.",
     "meaning": "단 하나의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪŋɡəɫ/"
   },
   {
     "word": "sink",
     "pos": "v.",
     "meaning": "가라앉다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪŋk/"
   },
   {
     "word": "sister",
     "pos": "n.",
     "meaning": "여자형제",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪstɝ/"
   },
   {
     "word": "sit",
     "pos": "v.",
     "meaning": "앉다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪt/"
   },
   {
     "word": "site",
     "pos": "n.",
     "meaning": "부지",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsaɪt/"
   },
   {
     "word": "situation",
     "pos": "n.",
     "meaning": "장소",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌsɪtʃuˈeɪʃən/"
   },
   {
     "word": "size",
     "pos": "n.",
     "meaning": "크기",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsaɪz/"
   },
   {
     "word": "skill",
     "pos": "n.",
     "meaning": "숙련",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskɪɫ/"
   },
   {
     "word": "skin",
     "pos": "n.",
     "meaning": "피부",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskɪn/"
   },
   {
     "word": "skip",
     "pos": "n.",
     "meaning": "도약",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskɪp/"
   },
   {
     "word": "skirt",
     "pos": "n.",
     "meaning": "스커어트",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskɝt/"
   },
   {
     "word": "sky",
     "pos": "n.",
     "meaning": "하늘",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskaɪ/"
   },
   {
     "word": "slaughter",
     "pos": "n.",
     "meaning": "도살",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɫɔtɝ/"
   },
   {
     "word": "slave",
     "pos": "v.",
     "meaning": "노예 노예처럼 일하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɫeɪv/"
   },
   {
     "word": "sleep",
     "pos": "v.",
     "meaning": "잠자다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɫip/"
   },
   {
     "word": "slice",
     "pos": "n.",
     "meaning": "얇은조각",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɫaɪs/"
   },
   {
     "word": "slide",
     "pos": "v.",
     "meaning": "미끄러지다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɫaɪd/"
   },
   {
     "word": "slight",
     "pos": "a.",
     "meaning": "약간의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɫaɪt/"
   },
   {
     "word": "slim",
     "pos": "a.",
     "meaning": "호리호리한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɫɪm/"
   },
   {
     "word": "slip (",
     "pos": "v.",
     "meaning": "때가)어느덧 지나가다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɫɪp/"
   },
   {
     "word": "slope",
     "pos": "n.",
     "meaning": "비탈",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɫoʊp/"
   },
   {
     "word": "slow",
     "pos": "n.",
     "meaning": "느린",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɫoʊ/"
   },
   {
     "word": "small",
     "pos": "ad.",
     "meaning": "작은 작은 부분 적게",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsmɔɫ/"
   },
   {
     "word": "smart",
     "pos": "a.",
     "meaning": "재치있는",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsmɑɹt/"
   },
   {
     "word": "smash",
     "pos": "v.",
     "meaning": "박살내다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsmæʃ/"
   },
   {
     "word": "smell",
     "pos": "n.",
     "meaning": "냄새",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsmɛɫ/"
   },
   {
     "word": "smile",
     "pos": "v.",
     "meaning": "미소짓다 미소",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsmaɪɫ/"
   },
   {
     "word": "smoke",
     "pos": "n.",
     "meaning": "연기",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsmoʊk/"
   },
   {
     "word": "smooth",
     "pos": "n.",
     "meaning": "매끄러운",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsmuð/"
   },
   {
     "word": "snake",
     "pos": "n.",
     "meaning": "뱀",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsneɪk/"
   },
   {
     "word": "snap",
     "pos": "v.",
     "meaning": "덥석 물다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsnæp/"
   },
   {
     "word": "sneak",
     "pos": "v.",
     "meaning": "몰래 움직이다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsnik/"
   },
   {
     "word": "sniff",
     "pos": "v.",
     "meaning": "코를 킁킁거리다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsnɪf/"
   },
   {
     "word": "snow",
     "pos": "v.",
     "meaning": "눈 눈이 내리다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsnoʊ/"
   },
   {
     "word": "so",
     "pos": "n.",
     "meaning": "그와 같이",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsoʊ/"
   },
   {
     "word": "soak",
     "pos": "v.",
     "meaning": "담그다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsoʊk/"
   },
   {
     "word": "soap",
     "pos": "v.",
     "meaning": "비누 비누로 씻다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsoʊp/"
   },
   {
     "word": "soccer",
     "pos": "n.",
     "meaning": "축구",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɑkɝ/"
   },
   {
     "word": "social",
     "pos": "a.",
     "meaning": "사회의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsoʊʃəɫ/"
   },
   {
     "word": "society",
     "pos": "n.",
     "meaning": "사회",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/səˈsaɪəti/"
   },
   {
     "word": "sociology",
     "pos": "n.",
     "meaning": "사회학",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌsoʊsiˈɑɫədʒi/"
   },
   {
     "word": "sock",
     "pos": "n.",
     "meaning": "짧은 양말",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɑk/"
   },
   {
     "word": "soft",
     "pos": "n.",
     "meaning": "부드러운",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɑft/, /ˈsɔft/"
   },
   {
     "word": "software",
     "pos": "n.",
     "meaning": "소프트웨어",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɔfˌwɛɹ/, /ˈsɔftˌwɛɹ/"
   },
   {
     "word": "soil",
     "pos": "n.",
     "meaning": "흙",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɔɪɫ/"
   },
   {
     "word": "soldier",
     "pos": "a.",
     "meaning": "군인",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsoʊɫdʒɝ/"
   },
   {
     "word": "sole",
     "pos": "n.",
     "meaning": "유일한 발바닥",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsoʊɫ/"
   },
   {
     "word": "solid",
     "pos": "a.",
     "meaning": "고체의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɑɫəd/"
   },
   {
     "word": "solo",
     "pos": "n.",
     "meaning": "독주",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsoʊˌɫoʊ/"
   },
   {
     "word": "solve",
     "pos": "v.",
     "meaning": "해결하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɑɫv/"
   },
   {
     "word": "some",
     "pos": "a.",
     "meaning": "얼만가의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsəm/"
   },
   {
     "word": "somewhat",
     "pos": "n.",
     "meaning": "약간",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsəmˈwət/, /ˈsəmhˈwət/"
   },
   {
     "word": "son",
     "pos": "n.",
     "meaning": "아들",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsən/"
   },
   {
     "word": "song",
     "pos": "n.",
     "meaning": "노래",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɔŋ/"
   },
   {
     "word": "soon",
     "pos": "n.",
     "meaning": "얼마 안 가서",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsun/"
   },
   {
     "word": "sophisticated",
     "pos": "n.",
     "meaning": "물정에 닳고 닳은",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/səˈfɪstəˌkeɪtɪd/, /səˈfɪstɪˌkeɪtəd/"
   },
   {
     "word": "sore",
     "pos": "n.",
     "meaning": "슬픈",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɔɹ/"
   },
   {
     "word": "sorry",
     "pos": "n.",
     "meaning": "가엾은",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɑɹi/"
   },
   {
     "word": "sort",
     "pos": "n.",
     "meaning": "종류",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɔɹt/"
   },
   {
     "word": "soul",
     "pos": "n.",
     "meaning": "혼",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsoʊɫ/"
   },
   {
     "word": "sound",
     "pos": "n.",
     "meaning": "소리",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsaʊnd/"
   },
   {
     "word": "sour",
     "pos": "v.",
     "meaning": "시큼한 시어지다 시큼한 것",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsaʊɝ/, /ˈsaʊɹ/"
   },
   {
     "word": "source",
     "pos": "n.",
     "meaning": "원천",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɔɹs/"
   },
   {
     "word": "south",
     "pos": "ad.",
     "meaning": "남쪽 남쪽의 남으로",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsaʊθ/"
   },
   {
     "word": "space",
     "pos": "n.",
     "meaning": "공간",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspeɪs/"
   },
   {
     "word": "span",
     "pos": "n.",
     "meaning": "한 뼘",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspæn/"
   },
   {
     "word": "spare",
     "pos": "a.",
     "meaning": "여분의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspɛɹ/"
   },
   {
     "word": "spark",
     "pos": "n.",
     "meaning": "불꽃",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspɑɹk/"
   },
   {
     "word": "speak",
     "pos": "v.",
     "meaning": "이야기하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspik/"
   },
   {
     "word": "special",
     "pos": "a.",
     "meaning": "특별한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspɛʃəɫ/"
   },
   {
     "word": "species",
     "pos": "n.",
     "meaning": "종",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspiʃiz/"
   },
   {
     "word": "specific",
     "pos": "a.",
     "meaning": "특정한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/spəˈsɪfɪk/, /spɪˈsɪfɪk/"
   },
   {
     "word": "spectacle",
     "pos": "n.",
     "meaning": "광경",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspɛktəkəɫ/"
   },
   {
     "word": "spectrum",
     "pos": "n.",
     "meaning": "스펙트럼",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspɛktɹəm/"
   },
   {
     "word": "speech",
     "pos": "n.",
     "meaning": "연설",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspitʃ/"
   },
   {
     "word": "speed",
     "pos": "n.",
     "meaning": "속도",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspid/"
   },
   {
     "word": "spell",
     "pos": "v.",
     "meaning": "철자하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspɛɫ/"
   },
   {
     "word": "spend",
     "pos": "v.",
     "meaning": "소비하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspɛnd/"
   },
   {
     "word": "sphere",
     "pos": "n.",
     "meaning": "구",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsfɪɹ/"
   },
   {
     "word": "spill",
     "pos": "v.",
     "meaning": "엎지르다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspɪɫ/"
   },
   {
     "word": "spin",
     "pos": "v.",
     "meaning": "잣다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspɪn/"
   },
   {
     "word": "spirit",
     "pos": "n.",
     "meaning": "정신",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspɪɹət/, /ˈspɪɹɪt/"
   },
   {
     "word": "spit",
     "pos": "v.",
     "meaning": "침을 뱉다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspɪt/"
   },
   {
     "word": "spite",
     "pos": "a.",
     "meaning": "악의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspaɪt/"
   },
   {
     "word": "splash",
     "pos": "v.",
     "meaning": "튀기다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspɫæʃ/"
   },
   {
     "word": "split",
     "pos": "v.",
     "meaning": "쪼개다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspɫɪt/"
   },
   {
     "word": "spoil",
     "pos": "v.",
     "meaning": "망쳐놓다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspɔɪɫ/"
   },
   {
     "word": "spoon",
     "pos": "n.",
     "meaning": "숟가락",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspun/"
   },
   {
     "word": "spot",
     "pos": "n.",
     "meaning": "장소",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspɑt/"
   },
   {
     "word": "spouse",
     "pos": "n.",
     "meaning": "배우자",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspaʊs/"
   },
   {
     "word": "spread",
     "pos": "v.",
     "meaning": "펴다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈspɹɛd/"
   },
   {
     "word": "square",
     "pos": "a.",
     "meaning": "정사각형의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskwɛɹ/"
   },
   {
     "word": "squeeze",
     "pos": "v.",
     "meaning": "압착하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈskwiz/"
   },
   {
     "word": "stable",
     "pos": "a.",
     "meaning": "안정된",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsteɪbəɫ/"
   },
   {
     "word": "stack",
     "pos": "n.",
     "meaning": "낟가리",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstæk/"
   },
   {
     "word": "stage",
     "pos": "n.",
     "meaning": "무대",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsteɪdʒ/"
   },
   {
     "word": "stain",
     "pos": "v.",
     "meaning": "더럽히다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsteɪn/"
   },
   {
     "word": "stairs",
     "pos": "n.",
     "meaning": "계단",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɛɹz/"
   },
   {
     "word": "stamp",
     "pos": "n.",
     "meaning": "도장",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstæmp/"
   },
   {
     "word": "stand",
     "pos": "v.",
     "meaning": "서다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstænd/"
   },
   {
     "word": "standard",
     "pos": "n.",
     "meaning": "표준",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstændɝd/"
   },
   {
     "word": "stare",
     "pos": "v.",
     "meaning": "응시하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɛɹ/"
   },
   {
     "word": "start",
     "pos": "v.",
     "meaning": "시작하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɑɹt/"
   },
   {
     "word": "starve",
     "pos": "v.",
     "meaning": "굶어 죽다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɑɹv/"
   },
   {
     "word": "state",
     "pos": "n.",
     "meaning": "상태",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsteɪt/"
   },
   {
     "word": "station",
     "pos": "n.",
     "meaning": "역",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsteɪʃən/"
   },
   {
     "word": "statistic",
     "pos": "n.",
     "meaning": "통계의 통계량",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/stəˈtɪstɪk/"
   },
   {
     "word": "statue",
     "pos": "n.",
     "meaning": "조상",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstæˌtʃu/"
   },
   {
     "word": "status",
     "pos": "n.",
     "meaning": "신분",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstætəs/, /ˈsteɪtəs/"
   },
   {
     "word": "stay",
     "pos": "v.",
     "meaning": "머무르다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsteɪ/"
   },
   {
     "word": "steady",
     "pos": "a.",
     "meaning": "확고한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɛdi/"
   },
   {
     "word": "steal",
     "pos": "v.",
     "meaning": "훔치다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstiɫ/"
   },
   {
     "word": "steam",
     "pos": "n.",
     "meaning": "증기",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstim/"
   },
   {
     "word": "steel",
     "pos": "n.",
     "meaning": "강철",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstiɫ/"
   },
   {
     "word": "steep",
     "pos": "v.",
     "meaning": "가파른 -에 담그다 잠기다 담그기",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstip/"
   },
   {
     "word": "stem",
     "pos": "n.",
     "meaning": "줄기",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɛm/"
   },
   {
     "word": "step",
     "pos": "v.",
     "meaning": "걷다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɛp/"
   },
   {
     "word": "stick",
     "pos": "n.",
     "meaning": "나무토막",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɪk/"
   },
   {
     "word": "stiff",
     "pos": "n.",
     "meaning": "굳은",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɪf/"
   },
   {
     "word": "still",
     "pos": "n.",
     "meaning": "소리가 없는 아직(도)",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɪɫ/"
   },
   {
     "word": "stimulate",
     "pos": "v.",
     "meaning": "자극하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɪmjəˌɫeɪt/"
   },
   {
     "word": "stir",
     "pos": "v.",
     "meaning": "휘젓다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɝ/"
   },
   {
     "word": "stitch",
     "pos": "n.",
     "meaning": "한 바늘",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɪtʃ/"
   },
   {
     "word": "stock",
     "pos": "n.",
     "meaning": "줄기",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɑk/"
   },
   {
     "word": "stomach",
     "pos": "n.",
     "meaning": "위",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstəmək/"
   },
   {
     "word": "stone",
     "pos": "n.",
     "meaning": "돌",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstoʊn/"
   },
   {
     "word": "stop",
     "pos": "v.",
     "meaning": "멈추다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɑp/"
   },
   {
     "word": "store",
     "pos": "ad.",
     "meaning": "가게",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɔɹ/"
   },
   {
     "word": "storm",
     "pos": "n.",
     "meaning": "폭풍",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɔɹm/"
   },
   {
     "word": "story",
     "pos": "n.",
     "meaning": "층",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɔɹi/"
   },
   {
     "word": "stove stave",
     "pos": "n.",
     "meaning": "의 과거(분사)",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": ""
   },
   {
     "word": "straight",
     "pos": "n.",
     "meaning": "곧은",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɹeɪt/"
   },
   {
     "word": "strain",
     "pos": "v.",
     "meaning": "잡아당기다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɹeɪn/"
   },
   {
     "word": "strange",
     "pos": "a.",
     "meaning": "이상한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɹeɪndʒ/"
   },
   {
     "word": "strategy",
     "pos": "n.",
     "meaning": "용병학",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɹætədʒi/"
   },
   {
     "word": "straw",
     "pos": "n.",
     "meaning": "짚",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɹɔ/"
   },
   {
     "word": "strawberry",
     "pos": "n.",
     "meaning": "딸기",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɹɔˌbɛɹi/"
   },
   {
     "word": "stream",
     "pos": "n.",
     "meaning": "시내",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɹim/"
   },
   {
     "word": "street",
     "pos": "n.",
     "meaning": "거리",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɹit/"
   },
   {
     "word": "stress",
     "pos": "n.",
     "meaning": "압박",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɹɛs/"
   },
   {
     "word": "stretch",
     "pos": "v.",
     "meaning": "뻗치다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɹɛtʃ/"
   },
   {
     "word": "strict",
     "pos": "a.",
     "meaning": "엄중한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɹɪkt/"
   },
   {
     "word": "strike",
     "pos": "v.",
     "meaning": "치다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɹaɪk/"
   },
   {
     "word": "string",
     "pos": "n.",
     "meaning": "끈",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɹɪŋ/"
   },
   {
     "word": "strip",
     "pos": "v.",
     "meaning": "벗기다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɹɪp/"
   },
   {
     "word": "stripe",
     "pos": "n.",
     "meaning": "줄무늬",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɹaɪp/"
   },
   {
     "word": "stroke",
     "pos": "n.",
     "meaning": "한번치기",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɹoʊk/"
   },
   {
     "word": "strong",
     "pos": "a.",
     "meaning": "강한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɹɔŋ/"
   },
   {
     "word": "structure",
     "pos": "n.",
     "meaning": "구조",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɹəktʃɝ/"
   },
   {
     "word": "struggle",
     "pos": "v.",
     "meaning": "버둥거리다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstɹəɡəɫ/"
   },
   {
     "word": "student",
     "pos": "n.",
     "meaning": "학생",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstudənt/"
   },
   {
     "word": "study",
     "pos": "n.",
     "meaning": "학문",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstədi/"
   },
   {
     "word": "stuff",
     "pos": "n.",
     "meaning": "재료",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈstəf/"
   },
   {
     "word": "subject",
     "pos": "v.",
     "meaning": "복종시키다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsəbdʒɪkt/, /səbˈdʒɛkt/"
   },
   {
     "word": "subjective",
     "pos": "a.",
     "meaning": "주관의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/səbˈdʒɛktɪv/"
   },
   {
     "word": "submarine",
     "pos": "n.",
     "meaning": "잠수함",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsəbmɝˌin/, /ˌsəbmɝˈin/"
   },
   {
     "word": "submit",
     "pos": "v.",
     "meaning": "복종시키다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/səbˈmɪt/"
   },
   {
     "word": "subscribe",
     "pos": "v.",
     "meaning": "서명승락하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/səbsˈkɹaɪb/"
   },
   {
     "word": "substance",
     "pos": "n.",
     "meaning": "물질",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsəbstəns/"
   },
   {
     "word": "substantial",
     "pos": "a.",
     "meaning": "실체의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/səbˈstænʃəɫ/"
   },
   {
     "word": "substitute",
     "pos": "v.",
     "meaning": "대용하다 대신하다 대리(인)",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsəbstəˌtut/"
   },
   {
     "word": "subtle",
     "pos": "a.",
     "meaning": "미묘한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsətəɫ/"
   },
   {
     "word": "suburb",
     "pos": "n.",
     "meaning": "교외",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsəbɝb/"
   },
   {
     "word": "subway",
     "pos": "n.",
     "meaning": "지하도",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsəbˌweɪ/"
   },
   {
     "word": "succeed",
     "pos": "v.",
     "meaning": "성공하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/səkˈsid/"
   },
   {
     "word": "such",
     "pos": "a.",
     "meaning": "이러한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsətʃ/"
   },
   {
     "word": "suck",
     "pos": "v.",
     "meaning": "빨다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsək/"
   },
   {
     "word": "sudden",
     "pos": "a.",
     "meaning": "별안간의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsədən/"
   },
   {
     "word": "suffer",
     "pos": "v.",
     "meaning": "경험하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsəfɝ/"
   },
   {
     "word": "sufficient",
     "pos": "a.",
     "meaning": "충분한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/səˈfɪʃənt/"
   },
   {
     "word": "sugar",
     "pos": "n.",
     "meaning": "설탕",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃʊɡɝ/"
   },
   {
     "word": "suggest",
     "pos": "v.",
     "meaning": "암시하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/səˈdʒɛst/"
   },
   {
     "word": "suicide",
     "pos": "v.",
     "meaning": "자살 자살하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsuəˌsaɪd/, /ˈsuɪˌsaɪd/"
   },
   {
     "word": "suit",
     "pos": "n.",
     "meaning": "소송",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsut/"
   },
   {
     "word": "suite",
     "pos": "n.",
     "meaning": "수행원",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈswit/"
   },
   {
     "word": "sum",
     "pos": "n.",
     "meaning": "총계",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsəm/"
   },
   {
     "word": "summary",
     "pos": "n.",
     "meaning": "요약",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsəmɝi/"
   },
   {
     "word": "summit",
     "pos": "n.",
     "meaning": "꼭대기",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsəmət/, /ˈsəmɪt/"
   },
   {
     "word": "sun",
     "pos": "n.",
     "meaning": "태양",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsən/"
   },
   {
     "word": "super",
     "pos": "n.",
     "meaning": "임시고용배우",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsupɝ/"
   },
   {
     "word": "superb",
     "pos": "a.",
     "meaning": "장려한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/sʊˈpɝb/"
   },
   {
     "word": "superior",
     "pos": "n.",
     "meaning": "뛰어난",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/suˈpɪɹiɝ/"
   },
   {
     "word": "supervise",
     "pos": "v.",
     "meaning": "감독하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsupɝˌvaɪz/"
   },
   {
     "word": "supper",
     "pos": "n.",
     "meaning": "저녁식사",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsəpɝ/"
   },
   {
     "word": "supplement",
     "pos": "n.",
     "meaning": "부록",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsəpɫəmənt/, /ˌsəpɫəˈmɛnt/"
   },
   {
     "word": "supply",
     "pos": "v.",
     "meaning": "공급하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/səˈpɫaɪ/"
   },
   {
     "word": "support",
     "pos": "v.",
     "meaning": "지탱하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/səˈpɔɹt/"
   },
   {
     "word": "suppose",
     "pos": "v.",
     "meaning": "상상하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/səˈpoʊz/"
   },
   {
     "word": "sure",
     "pos": "a.",
     "meaning": "확신하는, 확실한 , 틀림없는",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈʃʊɹ/"
   },
   {
     "word": "surface",
     "pos": "n.",
     "meaning": "표면",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɝfəs/"
   },
   {
     "word": "surgery",
     "pos": "n.",
     "meaning": "외과",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɝdʒɝi/"
   },
   {
     "word": "surprise",
     "pos": "n.",
     "meaning": "놀람",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/səˈpɹaɪz/, /sɝˈpɹaɪz/"
   },
   {
     "word": "surrender",
     "pos": "v.",
     "meaning": "넘겨주다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/sɝˈɛndɝ/"
   },
   {
     "word": "surround",
     "pos": "v.",
     "meaning": "에워싸다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/sɝˈaʊnd/"
   },
   {
     "word": "survey",
     "pos": "v.",
     "meaning": "둘러보다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɝˌveɪ/, /sɝˈveɪ/"
   },
   {
     "word": "survive",
     "pos": "v.",
     "meaning": "살아 남다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/sɝˈvaɪv/"
   },
   {
     "word": "suspect",
     "pos": "v.",
     "meaning": "짐작하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsəsˌpɛkt/, /səˈspɛkt/"
   },
   {
     "word": "suspend",
     "pos": "v.",
     "meaning": "매달다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/səˈspɛnd/"
   },
   {
     "word": "sustain",
     "pos": "v.",
     "meaning": "떠받치다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/səˈsteɪn/"
   },
   {
     "word": "swallow",
     "pos": "v.",
     "meaning": "삼키다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈswɑɫoʊ/, /ˈswɔɫoʊ/"
   },
   {
     "word": "swear",
     "pos": "v.",
     "meaning": "맹세하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈswɛɹ/"
   },
   {
     "word": "sweat",
     "pos": "n.",
     "meaning": "땀",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈswɛt/"
   },
   {
     "word": "sweep",
     "pos": "v.",
     "meaning": "청소하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈswip/"
   },
   {
     "word": "sweet",
     "pos": "n.",
     "meaning": "단",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈswit/"
   },
   {
     "word": "swell",
     "pos": "v.",
     "meaning": "부풀다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈswɛɫ/"
   },
   {
     "word": "swift",
     "pos": "n.",
     "meaning": "빠른",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈswɪft/"
   },
   {
     "word": "swim",
     "pos": "v.",
     "meaning": "헤엄치다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈswɪm/"
   },
   {
     "word": "swing",
     "pos": "v.",
     "meaning": "흔들리다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈswɪŋ/"
   },
   {
     "word": "switch",
     "pos": "n.",
     "meaning": "회초리",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈswɪtʃ/"
   },
   {
     "word": "symbol",
     "pos": "n.",
     "meaning": "상징",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪmbəɫ/"
   },
   {
     "word": "sympathy",
     "pos": "n.",
     "meaning": "동정",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪmpəθi/"
   },
   {
     "word": "symphony",
     "pos": "n.",
     "meaning": "교향곡",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪmfəni/"
   },
   {
     "word": "symptom",
     "pos": "n.",
     "meaning": "조짐",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪmptəm/"
   },
   {
     "word": "system",
     "pos": "n.",
     "meaning": "조직",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈsɪstəm/"
   },
   {
     "word": "table",
     "pos": "n.",
     "meaning": "테이블",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈteɪbəɫ/"
   },
   {
     "word": "tackle",
     "pos": "n.",
     "meaning": "고패",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtækəɫ/"
   },
   {
     "word": "tag",
     "pos": "n.",
     "meaning": "손잡이가죽",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtæɡ/"
   },
   {
     "word": "tail",
     "pos": "n.",
     "meaning": "꼬리",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈteɪɫ/"
   },
   {
     "word": "take",
     "pos": "v.",
     "meaning": "잡다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈteɪk/"
   },
   {
     "word": "tale",
     "pos": "n.",
     "meaning": "이야기",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈteɪɫ/"
   },
   {
     "word": "talent",
     "pos": "n.",
     "meaning": "재주",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtæɫənt/"
   },
   {
     "word": "talk",
     "pos": "v.",
     "meaning": "말하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɔk/"
   },
   {
     "word": "tall",
     "pos": "n.",
     "meaning": "키큰",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɔɫ/"
   },
   {
     "word": "tap",
     "pos": "n.",
     "meaning": "가볍게 치기",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtæp/"
   },
   {
     "word": "tape",
     "pos": "n.",
     "meaning": "테이프",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈteɪp/"
   },
   {
     "word": "target",
     "pos": "n.",
     "meaning": "과녁",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɑɹɡət/, /ˈtɝɡət/"
   },
   {
     "word": "task",
     "pos": "n.",
     "meaning": "일",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtæsk/"
   },
   {
     "word": "taste",
     "pos": "n.",
     "meaning": "맛",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈteɪst/"
   },
   {
     "word": "tattoo",
     "pos": "n.",
     "meaning": "귀영나팔",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌtæˈtu/"
   },
   {
     "word": "tax",
     "pos": "n.",
     "meaning": "세금",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtæks/"
   },
   {
     "word": "tea",
     "pos": "n.",
     "meaning": "차",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈti/"
   },
   {
     "word": "teach",
     "pos": "v.",
     "meaning": "가르치다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtitʃ/"
   },
   {
     "word": "tear",
     "pos": "n.",
     "meaning": "눈물",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɛɹ/, /ˈtɪɹ/"
   },
   {
     "word": "tease",
     "pos": "v.",
     "meaning": "괴롭히다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtiz/"
   },
   {
     "word": "teen",
     "pos": "n.",
     "meaning": "슬픔",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtin/"
   },
   {
     "word": "teenage 10",
     "pos": "n.",
     "meaning": "대",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtiˌneɪdʒ/"
   },
   {
     "word": "telegraph",
     "pos": "n.",
     "meaning": "전신",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɛɫəˌɡɹæf/"
   },
   {
     "word": "telephone",
     "pos": "n.",
     "meaning": "전화",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɛɫəˌfoʊn/"
   },
   {
     "word": "tell",
     "pos": "v.",
     "meaning": "말하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɛɫ/"
   },
   {
     "word": "temperature",
     "pos": "n.",
     "meaning": "온도",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɛmpɝətʃɝ/, /ˈtɛmpɹətʃɝ/"
   },
   {
     "word": "temple",
     "pos": "n.",
     "meaning": "관자놀이",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɛmpəɫ/"
   },
   {
     "word": "temporary",
     "pos": "a.",
     "meaning": "일시적인",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɛmpɝˌɛɹi/"
   },
   {
     "word": "tempt",
     "pos": "v.",
     "meaning": "유혹하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɛmpt/"
   },
   {
     "word": "tenant",
     "pos": "a.",
     "meaning": "차지인",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɛnənt/"
   },
   {
     "word": "tend (-",
     "pos": "v.",
     "meaning": "의)경향이 있다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɛnd/"
   },
   {
     "word": "tender",
     "pos": "n.",
     "meaning": "제공",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɛndɝ/"
   },
   {
     "word": "tense",
     "pos": "n.",
     "meaning": "시제",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɛns/"
   },
   {
     "word": "term",
     "pos": "n.",
     "meaning": "기간",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɝm/"
   },
   {
     "word": "terminal",
     "pos": "a.",
     "meaning": "종점의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɝmənəɫ/"
   },
   {
     "word": "terminate",
     "pos": "v.",
     "meaning": "끝내다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɝməˌneɪt/"
   },
   {
     "word": "terrace",
     "pos": "n.",
     "meaning": "계단모양의 뜰(광장)",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɛɹəs/"
   },
   {
     "word": "terrible",
     "pos": "a.",
     "meaning": "무시무시한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɛɹəbəɫ/"
   },
   {
     "word": "terrific",
     "pos": "n.",
     "meaning": "무서운",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/tɝˈɪfɪk/"
   },
   {
     "word": "territory",
     "pos": "n.",
     "meaning": "영토",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɛɹɪˌtɔɹi/"
   },
   {
     "word": "test",
     "pos": "n.",
     "meaning": "시험",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɛst/"
   },
   {
     "word": "testify",
     "pos": "v.",
     "meaning": "증명하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɛstəˌfaɪ/"
   },
   {
     "word": "text",
     "pos": "n.",
     "meaning": "원문",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɛkst/"
   },
   {
     "word": "textbook",
     "pos": "n.",
     "meaning": "교과서",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɛkstˌbʊk/"
   },
   {
     "word": "than -",
     "pos": "n.",
     "meaning": "보다도",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈðæn/, /ðən/"
   },
   {
     "word": "thank",
     "pos": "v.",
     "meaning": "감사하다 감사",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθæŋk/"
   },
   {
     "word": "that",
     "pos": "n.",
     "meaning": "저",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈðæt/, /ðət/"
   },
   {
     "word": "the art.",
     "pos": "n.",
     "meaning": "저",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": ""
   },
   {
     "word": "theater",
     "pos": "n.",
     "meaning": "극장",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθiətɝ/"
   },
   {
     "word": "theme",
     "pos": "n.",
     "meaning": "논제",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθim/"
   },
   {
     "word": "then",
     "pos": "n.",
     "meaning": "그때",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈðɛn/"
   },
   {
     "word": "theory",
     "pos": "n.",
     "meaning": "이론",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθiɝi/, /ˈθɪɹi/"
   },
   {
     "word": "therapy",
     "pos": "n.",
     "meaning": "치료법",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθɛɹəpi/"
   },
   {
     "word": "there",
     "pos": "n.",
     "meaning": "거기에",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈðɛɹ/"
   },
   {
     "word": "therefore",
     "pos": "n.",
     "meaning": "그런 까닭에",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈðɛɹˌfɔɹ/"
   },
   {
     "word": "they",
     "pos": "n.",
     "meaning": "그들",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈðeɪ/"
   },
   {
     "word": "thick",
     "pos": "n.",
     "meaning": "두꺼운",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθɪk/"
   },
   {
     "word": "thief",
     "pos": "n.",
     "meaning": "도둑",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθif/"
   },
   {
     "word": "thin",
     "pos": "n.",
     "meaning": "얇은",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθɪn/"
   },
   {
     "word": "thing",
     "pos": "n.",
     "meaning": "물건",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθɪŋ/"
   },
   {
     "word": "think",
     "pos": "v.",
     "meaning": "생각하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθɪŋk/"
   },
   {
     "word": "thirst",
     "pos": "n.",
     "meaning": "갈증",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθɝst/"
   },
   {
     "word": "this",
     "pos": "n.",
     "meaning": "이",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈðɪs/, /ðɪs/"
   },
   {
     "word": "thorough",
     "pos": "a.",
     "meaning": "완전한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθɝoʊ/, /ˈθɔɹoʊ/"
   },
   {
     "word": "though -",
     "pos": "n.",
     "meaning": "임에도 불구하고 그러나",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈðoʊ/"
   },
   {
     "word": "thousand",
     "pos": "n.",
     "meaning": "천",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθaʊzən/, /ˈθaʊzənd/"
   },
   {
     "word": "thread",
     "pos": "n.",
     "meaning": "실",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθɹɛd/"
   },
   {
     "word": "threat",
     "pos": "n.",
     "meaning": "협박",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθɹɛt/"
   },
   {
     "word": "thrill",
     "pos": "v.",
     "meaning": "오싹하다 오싹함",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθɹɪɫ/"
   },
   {
     "word": "throat",
     "pos": "n.",
     "meaning": "목",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθɹoʊt/"
   },
   {
     "word": "through (-",
     "pos": "a.",
     "meaning": "을)통하여 통하여 직통의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθɹu/"
   },
   {
     "word": "throw",
     "pos": "v.",
     "meaning": "던지다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθɹoʊ/"
   },
   {
     "word": "thumb",
     "pos": "v.",
     "meaning": "엄지손가락 엄지손가락으로 만지다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈθəm/"
   },
   {
     "word": "thus",
     "pos": "ad.",
     "meaning": "이렇게",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈðəs/"
   },
   {
     "word": "tick",
     "pos": "n.",
     "meaning": "시계소리",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɪk/"
   },
   {
     "word": "tide",
     "pos": "n.",
     "meaning": "조수",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtaɪd/"
   },
   {
     "word": "tidy",
     "pos": "a.",
     "meaning": "말쑥한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtaɪdi/"
   },
   {
     "word": "tie",
     "pos": "v.",
     "meaning": "매다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtaɪ/"
   },
   {
     "word": "tiger",
     "pos": "n.",
     "meaning": "호랑이",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtaɪɡɝ/"
   },
   {
     "word": "tight",
     "pos": "a.",
     "meaning": "단단한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtaɪt/"
   },
   {
     "word": "till -",
     "pos": "n.",
     "meaning": "까지",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɪɫ/"
   },
   {
     "word": "timber",
     "pos": "n.",
     "meaning": "재목",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɪmbɝ/"
   },
   {
     "word": "time",
     "pos": "n.",
     "meaning": "때",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtaɪm/"
   },
   {
     "word": "tin",
     "pos": "n.",
     "meaning": "주석",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɪn/"
   },
   {
     "word": "tiny",
     "pos": "a.",
     "meaning": "자그마한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtaɪni/"
   },
   {
     "word": "tip",
     "pos": "n.",
     "meaning": "끝",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɪp/"
   },
   {
     "word": "tire",
     "pos": "v.",
     "meaning": "피로하게 하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtaɪɝ/"
   },
   {
     "word": "tissue",
     "pos": "n.",
     "meaning": "조직",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɪsˌju/, /ˈtɪʃu/"
   },
   {
     "word": "title",
     "pos": "n.",
     "meaning": "표제",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtaɪtəɫ/"
   },
   {
     "word": "to -",
     "pos": "ad.",
     "meaning": "로",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtu/, /tə/, /tɪ/"
   },
   {
     "word": "tobacco",
     "pos": "n.",
     "meaning": "담배",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/təˈbæˌkoʊ/"
   },
   {
     "word": "today",
     "pos": "n.",
     "meaning": "오늘은",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/təˈdeɪ/, /tuˈdeɪ/"
   },
   {
     "word": "toe",
     "pos": "n.",
     "meaning": "발가락",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtoʊ/"
   },
   {
     "word": "together",
     "pos": "n.",
     "meaning": "같이",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/təˈɡɛðɝ/"
   },
   {
     "word": "toilet",
     "pos": "n.",
     "meaning": "화장실",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɔɪɫət/"
   },
   {
     "word": "tomorrow",
     "pos": "n.",
     "meaning": "내일(은)",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/təˈmɑˌɹoʊ/, /tuˈmɑˌɹoʊ/"
   },
   {
     "word": "tone",
     "pos": "n.",
     "meaning": "음조",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtoʊn/"
   },
   {
     "word": "tongue",
     "pos": "n.",
     "meaning": "혀",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtəŋ/"
   },
   {
     "word": "tonight",
     "pos": "n.",
     "meaning": "오늘밤에 오늘밤",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/təˈnaɪt/, /tʊˈnaɪt/"
   },
   {
     "word": "too (-",
     "pos": "a.",
     "meaning": "도)또한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtu/"
   },
   {
     "word": "tool",
     "pos": "n.",
     "meaning": "사용세",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtuɫ/"
   },
   {
     "word": "tooth",
     "pos": "n.",
     "meaning": "이",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtuθ/"
   },
   {
     "word": "top",
     "pos": "n.",
     "meaning": "정상",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɑp/, /ˈtɔp/"
   },
   {
     "word": "torture",
     "pos": "n.",
     "meaning": "고문",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɔɹtʃɝ/"
   },
   {
     "word": "toss",
     "pos": "v.",
     "meaning": "던지다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɔs/"
   },
   {
     "word": "total",
     "pos": "v.",
     "meaning": "총계 전체의 합계하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtoʊtəɫ/"
   },
   {
     "word": "touch",
     "pos": "v.",
     "meaning": "닿다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtətʃ/"
   },
   {
     "word": "tough",
     "pos": "a.",
     "meaning": "단단한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtəf/"
   },
   {
     "word": "tour",
     "pos": "n.",
     "meaning": "일주",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtʊɹ/"
   },
   {
     "word": "toward -",
     "pos": "ad.",
     "meaning": "쪽으로",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɔɹd/, /təˈwɔɹd/"
   },
   {
     "word": "tower",
     "pos": "n.",
     "meaning": "탑",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtaʊɝ/"
   },
   {
     "word": "town",
     "pos": "n.",
     "meaning": "읍",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtaʊn/"
   },
   {
     "word": "toxic",
     "pos": "a.",
     "meaning": "독의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɑksɪk/"
   },
   {
     "word": "toy",
     "pos": "v.",
     "meaning": "장난감 장난하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɔɪ/"
   },
   {
     "word": "trace",
     "pos": "n.",
     "meaning": "발자국",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹeɪs/"
   },
   {
     "word": "trade",
     "pos": "n.",
     "meaning": "매매",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹeɪd/"
   },
   {
     "word": "tradition",
     "pos": "n.",
     "meaning": "전설",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/tɹəˈdɪʃən/"
   },
   {
     "word": "traffic",
     "pos": "n.",
     "meaning": "교통",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹæfɪk/"
   },
   {
     "word": "tragic",
     "pos": "a.",
     "meaning": "비극의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹædʒɪk/"
   },
   {
     "word": "trail",
     "pos": "v.",
     "meaning": "질질 끌다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹeɪɫ/"
   },
   {
     "word": "train",
     "pos": "n.",
     "meaning": "기차",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹeɪn/"
   },
   {
     "word": "transact",
     "pos": "v.",
     "meaning": "처리하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/tɹænˈzækt/"
   },
   {
     "word": "transfer",
     "pos": "v.",
     "meaning": "옮기다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹænsfɝ/, /tɹænsˈfɝ/"
   },
   {
     "word": "transform",
     "pos": "v.",
     "meaning": "변형(변용,변태)시키다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹænsfɔɹm/, /tɹænsˈfɔɹm/"
   },
   {
     "word": "transition",
     "pos": "n.",
     "meaning": "변천",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/tɹænˈzɪʃən/"
   },
   {
     "word": "translate",
     "pos": "v.",
     "meaning": "번역하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/tɹænˈsɫeɪt/, /tɹænzˈɫeɪt/"
   },
   {
     "word": "transmit",
     "pos": "v.",
     "meaning": "보내다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/tɹænzˈmɪt/"
   },
   {
     "word": "transport",
     "pos": "v.",
     "meaning": "수송(운송)하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹænspɔɹt/, /tɹænˈspɔɹt/"
   },
   {
     "word": "trap",
     "pos": "n.",
     "meaning": "덫",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹæp/"
   },
   {
     "word": "travel",
     "pos": "v.",
     "meaning": "여행하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹævəɫ/"
   },
   {
     "word": "tray",
     "pos": "n.",
     "meaning": "쟁반",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹeɪ/"
   },
   {
     "word": "treasure",
     "pos": "n.",
     "meaning": "보물",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹɛʒɝ/"
   },
   {
     "word": "treat",
     "pos": "v.",
     "meaning": "대우하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹit/"
   },
   {
     "word": "treaty",
     "pos": "n.",
     "meaning": "조약",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹiti/"
   },
   {
     "word": "tree",
     "pos": "n.",
     "meaning": "나무",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹi/"
   },
   {
     "word": "tremendous",
     "pos": "n.",
     "meaning": "무서운",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/tɹəˈmɛndəs/, /tɹɪˈmɛndəs/"
   },
   {
     "word": "trend",
     "pos": "n.",
     "meaning": "방향",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹɛnd/"
   },
   {
     "word": "trial",
     "pos": "n.",
     "meaning": "시험",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹaɪəɫ/, /ˈtɹaɪɫ/"
   },
   {
     "word": "triangle",
     "pos": "n.",
     "meaning": "각형",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹaɪˌæŋɡəɫ/"
   },
   {
     "word": "tribe",
     "pos": "n.",
     "meaning": "종족",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹaɪb/"
   },
   {
     "word": "trick",
     "pos": "n.",
     "meaning": "책략",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹɪk/"
   },
   {
     "word": "trigger",
     "pos": "n.",
     "meaning": "방아쇠 재빠른",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹɪɡɝ/"
   },
   {
     "word": "trim",
     "pos": "v.",
     "meaning": "산뜻한 정돈하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹɪm/"
   },
   {
     "word": "trip",
     "pos": "n.",
     "meaning": "여행",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹɪp/"
   },
   {
     "word": "triumph",
     "pos": "n.",
     "meaning": "승리",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹaɪəmf/"
   },
   {
     "word": "troop",
     "pos": "n.",
     "meaning": "대",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹup/"
   },
   {
     "word": "trophy",
     "pos": "n.",
     "meaning": "전리품",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹoʊfi/"
   },
   {
     "word": "trouble",
     "pos": "n.",
     "meaning": "고생",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹəbəɫ/"
   },
   {
     "word": "trouser",
     "pos": "n.",
     "meaning": "즈봉",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹaʊzɝ/"
   },
   {
     "word": "TRUE",
     "pos": "n.",
     "meaning": "진실",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹu/"
   },
   {
     "word": "trunk",
     "pos": "n.",
     "meaning": "줄기",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹəŋk/"
   },
   {
     "word": "trust",
     "pos": "n.",
     "meaning": "신용",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹəst/"
   },
   {
     "word": "truth",
     "pos": "n.",
     "meaning": "진리",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹuθ/"
   },
   {
     "word": "try",
     "pos": "v.",
     "meaning": "시험해보다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɹaɪ/"
   },
   {
     "word": "tube",
     "pos": "n.",
     "meaning": "관",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtjub/, /ˈtub/"
   },
   {
     "word": "tune",
     "pos": "n.",
     "meaning": "곡",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtun/"
   },
   {
     "word": "tunnel",
     "pos": "n.",
     "meaning": "터널",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtənəɫ/"
   },
   {
     "word": "turn",
     "pos": "v.",
     "meaning": "돌리다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɝn/"
   },
   {
     "word": "turnover",
     "pos": "n.",
     "meaning": "전복",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɝˌnoʊvɝ/"
   },
   {
     "word": "tutor",
     "pos": "n.",
     "meaning": "가정교사",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtutɝ/"
   },
   {
     "word": "twice",
     "pos": "n.",
     "meaning": "두 번",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtwaɪs/"
   },
   {
     "word": "twin",
     "pos": "n.",
     "meaning": "쌍동이",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtwɪn/"
   },
   {
     "word": "twist",
     "pos": "v.",
     "meaning": "꼬이다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtwɪst/"
   },
   {
     "word": "type",
     "pos": "n.",
     "meaning": "형",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtaɪp/"
   },
   {
     "word": "typical",
     "pos": "a.",
     "meaning": "전형적인",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈtɪpəkəɫ/, /ˈtɪpɪkəɫ/"
   },
   {
     "word": "ugly",
     "pos": "a.",
     "meaning": "추한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈəɡɫi/"
   },
   {
     "word": "ultimate",
     "pos": "a.",
     "meaning": "최후의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈəɫtəmət/"
   },
   {
     "word": "umbrella",
     "pos": "n.",
     "meaning": "우산",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈəmˌbɹɛɫə/, /əmˈbɹɛɫə/"
   },
   {
     "word": "uncle",
     "pos": "n.",
     "meaning": "아저씨",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈəŋkəɫ/"
   },
   {
     "word": "under -",
     "pos": "n.",
     "meaning": "아래에",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈəndɝ/"
   },
   {
     "word": "undergo (",
     "pos": "v.",
     "meaning": "영향 등을)받다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌəndɝˈɡoʊ/"
   },
   {
     "word": "underlie -",
     "pos": "v.",
     "meaning": "의 밑에 있다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌəndɝˈɫaɪ/"
   },
   {
     "word": "undermine -",
     "pos": "v.",
     "meaning": "밑을 파다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈəndɝˌmaɪn/"
   },
   {
     "word": "understand",
     "pos": "v.",
     "meaning": "이해하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌəndɝˈstænd/"
   },
   {
     "word": "undertake",
     "pos": "v.",
     "meaning": "떠맡다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈəndɝˌteɪk/"
   },
   {
     "word": "uniform",
     "pos": "n.",
     "meaning": "한결같은",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈjunəˌfɔɹm/"
   },
   {
     "word": "unify",
     "pos": "v.",
     "meaning": "하나로 하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈjunəˌfaɪ/"
   },
   {
     "word": "union",
     "pos": "n.",
     "meaning": "결합",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈjunjən/"
   },
   {
     "word": "unique",
     "pos": "a.",
     "meaning": "유일무이한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/juˈnik/"
   },
   {
     "word": "unit",
     "pos": "n.",
     "meaning": "단위",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈjunət/, /ˈjunɪt/"
   },
   {
     "word": "unite",
     "pos": "v.",
     "meaning": "결합하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈjuˌnaɪt/"
   },
   {
     "word": "universe",
     "pos": "n.",
     "meaning": "우주",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈjunəˌvɝs/"
   },
   {
     "word": "university",
     "pos": "n.",
     "meaning": "종합대학(교) 대학의(에 관계 있는)",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌjunəˈvɝsəti/"
   },
   {
     "word": "unless -",
     "pos": "n.",
     "meaning": "하지 않으면",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ənˈɫɛs/"
   },
   {
     "word": "until -",
     "pos": "n.",
     "meaning": "까지",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ənˈtɪɫ/"
   },
   {
     "word": "up",
     "pos": "ad.",
     "meaning": "위로",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈəp/"
   },
   {
     "word": "update",
     "pos": "v.",
     "meaning": "새롭게 하다 최신정보",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈəpˌdeɪt/, /əpˈdeɪt/"
   },
   {
     "word": "upon -",
     "pos": "n.",
     "meaning": "의 위에",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/əˈpɑn/"
   },
   {
     "word": "upper",
     "pos": "a.",
     "meaning": "위쪽의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈəpɝ/"
   },
   {
     "word": "upset",
     "pos": "v.",
     "meaning": "뒤집어 엎다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈəpˌsɛt/, /əpˈsɛt/"
   },
   {
     "word": "upward",
     "pos": "a.",
     "meaning": "위로 향한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈəpwɝd/"
   },
   {
     "word": "urban",
     "pos": "a.",
     "meaning": "도시의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɝbən/"
   },
   {
     "word": "urge",
     "pos": "v.",
     "meaning": "몰아대다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɝdʒ/"
   },
   {
     "word": "urgent",
     "pos": "a.",
     "meaning": "긴급한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɝdʒənt/"
   },
   {
     "word": "use",
     "pos": "v.",
     "meaning": "쓰다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈjus/, /ˈjuz/"
   },
   {
     "word": "usual",
     "pos": "a.",
     "meaning": "평소의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈjuʒəwəɫ/, /ˈjuʒuəɫ/"
   },
   {
     "word": "utilize -",
     "pos": "v.",
     "meaning": "을 이용하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈjutəˌɫaɪz/"
   },
   {
     "word": "utter",
     "pos": "a.",
     "meaning": "전적인",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈətɝ/"
   },
   {
     "word": "vacation",
     "pos": "n.",
     "meaning": "휴가",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/veɪˈkeɪʃən/"
   },
   {
     "word": "vacuum",
     "pos": "n.",
     "meaning": "진공",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvækjum/"
   },
   {
     "word": "vague",
     "pos": "a.",
     "meaning": "막연한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈveɪɡ/"
   },
   {
     "word": "valid",
     "pos": "a.",
     "meaning": "유효한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvæɫɪd/"
   },
   {
     "word": "valley",
     "pos": "n.",
     "meaning": "골짜기",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvæɫi/"
   },
   {
     "word": "value",
     "pos": "n.",
     "meaning": "가치",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvæɫju/"
   },
   {
     "word": "van",
     "pos": "n.",
     "meaning": "유개트럭",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvæn/"
   },
   {
     "word": "vanish",
     "pos": "v.",
     "meaning": "자취를 감추다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvænɪʃ/"
   },
   {
     "word": "various",
     "pos": "a.",
     "meaning": "가지가지의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɛɹiəs/"
   },
   {
     "word": "vary",
     "pos": "v.",
     "meaning": "바꾸다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɛɹi/"
   },
   {
     "word": "vast",
     "pos": "a.",
     "meaning": "광대한, 광막한 막대한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvæst/"
   },
   {
     "word": "vegetable",
     "pos": "n.",
     "meaning": "식물 야채, 푸성귀, 남새, 채소",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɛdʒtəbəɫ/"
   },
   {
     "word": "vehicle",
     "pos": "n.",
     "meaning": "운반 기구, 운송 수단, 수레, 차량, 탈것",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvihɪkəɫ/, /ˈviɪkəɫ/"
   },
   {
     "word": "venture",
     "pos": "n.",
     "meaning": "모험",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɛntʃɝ/"
   },
   {
     "word": "verbal",
     "pos": "a.",
     "meaning": "말의, 말에 관한, 언어상의, 말로 나타낸, 말로 된",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɝbəɫ/"
   },
   {
     "word": "verse",
     "pos": "n.",
     "meaning": "시의 한 줄, 시구 일련의 시구",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɝs/"
   },
   {
     "word": "version",
     "pos": "n.",
     "meaning": "번역, 번역문 개작, 각색, 번안",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɝʒən/"
   },
   {
     "word": "versus …",
     "pos": "a.",
     "meaning": "대, …에 대한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɝsəs/, /ˈvɝsəz/"
   },
   {
     "word": "vertical",
     "pos": "a.",
     "meaning": "수평면에 직각인, 수직의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɝtɪkəɫ/"
   },
   {
     "word": "very",
     "pos": "n.",
     "meaning": "매우",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɛɹi/"
   },
   {
     "word": "vessel",
     "pos": "n.",
     "meaning": "그릇",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɛsəɫ/"
   },
   {
     "word": "veteran",
     "pos": "n.",
     "meaning": "노련가, 경험 많은 대가, 베테랑",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɛtɝən/, /ˈvɛtɹən/"
   },
   {
     "word": "veterinarian",
     "pos": "n.",
     "meaning": "수의사",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˌvɛtɝəˈnɛɹiən/, /ˌvɛtɹəˈnɛɹiən/"
   },
   {
     "word": "via …",
     "pos": "n.",
     "meaning": "을 거쳐, …을 경유하여",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvaɪə/, /ˈviə/"
   },
   {
     "word": "vice",
     "pos": "n.",
     "meaning": "악덕, 비행, 타락 행위",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvaɪs/"
   },
   {
     "word": "victim",
     "pos": "n.",
     "meaning": "희생, 산 제물, 인신 제물",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɪktəm/, /ˈvɪktɪm/"
   },
   {
     "word": "victory",
     "pos": "n.",
     "meaning": "승리, 전승",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɪktɝi/, /ˈvɪktɹi/"
   },
   {
     "word": "view",
     "pos": "n.",
     "meaning": "봄, 관찰, 개관, 실지 검증 보는 힘, 시계, 시야",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvju/"
   },
   {
     "word": "vigorous",
     "pos": "a.",
     "meaning": "정력적인, 강건한, 활기 있는, 격렬한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɪɡɝəs/"
   },
   {
     "word": "village",
     "pos": "n.",
     "meaning": "마을, 촌락",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɪɫədʒ/, /ˈvɪɫɪdʒ/"
   },
   {
     "word": "violent",
     "pos": "a.",
     "meaning": "격렬한, 맹렬한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvaɪəɫənt/, /ˈvaɪɫənt/"
   },
   {
     "word": "virgin",
     "pos": "n.",
     "meaning": "처녀, 동정녀, 미혼 여성, 동정녀 마리아",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɝdʒɪn/"
   },
   {
     "word": "virtual",
     "pos": "a.",
     "meaning": "사실상의, 실질상의, 실제의 허상의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɝtʃuəɫ/"
   },
   {
     "word": "virtue",
     "pos": "n.",
     "meaning": "덕, 덕행, 선, 선행",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɝtʃu/"
   },
   {
     "word": "visible",
     "pos": "a.",
     "meaning": "눈에 보이는, 볼 수 있는",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɪzəbəɫ/"
   },
   {
     "word": "visit",
     "pos": "v.",
     "meaning": "방문하다, …의 손님으로 묵다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɪzɪt/"
   },
   {
     "word": "visual",
     "pos": "a.",
     "meaning": "시각의, 물건을 보기 위한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɪʒəwəɫ/"
   },
   {
     "word": "vital",
     "pos": "a.",
     "meaning": "생명의, 생명에 관한, 생명유지에 필요한, 살아 있는",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvaɪtəɫ/"
   },
   {
     "word": "vivid",
     "pos": "a.",
     "meaning": "발랄한, 약동적인, 힘찬, 생기있는",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɪvəd/, /ˈvɪvɪd/"
   },
   {
     "word": "vocabulary",
     "pos": "n.",
     "meaning": "어휘, 용어수, 용어 범위",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/voʊˈkæbjəˌɫɛɹi/"
   },
   {
     "word": "vocation",
     "pos": "n.",
     "meaning": "천직, 사명 직업, 생업, 장사 적성, 소질, 재능",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/voʊˈkeɪʃən/"
   },
   {
     "word": "voice",
     "pos": "n.",
     "meaning": "목소리, 음성, 음성",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɔɪs/"
   },
   {
     "word": "volume",
     "pos": "n.",
     "meaning": "책 권",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɑɫjum/"
   },
   {
     "word": "voluntary",
     "pos": "a.",
     "meaning": "자발적인, 수의의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɑɫəntɛɹi/"
   },
   {
     "word": "vote",
     "pos": "n.",
     "meaning": "찬부 표시, 투표, 표결",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvoʊt/"
   },
   {
     "word": "voyage",
     "pos": "n.",
     "meaning": "여행",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈvɔɪədʒ/, /ˈvɔɪɪdʒ/"
   },
   {
     "word": "wage",
     "pos": "n.",
     "meaning": "임금",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈweɪdʒ/"
   },
   {
     "word": "wagon",
     "pos": "n.",
     "meaning": "짐마차",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwæɡən/"
   },
   {
     "word": "wait",
     "pos": "v.",
     "meaning": "기다리다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈweɪt/"
   },
   {
     "word": "wake",
     "pos": "v.",
     "meaning": "잠깨다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈweɪk/"
   },
   {
     "word": "walk",
     "pos": "v.",
     "meaning": "걷다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɑk/, /ˈwɔk/"
   },
   {
     "word": "wall",
     "pos": "n.",
     "meaning": "벽",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɔɫ/"
   },
   {
     "word": "wander",
     "pos": "v.",
     "meaning": "헤매다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɑndɝ/"
   },
   {
     "word": "want",
     "pos": "n.",
     "meaning": "결핍",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɑnt/, /ˈwɔnt/"
   },
   {
     "word": "war",
     "pos": "n.",
     "meaning": "전쟁",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɔɹ/"
   },
   {
     "word": "warehouse",
     "pos": "n.",
     "meaning": "창고",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɛɹˌhaʊs/"
   },
   {
     "word": "warm",
     "pos": "a.",
     "meaning": "따뜻한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɔɹm/"
   },
   {
     "word": "warn",
     "pos": "v.",
     "meaning": "경고하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɔɹn/"
   },
   {
     "word": "warrant",
     "pos": "v.",
     "meaning": "보증하다 보증",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɔɹənt/"
   },
   {
     "word": "warrior",
     "pos": "n.",
     "meaning": "병사",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɔɹiɝ/, /ˈwɔɹjɝ/"
   },
   {
     "word": "wash",
     "pos": "v.",
     "meaning": "씻다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɑʃ/"
   },
   {
     "word": "waste",
     "pos": "v.",
     "meaning": "낭비하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈweɪst/"
   },
   {
     "word": "watch",
     "pos": "n.",
     "meaning": "손목시계",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɑtʃ/, /ˈwɔtʃ/"
   },
   {
     "word": "water",
     "pos": "n.",
     "meaning": "물",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɔtɝ/"
   },
   {
     "word": "watermelon",
     "pos": "n.",
     "meaning": "수박",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɔtɝˌmɛɫən/"
   },
   {
     "word": "wave",
     "pos": "n.",
     "meaning": "물결",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈweɪv/"
   },
   {
     "word": "way",
     "pos": "n.",
     "meaning": "길",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈweɪ/"
   },
   {
     "word": "we",
     "pos": "n.",
     "meaning": "우리가",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwi/"
   },
   {
     "word": "weak",
     "pos": "a.",
     "meaning": "약한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwik/"
   },
   {
     "word": "wealth",
     "pos": "n.",
     "meaning": "재산",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɛɫθ/"
   },
   {
     "word": "weapon",
     "pos": "n.",
     "meaning": "무기",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɛpən/"
   },
   {
     "word": "wear",
     "pos": "v.",
     "meaning": "입다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɛɹ/"
   },
   {
     "word": "weather",
     "pos": "n.",
     "meaning": "날씨",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɛðɝ/"
   },
   {
     "word": "weave",
     "pos": "v.",
     "meaning": "짜다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwiv/"
   },
   {
     "word": "wedding",
     "pos": "n.",
     "meaning": "혼례",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɛdɪŋ/"
   },
   {
     "word": "weed",
     "pos": "v.",
     "meaning": "잡초 잡초를 뽑다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwid/"
   },
   {
     "word": "week",
     "pos": "n.",
     "meaning": "주",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwik/"
   },
   {
     "word": "weekend",
     "pos": "v.",
     "meaning": "주말 주말의 주말을 지내다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwiˌkɛnd/, /ˈwiˌkɪnd/"
   },
   {
     "word": "weigh",
     "pos": "v.",
     "meaning": "무게를 달다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈweɪ/"
   },
   {
     "word": "weight",
     "pos": "ad.",
     "meaning": "무게",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈweɪt/"
   },
   {
     "word": "weird",
     "pos": "a.",
     "meaning": "불가사의한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɪɹd/"
   },
   {
     "word": "welcome",
     "pos": "a.",
     "meaning": "환영 환영받는",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɛɫkəm/"
   },
   {
     "word": "welfare",
     "pos": "n.",
     "meaning": "행복",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɛɫˌfɛɹ/"
   },
   {
     "word": "well",
     "pos": "n.",
     "meaning": "잘",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɛɫ/"
   },
   {
     "word": "west",
     "pos": "n.",
     "meaning": "서쪽",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɛst/"
   },
   {
     "word": "wet",
     "pos": "a.",
     "meaning": "축축한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɛt/"
   },
   {
     "word": "whale",
     "pos": "n.",
     "meaning": "고래",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈhweɪɫ/, /ˈweɪɫ/"
   },
   {
     "word": "what",
     "pos": "n.",
     "meaning": "무엇 무슨",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈhwət/, /ˈwət/"
   },
   {
     "word": "wheat",
     "pos": "n.",
     "meaning": "밀",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈhwit/, /ˈwit/"
   },
   {
     "word": "wheel",
     "pos": "n.",
     "meaning": "바퀴",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈhwiɫ/, /ˈwiɫ/"
   },
   {
     "word": "when",
     "pos": "n.",
     "meaning": "언제",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈhwɛn/, /ˈhwɪn/, /ˈwɛn/, /ˈwɪn/"
   },
   {
     "word": "where",
     "pos": "n.",
     "meaning": "어디에 (-하는)곳에 pr.어디 (문제의)장소",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈhwɛɹ/, /ˈwɛɹ/"
   },
   {
     "word": "whereas cnj.(-",
     "pos": "n.",
     "meaning": "인)까닭에",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": ""
   },
   {
     "word": "whether -",
     "pos": "n.",
     "meaning": "인지 어떤지",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈhwɛðɝ/, /ˈwɛðɝ/"
   },
   {
     "word": "which",
     "pos": "n.",
     "meaning": "어느 쪽",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈhwɪtʃ/, /ˈwɪtʃ/"
   },
   {
     "word": "while",
     "pos": "n.",
     "meaning": "동안 -하는 동안",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈhwaɪɫ/, /ˈwaɪɫ/"
   },
   {
     "word": "whip",
     "pos": "v.",
     "meaning": "채찍 채찍질하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈhwɪp/, /ˈwɪp/"
   },
   {
     "word": "whisper",
     "pos": "v.",
     "meaning": "속삭이다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈhwɪspɝ/, /ˈwɪspɝ/"
   },
   {
     "word": "whistle",
     "pos": "n.",
     "meaning": "휘파람",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈhwɪsəɫ/, /ˈwɪsəɫ/"
   },
   {
     "word": "white",
     "pos": "n.",
     "meaning": "흰",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈhwaɪt/, /ˈwaɪt/"
   },
   {
     "word": "who",
     "pos": "n.",
     "meaning": "누구",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈhu/"
   },
   {
     "word": "whole",
     "pos": "a.",
     "meaning": "전체의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈhoʊɫ/"
   },
   {
     "word": "why",
     "pos": "n.",
     "meaning": "왜",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈhwaɪ/, /ˈwaɪ/"
   },
   {
     "word": "wicked",
     "pos": "a.",
     "meaning": "사악한",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɪkəd/"
   },
   {
     "word": "wide",
     "pos": "n.",
     "meaning": "폭넓은",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwaɪd/"
   },
   {
     "word": "widespread",
     "pos": "a.",
     "meaning": "널리 보급되어 있는",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwaɪdsˈpɹɛd/"
   },
   {
     "word": "widow",
     "pos": "a.",
     "meaning": "미망인",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɪdoʊ/"
   },
   {
     "word": "wife",
     "pos": "n.",
     "meaning": "아내",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwaɪf/"
   },
   {
     "word": "wild",
     "pos": "a.",
     "meaning": "야생의",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwaɪɫd/"
   },
   {
     "word": "will",
     "pos": "n.",
     "meaning": "의지",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɪɫ/, /wəɫ/"
   },
   {
     "word": "win",
     "pos": "v.",
     "meaning": "이기다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɪn/"
   },
   {
     "word": "wind",
     "pos": "n.",
     "meaning": "바람",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwaɪnd/, /ˈwɪnd/"
   },
   {
     "word": "window",
     "pos": "n.",
     "meaning": "창",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɪndoʊ/"
   },
   {
     "word": "wing",
     "pos": "n.",
     "meaning": "날개",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɪŋ/"
   },
   {
     "word": "wipe",
     "pos": "v.",
     "meaning": "닦다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwaɪp/"
   },
   {
     "word": "wire",
     "pos": "n.",
     "meaning": "철사",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwaɪɝ/, /ˈwaɪɹ/"
   },
   {
     "word": "wise",
     "pos": "a.",
     "meaning": "슬기로운",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwaɪz/"
   },
   {
     "word": "wish",
     "pos": "v.",
     "meaning": "바라다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɪʃ/"
   },
   {
     "word": "wit",
     "pos": "n.",
     "meaning": "기지",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɪt/"
   },
   {
     "word": "with",
     "pos": "n.",
     "meaning": "함께",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɪð/, /ˈwɪθ/, /wɪð/, /wɪθ/"
   },
   {
     "word": "withdraw",
     "pos": "v.",
     "meaning": "물러나다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/wɪðˈdɹɔ/, /wɪθˈdɹɔ/"
   },
   {
     "word": "within prop.-",
     "pos": "n.",
     "meaning": "의 안쪽에 안으로 내부",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": ""
   },
   {
     "word": "without prop.-",
     "pos": "n.",
     "meaning": "없이 밖은",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": ""
   },
   {
     "word": "witness",
     "pos": "n.",
     "meaning": "증언",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɪtnəs/"
   },
   {
     "word": "woman",
     "pos": "a.",
     "meaning": "부인",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwʊmən/"
   },
   {
     "word": "wonder",
     "pos": "n.",
     "meaning": "경이",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwəndɝ/"
   },
   {
     "word": "wood",
     "pos": "n.",
     "meaning": "숲",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwʊd/"
   },
   {
     "word": "wool",
     "pos": "n.",
     "meaning": "양모",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwʊɫ/"
   },
   {
     "word": "word",
     "pos": "n.",
     "meaning": "낱말",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɝd/"
   },
   {
     "word": "work",
     "pos": "n.",
     "meaning": "일",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɝk/"
   },
   {
     "word": "world",
     "pos": "n.",
     "meaning": "세계",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɝɫd/"
   },
   {
     "word": "worry",
     "pos": "v.",
     "meaning": "근심하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɝi/"
   },
   {
     "word": "worship",
     "pos": "n.",
     "meaning": "숭배",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɝʃəp/, /ˈwɝʃɪp/"
   },
   {
     "word": "worth",
     "pos": "n.",
     "meaning": "가치가 있는 가치",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwɝθ/"
   },
   {
     "word": "would auwill",
     "pos": "n.",
     "meaning": "의 과거",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": ""
   },
   {
     "word": "wound",
     "pos": "n.",
     "meaning": "부상",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈwaʊnd/, /ˈwund/"
   },
   {
     "word": "wrap",
     "pos": "v.",
     "meaning": "싸다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹæp/"
   },
   {
     "word": "wreck",
     "pos": "n.",
     "meaning": "난파",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɛk/"
   },
   {
     "word": "write",
     "pos": "v.",
     "meaning": "쓰다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹaɪt/"
   },
   {
     "word": "wrong",
     "pos": "n.",
     "meaning": "나쁜",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈɹɔŋ/"
   },
   {
     "word": "year",
     "pos": "n.",
     "meaning": "연",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈjɪɹ/"
   },
   {
     "word": "yell",
     "pos": "v.",
     "meaning": "고함치다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈjɛɫ/"
   },
   {
     "word": "yellow",
     "pos": "n.",
     "meaning": "황색의 황색",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈjɛɫoʊ/"
   },
   {
     "word": "yes",
     "pos": "n.",
     "meaning": "예",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈjɛs/"
   },
   {
     "word": "yesterday",
     "pos": "n.",
     "meaning": "어제",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈjɛstɝˌdeɪ/, /ˈjɛstɝdi/"
   },
   {
     "word": "yet",
     "pos": "n.",
     "meaning": "아직",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈjɛt/"
   },
   {
     "word": "yield",
     "pos": "v.",
     "meaning": "산출하다",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈjiɫd/"
   },
   {
     "word": "you",
     "pos": "n.",
     "meaning": "당신",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈju/"
   },
   {
     "word": "young",
     "pos": "n.",
     "meaning": "젊은",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈjəŋ/"
   },
   {
     "word": "zebra",
     "pos": "n.",
     "meaning": "얼룩말",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈzibɹə/"
   },
   {
     "word": "zone",
     "pos": "n.",
     "meaning": "구역",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈzoʊn/"
   },
   {
     "word": "zoo",
     "pos": "n.",
     "meaning": "동물원",
-    "level": "advanced"
+    "level": "advanced",
+    "pronunciation": "/ˈzu/"
   }
 ];
 

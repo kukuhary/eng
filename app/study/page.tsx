@@ -137,8 +137,13 @@ export default function StudyPage() {
                 overflowY: 'auto',
                 boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
               }}>
-                <div style={{ height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <div style={{ height: '100px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                   <div style={{ fontSize: '3.5rem', fontWeight: 'bold', textShadow: '0 0 20px rgba(56,189,248,0.2)' }}>{currentWord.word}</div>
+                  {currentWord.pronunciation && (
+                    <div style={{ fontSize: '1.2rem', color: '#a1a1aa', fontFamily: 'monospace', marginTop: '0.2rem' }}>
+                      {currentWord.pronunciation}
+                    </div>
+                  )}
                 </div>
                 <div style={{ height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                   <div style={{ fontSize: '1.2rem', color: getPosColor(currentWord.pos), fontStyle: 'italic', opacity: 0.9, fontWeight: '500' }}>{currentWord.pos}</div>

@@ -41,16 +41,35 @@ allWords = allWords.filter(item => {
   return !duplicate;
 });
 
+const en_US = require('./node_modules/ipa-dict/lib/en_US.js');
+
 console.log(`Found ${allWords.length} unique words.`);
 
 const wordsWithLevels = allWords.map((item, index) => {
   let level = 'middle';
   if (index > 800 && index <= 2000) level = 'high';
   if (index > 2000) level = 'advanced';
-  return { ...item, level };
+
+  // Look up pronunciation
+  const normalizedWord = item.word.toLowerCase().trim();
+  const ipaArray = en_US.get(normalizedWord);
+  let pronunciation = '';
+  if (ipaArray && ipaArray.length > 0) {
+    pronunciation = ipaArray.map(x => x.trim()).join(', ');
+  } else {
+    const cleanWord = normalizedWord.replace(/[^a-z]/g, '');
+    const cleanIpa = en_US.get(cleanWord);
+    if (cleanIpa && cleanIpa.length > 0) {
+      pronunciation = cleanIpa.map(x => x.trim()).join(', ');
+    }
+  }
+
+  return { ...item, level, pronunciation };
 });
 
-const tsContent = `export interface Word {
+const tsContent = `import EXAMPLES from './examples.json';
+
+export interface Word {
   id: string;
   word: string;
   pos: string;
@@ -58,9 +77,16 @@ const tsContent = `export interface Word {
   level: 'middle' | 'high' | 'advanced';
   status: 'new' | 'learning' | 'mastered';
   createdAt: number;
+  examples?: { en: string; ko: string; }[] | any;
+  pronunciation?: string;
 }
 
-export const SEED_WORDS: Omit<Word, 'id' | 'status' | 'createdAt'>[] = ${JSON.stringify(wordsWithLevels, null, 2)};
+const SEED_WORDS_RAW: any[] = ${JSON.stringify(wordsWithLevels, null, 2)};
+
+export const SEED_WORDS: Omit<Word, 'id' | 'status' | 'createdAt'>[] = SEED_WORDS_RAW.map(sw => ({
+  ...sw,
+  examples: (EXAMPLES as any)[sw.word] || sw.examples
+}));
 `;
 
 fs.writeFileSync('c:/antGra/eng/lib/seedWords.ts', tsContent);

@@ -8,7 +8,7 @@ export async function getWordsAction() {
 }
 
 export async function addWordAction(word: Omit<DBWord, 'id' | 'status' | 'createdAt'>) {
-  const newWord = dbAddWord(word);
+  const newWord = await dbAddWord(word);
   revalidatePath('/words');
   return newWord;
 }
