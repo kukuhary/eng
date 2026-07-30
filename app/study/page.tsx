@@ -285,7 +285,7 @@ export default function StudyPage() {
           disabled={!currentWord}
           style={{ flex: 1, padding: '1rem', justifyContent: 'center', fontSize: '1rem', whiteSpace: 'nowrap' }}
         >
-          아직 헷갈려요 ⚡
+          아직 헷갈려요
         </button>
         <button 
           onClick={(e) => { e.stopPropagation(); currentWord && handleNext('mastered'); }} 
@@ -293,7 +293,7 @@ export default function StudyPage() {
           disabled={!currentWord}
           style={{ flex: 1, padding: '1rem', background: 'var(--success)', color: 'white', justifyContent: 'center', fontSize: '1rem', whiteSpace: 'nowrap' }}
         >
-          확실히 알아요 🏆
+          확실히 알아요
         </button>
       </div>
     </div>
