@@ -104,13 +104,13 @@ export default function StudyPage() {
   const masteredCount = categoryWords.filter(w => w.status === 'mastered').length;
 
   return (
-    <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto', padding: '1rem 0.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', boxSizing: 'border-box' }}>
+    <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto', padding: '0.4rem 0.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', boxSizing: 'border-box' }}>
       {/* Progress Bar */}
-      <div style={{ width: '100%', maxWidth: '600px', height: '6px', background: 'var(--card-bg)', borderRadius: '3px', marginBottom: '1.5rem', overflow: 'hidden' }}>
+      <div style={{ width: '100%', maxWidth: '600px', height: '6px', background: 'var(--card-bg)', borderRadius: '3px', marginBottom: '0.75rem', overflow: 'hidden' }}>
         <div style={{ width: `${progressPercent}%`, height: '100%', background: 'var(--primary)', transition: 'width 0.3s' }} />
       </div>
 
-      <div style={{ width: '100%', maxWidth: '600px', marginBottom: '1rem', padding: '0 0.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: 'var(--secondary)', fontSize: '0.9rem', boxSizing: 'border-box' }}>
+      <div style={{ width: '100%', maxWidth: '600px', marginBottom: '0.5rem', padding: '0 0.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: 'var(--secondary)', fontSize: '0.9rem', boxSizing: 'border-box' }}>
         <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
           <span>Progress: {finished ? words.length : (currentWord ? currentIndex + 1 : 0)} / {words.length}</span>
           <span style={{ color: 'var(--success)', fontWeight: '500' }}>(완료: {masteredCount}개)</span>
@@ -181,7 +181,7 @@ export default function StudyPage() {
         style={{
           width: '100%',
           maxWidth: '600px',
-          height: '420px',
+          height: '350px',
           perspective: '1000px',
           cursor: finished ? 'default' : 'pointer',
           zIndex: 2,
@@ -345,7 +345,7 @@ export default function StudyPage() {
 
       {/* Action Buttons */}
       {!finished && (
-        <div style={{ display: 'flex', gap: '1rem', width: '100%', maxWidth: '600px', padding: '0 0.25rem', boxSizing: 'border-box', marginTop: '2rem' }}>
+        <div style={{ display: 'flex', gap: '1rem', width: '100%', maxWidth: '600px', padding: '0 0.25rem', boxSizing: 'border-box', marginTop: '1rem' }}>
           <button 
             onClick={(e) => { e.stopPropagation(); currentWord && handleNext('learning'); }} 
             className="btn btn-secondary" 
