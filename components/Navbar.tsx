@@ -19,7 +19,7 @@ export default function Navbar() {
   const navItems = [
     { name: '대시보드', href: '/' },
     { name: '학습하기', href: '/study' },
-    { name: '단어장', href: '/words' },
+    ...(currentUser === 'admin' ? [{ name: '단어장', href: '/words' }] : []),
   ];
 
   const handleLogin = (name: string) => {
@@ -59,16 +59,20 @@ export default function Navbar() {
               background: 'rgba(239, 68, 68, 0.1)',
               border: '1px solid rgba(239, 68, 68, 0.3)',
               color: '#ef4444',
-              fontSize: '0.8rem',
-              padding: '0.3rem 0.6rem',
+              fontSize: '0.75rem',
+              padding: '0.2rem 0.5rem',
               borderRadius: '6px',
               cursor: 'pointer',
               fontWeight: '600',
               transition: 'all 0.2s',
               marginLeft: '0.5rem',
+              lineHeight: '1.2',
+              textAlign: 'center',
             }}
           >
-            {currentUser} 로그아웃
+            {currentUser}
+            <br />
+            로그아웃
           </button>
         ) : (
           <button 
