@@ -48,7 +48,7 @@ export default function Home() {
     <div style={{ width: '100%', maxWidth: '600px', margin: '3rem auto', padding: '0 1rem', boxSizing: 'border-box' }}>
       <section style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
         <h1 style={{ 
-          fontSize: '2rem', 
+          fontSize: '1.5rem', 
           fontWeight: 'bold', 
           background: 'linear-gradient(to right, var(--primary), var(--accent))', 
           WebkitBackgroundClip: 'text', 
@@ -58,7 +58,7 @@ export default function Home() {
           🏆 보카프로 실시간 랭킹
         </h1>
         <p style={{ color: 'var(--secondary)', fontSize: '0.95rem' }}>
-          친구들과 함께 매일 확실히 아는 단어를 늘려보세요!
+          친구들과 아는 단어를 늘려보세요!
         </p>
       </section>
 
