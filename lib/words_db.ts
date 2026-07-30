@@ -12,8 +12,15 @@ export interface DBWord {
   pronunciation?: string;
 }
 
-export function getAllWords(): DBWord[] {
-  const words = db.prepare('SELECT * FROM words ORDER BY word ASC').all() as (Omit<DBWord, 'examples' | 'status'> & { status: string })[];
+export function getAllWords(userId: string = 'admin'): DBWord[] {
+  const sql = `
+    SELECT w.id, w.word, w.pos, w.meaning, w.level, w.createdAt, w.pronunciation,
+           COALESCE(uws.status, 'new') as status
+    FROM words w
+    LEFT JOIN user_word_status uws ON w.id = uws.wordId AND uws.userId = ?
+    ORDER BY w.word ASC
+  `;
+  const words = db.prepare(sql).all(userId) as (Omit<DBWord, 'examples' | 'status'> & { status: string })[];
   
   return words.map(w => {
     const examples = db.prepare('SELECT en, ko FROM examples WHERE wordId = ?').all(w.id) as { en: string; ko: string; }[];
@@ -25,8 +32,15 @@ export function getAllWords(): DBWord[] {
   });
 }
 
-export function getWordById(id: string): DBWord | null {
-  const word = db.prepare('SELECT * FROM words WHERE id = ?').get(id) as (Omit<DBWord, 'examples' | 'status'> & { status: string }) | undefined;
+export function getWordById(id: string, userId: string = 'admin'): DBWord | null {
+  const sql = `
+    SELECT w.id, w.word, w.pos, w.meaning, w.level, w.createdAt, w.pronunciation,
+           COALESCE(uws.status, 'new') as status
+    FROM words w
+    LEFT JOIN user_word_status uws ON w.id = uws.wordId AND uws.userId = ?
+    WHERE w.id = ?
+  `;
+  const word = db.prepare(sql).get(userId, id) as (Omit<DBWord, 'examples' | 'status'> & { status: string }) | undefined;
   if (!word) return null;
 
   const examples = db.prepare('SELECT en, ko FROM examples WHERE wordId = ?').all(id) as { en: string; ko: string; }[];
@@ -37,8 +51,15 @@ export function getWordById(id: string): DBWord | null {
   };
 }
 
-export function updateWordStatus(id: string, status: string): boolean {
-  const result = db.prepare('UPDATE words SET status = ? WHERE id = ?').run(status, id);
+export function updateWordStatus(id: string, status: string, userId: string = 'admin'): boolean {
+  const sql = `
+    INSERT INTO user_word_status (userId, wordId, status, updatedAt)
+    VALUES (?, ?, ?, ?)
+    ON CONFLICT(userId, wordId) DO UPDATE SET
+      status = excluded.status,
+      updatedAt = excluded.updatedAt
+  `;
+  const result = db.prepare(sql).run(userId, id, status, Date.now());
   return result.changes > 0;
 }
 
@@ -94,7 +115,8 @@ export function deleteWord(id: string): boolean {
   return result.changes > 0;
 }
 
-export function resetAllStatuses(): boolean {
-  const result = db.prepare("UPDATE words SET status = 'new'").run();
-  return result.changes > 0;
+export function resetAllStatuses(userId: string = 'admin'): boolean {
+  db.prepare("DELETE FROM user_word_status WHERE userId = ?").run(userId);
+  db.prepare("UPDATE words SET status = 'new'").run(); // keep for fallback / legacy compatibility
+  return true;
 }
