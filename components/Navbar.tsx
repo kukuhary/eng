@@ -95,20 +95,40 @@ export default function Navbar() {
         )}
       </div>
       <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-        {navItems.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            style={{
-              color: pathname === item.href ? 'var(--primary)' : 'var(--foreground)',
-              textDecoration: 'none',
-              fontWeight: pathname === item.href ? '600' : '400',
-              transition: 'color 0.2s',
-            }}
-          >
-            {item.name}
-          </Link>
-        ))}
+        {navItems.map((item) => {
+          const isDisabled = item.href === '/study' && !currentUser;
+          if (isDisabled) {
+            return (
+              <span
+                key={item.href}
+                style={{
+                  color: 'rgba(255, 255, 255, 0.2)',
+                  cursor: 'not-allowed',
+                  fontSize: '1rem',
+                  fontWeight: '400',
+                  pointerEvents: 'none'
+                }}
+                title="로그인이 필요합니다"
+              >
+                {item.name}
+              </span>
+            );
+          }
+          return (
+            <Link
+              key={item.href}
+              href={item.href}
+              style={{
+                color: pathname === item.href ? 'var(--primary)' : 'var(--foreground)',
+                textDecoration: 'none',
+                fontWeight: pathname === item.href ? '600' : '400',
+                transition: 'color 0.2s',
+              }}
+            >
+              {item.name}
+            </Link>
+          );
+        })}
       </div>
 
       {showLoginModal && (
