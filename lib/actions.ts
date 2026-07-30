@@ -16,6 +16,7 @@ export async function getWordsAction(userId?: string) {
 
 export async function addWordAction(word: Omit<DBWord, 'id' | 'status' | 'createdAt'>) {
   const newWord = await dbAddWord(word);
+  revalidatePath('/');
   revalidatePath('/words');
   return newWord;
 }
@@ -23,6 +24,8 @@ export async function addWordAction(word: Omit<DBWord, 'id' | 'status' | 'create
 export async function updateWordStatusAction(id: string, status: 'new' | 'learning' | 'mastered', userId?: string) {
   const success = dbUpdateWordStatus(id, status, userId);
   if (success) {
+    revalidatePath('/');
+    revalidatePath('/study');
     revalidatePath('/words');
   }
   return success;
@@ -31,6 +34,7 @@ export async function updateWordStatusAction(id: string, status: 'new' | 'learni
 export async function resetAllStatusesAction(userId?: string) {
   const success = dbResetAllStatuses(userId);
   if (success) {
+    revalidatePath('/');
     revalidatePath('/words');
     revalidatePath('/study');
   }
