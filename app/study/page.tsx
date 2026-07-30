@@ -100,14 +100,7 @@ export default function StudyPage() {
         <h1 style={{ marginBottom: '1rem' }}>🎉 학습 완료!</h1>
         <p style={{ color: 'var(--secondary)', marginBottom: '2rem' }}>선택한 범위의 학습을 마쳤습니다.</p>
         <button onClick={() => setFinished(false)} className="btn btn-secondary" style={{ marginRight: '1rem' }}>다시 하기</button>
-        <Link href="/" className="btn btn-primary" style={{ marginRight: '1rem' }}>대시보드로 돌아가기</Link>
-        <button 
-          onClick={handleResetProgress} 
-          className="btn btn-secondary" 
-          style={{ background: 'rgba(239, 68, 68, 0.1)', border: '1px solid rgba(239, 68, 68, 0.3)', color: '#ef4444' }}
-        >
-          진도 초기화 🔄
-        </button>
+        <Link href="/" className="btn btn-primary">대시보드로 돌아가기</Link>
       </div>
     );
   }
@@ -126,40 +119,18 @@ export default function StudyPage() {
       </div>
 
       <div style={{ width: '100%', maxWidth: '600px', marginBottom: '1rem', padding: '0 0.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: 'var(--secondary)', fontSize: '0.9rem', boxSizing: 'border-box' }}>
-        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
           <span>Progress: {currentWord ? currentIndex + 1 : 0} / {words.length}</span>
           <span style={{ color: 'var(--success)', fontWeight: '500' }}>(완료: {masteredCount}개)</span>
         </div>
-        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-          <button 
-            onClick={handleResetProgress}
-            style={{
-              background: 'rgba(239, 68, 68, 0.1)',
-              border: '1px solid rgba(239, 68, 68, 0.3)',
-              color: '#ef4444',
-              fontSize: '0.75rem',
-              padding: '0.25rem 0.5rem',
-              borderRadius: '6px',
-              cursor: 'pointer',
-              fontWeight: '600',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '2px',
-              transition: 'all 0.2s',
-            }}
-            title="모든 단어의 학습 진도를 초기화합니다"
-          >
-            초기화 🔄
-          </button>
-          {currentWord && (
-            <span style={{ 
-              padding: '0.2rem 0.6rem', 
-              background: 'rgba(255,255,255,0.05)', 
-              borderRadius: '1rem',
-              color: currentWord.level === 'high' ? 'var(--accent)' : 'var(--primary)'
-            }}>{currentWord.level.toUpperCase()}</span>
-          )}
-        </div>
+        {currentWord && (
+          <span style={{ 
+            padding: '0.2rem 0.6rem', 
+            background: 'rgba(255,255,255,0.05)', 
+            borderRadius: '1rem',
+            color: currentWord.level === 'high' ? 'var(--accent)' : 'var(--primary)'
+          }}>{currentWord.level.toUpperCase()}</span>
+        )}
       </div>
 
       {/* POS Filter Tabs Row (Horizontal Bookmarks / File Folder Tabs) */}
@@ -261,7 +232,7 @@ export default function StudyPage() {
                       e.stopPropagation();
                       speak(currentWord.word);
                     }}
-                    style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '2rem', display: 'inline-flex', alignItems: 'center', opacity: 0.8, padding: '4px', flexShrink: 0 }}
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '3.5rem', display: 'inline-flex', alignItems: 'center', opacity: 0.9, padding: '4px', flexShrink: 0 }}
                     title="발음 듣기"
                   >
                     🔊
