@@ -101,16 +101,18 @@ export default function StudyPage() {
         )}
       </div>
 
-      {/* POS Filter Tabs Row (Horizontal Tab Menu for Mobile/Desktop) */}
+      {/* POS Filter Tabs Row (Horizontal Bookmarks / File Folder Tabs) */}
       <div style={{ 
         display: 'flex', 
-        gap: '0.25rem', 
+        gap: '4px', 
         width: '100%', 
         maxWidth: '600px', 
-        justifyContent: 'center', 
-        marginBottom: '1.5rem',
-        padding: '0 0.25rem',
-        boxSizing: 'border-box'
+        alignItems: 'flex-end', 
+        padding: '0 1rem',
+        boxSizing: 'border-box',
+        zIndex: 3,
+        position: 'relative',
+        bottom: '-2px', // Overlaps the card's top border
       }}>
         {[
           { label: '전체', value: null, color: '#475569' },
@@ -118,31 +120,36 @@ export default function StudyPage() {
           { label: '부사', value: 'ad.', color: 'var(--primary)' },
           { label: '명사', value: 'n.', color: '#f8fafc' },
           { label: '형용사', value: 'a.', color: 'var(--accent)' },
-        ].map((btn) => (
-          <button
-            key={btn.label}
-            onClick={() => handleFilter(btn.value)}
-            style={{
-              flex: 1,
-              height: '40px',
-              borderRadius: '8px',
-              border: 'none',
-              background: filterPos === btn.value ? btn.color : 'rgba(255,255,255,0.03)',
-              color: filterPos === btn.value ? (btn.value === 'n.' ? '#0f172a' : 'white') : '#94a3b8',
-              cursor: 'pointer',
-              fontSize: '0.85rem',
-              fontWeight: '600',
-              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: filterPos === btn.value ? `0 4px 12px ${btn.color}33` : 'none',
-              borderBottom: filterPos === btn.value ? `3px solid ${btn.value === 'n.' ? 'var(--primary)' : 'white'}` : 'none',
-            }}
-          >
-            {btn.label}
-          </button>
-        ))}
+        ].map((btn) => {
+          const isActive = filterPos === btn.value;
+          return (
+            <button
+              key={btn.label}
+              onClick={() => handleFilter(btn.value)}
+              style={{
+                flex: 1,
+                height: isActive ? '42px' : '36px',
+                borderRadius: '8px 8px 0 0',
+                border: isActive ? `2px solid ${btn.color}` : '1px solid rgba(255,255,255,0.1)',
+                borderBottom: isActive ? 'none' : '1px solid rgba(255,255,255,0.1)',
+                background: isActive ? btn.color : 'rgba(255,255,255,0.03)',
+                color: isActive ? (btn.value === 'n.' ? '#0f172a' : 'white') : '#94a3b8',
+                cursor: 'pointer',
+                fontSize: '0.85rem',
+                fontWeight: '600',
+                transition: 'all 0.2s ease',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                boxShadow: isActive ? `0 -4px 10px ${btn.color}33` : 'none',
+                zIndex: isActive ? 4 : 2,
+                paddingBottom: isActive ? '4px' : '0', // Offset the bottom overlap
+              }}
+            >
+              {btn.label}
+            </button>
+          );
+        })}
       </div>
 
       {/* Flashcard Container */}
@@ -154,7 +161,7 @@ export default function StudyPage() {
           perspective: '1000px',
           cursor: 'pointer',
           zIndex: 2,
-          padding: '0 0.25rem',
+          padding: '0 1rem',
           boxSizing: 'border-box'
         }}
         onClick={() => currentWord && setIsFlipped(!isFlipped)}
