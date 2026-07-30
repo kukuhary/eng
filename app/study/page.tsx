@@ -83,13 +83,13 @@ export default function StudyPage() {
   const progressPercent = currentWord ? ((currentIndex) / words.length) * 100 : 0;
 
   return (
-    <div style={{ maxWidth: '800px', margin: '4rem auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto', padding: '1rem 0.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', boxSizing: 'border-box' }}>
       {/* Progress Bar */}
-      <div style={{ width: '100%', maxWidth: '600px', height: '6px', background: 'var(--card-bg)', borderRadius: '3px', marginBottom: '2rem', overflow: 'hidden' }}>
+      <div style={{ width: '100%', maxWidth: '600px', height: '6px', background: 'var(--card-bg)', borderRadius: '3px', marginBottom: '1.5rem', overflow: 'hidden' }}>
         <div style={{ width: `${progressPercent}%`, height: '100%', background: 'var(--primary)', transition: 'width 0.3s' }} />
       </div>
 
-      <div style={{ width: '100%', maxWidth: '600px', marginBottom: '1rem', display: 'flex', justifyContent: 'space-between', color: 'var(--secondary)', fontSize: '0.9rem' }}>
+      <div style={{ width: '100%', maxWidth: '600px', marginBottom: '1rem', padding: '0 0.25rem', display: 'flex', justifyContent: 'space-between', color: 'var(--secondary)', fontSize: '0.9rem', boxSizing: 'border-box' }}>
         <span>Progress: {currentWord ? currentIndex + 1 : 0} / {words.length}</span>
         {currentWord && (
           <span style={{ 
@@ -101,180 +101,185 @@ export default function StudyPage() {
         )}
       </div>
 
-      <div style={{ display: 'flex', gap: '0', width: '100%', justifyContent: 'center', alignItems: 'flex-start' }}>
-        {/* Flashcard with Flip Animation */}
-        <div 
-          style={{
-            flex: '0 0 600px',
-            height: '450px',
-            perspective: '1000px',
-            cursor: 'pointer',
-            zIndex: 2,
-          }}
-          onClick={() => currentWord && setIsFlipped(!isFlipped)}
-        >
-          {currentWord ? (
-            <div style={{
-              position: 'relative',
-              width: '100%',
-              height: '100%',
-              transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
-              transformStyle: 'preserve-3d',
-              transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
-            }}>
-              {/* Front */}
-              <div className="glass" style={{
-                position: 'absolute',
-                width: '100%',
-                height: '100%',
-                backfaceVisibility: 'hidden',
-                display: 'flex',
-                flexDirection: 'column',
-                padding: '2rem',
-                borderWidth: '2px',
-                borderColor: getPosColor(currentWord.pos),
-                justifyContent: 'flex-start',
-                paddingTop: '3rem',
-                overflowY: 'auto',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
-              }}>
-                <div style={{ height: '100px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                    <div style={{ fontSize: '3.5rem', fontWeight: 'bold', textShadow: '0 0 20px rgba(56,189,248,0.2)' }}>{currentWord.word}</div>
-                    <button 
-                      onClick={(e) => {
-                        e.stopPropagation(); // Prevent card from flipping
-                        speak(currentWord.word);
-                      }}
-                      style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '2rem', display: 'inline-flex', alignItems: 'center', opacity: 0.8, padding: '4px' }}
-                      title="발음 듣기"
-                    >
-                      🔊
-                    </button>
-                  </div>
-                  {currentWord.pronunciation && (
-                    <div style={{ fontSize: '1.2rem', color: '#a1a1aa', fontFamily: 'monospace', marginTop: '0.2rem' }}>
-                      {currentWord.pronunciation}
-                    </div>
-                  )}
-                </div>
-                <div style={{ height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <div style={{ fontSize: '1.2rem', color: getPosColor(currentWord.pos), fontStyle: 'italic', opacity: 0.9, fontWeight: '500' }}>{currentWord.pos}</div>
-                </div>
-
-                <div style={{ marginTop: '2rem', width: '100%', textAlign: 'left', padding: '0 1rem' }}>
-                  {currentWord.examples && currentWord.examples.length > 0 ? (
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
-                      {currentWord.examples.map((ex, idx) => (
-                        <div key={idx} style={{ color: 'var(--foreground)', fontSize: '0.95rem', lineHeight: '1.4' }}>
-                          {idx + 1}. {ex.en}
-                        </div>
-                      ))}
-                    </div>
-                  ) : (
-                    <div style={{ color: 'var(--secondary)', fontSize: '0.85rem', fontStyle: 'italic' }}>No examples available.</div>
-                  )}
-                </div>
-              </div>
-
-              {/* Back */}
-              <div className="glass" style={{
-                position: 'absolute',
-                width: '100%',
-                height: '100%',
-                backfaceVisibility: 'hidden',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                transform: 'rotateY(180deg)',
-                padding: '2rem',
-                textAlign: 'center',
-                borderWidth: '2px',
-                borderColor: getPosColor(currentWord.pos),
-                justifyContent: 'flex-start',
-                paddingTop: '3rem',
-                overflowY: 'auto',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
-              }}>
-                <div style={{ height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <div style={{ fontSize: '2.5rem', fontWeight: '600', color: 'var(--primary)' }}>{currentWord.meaning}</div>
-                </div>
-                <div style={{ height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <div style={{ fontSize: '1.2rem', color: getPosColor(currentWord.pos), fontStyle: 'italic', opacity: 0.9, fontWeight: '500' }}>{currentWord.pos}</div>
-                </div>
-                
-                <div style={{ marginTop: '2rem', width: '100%', textAlign: 'left', padding: '0 1rem' }}>
-                  {currentWord.examples && currentWord.examples.length > 0 ? (
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
-                      {currentWord.examples.map((ex, idx) => (
-                        <div key={idx} style={{ color: 'var(--foreground)', fontSize: '0.95rem', lineHeight: '1.4' }}>
-                          {idx + 1}. {ex.ko}
-                        </div>
-                      ))}
-                    </div>
-                  ) : (
-                    <div style={{ color: 'var(--secondary)', fontSize: '0.85rem', fontStyle: 'italic' }}>예문이 없습니다.</div>
-                  )}
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className="glass" style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              해당 품사의 단어가 없습니다.
-            </div>
-          )}
-        </div>
-
-        {/* Bookmark Tabs Sidebar */}
-        <div style={{ 
-          display: 'flex', 
-          flexDirection: 'column', 
-          gap: '0.2rem', 
-          paddingTop: '2rem',
-          marginLeft: '-2px', // Slight overlap with card
-          zIndex: 1
-        }}>
-          {[
-            { label: '전체', value: null, color: '#475569' },
-            { label: '동사', value: 'v.', color: '#fb923c' },
-            { label: '부사', value: 'ad.', color: 'var(--primary)' },
-            { label: '명사', value: 'n.', color: '#f8fafc' },
-            { label: '형용사', value: 'a.', color: 'var(--accent)' },
-          ].map((btn) => (
-            <button
-              key={btn.label}
-              onClick={() => handleFilter(btn.value)}
-              style={{
-                width: '70px',
-                height: '45px',
-                borderRadius: '0 8px 8px 0',
-                border: 'none',
-                background: filterPos === btn.value ? btn.color : 'rgba(255,255,255,0.03)',
-                color: filterPos === btn.value ? (btn.value === 'n.' ? '#0f172a' : 'white') : '#94a3b8',
-                cursor: 'pointer',
-                fontSize: '0.85rem',
-                fontWeight: '600',
-                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                boxShadow: filterPos === btn.value ? `5px 0 15px ${btn.color}44` : 'none',
-                transform: filterPos === btn.value ? 'translateX(5px)' : 'translateX(0)',
-                borderLeft: filterPos === btn.value ? `4px solid ${btn.value === 'n.' ? 'var(--primary)' : 'white'}` : 'none',
-              }}
-            >
-              {btn.label}
-            </button>
-          ))}
-        </div>
+      {/* POS Filter Tabs Row (Horizontal Tab Menu for Mobile/Desktop) */}
+      <div style={{ 
+        display: 'flex', 
+        gap: '0.25rem', 
+        width: '100%', 
+        maxWidth: '600px', 
+        justifyContent: 'center', 
+        marginBottom: '1.5rem',
+        padding: '0 0.25rem',
+        boxSizing: 'border-box'
+      }}>
+        {[
+          { label: '전체', value: null, color: '#475569' },
+          { label: '동사', value: 'v.', color: '#fb923c' },
+          { label: '부사', value: 'ad.', color: 'var(--primary)' },
+          { label: '명사', value: 'n.', color: '#f8fafc' },
+          { label: '형용사', value: 'a.', color: 'var(--accent)' },
+        ].map((btn) => (
+          <button
+            key={btn.label}
+            onClick={() => handleFilter(btn.value)}
+            style={{
+              flex: 1,
+              height: '40px',
+              borderRadius: '8px',
+              border: 'none',
+              background: filterPos === btn.value ? btn.color : 'rgba(255,255,255,0.03)',
+              color: filterPos === btn.value ? (btn.value === 'n.' ? '#0f172a' : 'white') : '#94a3b8',
+              cursor: 'pointer',
+              fontSize: '0.85rem',
+              fontWeight: '600',
+              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: filterPos === btn.value ? `0 4px 12px ${btn.color}33` : 'none',
+              borderBottom: filterPos === btn.value ? `3px solid ${btn.value === 'n.' ? 'var(--primary)' : 'white'}` : 'none',
+            }}
+          >
+            {btn.label}
+          </button>
+        ))}
       </div>
 
-      <div style={{ display: 'flex', gap: '1.5rem', width: '600px', marginTop: '3rem' }}>
+      {/* Flashcard Container */}
+      <div 
+        style={{
+          width: '100%',
+          maxWidth: '600px',
+          height: '420px',
+          perspective: '1000px',
+          cursor: 'pointer',
+          zIndex: 2,
+          padding: '0 0.25rem',
+          boxSizing: 'border-box'
+        }}
+        onClick={() => currentWord && setIsFlipped(!isFlipped)}
+      >
+        {currentWord ? (
+          <div style={{
+            position: 'relative',
+            width: '100%',
+            height: '100%',
+            transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+            transformStyle: 'preserve-3d',
+            transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+          }}>
+            {/* Front */}
+            <div className="glass" style={{
+              position: 'absolute',
+              width: '100%',
+              height: '100%',
+              backfaceVisibility: 'hidden',
+              display: 'flex',
+              flexDirection: 'column',
+              padding: '1.5rem',
+              borderWidth: '2px',
+              borderColor: getPosColor(currentWord.pos),
+              justifyContent: 'flex-start',
+              paddingTop: '2rem',
+              overflowY: 'auto',
+              boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
+              boxSizing: 'border-box'
+            }}>
+              <div style={{ height: '90px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', width: '100%', flexWrap: 'wrap' }}>
+                  <div style={{ fontSize: 'clamp(2rem, 8vw, 3.2rem)', fontWeight: 'bold', textShadow: '0 0 20px rgba(56,189,248,0.2)', wordBreak: 'break-all', textAlign: 'center' }}>{currentWord.word}</div>
+                  <button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      speak(currentWord.word);
+                    }}
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '2rem', display: 'inline-flex', alignItems: 'center', opacity: 0.8, padding: '4px', flexShrink: 0 }}
+                    title="발음 듣기"
+                  >
+                    🔊
+                  </button>
+                </div>
+                {currentWord.pronunciation && (
+                  <div style={{ fontSize: '1.1rem', color: '#a1a1aa', fontFamily: 'monospace', marginTop: '0.1rem' }}>
+                    {currentWord.pronunciation}
+                  </div>
+                )}
+              </div>
+              <div style={{ height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <div style={{ fontSize: '1.1rem', color: getPosColor(currentWord.pos), fontStyle: 'italic', opacity: 0.9, fontWeight: '500' }}>{currentWord.pos}</div>
+              </div>
+
+              <div style={{ marginTop: '1.5rem', width: '100%', textAlign: 'left', padding: '0 0.5rem', boxSizing: 'border-box' }}>
+                {currentWord.examples && currentWord.examples.length > 0 ? (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                    {currentWord.examples.map((ex, idx) => (
+                      <div key={idx} style={{ color: 'var(--foreground)', fontSize: '0.9rem', lineHeight: '1.4' }}>
+                        {idx + 1}. {ex.en}
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div style={{ color: 'var(--secondary)', fontSize: '0.85rem', fontStyle: 'italic' }}>No examples available.</div>
+                )}
+              </div>
+            </div>
+
+            {/* Back */}
+            <div className="glass" style={{
+              position: 'absolute',
+              width: '100%',
+              height: '100%',
+              backfaceVisibility: 'hidden',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              transform: 'rotateY(180deg)',
+              padding: '1.5rem',
+              textAlign: 'center',
+              borderWidth: '2px',
+              borderColor: getPosColor(currentWord.pos),
+              justifyContent: 'flex-start',
+              paddingTop: '2rem',
+              overflowY: 'auto',
+              boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
+              boxSizing: 'border-box'
+            }}>
+              <div style={{ height: '90px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <div style={{ fontSize: 'clamp(1.8rem, 6vw, 2.5rem)', fontWeight: '600', color: 'var(--primary)', wordBreak: 'break-all', padding: '0 0.5rem', textAlign: 'center' }}>{currentWord.meaning}</div>
+                <div style={{ height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '0.2rem' }}>
+                  <div style={{ fontSize: '1.1rem', color: getPosColor(currentWord.pos), fontStyle: 'italic', opacity: 0.9, fontWeight: '500' }}>{currentWord.pos}</div>
+                </div>
+              </div>
+              
+              <div style={{ marginTop: '1.5rem', width: '100%', textAlign: 'left', padding: '0 0.5rem', boxSizing: 'border-box' }}>
+                {currentWord.examples && currentWord.examples.length > 0 ? (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                    {currentWord.examples.map((ex, idx) => (
+                      <div key={idx} style={{ color: 'var(--foreground)', fontSize: '0.9rem', lineHeight: '1.4' }}>
+                        {idx + 1}. {ex.ko}
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div style={{ color: 'var(--secondary)', fontSize: '0.85rem', fontStyle: 'italic' }}>예문이 없습니다.</div>
+                )}
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="glass" style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            해당 품사의 단어가 없습니다.
+          </div>
+        )}
+      </div>
+
+      {/* Action Buttons */}
+      <div style={{ display: 'flex', gap: '1rem', width: '100%', maxWidth: '600px', padding: '0 0.25rem', boxSizing: 'border-box', marginTop: '2rem' }}>
         <button 
           onClick={(e) => { e.stopPropagation(); currentWord && handleNext('learning'); }} 
           className="btn btn-secondary" 
           disabled={!currentWord}
-          style={{ flex: 1, padding: '1.25rem', justifyContent: 'center' }}
+          style={{ flex: 1, padding: '1rem', justifyContent: 'center', fontSize: '1rem', whiteSpace: 'nowrap' }}
         >
           아직 헷갈려요 ⚡
         </button>
@@ -282,7 +287,7 @@ export default function StudyPage() {
           onClick={(e) => { e.stopPropagation(); currentWord && handleNext('mastered'); }} 
           className="btn btn-primary" 
           disabled={!currentWord}
-          style={{ flex: 1, padding: '1.25rem', background: 'var(--success)', color: 'white', justifyContent: 'center' }}
+          style={{ flex: 1, padding: '1rem', background: 'var(--success)', color: 'white', justifyContent: 'center', fontSize: '1rem', whiteSpace: 'nowrap' }}
         >
           확실히 알아요 🏆
         </button>

@@ -14,19 +14,19 @@ export default function Navbar() {
 
   return (
     <nav className="glass" style={{
-      margin: '1rem',
-      padding: '0.75rem 2rem',
+      margin: '0.5rem',
+      padding: '0.75rem 1rem',
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
       position: 'sticky',
-      top: '1rem',
+      top: '0.5rem',
       zIndex: 100,
     }}>
-      <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--primary)' }}>
+      <div style={{ fontSize: '1.3rem', fontWeight: 'bold', color: 'var(--primary)' }}>
         VocaPro
       </div>
-      <div style={{ display: 'flex', gap: '2rem' }}>
+      <div style={{ display: 'flex', gap: '1rem' }}>
         {navItems.map((item) => (
           <Link
             key={item.href}
