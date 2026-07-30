@@ -94,19 +94,8 @@ export default function StudyPage() {
   if (loading) return <div style={{ textAlign: 'center', marginTop: '4rem' }}>로딩 중...</div>;
   if (allWords.length === 0) return <div style={{ textAlign: 'center', marginTop: '4rem' }}>학습할 단어가 없습니다.</div>;
 
-  if (finished) {
-    return (
-      <div style={{ textAlign: 'center', marginTop: '4rem' }}>
-        <h1 style={{ marginBottom: '1rem' }}>🎉 학습 완료!</h1>
-        <p style={{ color: 'var(--secondary)', marginBottom: '2rem' }}>선택한 범위의 학습을 마쳤습니다.</p>
-        <button onClick={() => setFinished(false)} className="btn btn-secondary" style={{ marginRight: '1rem' }}>다시 하기</button>
-        <Link href="/" className="btn btn-primary">대시보드로 돌아가기</Link>
-      </div>
-    );
-  }
-
   const currentWord = words[currentIndex] || null;
-  const progressPercent = currentWord ? ((currentIndex) / words.length) * 100 : 0;
+  const progressPercent = finished ? 100 : (currentWord ? ((currentIndex) / words.length) * 100 : 0);
 
   const categoryWords = filterPos ? allWords.filter(w => w.pos === filterPos) : allWords;
   const masteredCount = categoryWords.filter(w => w.status === 'mastered').length;
@@ -120,10 +109,10 @@ export default function StudyPage() {
 
       <div style={{ width: '100%', maxWidth: '600px', marginBottom: '1rem', padding: '0 0.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: 'var(--secondary)', fontSize: '0.9rem', boxSizing: 'border-box' }}>
         <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-          <span>Progress: {currentWord ? currentIndex + 1 : 0} / {words.length}</span>
+          <span>Progress: {finished ? words.length : (currentWord ? currentIndex + 1 : 0)} / {words.length}</span>
           <span style={{ color: 'var(--success)', fontWeight: '500' }}>(완료: {masteredCount}개)</span>
         </div>
-        {currentWord && (
+        {!finished && currentWord && (
           <span style={{ 
             padding: '0.2rem 0.6rem', 
             background: 'rgba(255,255,255,0.05)', 
@@ -191,14 +180,54 @@ export default function StudyPage() {
           maxWidth: '600px',
           height: '420px',
           perspective: '1000px',
-          cursor: 'pointer',
+          cursor: finished ? 'default' : 'pointer',
           zIndex: 2,
           padding: '0 1rem',
           boxSizing: 'border-box'
         }}
-        onClick={() => currentWord && setIsFlipped(!isFlipped)}
+        onClick={() => !finished && currentWord && setIsFlipped(!isFlipped)}
       >
-        {currentWord ? (
+        {finished ? (
+          <div className="glass" style={{
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '2rem',
+            textAlign: 'center',
+            borderColor: 'var(--primary)',
+            borderWidth: '2px',
+            borderStyle: 'solid',
+            boxSizing: 'border-box',
+            borderRadius: '12px'
+          }}>
+            <h1 style={{ fontSize: '2.2rem', marginBottom: '1rem' }}>🎉 학습 완료!</h1>
+            <p style={{ color: 'var(--secondary)', marginBottom: '2.5rem', fontSize: '1rem' }}>선택한 범위의 학습을 마쳤습니다.</p>
+            <div style={{ display: 'flex', gap: '1rem', width: '100%', justifyContent: 'center', maxWidth: '360px' }}>
+              <button 
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setCurrentIndex(0);
+                  setFinished(false);
+                  setIsFlipped(false);
+                }} 
+                className="btn btn-secondary"
+                style={{ flex: 1, padding: '0.8rem', fontSize: '0.95rem', justifyContent: 'center' }}
+              >
+                다시 하기
+              </button>
+              <Link 
+                href="/" 
+                className="btn btn-primary"
+                style={{ flex: 1, padding: '0.8rem', fontSize: '0.95rem', justifyContent: 'center', textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}
+              >
+                대시보드
+              </Link>
+            </div>
+          </div>
+        ) : currentWord ? (
           <div style={{
             position: 'relative',
             width: '100%',
@@ -312,24 +341,26 @@ export default function StudyPage() {
       </div>
 
       {/* Action Buttons */}
-      <div style={{ display: 'flex', gap: '1rem', width: '100%', maxWidth: '600px', padding: '0 0.25rem', boxSizing: 'border-box', marginTop: '2rem' }}>
-        <button 
-          onClick={(e) => { e.stopPropagation(); currentWord && handleNext('learning'); }} 
-          className="btn btn-secondary" 
-          disabled={!currentWord}
-          style={{ flex: 1, padding: '1rem', justifyContent: 'center', fontSize: '1rem', whiteSpace: 'nowrap' }}
-        >
-          아직 헷갈려요
-        </button>
-        <button 
-          onClick={(e) => { e.stopPropagation(); currentWord && handleNext('mastered'); }} 
-          className="btn btn-primary" 
-          disabled={!currentWord}
-          style={{ flex: 1, padding: '1rem', background: 'var(--success)', color: 'white', justifyContent: 'center', fontSize: '1rem', whiteSpace: 'nowrap' }}
-        >
-          확실히 알아요
-        </button>
-      </div>
+      {!finished && (
+        <div style={{ display: 'flex', gap: '1rem', width: '100%', maxWidth: '600px', padding: '0 0.25rem', boxSizing: 'border-box', marginTop: '2rem' }}>
+          <button 
+            onClick={(e) => { e.stopPropagation(); currentWord && handleNext('learning'); }} 
+            className="btn btn-secondary" 
+            disabled={!currentWord}
+            style={{ flex: 1, padding: '1rem', justifyContent: 'center', fontSize: '1rem', whiteSpace: 'nowrap' }}
+          >
+            아직 헷갈려요
+          </button>
+          <button 
+            onClick={(e) => { e.stopPropagation(); currentWord && handleNext('mastered'); }} 
+            className="btn btn-primary" 
+            disabled={!currentWord}
+            style={{ flex: 1, padding: '1rem', background: 'var(--success)', color: 'white', justifyContent: 'center', fontSize: '1rem', whiteSpace: 'nowrap' }}
+          >
+            확실히 알아요
+          </button>
+        </div>
+      )}
     </div>
   );
 }
