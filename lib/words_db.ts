@@ -93,3 +93,8 @@ export function deleteWord(id: string): boolean {
   const result = db.prepare('DELETE FROM words WHERE id = ?').run(id);
   return result.changes > 0;
 }
+
+export function resetAllStatuses(): boolean {
+  const result = db.prepare("UPDATE words SET status = 'new'").run();
+  return result.changes > 0;
+}

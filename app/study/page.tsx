@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { getWordsAction, updateWordStatusAction } from '@/lib/actions';
+import { getWordsAction, updateWordStatusAction, resetAllStatusesAction } from '@/lib/actions';
 import { DBWord as Word } from '@/lib/words_db';
 import { getPosColor } from '@/lib/constants';
 import Link from 'next/link';
@@ -65,6 +65,32 @@ export default function StudyPage() {
     }
   };
 
+  const handleResetProgress = async () => {
+    if (!confirm('모든 단어의 학습 상태를 초기화(미학습 상태로 변경)하시겠습니까?')) {
+      return;
+    }
+    setLoading(true);
+    await resetAllStatusesAction();
+    const data = await getWordsAction() as Word[];
+    
+    const sorted = [...data].sort((a, b) => {
+      const orderA = POS_ORDER[a.pos as keyof typeof POS_ORDER] ?? 99;
+      const orderB = POS_ORDER[b.pos as keyof typeof POS_ORDER] ?? 99;
+      return orderA - orderB;
+    });
+
+    setAllWords(sorted);
+    
+    const baseList = sorted.filter(w => w.status !== 'mastered');
+    const filtered = filterPos ? baseList.filter(w => w.pos === filterPos) : baseList;
+    setWords(filtered.length > 0 ? filtered : (filterPos ? [] : sorted));
+    
+    setCurrentIndex(0);
+    setIsFlipped(false);
+    setFinished(false);
+    setLoading(false);
+  };
+
   if (loading) return <div style={{ textAlign: 'center', marginTop: '4rem' }}>로딩 중...</div>;
   if (allWords.length === 0) return <div style={{ textAlign: 'center', marginTop: '4rem' }}>학습할 단어가 없습니다.</div>;
 
@@ -74,13 +100,23 @@ export default function StudyPage() {
         <h1 style={{ marginBottom: '1rem' }}>🎉 학습 완료!</h1>
         <p style={{ color: 'var(--secondary)', marginBottom: '2rem' }}>선택한 범위의 학습을 마쳤습니다.</p>
         <button onClick={() => setFinished(false)} className="btn btn-secondary" style={{ marginRight: '1rem' }}>다시 하기</button>
-        <Link href="/" className="btn btn-primary">대시보드로 돌아가기</Link>
+        <Link href="/" className="btn btn-primary" style={{ marginRight: '1rem' }}>대시보드로 돌아가기</Link>
+        <button 
+          onClick={handleResetProgress} 
+          className="btn btn-secondary" 
+          style={{ background: 'rgba(239, 68, 68, 0.1)', border: '1px solid rgba(239, 68, 68, 0.3)', color: '#ef4444' }}
+        >
+          진도 초기화 🔄
+        </button>
       </div>
     );
   }
 
   const currentWord = words[currentIndex] || null;
   const progressPercent = currentWord ? ((currentIndex) / words.length) * 100 : 0;
+
+  const categoryWords = filterPos ? allWords.filter(w => w.pos === filterPos) : allWords;
+  const masteredCount = categoryWords.filter(w => w.status === 'mastered').length;
 
   return (
     <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto', padding: '1rem 0.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', boxSizing: 'border-box' }}>
@@ -89,16 +125,41 @@ export default function StudyPage() {
         <div style={{ width: `${progressPercent}%`, height: '100%', background: 'var(--primary)', transition: 'width 0.3s' }} />
       </div>
 
-      <div style={{ width: '100%', maxWidth: '600px', marginBottom: '1rem', padding: '0 0.25rem', display: 'flex', justifyContent: 'space-between', color: 'var(--secondary)', fontSize: '0.9rem', boxSizing: 'border-box' }}>
-        <span>Progress: {currentWord ? currentIndex + 1 : 0} / {words.length}</span>
-        {currentWord && (
-          <span style={{ 
-            padding: '0.2rem 0.6rem', 
-            background: 'rgba(255,255,255,0.05)', 
-            borderRadius: '1rem',
-            color: currentWord.level === 'high' ? 'var(--accent)' : 'var(--primary)'
-          }}>{currentWord.level.toUpperCase()}</span>
-        )}
+      <div style={{ width: '100%', maxWidth: '600px', marginBottom: '1rem', padding: '0 0.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: 'var(--secondary)', fontSize: '0.9rem', boxSizing: 'border-box' }}>
+        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
+          <span>Progress: {currentWord ? currentIndex + 1 : 0} / {words.length}</span>
+          <span style={{ color: 'var(--success)', fontWeight: '500' }}>(완료: {masteredCount}개)</span>
+        </div>
+        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+          <button 
+            onClick={handleResetProgress}
+            style={{
+              background: 'rgba(239, 68, 68, 0.1)',
+              border: '1px solid rgba(239, 68, 68, 0.3)',
+              color: '#ef4444',
+              fontSize: '0.75rem',
+              padding: '0.25rem 0.5rem',
+              borderRadius: '6px',
+              cursor: 'pointer',
+              fontWeight: '600',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '2px',
+              transition: 'all 0.2s',
+            }}
+            title="모든 단어의 학습 진도를 초기화합니다"
+          >
+            초기화 🔄
+          </button>
+          {currentWord && (
+            <span style={{ 
+              padding: '0.2rem 0.6rem', 
+              background: 'rgba(255,255,255,0.05)', 
+              borderRadius: '1rem',
+              color: currentWord.level === 'high' ? 'var(--accent)' : 'var(--primary)'
+            }}>{currentWord.level.toUpperCase()}</span>
+          )}
+        </div>
       </div>
 
       {/* POS Filter Tabs Row (Horizontal Bookmarks / File Folder Tabs) */}
