@@ -155,7 +155,7 @@ export default function Navbar() {
           }} onClick={(e) => e.stopPropagation()}>
             <h3 style={{ marginBottom: '1.2rem', color: 'var(--foreground)', fontSize: '1.1rem' }}>너무도 소중한 내 친구들에게</h3>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginBottom: '1.2rem' }}>
-              {['경준', '남규', '서아', '서준', '민경', '소윤'].map(name => (
+              {['서준', '소윤', '서아', '민경', '남규', '경준'].map(name => (
                 <button
                   key={name}
                   onClick={() => handleLogin(name)}

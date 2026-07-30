@@ -136,7 +136,16 @@ export function getAllUsersStats(): UserStats[] {
     LEFT JOIN user_word_status uws ON u.id = uws.userId
     WHERE u.id != 'admin'
     GROUP BY u.id, u.username
-    ORDER BY masteredCount DESC
+    ORDER BY masteredCount DESC, 
+             CASE u.username
+               WHEN '서준' THEN 1
+               WHEN '소윤' THEN 2
+               WHEN '서아' THEN 3
+               WHEN '민경' THEN 4
+               WHEN '남규' THEN 5
+               WHEN '경준' THEN 6
+               ELSE 7
+             END ASC
   `;
   return db.prepare(sql).all() as UserStats[];
 }

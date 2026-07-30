@@ -93,7 +93,7 @@ tables.forEach(table => {
 
 // Seed admin user and the 6 default users, then migrate existing statuses
 try {
-  const usersToSeed = ['admin', '경준', '남규', '서아', '서준', '민경', '소윤'];
+  const usersToSeed = ['admin', '서준', '소윤', '서아', '민경', '남규', '경준'];
   const insertUser = db.prepare(`
     INSERT OR IGNORE INTO users (id, username, createdAt, reg_dt)
     VALUES (?, ?, ?, ?)
