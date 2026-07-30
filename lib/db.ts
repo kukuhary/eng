@@ -91,14 +91,19 @@ tables.forEach(table => {
   }
 });
 
-// Seed admin user and migrate existing statuses
+// Seed admin user and the 6 default users, then migrate existing statuses
 try {
-  db.prepare(`
+  const usersToSeed = ['admin', '경준', '남규', '서아', '서준', '민경', '소윤'];
+  const insertUser = db.prepare(`
     INSERT OR IGNORE INTO users (id, username, createdAt, reg_dt)
-    VALUES ('admin', 'admin', ?, ?)
-  `).run(Date.now(), Date.now());
+    VALUES (?, ?, ?, ?)
+  `);
 
-  // Count existing statuses. If 0, copy from words table.
+  usersToSeed.forEach(username => {
+    insertUser.run(username, username, Date.now(), Date.now());
+  });
+
+  // Count existing statuses. If 0, copy from words table for admin.
   const countStatus = db.prepare('SELECT COUNT(*) as count FROM user_word_status').get() as { count: number };
   if (countStatus && countStatus.count === 0) {
     db.prepare(`

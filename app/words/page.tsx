@@ -16,7 +16,8 @@ export default function WordsPage() {
 
   const fetchWords = async () => {
     setLoading(true);
-    const data = await getWordsAction();
+    const storedUser = typeof window !== 'undefined' ? (localStorage.getItem('voca_user') || 'admin') : 'admin';
+    const data = await getWordsAction(storedUser);
     setWords(data as Word[]);
     setLoading(false);
   };

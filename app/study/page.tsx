@@ -17,11 +17,14 @@ export default function StudyPage() {
   const [finished, setFinished] = useState(false);
   const [loading, setLoading] = useState(true);
   const [filterPos, setFilterPos] = useState<string | null>('v.');
+  const [userId, setUserId] = useState<string>('admin');
 
   useEffect(() => {
     const fetchWords = async () => {
       setLoading(true);
-      const data = await getWordsAction() as Word[];
+      const storedUser = typeof window !== 'undefined' ? (localStorage.getItem('voca_user') || 'admin') : 'admin';
+      setUserId(storedUser);
+      const data = await getWordsAction(storedUser) as Word[];
       
       // Sort words by Verb, Adverb, Noun, Adjective
       const sorted = [...data].sort((a, b) => {
@@ -54,7 +57,7 @@ export default function StudyPage() {
 
   const handleNext = async (status?: Word['status']) => {
     if (status) {
-      await updateWordStatusAction(words[currentIndex].id, status);
+      await updateWordStatusAction(words[currentIndex].id, status, userId);
     }
     
     if (currentIndex < words.length - 1) {
@@ -70,8 +73,8 @@ export default function StudyPage() {
       return;
     }
     setLoading(true);
-    await resetAllStatusesAction();
-    const data = await getWordsAction() as Word[];
+    await resetAllStatusesAction(userId);
+    const data = await getWordsAction(userId) as Word[];
     
     const sorted = [...data].sort((a, b) => {
       const orderA = POS_ORDER[a.pos as keyof typeof POS_ORDER] ?? 99;
