@@ -11,7 +11,7 @@ export interface Word {
   examples?: { en: string; ko: string; }[] | any;
 }
 
-const SEED_WORDS_RAW: Omit<Word, 'id' | 'status' | 'createdAt'>[] = [
+const SEED_WORDS_RAW: any[] = [
   {
     "word": "a",
     "pos": "a.",
@@ -18007,7 +18007,7 @@ const SEED_WORDS_RAW: Omit<Word, 'id' | 'status' | 'createdAt'>[] = [
   }
 ];
 
-export const SEED_WORDS = SEED_WORDS_RAW.map(sw => ({
+export const SEED_WORDS: Omit<Word, 'id' | 'status' | 'createdAt'>[] = SEED_WORDS_RAW.map(sw => ({
   ...sw,
   examples: (EXAMPLES as any)[sw.word] || sw.examples
 }));
