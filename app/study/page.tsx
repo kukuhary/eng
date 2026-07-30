@@ -5,6 +5,7 @@ import { getWordsAction, updateWordStatusAction } from '@/lib/actions';
 import { DBWord as Word } from '@/lib/words_db';
 import { getPosColor } from '@/lib/constants';
 import Link from 'next/link';
+import { speak } from '@/lib/tts';
 
 const POS_ORDER = { 'v.': 0, 'ad.': 1, 'n.': 2, 'a.': 3 };
 
@@ -138,7 +139,19 @@ export default function StudyPage() {
                 boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
               }}>
                 <div style={{ height: '100px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <div style={{ fontSize: '3.5rem', fontWeight: 'bold', textShadow: '0 0 20px rgba(56,189,248,0.2)' }}>{currentWord.word}</div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                    <div style={{ fontSize: '3.5rem', fontWeight: 'bold', textShadow: '0 0 20px rgba(56,189,248,0.2)' }}>{currentWord.word}</div>
+                    <button 
+                      onClick={(e) => {
+                        e.stopPropagation(); // Prevent card from flipping
+                        speak(currentWord.word);
+                      }}
+                      style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '2rem', display: 'inline-flex', alignItems: 'center', opacity: 0.8, padding: '4px' }}
+                      title="발음 듣기"
+                    >
+                      🔊
+                    </button>
+                  </div>
                   {currentWord.pronunciation && (
                     <div style={{ fontSize: '1.2rem', color: '#a1a1aa', fontFamily: 'monospace', marginTop: '0.2rem' }}>
                       {currentWord.pronunciation}

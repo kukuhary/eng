@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { getWordsAction, addWordAction } from '@/lib/actions';
 import { DBWord as Word } from '@/lib/words_db';
 import { getPosColor } from '@/lib/constants';
+import { speak } from '@/lib/tts';
 
 export default function WordsPage() {
   const [words, setWords] = useState<Word[]>([]);
@@ -86,9 +87,19 @@ export default function WordsPage() {
           {words.map(w => (
             <div key={w.id} className="glass" style={{ padding: '1rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', border: `1px solid ${getPosColor(w.pos)}` }}>
               <div>
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{w.word}</span>
-                  <span style={{ color: getPosColor(w.pos), fontStyle: 'italic', fontSize: '0.9rem', fontWeight: '500' }}>{w.pos}</span>
+                  <button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      speak(w.word);
+                    }}
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '1.1rem', display: 'inline-flex', alignItems: 'center', opacity: 0.8, padding: '0 4px' }}
+                    title="발음 듣기"
+                  >
+                    🔊
+                  </button>
+                  <span style={{ color: getPosColor(w.pos), fontStyle: 'italic', fontSize: '0.9rem', fontWeight: '500', marginLeft: '0.2rem' }}>{w.pos}</span>
                 </div>
                 {w.pronunciation && (
                   <div style={{ fontSize: '0.9rem', color: '#a1a1aa', fontFamily: 'monospace', margin: '0.1rem 0 0.3rem 0' }}>
