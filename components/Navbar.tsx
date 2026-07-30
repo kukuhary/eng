@@ -153,7 +153,7 @@ export default function Navbar() {
             border: '2px solid rgba(255, 255, 255, 0.1)',
             textAlign: 'center',
           }} onClick={(e) => e.stopPropagation()}>
-            <h3 style={{ marginBottom: '1.2rem', color: 'var(--foreground)', fontSize: '1.1rem' }}>사용자를 선택해주세요</h3>
+            <h3 style={{ marginBottom: '1.2rem', color: 'var(--foreground)', fontSize: '1.1rem' }}>너무도 소중한 내 친구들에게</h3>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginBottom: '1.2rem' }}>
               {['경준', '남규', '서아', '서준', '민경', '소윤'].map(name => (
                 <button
