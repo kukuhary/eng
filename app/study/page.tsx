@@ -225,24 +225,26 @@ export default function StudyPage() {
               boxSizing: 'border-box'
             }}>
               <div style={{ minHeight: '90px', height: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginBottom: '0.5rem' }}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', width: '100%', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
                   <div style={{ fontSize: 'clamp(2rem, 8vw, 3.2rem)', fontWeight: 'bold', textShadow: '0 0 20px rgba(56,189,248,0.2)', wordBreak: 'break-all', textAlign: 'center' }}>{currentWord.word}</div>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.3rem', marginTop: '0.3rem' }}>
                   <button 
                     onClick={(e) => {
                       e.stopPropagation();
                       speak(currentWord.word);
                     }}
-                    style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '3.5rem', display: 'inline-flex', alignItems: 'center', opacity: 0.9, padding: '4px', flexShrink: 0 }}
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '1.6rem', display: 'inline-flex', alignItems: 'center', opacity: 0.8, padding: '2px', flexShrink: 0 }}
                     title="발음 듣기"
                   >
                     🔊
                   </button>
+                  {currentWord.pronunciation && (
+                    <div style={{ fontSize: '1.2rem', color: '#a1a1aa', fontFamily: 'monospace' }}>
+                      {currentWord.pronunciation}
+                    </div>
+                  )}
                 </div>
-                {currentWord.pronunciation && (
-                  <div style={{ fontSize: '1.1rem', color: '#a1a1aa', fontFamily: 'monospace', marginTop: '0.1rem' }}>
-                    {currentWord.pronunciation}
-                  </div>
-                )}
               </div>
 
               <div style={{ marginTop: '1.5rem', width: '100%', textAlign: 'left', padding: '0 0.5rem', boxSizing: 'border-box' }}>
