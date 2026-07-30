@@ -192,7 +192,7 @@ export default function StudyPage() {
               boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
               boxSizing: 'border-box'
             }}>
-              <div style={{ height: '90px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+              <div style={{ minHeight: '90px', height: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginBottom: '0.5rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', width: '100%', flexWrap: 'wrap' }}>
                   <div style={{ fontSize: 'clamp(2rem, 8vw, 3.2rem)', fontWeight: 'bold', textShadow: '0 0 20px rgba(56,189,248,0.2)', wordBreak: 'break-all', textAlign: 'center' }}>{currentWord.word}</div>
                   <button 
@@ -211,9 +211,6 @@ export default function StudyPage() {
                     {currentWord.pronunciation}
                   </div>
                 )}
-              </div>
-              <div style={{ height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <div style={{ fontSize: '1.1rem', color: getPosColor(currentWord.pos), fontStyle: 'italic', opacity: 0.9, fontWeight: '500' }}>{currentWord.pos}</div>
               </div>
 
               <div style={{ marginTop: '1.5rem', width: '100%', textAlign: 'left', padding: '0 0.5rem', boxSizing: 'border-box' }}>
