@@ -3,8 +3,8 @@
 import { getAllWords, addWord as dbAddWord, updateWordStatus as dbUpdateWordStatus, resetAllStatuses as dbResetAllStatuses, DBWord } from './words_db';
 import { revalidatePath } from 'next/cache';
 
-export async function getWordsAction() {
-  return getAllWords();
+export async function getWordsAction(userId?: string) {
+  return getAllWords(userId);
 }
 
 export async function addWordAction(word: Omit<DBWord, 'id' | 'status' | 'createdAt'>) {
@@ -13,16 +13,16 @@ export async function addWordAction(word: Omit<DBWord, 'id' | 'status' | 'create
   return newWord;
 }
 
-export async function updateWordStatusAction(id: string, status: 'new' | 'learning' | 'mastered') {
-  const success = dbUpdateWordStatus(id, status);
+export async function updateWordStatusAction(id: string, status: 'new' | 'learning' | 'mastered', userId?: string) {
+  const success = dbUpdateWordStatus(id, status, userId);
   if (success) {
     revalidatePath('/words');
   }
   return success;
 }
 
-export async function resetAllStatusesAction() {
-  const success = dbResetAllStatuses();
+export async function resetAllStatusesAction(userId?: string) {
+  const success = dbResetAllStatuses(userId);
   if (success) {
     revalidatePath('/words');
     revalidatePath('/study');
