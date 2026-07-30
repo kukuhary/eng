@@ -53,13 +53,13 @@ export function getWordById(id: string, userId: string = 'admin'): DBWord | null
 
 export function updateWordStatus(id: string, status: string, userId: string = 'admin'): boolean {
   const sql = `
-    INSERT INTO user_word_status (userId, wordId, status, updatedAt)
-    VALUES (?, ?, ?, ?)
+    INSERT INTO user_word_status (userId, wordId, status, updatedAt, reg_dt)
+    VALUES (?, ?, ?, ?, ?)
     ON CONFLICT(userId, wordId) DO UPDATE SET
       status = excluded.status,
       updatedAt = excluded.updatedAt
   `;
-  const result = db.prepare(sql).run(userId, id, status, Date.now());
+  const result = db.prepare(sql).run(userId, id, status, Date.now(), Date.now());
   return result.changes > 0;
 }
 
@@ -90,17 +90,17 @@ export async function addWord(word: Omit<DBWord, 'id' | 'status' | 'createdAt'>)
 
   const insert = db.transaction(() => {
     db.prepare(`
-      INSERT INTO words (id, word, pos, meaning, level, status, createdAt, pronunciation)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-    `).run(id, word.word, word.pos, word.meaning, word.level, status, createdAt, pronunciation);
+      INSERT INTO words (id, word, pos, meaning, level, status, createdAt, pronunciation, reg_dt)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `).run(id, word.word, word.pos, word.meaning, word.level, status, createdAt, pronunciation, Date.now());
 
     if (word.examples && word.examples.length > 0) {
       const insertEx = db.prepare(`
-        INSERT INTO examples (id, en, ko, wordId)
-        VALUES (?, ?, ?, ?)
+        INSERT INTO examples (id, en, ko, wordId, reg_dt)
+        VALUES (?, ?, ?, ?, ?)
       `);
       word.examples.forEach((ex, index) => {
-        insertEx.run(`ex-${id}-${index}`, ex.en, ex.ko, id);
+        insertEx.run(`ex-${id}-${index}`, ex.en, ex.ko, id, Date.now());
       });
     }
 
