@@ -1,6 +1,13 @@
 'use server';
 
-import { getAllWords, addWord as dbAddWord, updateWordStatus as dbUpdateWordStatus, resetAllStatuses as dbResetAllStatuses, DBWord } from './words_db';
+import { 
+  getAllWords, 
+  addWord as dbAddWord, 
+  updateWordStatus as dbUpdateWordStatus, 
+  resetAllStatuses as dbResetAllStatuses, 
+  getAllUsersStats,
+  DBWord 
+} from './words_db';
 import { revalidatePath } from 'next/cache';
 
 export async function getWordsAction(userId?: string) {
@@ -28,4 +35,8 @@ export async function resetAllStatusesAction(userId?: string) {
     revalidatePath('/study');
   }
   return success;
+}
+
+export async function getAllUsersStatsAction() {
+  return getAllUsersStats();
 }

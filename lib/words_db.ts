@@ -120,3 +120,23 @@ export function resetAllStatuses(userId: string = 'admin'): boolean {
   db.prepare("UPDATE words SET status = 'new'").run(); // keep for fallback / legacy compatibility
   return true;
 }
+
+export interface UserStats {
+  username: string;
+  masteredCount: number;
+  totalCount: number;
+}
+
+export function getAllUsersStats(): UserStats[] {
+  const sql = `
+    SELECT u.username,
+           COUNT(CASE WHEN uws.status = 'mastered' THEN 1 END) as masteredCount,
+           (SELECT COUNT(*) FROM words) as totalCount
+    FROM users u
+    LEFT JOIN user_word_status uws ON u.id = uws.userId
+    WHERE u.id != 'admin'
+    GROUP BY u.id, u.username
+    ORDER BY masteredCount DESC
+  `;
+  return db.prepare(sql).all() as UserStats[];
+}
