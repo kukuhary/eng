@@ -58,6 +58,9 @@ export default function StudyPage() {
   const handleNext = async (status?: Word['status']) => {
     if (status) {
       await updateWordStatusAction(words[currentIndex].id, status, userId);
+      // 클라이언트 상태도 즉시 반영
+      const updatedId = words[currentIndex].id;
+      setAllWords(prev => prev.map(w => w.id === updatedId ? { ...w, status } : w));
     }
     
     if (currentIndex < words.length - 1) {
