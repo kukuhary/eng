@@ -295,55 +295,60 @@ export default function StudyPage() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              justifyContent: 'center',
-              padding: '2rem',
+              padding: '1.5rem 2rem',
               boxSizing: 'border-box'
             }}>
-              <span style={{ 
-                alignSelf: 'flex-start', 
-                fontSize: '0.85rem', 
-                fontWeight: 'bold',
-                color: getPosColor(currentWord.pos),
-                background: 'rgba(255,255,255,0.05)',
-                padding: '0.2rem 0.6rem',
-                borderRadius: '4px'
-              }}>
-                {currentWord.pos}
-              </span>
+              {/* Top Row: POS Tag */}
+              <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-start', marginBottom: '1rem' }}>
+                <span style={{ 
+                  fontSize: '0.85rem', 
+                  fontWeight: 'bold',
+                  color: getPosColor(currentWord.pos),
+                  background: 'rgba(255,255,255,0.05)',
+                  padding: '0.2rem 0.6rem',
+                  borderRadius: '4px'
+                }}>
+                  {currentWord.pos}
+                </span>
+              </div>
               
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', margin: 'auto 0' }}>
-                <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', margin: 0, letterSpacing: '1px' }}>
-                  {currentWord.word}
-                </h2>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    speak(currentWord.word);
-                  }}
-                  style={{
-                    background: 'none',
-                    border: 'none',
-                    fontSize: '1.5rem',
-                    cursor: 'pointer',
-                    padding: '0.2rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: 'var(--primary)',
-                  }}
-                  title="발음 듣기"
-                >
-                  🔊
-                </button>
+              {/* Main Text Center Container (Synchronized with Back side) */}
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '1rem', width: '100%' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
+                  <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', margin: 0, letterSpacing: '1px', color: '#ffffff' }}>
+                    {currentWord.word}
+                  </h2>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      speak(currentWord.word);
+                    }}
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      fontSize: '1.5rem',
+                      cursor: 'pointer',
+                      padding: '0.2rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: 'var(--primary)',
+                    }}
+                    title="발음 듣기"
+                  >
+                    🔊
+                  </button>
+                </div>
+
+                {currentWord.pronunciation && (
+                  <div style={{ color: 'var(--secondary)', fontSize: '1rem', marginTop: '0.4rem' }}>
+                    [{currentWord.pronunciation}]
+                  </div>
+                )}
               </div>
 
-              {currentWord.pronunciation && (
-                <div style={{ color: 'var(--secondary)', fontSize: '1rem', marginTop: '-1rem', marginBottom: '1rem' }}>
-                  [{currentWord.pronunciation}]
-                </div>
-              )}
-              
-              <p style={{ color: 'var(--secondary)', fontSize: '0.85rem', marginTop: 'auto' }}>
+              {/* Bottom Tip */}
+              <p style={{ color: 'var(--secondary)', fontSize: '0.85rem', marginTop: 'auto', marginBottom: '0.5rem' }}>
                 💡 카드를 클릭하면 뜻을 볼 수 있습니다.
               </p>
             </div>
@@ -359,39 +364,45 @@ export default function StudyPage() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              justifyContent: 'center',
-              padding: '1.5rem',
+              padding: '1.5rem 2rem',
               boxSizing: 'border-box'
             }}>
-              <span style={{ 
-                alignSelf: 'flex-start', 
-                fontSize: '0.85rem', 
-                fontWeight: 'bold',
-                color: getPosColor(currentWord.pos),
-                background: 'rgba(255,255,255,0.05)',
-                padding: '0.2rem 0.6rem',
-                borderRadius: '4px'
-              }}>
-                {currentWord.pos}
-              </span>
+              {/* Top Row: POS Tag */}
+              <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-start', marginBottom: '1rem' }}>
+                <span style={{ 
+                  fontSize: '0.85rem', 
+                  fontWeight: 'bold',
+                  color: getPosColor(currentWord.pos),
+                  background: 'rgba(255,255,255,0.05)',
+                  padding: '0.2rem 0.6rem',
+                  borderRadius: '4px'
+                }}>
+                  {currentWord.pos}
+                </span>
+              </div>
               
-              <div style={{ margin: 'auto 0', textAlign: 'center', width: '100%' }}>
-                <h3 style={{ fontSize: '1.8rem', color: 'var(--accent)', margin: '0 0 1rem 0' }}>
+              {/* Main Text Center Container (Synchronized with Front side) */}
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '1rem', width: '100%' }}>
+                <h3 style={{ fontSize: '2.2rem', fontWeight: 'bold', color: 'var(--accent)', margin: 0, textAlign: 'center' }}>
                   {currentWord.meaning}
                 </h3>
-                
-                {/* Examples */}
+              </div>
+
+              {/* Bottom Examples Container */}
+              <div style={{ width: '100%', marginTop: 'auto', marginBottom: '0.5rem' }}>
                 {currentWord.examples && currentWord.examples.length > 0 ? (
-                  <div style={{ textAlign: 'left', background: 'rgba(0,0,0,0.2)', padding: '0.75rem', borderRadius: '8px', fontSize: '0.85rem' }}>
+                  <div style={{ textAlign: 'left', background: 'rgba(0,0,0,0.2)', padding: '0.75rem 1rem', borderRadius: '8px', fontSize: '0.85rem' }}>
                     {currentWord.examples.map((ex, idx) => (
-                      <div key={idx} style={{ marginBottom: idx < currentWord.examples!.length - 1 ? '0.5rem' : 0 }}>
+                      <div key={idx} style={{ marginBottom: idx < currentWord.examples!.length - 1 ? '0.4rem' : 0 }}>
                         <div style={{ color: '#e2e8f0', fontWeight: '500' }}>• {ex.en}</div>
                         <div style={{ color: 'var(--secondary)', fontSize: '0.8rem', paddingLeft: '0.8rem' }}>{ex.ko}</div>
                       </div>
                     ))}
                   </div>
                 ) : (
-                  <div style={{ color: 'var(--secondary)', fontSize: '0.85rem', fontStyle: 'italic' }}>예문을 불러오는 중...</div>
+                  <div style={{ color: 'var(--secondary)', fontSize: '0.85rem', fontStyle: 'italic', textAlign: 'center' }}>
+                    예문을 불러오는 중...
+                  </div>
                 )}
               </div>
             </div>
