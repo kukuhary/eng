@@ -506,28 +506,33 @@ export default function StudyPage() {
                 )}
               </div>
 
-              {/* Bottom Examples Container (Attached closely under main text) */}
-              <div style={{ width: '100%', marginTop: '0.3rem', marginBottom: '0.25rem' }}>
+              {/* Bottom Examples Container (Expanded downwards to fill space, top-aligned) */}
+              <div style={{ width: '100%', marginTop: '0.35rem', flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
                 {currentWord.examples && currentWord.examples.length > 0 ? (
                   <div style={{ 
+                    width: '100%',
+                    height: '100%',
                     textAlign: 'left', 
                     background: 'rgba(0,0,0,0.25)', 
-                    padding: '0.5rem 0.6rem', 
+                    padding: '0.6rem 0.75rem', 
                     borderRadius: '8px', 
-                    fontSize: '0.82rem',
-                    maxHeight: '165px',
+                    fontSize: '0.83rem',
+                    maxHeight: '235px',
                     overflowY: 'auto',
-                    boxSizing: 'border-box'
+                    boxSizing: 'border-box',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-start'
                   }}>
                     {currentWord.examples.map((ex, idx) => (
-                      <div key={idx} style={{ marginBottom: idx < currentWord.examples!.length - 1 ? '0.35rem' : 0 }}>
+                      <div key={idx} style={{ marginBottom: idx < currentWord.examples!.length - 1 ? '0.45rem' : 0 }}>
                         <div style={{ color: '#e2e8f0', fontWeight: '500', lineHeight: '1.3' }}>• {ex.en}</div>
-                        <div style={{ color: 'var(--secondary)', fontSize: '0.78rem', paddingLeft: '0.6rem', marginTop: '0.1rem' }}>{ex.ko}</div>
+                        <div style={{ color: 'var(--secondary)', fontSize: '0.79rem', paddingLeft: '0.6rem', marginTop: '0.1rem' }}>{ex.ko}</div>
                       </div>
                     ))}
                   </div>
                 ) : (
-                  <div style={{ color: 'var(--secondary)', fontSize: '0.85rem', fontStyle: 'italic', textAlign: 'center' }}>
+                  <div style={{ color: 'var(--secondary)', fontSize: '0.85rem', fontStyle: 'italic', textAlign: 'center', margin: 'auto 0' }}>
                     예문을 불러오는 중...
                   </div>
                 )}
