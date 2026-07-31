@@ -321,11 +321,11 @@ export default function StudyPage() {
         style={{
           width: '100%',
           maxWidth: '600px',
-          height: '350px',
+          height: '390px',
           perspective: '1000px',
           cursor: finished ? 'default' : 'pointer',
           zIndex: 2,
-          padding: '0 1rem',
+          padding: '0 0.5rem',
           boxSizing: 'border-box'
         }}
         onClick={handleCardClick}
@@ -512,15 +512,15 @@ export default function StudyPage() {
                   <div style={{ 
                     textAlign: 'left', 
                     background: 'rgba(0,0,0,0.25)', 
-                    padding: '0.6rem 0.6rem', 
+                    padding: '0.5rem 0.6rem', 
                     borderRadius: '8px', 
                     fontSize: '0.82rem',
-                    maxHeight: '145px',
+                    maxHeight: '200px',
                     overflowY: 'auto',
                     boxSizing: 'border-box'
                   }}>
                     {currentWord.examples.map((ex, idx) => (
-                      <div key={idx} style={{ marginBottom: idx < currentWord.examples!.length - 1 ? '0.4rem' : 0 }}>
+                      <div key={idx} style={{ marginBottom: idx < currentWord.examples!.length - 1 ? '0.35rem' : 0 }}>
                         <div style={{ color: '#e2e8f0', fontWeight: '500', lineHeight: '1.3' }}>• {ex.en}</div>
                         <div style={{ color: 'var(--secondary)', fontSize: '0.78rem', paddingLeft: '0.6rem', marginTop: '0.1rem' }}>{ex.ko}</div>
                       </div>
@@ -543,12 +543,12 @@ export default function StudyPage() {
 
       {/* Action Buttons */}
       {!finished && (
-        <div style={{ display: 'flex', gap: '1rem', width: '100%', maxWidth: '600px', padding: '0 0.25rem', boxSizing: 'border-box', marginTop: '1rem' }}>
+        <div style={{ display: 'flex', gap: '0.75rem', width: '100%', maxWidth: '600px', padding: '0 0.25rem', boxSizing: 'border-box', marginTop: '0.4rem' }}>
           <button 
             onClick={(e) => { e.stopPropagation(); currentWord && handleNext('learning'); }} 
             className="btn btn-secondary" 
             disabled={!currentWord}
-            style={{ flex: 1, padding: '1rem', justifyContent: 'center', fontSize: '1rem', whiteSpace: 'nowrap' }}
+            style={{ flex: 1, padding: '0.45rem 0.8rem', justifyContent: 'center', fontSize: '0.9rem', whiteSpace: 'nowrap' }}
           >
             아직 헷갈려요
           </button>
