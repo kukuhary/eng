@@ -27,6 +27,8 @@ const StatsContext = createContext<StatsContextType>({
   statsLoading: true,
 });
 
+import { getLocalUsersStats } from './userStorage';
+
 export function StatsProvider({ children }: { children: React.ReactNode }) {
   const [allUsersStats, setAllUsersStats] = useState<UserStats[]>([]);
   const [currentUser, setCurrentUser] = useState<string | null>(null);
@@ -43,16 +45,15 @@ export function StatsProvider({ children }: { children: React.ReactNode }) {
   const refreshStats = useCallback(async () => {
     const callId = ++refreshCallId.current;
     const data = await getAllUsersStatsAction();
-    // 더 새로운 요청이 이미 발송된 경우 이 응답은 버림 (stale response 방지)
     if (callId !== refreshCallId.current) return;
-    setAllUsersStats(data);
+    const merged = getLocalUsersStats(data);
+    setAllUsersStats(merged);
     setStatsLoading(false);
   }, []);
 
   useEffect(() => {
     refreshStats();
 
-    // 다른 탭에서 돌아올 때 자동 갱신
     const handleVisibilityChange = () => {
       if (document.visibilityState === 'visible') {
         refreshStats();
@@ -67,12 +68,12 @@ export function StatsProvider({ children }: { children: React.ReactNode }) {
     : null;
 
   const currentUserMasteredCount = currentUserStats?.masteredCount ?? 0;
-  // totalCount는 모든 유저에게 동일 (전체 단어 수)
   const totalCount = allUsersStats[0]?.totalCount ?? 0;
 
   const setStatsDirectly = useCallback((stats: UserStats[]) => {
-    refreshCallId.current++; // 진행 중인 구 요청 응답을 무시하도록 callId 증가
-    setAllUsersStats(stats);
+    refreshCallId.current++;
+    const merged = getLocalUsersStats(stats);
+    setAllUsersStats(merged);
     setStatsLoading(false);
   }, []);
 
