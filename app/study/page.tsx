@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { getWordsAction, updateWordStatusAction, resetAllStatusesAction, getWordExamplesAction } from '@/lib/actions';
+import { getWordsAction, updateWordStatusAction, resetAllStatusesAction, getWordExamplesAction, getAllExamplesAction } from '@/lib/actions';
 import { DBWord as Word } from '@/lib/words_db';
 import { getPosColor } from '@/lib/constants';
 import Link from 'next/link';
@@ -26,9 +26,10 @@ export default function StudyPage() {
       setLoading(true);
       const storedUser = typeof window !== 'undefined' ? (localStorage.getItem('voca_user') || 'admin') : 'admin';
       setUserId(storedUser);
+      
+      // 1. 단어 데이터 우선 로딩 및 화면 디스플레이 완료
       const data = await getWordsAction(storedUser) as Word[];
 
-      // Sort words by Verb, Adverb, Noun, Adjective
       const sorted = [...data].sort((a, b) => {
         const orderA = POS_ORDER[a.pos as keyof typeof POS_ORDER] ?? 99;
         const orderB = POS_ORDER[b.pos as keyof typeof POS_ORDER] ?? 99;
@@ -37,12 +38,31 @@ export default function StudyPage() {
 
       setAllWords(sorted);
       
-      // Initial filter: Verbs (v.) 미학습 단어만
       const baseList = sorted.filter(w => w.status !== 'mastered');
       const filtered = baseList.filter(w => w.pos === 'v.');
       setWords(filtered);
       
+      // 🚀 화면 디스플레이 즉시 종료 (유저 기다림 없음)
       setLoading(false);
+
+      // 2. 화면 디스플레이가 끝난 후 백그라운드에서 한글 예문 2차 로딩
+      getAllExamplesAction().then(allExamples => {
+        if (!allExamples || allExamples.length === 0) return;
+        const exampleMap = new Map<string, { en: string; ko: string; }[]>();
+        for (const ex of allExamples) {
+          if (!exampleMap.has(ex.wordId)) exampleMap.set(ex.wordId, []);
+          exampleMap.get(ex.wordId)!.push({ en: ex.en, ko: ex.ko });
+        }
+
+        setAllWords(prev => prev.map(w => ({
+          ...w,
+          examples: exampleMap.get(w.id) || w.examples || []
+        })));
+        setWords(prev => prev.map(w => ({
+          ...w,
+          examples: exampleMap.get(w.id) || w.examples || []
+        })));
+      }).catch(() => {});
     };
     fetchWords();
   }, []);

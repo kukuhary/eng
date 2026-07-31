@@ -59,6 +59,16 @@ export async function getWordExamples(wordId: string): Promise<{ en: string; ko:
   }
 }
 
+export async function getAllExamples(): Promise<{ wordId: string; en: string; ko: string; }[]> {
+  const sql = 'SELECT wordId, en, ko FROM examples';
+  if (isTurso && libsqlClient) {
+    const res = await libsqlClient.execute(sql);
+    return res.rows.map(r => ({ wordId: String(r.wordId), en: String(r.en), ko: String(r.ko) }));
+  } else {
+    return sqliteDb.prepare(sql).all() as { wordId: string; en: string; ko: string; }[];
+  }
+}
+
 export async function getWordById(id: string, userId: string = 'admin'): Promise<DBWord | null> {
   const sql = `
     SELECT w.id, w.word, w.pos, w.meaning, w.level, w.createdAt, w.pronunciation,

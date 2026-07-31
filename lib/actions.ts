@@ -45,3 +45,8 @@ export async function getWordExamplesAction(wordId: string) {
   const { getWordExamples } = await import('./words_db');
   return getWordExamples(wordId);
 }
+
+export async function getAllExamplesAction() {
+  const { getAllExamples } = await import('./words_db');
+  return getAllExamples();
+}
