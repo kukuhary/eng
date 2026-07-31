@@ -33,7 +33,7 @@ export default function Navbar() {
     if (confirm('로그아웃 하시겠습니까?')) {
       localStorage.removeItem('voca_user');
       setCurrentUser(null);
-      window.location.reload();
+      window.location.href = '/';
     }
   };
 
