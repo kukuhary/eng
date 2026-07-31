@@ -10,6 +10,15 @@ import { useStats } from '@/lib/StatsContext';
 
 const POS_ORDER = { 'v.': 0, 'ad.': 1, 'n.': 2, 'a.': 3 };
 
+// 텍스트 길이에 맞춰 폰트 크기를 자동으로 축소하여 줄바꿈 없이 한 줄에 쏙 넣는 헬퍼 함수
+const getDynamicFontSize = (text: string, baseSizeRem: number = 2.4): string => {
+  const len = text ? text.trim().length : 0;
+  if (len <= 10) return `${baseSizeRem}rem`;
+  if (len <= 14) return `${baseSizeRem * 0.75}rem`;
+  if (len <= 20) return `${baseSizeRem * 0.6}rem`;
+  return `${baseSizeRem * 0.48}rem`;
+};
+
 export default function StudyPage() {
   const [allWords, setAllWords] = useState<Word[]>([]);
   const [words, setWords] = useState<Word[]>([]);
@@ -389,11 +398,22 @@ export default function StudyPage() {
               </div>
               
               {/* Main Text Center Container */}
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '0.4rem', marginBottom: '0.4rem', width: '100%' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '0.4rem', marginBottom: '0.4rem', width: '100%', overflow: 'hidden' }}>
                 {langMode === 'en' ? (
                   <>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
-                      <h2 style={{ fontSize: '2.4rem', fontWeight: 'bold', margin: 0, letterSpacing: '1px', color: '#ffffff' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', width: '100%' }}>
+                      <h2 style={{ 
+                        fontSize: getDynamicFontSize(currentWord.word, 2.5), 
+                        fontWeight: 'bold', 
+                        margin: 0, 
+                        letterSpacing: '1px', 
+                        color: '#ffffff',
+                        whiteSpace: 'nowrap',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        maxWidth: '85%',
+                        textAlign: 'center'
+                      }}>
                         {currentWord.word}
                       </h2>
                       <button
@@ -404,13 +424,14 @@ export default function StudyPage() {
                         style={{
                           background: 'none',
                           border: 'none',
-                          fontSize: '1.5rem',
+                          fontSize: '1.4rem',
                           cursor: 'pointer',
                           padding: '0.2rem',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
                           color: 'var(--primary)',
+                          flexShrink: 0
                         }}
                         title="발음 듣기"
                       >
@@ -418,13 +439,23 @@ export default function StudyPage() {
                       </button>
                     </div>
                     {currentWord.pronunciation && (
-                      <div style={{ color: 'var(--secondary)', fontSize: '0.95rem', marginTop: '0.2rem' }}>
+                      <div style={{ color: 'var(--secondary)', fontSize: '0.95rem', marginTop: '0.2rem', whiteSpace: 'nowrap' }}>
                         [{currentWord.pronunciation}]
                       </div>
                     )}
                   </>
                 ) : (
-                  <h2 style={{ fontSize: '2.2rem', fontWeight: 'bold', color: 'var(--accent)', margin: 0, textAlign: 'center' }}>
+                  <h2 style={{ 
+                    fontSize: getDynamicFontSize(currentWord.meaning, 2.2), 
+                    fontWeight: 'bold', 
+                    color: 'var(--accent)', 
+                    margin: 0, 
+                    textAlign: 'center',
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    maxWidth: '100%'
+                  }}>
                     {currentWord.meaning}
                   </h2>
                 )}
@@ -465,15 +496,36 @@ export default function StudyPage() {
               </div>
               
               {/* Main Text Center Container */}
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '0.3rem', marginBottom: '0.3rem', width: '100%' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '0.3rem', marginBottom: '0.3rem', width: '100%', overflow: 'hidden' }}>
                 {langMode === 'en' ? (
-                  <h3 style={{ fontSize: '2.1rem', fontWeight: 'bold', color: 'var(--accent)', margin: 0, textAlign: 'center' }}>
+                  <h3 style={{ 
+                    fontSize: getDynamicFontSize(currentWord.meaning, 2.2), 
+                    fontWeight: 'bold', 
+                    color: 'var(--accent)', 
+                    margin: 0, 
+                    textAlign: 'center',
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    maxWidth: '100%'
+                  }}>
                     {currentWord.meaning}
                   </h3>
                 ) : (
-                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
-                      <h3 style={{ fontSize: '2.4rem', fontWeight: 'bold', margin: 0, letterSpacing: '1px', color: '#ffffff' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', width: '100%' }}>
+                      <h3 style={{ 
+                        fontSize: getDynamicFontSize(currentWord.word, 2.4), 
+                        fontWeight: 'bold', 
+                        margin: 0, 
+                        letterSpacing: '1px', 
+                        color: '#ffffff',
+                        whiteSpace: 'nowrap',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        maxWidth: '85%',
+                        textAlign: 'center'
+                      }}>
                         {currentWord.word}
                       </h3>
                       <button
@@ -484,13 +536,14 @@ export default function StudyPage() {
                         style={{
                           background: 'none',
                           border: 'none',
-                          fontSize: '1.5rem',
+                          fontSize: '1.4rem',
                           cursor: 'pointer',
                           padding: '0.2rem',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
                           color: 'var(--primary)',
+                          flexShrink: 0
                         }}
                         title="발음 듣기"
                       >
@@ -498,7 +551,7 @@ export default function StudyPage() {
                       </button>
                     </div>
                     {currentWord.pronunciation && (
-                      <div style={{ color: 'var(--secondary)', fontSize: '0.9rem', marginTop: '0.1rem' }}>
+                      <div style={{ color: 'var(--secondary)', fontSize: '0.9rem', marginTop: '0.1rem', whiteSpace: 'nowrap' }}>
                         [{currentWord.pronunciation}]
                       </div>
                     )}
