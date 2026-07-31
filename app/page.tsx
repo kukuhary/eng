@@ -2,34 +2,16 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { getAllUsersStatsAction } from '@/lib/actions';
-import { UserStats } from '@/lib/words_db';
+import { useStats } from '@/lib/StatsContext';
 
 export default function Home() {
-  const [leaderboard, setLeaderboard] = useState<UserStats[]>([]);
-  const [loading, setLoading] = useState(true);
+  const { allUsersStats, statsLoading } = useStats();
   const [currentUser, setCurrentUser] = useState<string | null>(null);
 
   useEffect(() => {
-    const loadData = async () => {
-      setLoading(true);
-      if (typeof window !== 'undefined') {
-        setCurrentUser(localStorage.getItem('voca_user'));
-      }
-      const data = await getAllUsersStatsAction();
-      setLeaderboard(data);
-      setLoading(false);
-    };
-    loadData();
-
-    // 학습 페이지에서 돌아올 때 랭킹 자동 갱신
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === 'visible') {
-        loadData();
-      }
-    };
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
+    if (typeof window !== 'undefined') {
+      setCurrentUser(localStorage.getItem('voca_user'));
+    }
   }, []);
 
   function getRankEmoji(index: number) {
@@ -71,11 +53,11 @@ export default function Home() {
         </p>
       </section>
 
-      {loading ? (
+      {statsLoading ? (
         <div style={{ textAlign: 'center', padding: '4rem', color: 'var(--secondary)' }}>랭킹 집계 중...</div>
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginBottom: '3rem' }}>
-          {leaderboard.map((user, idx) => {
+          {allUsersStats.map((user, idx) => {
             const percent = user.totalCount > 0 ? (user.masteredCount / user.totalCount) * 100 : 0;
             return (
               <div key={user.username} style={{ display: 'flex', alignItems: 'center', gap: '1rem', width: '100%' }}>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { StatsProvider } from "@/lib/StatsContext";
 
 export const metadata: Metadata = {
   title: "VocaPro - 중고등 필수 영단어 암기",
@@ -15,10 +16,12 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <Navbar />
-        <main style={{ padding: '0 2rem 2rem' }}>
-          {children}
-        </main>
+        <StatsProvider>
+          <Navbar />
+          <main style={{ padding: '0 2rem 2rem' }}>
+            {children}
+          </main>
+        </StatsProvider>
       </body>
     </html>
   );

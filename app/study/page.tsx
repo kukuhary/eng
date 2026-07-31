@@ -6,6 +6,7 @@ import { DBWord as Word } from '@/lib/words_db';
 import { getPosColor } from '@/lib/constants';
 import Link from 'next/link';
 import { speak } from '@/lib/tts';
+import { useStats } from '@/lib/StatsContext';
 
 const POS_ORDER = { 'v.': 0, 'ad.': 1, 'n.': 2, 'a.': 3 };
 
@@ -18,6 +19,8 @@ export default function StudyPage() {
   const [loading, setLoading] = useState(true);
   const [filterPos, setFilterPos] = useState<string | null>('v.');
   const [userId, setUserId] = useState<string>('admin');
+  // 사이트 공통 통계: refreshStats로 mastered 후 대시보드 포함 전체 갱신
+  const { refreshStats, currentUserMasteredCount } = useStats();
 
   useEffect(() => {
     const fetchWords = async () => {
@@ -59,7 +62,7 @@ export default function StudyPage() {
     if (status) {
       await updateWordStatusAction(words[currentIndex].id, status, userId);
       const updatedId = words[currentIndex].id;
-      // allWords 클라이언트 상태 즉시 반영
+      // allWords 클라이언트 상태 즉시 반영 (품사 탭 카운트용)
       setAllWords(prev => prev.map(w => w.id === updatedId ? { ...w, status } : w));
 
       if (status === 'mastered') {
@@ -73,6 +76,8 @@ export default function StudyPage() {
           setCurrentIndex(newWords.length - 1);
         }
         setIsFlipped(false);
+        // 공통 통계 갱신 → 대시보드·전체탭 카운트가 DB 기준으로 동기화됨
+        refreshStats();
         return;
       }
     }
@@ -117,10 +122,10 @@ export default function StudyPage() {
   const currentWord = words[currentIndex] || null;
   const progressPercent = finished ? 100 : (currentWord ? ((currentIndex) / words.length) * 100 : 0);
 
-  // 전체 탭: 전체 완료 개수 / 각 품사 탭: 해당 탭 완료 개수
+  // 전체 탭: DB 기준 (대시보드와 동일한 값) / 품사 탭: allWords 기준 즉시 반영
   const masteredCount = filterPos
     ? allWords.filter(w => w.pos === filterPos && w.status === 'mastered').length
-    : allWords.filter(w => w.status === 'mastered').length;
+    : currentUserMasteredCount;
 
   return (
     <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto', padding: '0.4rem 0.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', boxSizing: 'border-box' }}>
