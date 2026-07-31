@@ -114,7 +114,7 @@ export default function StudyPage() {
     
     const baseList = sorted.filter(w => w.status !== 'mastered');
     const filtered = filterPos ? baseList.filter(w => w.pos === filterPos) : baseList;
-    setWords(filtered.length > 0 ? filtered : (filterPos ? [] : sorted));
+    setWords(filtered);
     
     setCurrentIndex(0);
     setIsFlipped(false);
@@ -128,11 +128,21 @@ export default function StudyPage() {
   const currentWord = words[currentIndex] || null;
   const progressPercent = finished ? 100 : (currentWord ? ((currentIndex) / words.length) * 100 : 0);
 
-  // 전체 탭: 동사, 부사, 명사, 형용사 모든 품사 완료 개수의 합 (allWords 기준)
-  // 품사 탭: 해당 품사 완료 개수 (allWords 기준)
-  const masteredCount = filterPos
-    ? allWords.filter(w => w.pos === filterPos && w.status === 'mastered').length
-    : allWords.filter(w => w.status === 'mastered').length;
+  // 1. 각 품사별 완료(mastered) 개수 계산
+  const verbMastered = allWords.filter(w => w.pos === 'v.' && w.status === 'mastered').length;
+  const adverbMastered = allWords.filter(w => w.pos === 'ad.' && w.status === 'mastered').length;
+  const nounMastered = allWords.filter(w => w.pos === 'n.' && w.status === 'mastered').length;
+  const adjMastered = allWords.filter(w => w.pos === 'a.' && w.status === 'mastered').length;
+
+  // 2. 개인별 총합 (동사 + 부사 + 명사 + 형용사 완료 개수의 합)
+  const totalMasteredCount = verbMastered + adverbMastered + nounMastered + adjMastered;
+
+  // 3. 현재 탭에 따른 표시 완료 개수 (품사 탭: 해당 품사 개수 / 전체 탭: 개인별 총합)
+  let masteredCount = totalMasteredCount;
+  if (filterPos === 'v.') masteredCount = verbMastered;
+  else if (filterPos === 'ad.') masteredCount = adverbMastered;
+  else if (filterPos === 'n.') masteredCount = nounMastered;
+  else if (filterPos === 'a.') masteredCount = adjMastered;
 
   return (
     <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto', padding: '0.4rem 0.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', boxSizing: 'border-box' }}>
