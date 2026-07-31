@@ -122,10 +122,11 @@ export default function StudyPage() {
   const currentWord = words[currentIndex] || null;
   const progressPercent = finished ? 100 : (currentWord ? ((currentIndex) / words.length) * 100 : 0);
 
-  // 전체 탭: DB 기준 (대시보드와 동일한 값) / 품사 탭: allWords 기준 즉시 반영
+  // 전체 탭: 동사, 부사, 명사, 형용사 모든 품사 완료 개수의 합 (allWords 기준)
+  // 품사 탭: 해당 품사 완료 개수 (allWords 기준)
   const masteredCount = filterPos
     ? allWords.filter(w => w.pos === filterPos && w.status === 'mastered').length
-    : currentUserMasteredCount;
+    : allWords.filter(w => w.status === 'mastered').length;
 
   return (
     <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto', padding: '0.4rem 0.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', boxSizing: 'border-box' }}>
