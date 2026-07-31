@@ -447,11 +447,11 @@ export default function StudyPage() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              padding: '1.5rem 2rem',
+              padding: '1.2rem 1rem',
               boxSizing: 'border-box'
             }}>
               {/* Top Row: POS Tag */}
-              <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-start', marginBottom: '1rem' }}>
+              <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-start', marginBottom: '0.5rem' }}>
                 <span style={{ 
                   fontSize: '0.85rem', 
                   fontWeight: 'bold',
@@ -464,8 +464,8 @@ export default function StudyPage() {
                 </span>
               </div>
               
-              {/* Main Text Center Container (Shifted 30px Upwards) */}
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '1rem', transform: 'translateY(-30px)', width: '100%' }}>
+              {/* Main Text Center Container (Shifted Upwards) */}
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '0.5rem', transform: 'translateY(-15px)', width: '100%' }}>
                 {langMode === 'en' ? (
                   <h3 style={{ fontSize: '2.2rem', fontWeight: 'bold', color: 'var(--accent)', margin: 0, textAlign: 'center' }}>
                     {currentWord.meaning}
@@ -506,14 +506,23 @@ export default function StudyPage() {
                 )}
               </div>
 
-              {/* Bottom Examples Container */}
-              <div style={{ width: '100%', marginTop: 'auto', marginBottom: '0.5rem' }}>
+              {/* Bottom Examples Container (Wider horizontal space & scroll support) */}
+              <div style={{ width: '100%', marginTop: 'auto', marginBottom: '0.25rem' }}>
                 {currentWord.examples && currentWord.examples.length > 0 ? (
-                  <div style={{ textAlign: 'left', background: 'rgba(0,0,0,0.2)', padding: '0.75rem 1rem', borderRadius: '8px', fontSize: '0.85rem' }}>
+                  <div style={{ 
+                    textAlign: 'left', 
+                    background: 'rgba(0,0,0,0.25)', 
+                    padding: '0.6rem 0.6rem', 
+                    borderRadius: '8px', 
+                    fontSize: '0.82rem',
+                    maxHeight: '145px',
+                    overflowY: 'auto',
+                    boxSizing: 'border-box'
+                  }}>
                     {currentWord.examples.map((ex, idx) => (
                       <div key={idx} style={{ marginBottom: idx < currentWord.examples!.length - 1 ? '0.4rem' : 0 }}>
-                        <div style={{ color: '#e2e8f0', fontWeight: '500' }}>• {ex.en}</div>
-                        <div style={{ color: 'var(--secondary)', fontSize: '0.8rem', paddingLeft: '0.8rem' }}>{ex.ko}</div>
+                        <div style={{ color: '#e2e8f0', fontWeight: '500', lineHeight: '1.3' }}>• {ex.en}</div>
+                        <div style={{ color: 'var(--secondary)', fontSize: '0.78rem', paddingLeft: '0.6rem', marginTop: '0.1rem' }}>{ex.ko}</div>
                       </div>
                     ))}
                   </div>
