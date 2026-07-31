@@ -117,8 +117,10 @@ export default function StudyPage() {
   const currentWord = words[currentIndex] || null;
   const progressPercent = finished ? 100 : (currentWord ? ((currentIndex) / words.length) * 100 : 0);
 
-  // masteredCount는 전체 단어 기준으로 집계 (대시보드와 동일한 기준)
-  const masteredCount = allWords.filter(w => w.status === 'mastered').length;
+  // 전체 탭: 전체 완료 개수 / 각 품사 탭: 해당 탭 완료 개수
+  const masteredCount = filterPos
+    ? allWords.filter(w => w.pos === filterPos && w.status === 'mastered').length
+    : allWords.filter(w => w.status === 'mastered').length;
 
   return (
     <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto', padding: '0.4rem 0.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', boxSizing: 'border-box' }}>
