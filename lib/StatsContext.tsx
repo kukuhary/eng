@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import { createContext, useContext, useState, useEffect, useCallback, useRef } from 'react';
 import { getAllUsersStatsAction } from './actions';
 import { UserStats } from './words_db';
 
@@ -28,6 +28,8 @@ export function StatsProvider({ children }: { children: React.ReactNode }) {
   const [allUsersStats, setAllUsersStats] = useState<UserStats[]>([]);
   const [currentUser, setCurrentUser] = useState<string | null>(null);
   const [statsLoading, setStatsLoading] = useState(true);
+  // 요청 ID 추적: 니는 응답이 이전 요청을 덮어쓰는 race condition 방지
+  const refreshCallId = useRef(0);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -36,7 +38,10 @@ export function StatsProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const refreshStats = useCallback(async () => {
+    const callId = ++refreshCallId.current;
     const data = await getAllUsersStatsAction();
+    // 더 새로운 요청이 이미 발송된 경우 이 응답은 버림 (stale response 방지)
+    if (callId !== refreshCallId.current) return;
     setAllUsersStats(data);
     setStatsLoading(false);
   }, []);
