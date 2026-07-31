@@ -1,4 +1,4 @@
-import db from './db';
+import { libsqlClient, sqliteDb, isTurso } from './db';
 
 export interface DBWord {
   id: string;
@@ -12,7 +12,13 @@ export interface DBWord {
   pronunciation?: string;
 }
 
-export function getAllWords(userId: string = 'admin'): DBWord[] {
+export interface UserStats {
+  username: string;
+  masteredCount: number;
+  totalCount: number;
+}
+
+export async function getAllWords(userId: string = 'admin'): Promise<DBWord[]> {
   const sql = `
     SELECT w.id, w.word, w.pos, w.meaning, w.level, w.createdAt, w.pronunciation,
            COALESCE(uws.status, 'new') as status
@@ -20,19 +26,35 @@ export function getAllWords(userId: string = 'admin'): DBWord[] {
     LEFT JOIN user_word_status uws ON w.id = uws.wordId AND uws.userId = ?
     ORDER BY w.word ASC
   `;
-  const words = db.prepare(sql).all(userId) as (Omit<DBWord, 'examples' | 'status'> & { status: string })[];
-  
-  return words.map(w => {
-    const examples = db.prepare('SELECT en, ko FROM examples WHERE wordId = ?').all(w.id) as { en: string; ko: string; }[];
-    return {
+
+  let wordsRaw: any[] = [];
+  if (isTurso && libsqlClient) {
+    const res = await libsqlClient.execute({ sql, args: [userId] });
+    wordsRaw = res.rows as any[];
+  } else {
+    wordsRaw = sqliteDb.prepare(sql).all(userId);
+  }
+
+  const result: DBWord[] = [];
+  for (const w of wordsRaw) {
+    let examples: { en: string; ko: string; }[] = [];
+    if (isTurso && libsqlClient) {
+      const exRes = await libsqlClient.execute({ sql: 'SELECT en, ko FROM examples WHERE wordId = ?', args: [w.id] });
+      examples = exRes.rows as any[];
+    } else {
+      examples = sqliteDb.prepare('SELECT en, ko FROM examples WHERE wordId = ?').all(w.id);
+    }
+    result.push({
       ...w,
       status: w.status as DBWord['status'],
       examples
-    };
-  });
+    });
+  }
+
+  return result;
 }
 
-export function getWordById(id: string, userId: string = 'admin'): DBWord | null {
+export async function getWordById(id: string, userId: string = 'admin'): Promise<DBWord | null> {
   const sql = `
     SELECT w.id, w.word, w.pos, w.meaning, w.level, w.createdAt, w.pronunciation,
            COALESCE(uws.status, 'new') as status
@@ -40,10 +62,25 @@ export function getWordById(id: string, userId: string = 'admin'): DBWord | null
     LEFT JOIN user_word_status uws ON w.id = uws.wordId AND uws.userId = ?
     WHERE w.id = ?
   `;
-  const word = db.prepare(sql).get(userId, id) as (Omit<DBWord, 'examples' | 'status'> & { status: string }) | undefined;
+
+  let word: any = null;
+  if (isTurso && libsqlClient) {
+    const res = await libsqlClient.execute({ sql, args: [userId, id] });
+    word = res.rows[0] || null;
+  } else {
+    word = sqliteDb.prepare(sql).get(userId, id);
+  }
+
   if (!word) return null;
 
-  const examples = db.prepare('SELECT en, ko FROM examples WHERE wordId = ?').all(id) as { en: string; ko: string; }[];
+  let examples: { en: string; ko: string; }[] = [];
+  if (isTurso && libsqlClient) {
+    const exRes = await libsqlClient.execute({ sql: 'SELECT en, ko FROM examples WHERE wordId = ?', args: [id] });
+    examples = exRes.rows as any[];
+  } else {
+    examples = sqliteDb.prepare('SELECT en, ko FROM examples WHERE wordId = ?').all(id);
+  }
+
   return {
     ...word,
     status: word.status as DBWord['status'],
@@ -51,7 +88,7 @@ export function getWordById(id: string, userId: string = 'admin'): DBWord | null
   };
 }
 
-export function updateWordStatus(id: string, status: string, userId: string = 'admin'): { success: boolean; stats: UserStats[] } {
+export async function updateWordStatus(id: string, status: string, userId: string = 'admin'): Promise<{ success: boolean; stats: UserStats[] }> {
   const sql = `
     INSERT INTO user_word_status (userId, wordId, status, updatedAt, reg_dt)
     VALUES (?, ?, ?, ?, ?)
@@ -59,9 +96,20 @@ export function updateWordStatus(id: string, status: string, userId: string = 'a
       status = excluded.status,
       updatedAt = excluded.updatedAt
   `;
-  const result = db.prepare(sql).run(userId, id, status, Date.now(), Date.now());
-  const stats = getAllUsersStats();
-  return { success: result.changes > 0, stats };
+
+  let changes = 0;
+  const now = Date.now();
+
+  if (isTurso && libsqlClient) {
+    const res = await libsqlClient.execute({ sql, args: [userId, id, status, now, now] });
+    changes = Number(res.rowsAffected || 0);
+  } else {
+    const res = sqliteDb.prepare(sql).run(userId, id, status, now, now);
+    changes = res.changes;
+  }
+
+  const stats = await getAllUsersStats();
+  return { success: changes > 0, stats };
 }
 
 export async function addWord(word: Omit<DBWord, 'id' | 'status' | 'createdAt'>): Promise<DBWord> {
@@ -69,7 +117,6 @@ export async function addWord(word: Omit<DBWord, 'id' | 'status' | 'createdAt'>)
   const createdAt = Date.now();
   const status = 'new';
 
-  // Look up pronunciation automatically if not provided
   let pronunciation = word.pronunciation || '';
   if (!pronunciation) {
     try {
@@ -84,51 +131,67 @@ export async function addWord(word: Omit<DBWord, 'id' | 'status' | 'createdAt'>)
           }
         }
       }
-    } catch (e) {
-      console.error('Failed to fetch pronunciation in words_db.ts:', e);
-    }
+    } catch (e) {}
   }
 
-  const insert = db.transaction(() => {
-    db.prepare(`
-      INSERT INTO words (id, word, pos, meaning, level, status, createdAt, pronunciation, reg_dt)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-    `).run(id, word.word, word.pos, word.meaning, word.level, status, createdAt, pronunciation, Date.now());
+  const now = Date.now();
+  if (isTurso && libsqlClient) {
+    await libsqlClient.execute({
+      sql: `INSERT INTO words (id, word, pos, meaning, level, status, createdAt, pronunciation, reg_dt) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      args: [id, word.word, word.pos, word.meaning, word.level, status, createdAt, pronunciation, now]
+    });
 
     if (word.examples && word.examples.length > 0) {
-      const insertEx = db.prepare(`
+      for (let index = 0; index < word.examples.length; index++) {
+        const ex = word.examples[index];
+        await libsqlClient.execute({
+          sql: `INSERT INTO examples (id, en, ko, wordId, reg_dt) VALUES (?, ?, ?, ?, ?)`,
+          args: [`ex-${id}-${index}`, ex.en, ex.ko, id, now]
+        });
+      }
+    }
+  } else {
+    sqliteDb.prepare(`
+      INSERT INTO words (id, word, pos, meaning, level, status, createdAt, pronunciation, reg_dt)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `).run(id, word.word, word.pos, word.meaning, word.level, status, createdAt, pronunciation, now);
+
+    if (word.examples && word.examples.length > 0) {
+      const insertEx = sqliteDb.prepare(`
         INSERT INTO examples (id, en, ko, wordId, reg_dt)
         VALUES (?, ?, ?, ?, ?)
       `);
       word.examples.forEach((ex, index) => {
-        insertEx.run(`ex-${id}-${index}`, ex.en, ex.ko, id, Date.now());
+        insertEx.run(`ex-${id}-${index}`, ex.en, ex.ko, id, now);
       });
     }
+  }
 
-    return { id, ...word, status: status as DBWord['status'], createdAt, pronunciation };
-  });
-
-  return insert() as DBWord;
+  return { id, ...word, status: status as DBWord['status'], createdAt, pronunciation };
 }
 
-export function deleteWord(id: string): boolean {
-  const result = db.prepare('DELETE FROM words WHERE id = ?').run(id);
-  return result.changes > 0;
+export async function deleteWord(id: string): Promise<boolean> {
+  if (isTurso && libsqlClient) {
+    const res = await libsqlClient.execute({ sql: 'DELETE FROM words WHERE id = ?', args: [id] });
+    return Number(res.rowsAffected || 0) > 0;
+  } else {
+    const res = sqliteDb.prepare('DELETE FROM words WHERE id = ?').run(id);
+    return res.changes > 0;
+  }
 }
 
-export function resetAllStatuses(userId: string = 'admin'): boolean {
-  db.prepare("DELETE FROM user_word_status WHERE userId = ?").run(userId);
-  db.prepare("UPDATE words SET status = 'new'").run(); // keep for fallback / legacy compatibility
+export async function resetAllStatuses(userId: string = 'admin'): Promise<boolean> {
+  if (isTurso && libsqlClient) {
+    await libsqlClient.execute({ sql: 'DELETE FROM user_word_status WHERE userId = ?', args: [userId] });
+    await libsqlClient.execute({ sql: "UPDATE words SET status = 'new'", args: [] });
+  } else {
+    sqliteDb.prepare("DELETE FROM user_word_status WHERE userId = ?").run(userId);
+    sqliteDb.prepare("UPDATE words SET status = 'new'").run();
+  }
   return true;
 }
 
-export interface UserStats {
-  username: string;
-  masteredCount: number;
-  totalCount: number;
-}
-
-export function getAllUsersStats(): UserStats[] {
+export async function getAllUsersStats(): Promise<UserStats[]> {
   const sql = `
     SELECT u.username,
            COUNT(CASE WHEN uws.status = 'mastered' THEN 1 END) as masteredCount,
@@ -148,5 +211,18 @@ export function getAllUsersStats(): UserStats[] {
                ELSE 7
              END ASC
   `;
-  return db.prepare(sql).all() as UserStats[];
+
+  let rows: any[] = [];
+  if (isTurso && libsqlClient) {
+    const res = await libsqlClient.execute(sql);
+    rows = res.rows as any[];
+  } else {
+    rows = sqliteDb.prepare(sql).all();
+  }
+
+  return rows.map(r => ({
+    username: String(r.username),
+    masteredCount: Number(r.masteredCount || 0),
+    totalCount: Number(r.totalCount || 2998),
+  }));
 }

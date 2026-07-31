@@ -22,7 +22,7 @@ export async function addWordAction(word: Omit<DBWord, 'id' | 'status' | 'create
 }
 
 export async function updateWordStatusAction(id: string, status: 'new' | 'learning' | 'mastered', userId?: string) {
-  const result = dbUpdateWordStatus(id, status, userId);
+  const result = await dbUpdateWordStatus(id, status, userId);
   if (result.success) {
     revalidatePath('/');
   }
@@ -30,7 +30,7 @@ export async function updateWordStatusAction(id: string, status: 'new' | 'learni
 }
 
 export async function resetAllStatusesAction(userId?: string) {
-  const success = dbResetAllStatuses(userId);
+  const success = await dbResetAllStatuses(userId);
   if (success) {
     revalidatePath('/');
   }
