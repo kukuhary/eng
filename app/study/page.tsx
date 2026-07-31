@@ -207,11 +207,9 @@ export default function StudyPage() {
         <div style={{ width: `${progressPercent}%`, height: '100%', background: 'var(--primary)', transition: 'width 0.3s' }} />
       </div>
 
-      <div style={{ width: '100%', maxWidth: '600px', marginBottom: '0.5rem', padding: '0 0.25rem', display: 'flex', justifyContent: 'flex-start', alignItems: 'center', color: 'var(--secondary)', fontSize: '0.9rem', boxSizing: 'border-box' }}>
-        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-          <span>{finished ? words.length : (currentWord ? currentIndex + 1 : 0)} / {words.length}</span>
-          <span style={{ color: 'var(--primary)', fontWeight: 'bold' }}>(완료: {masteredCount}개)</span>
-        </div>
+      <div style={{ width: '100%', maxWidth: '600px', marginBottom: '0.5rem', padding: '0 0.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: 'var(--secondary)', fontSize: '0.9rem', boxSizing: 'border-box' }}>
+        <span>{finished ? words.length : (currentWord ? currentIndex + 1 : 0)} / {words.length}</span>
+        <span style={{ color: 'var(--primary)', fontWeight: 'bold' }}>(완료: {masteredCount}개)</span>
       </div>
 
       {/* POS Filter Tabs Row */}
