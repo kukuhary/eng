@@ -27,8 +27,6 @@ const StatsContext = createContext<StatsContextType>({
   statsLoading: true,
 });
 
-import { getLocalUsersStats } from './userStorage';
-
 export function StatsProvider({ children }: { children: React.ReactNode }) {
   const [allUsersStats, setAllUsersStats] = useState<UserStats[]>([]);
   const [currentUser, setCurrentUser] = useState<string | null>(null);
@@ -46,8 +44,7 @@ export function StatsProvider({ children }: { children: React.ReactNode }) {
     const callId = ++refreshCallId.current;
     const data = await getAllUsersStatsAction();
     if (callId !== refreshCallId.current) return;
-    const merged = getLocalUsersStats(data);
-    setAllUsersStats(merged);
+    setAllUsersStats(data);
     setStatsLoading(false);
   }, []);
 
@@ -72,8 +69,7 @@ export function StatsProvider({ children }: { children: React.ReactNode }) {
 
   const setStatsDirectly = useCallback((stats: UserStats[]) => {
     refreshCallId.current++;
-    const merged = getLocalUsersStats(stats);
-    setAllUsersStats(merged);
+    setAllUsersStats(stats);
     setStatsLoading(false);
   }, []);
 

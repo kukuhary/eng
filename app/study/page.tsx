@@ -10,8 +10,6 @@ import { useStats } from '@/lib/StatsContext';
 
 const POS_ORDER = { 'v.': 0, 'ad.': 1, 'n.': 2, 'a.': 3 };
 
-import { getLocalUserMasteredIds, saveLocalUserMasteredId, clearUserMasteredData } from '@/lib/userStorage';
-
 export default function StudyPage() {
   const [allWords, setAllWords] = useState<Word[]>([]);
   const [words, setWords] = useState<Word[]>([]);
@@ -29,18 +27,9 @@ export default function StudyPage() {
       const storedUser = typeof window !== 'undefined' ? (localStorage.getItem('voca_user') || 'admin') : 'admin';
       setUserId(storedUser);
       const data = await getWordsAction(storedUser) as Word[];
-      
-      // LocalStorage에 보관된 mastered ID와 병합하여 영구 유지 보장
-      const localMasteredIds = new Set(getLocalUserMasteredIds(storedUser));
-      const mergedData = data.map(w => {
-        if (localMasteredIds.has(w.id)) {
-          return { ...w, status: 'mastered' as const };
-        }
-        return w;
-      });
 
       // Sort words by Verb, Adverb, Noun, Adjective
-      const sorted = [...mergedData].sort((a, b) => {
+      const sorted = [...data].sort((a, b) => {
         const orderA = POS_ORDER[a.pos as keyof typeof POS_ORDER] ?? 99;
         const orderB = POS_ORDER[b.pos as keyof typeof POS_ORDER] ?? 99;
         return orderA - orderB;
@@ -75,9 +64,6 @@ export default function StudyPage() {
     const currentActiveUser = typeof window !== 'undefined' ? (localStorage.getItem('voca_user') || 'admin') : userId;
 
     if (status) {
-      // 0. LocalStorage에 영구 백업 저장 (서버리스 인스턴스 초기화 완벽 대비)
-      saveLocalUserMasteredId(currentActiveUser, targetWord.id, status);
-
       // 1. DB 업데이트 및 즉시 최신 통계 수신
       const res = await updateWordStatusAction(targetWord.id, status, currentActiveUser);
       if (res.stats) {
@@ -114,7 +100,6 @@ export default function StudyPage() {
       return;
     }
     setLoading(true);
-    clearUserMasteredData(userId);
     await resetAllStatusesAction(userId);
     const data = await getWordsAction(userId) as Word[];
     
