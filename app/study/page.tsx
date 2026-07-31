@@ -104,7 +104,7 @@ export default function StudyPage() {
   const progressPercent = finished ? 100 : (currentWord ? ((currentIndex) / words.length) * 100 : 0);
 
   const categoryWords = filterPos ? allWords.filter(w => w.pos === filterPos) : allWords;
-  const masteredCount = allWords.filter(w => w.status === 'mastered').length;
+  const masteredCount = categoryWords.filter(w => w.status === 'mastered').length;
 
   return (
     <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto', padding: '0.4rem 0.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', boxSizing: 'border-box' }}>
