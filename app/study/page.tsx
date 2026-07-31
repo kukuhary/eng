@@ -57,24 +57,18 @@ export default function StudyPage() {
     setFinished(false);
   };
 
-  const handleNext = async (status?: Word['status']) => {
+  const handleNext = (status?: Word['status']) => {
     const targetWord = words[currentIndex];
     if (!targetWord) return;
 
     const currentActiveUser = typeof window !== 'undefined' ? (localStorage.getItem('voca_user') || 'admin') : userId;
 
     if (status) {
-      // 1. DB 업데이트 및 즉시 최신 통계 수신
-      const res = await updateWordStatusAction(targetWord.id, status, currentActiveUser);
-      if (res.stats) {
-        setStatsDirectly(res.stats);
-      }
-
-      // 2. allWords 클라이언트 상태 반영
+      // 1. [0.00초 즉시 반영] allWords 클라이언트 메모리 상태 반영
       setAllWords(prev => prev.map(w => w.id === targetWord.id ? { ...w, status } : w));
 
+      // 2. [0.00초 즉시 반영] 카드 덱 조작 및 다음 단어로 넘기기
       if (status === 'mastered') {
-        // mastered 단어는 현재 학습 덱에서 즉시 제거
         const newWords = words.filter(w => w.id !== targetWord.id);
         setWords(newWords);
         if (newWords.length === 0) {
@@ -83,8 +77,23 @@ export default function StudyPage() {
           setCurrentIndex(newWords.length - 1);
         }
         setIsFlipped(false);
-        return;
+      } else {
+        if (currentIndex < words.length - 1) {
+          setCurrentIndex(currentIndex + 1);
+          setIsFlipped(false);
+        } else {
+          setFinished(true);
+        }
       }
+
+      // 3. 백그라운드로 DB 저장 및 통계 수신 (화면 딜레이 0초)
+      updateWordStatusAction(targetWord.id, status, currentActiveUser).then(res => {
+        if (res && res.stats) {
+          setStatsDirectly(res.stats);
+        }
+      });
+
+      return;
     }
 
     if (currentIndex < words.length - 1) {
