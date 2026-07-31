@@ -8,11 +8,14 @@ export default function Navbar() {
   const pathname = usePathname();
   const [currentUser, setCurrentUser] = useState<string | null>(null);
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [langMode, setLangMode] = useState<'en' | 'ko'>('en');
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const stored = localStorage.getItem('voca_user');
       setCurrentUser(stored);
+      const storedLang = (localStorage.getItem('voca_lang_mode') as 'en' | 'ko') || 'en';
+      setLangMode(storedLang);
     }
   }, []);
 
@@ -95,7 +98,59 @@ export default function Navbar() {
             </button>
           )}
         </div>
-        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+        <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
+          {/* Language Mode Toggle (English | 한글) */}
+          <div style={{
+            display: 'flex',
+            background: 'rgba(255, 255, 255, 0.05)',
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            borderRadius: '20px',
+            padding: '2px',
+            fontSize: '0.75rem',
+            fontWeight: '600',
+            userSelect: 'none',
+          }}>
+            <button
+              onClick={() => {
+                localStorage.setItem('voca_lang_mode', 'en');
+                window.dispatchEvent(new Event('voca_lang_change'));
+                setLangMode('en');
+              }}
+              style={{
+                background: langMode === 'en' ? 'var(--primary)' : 'none',
+                color: langMode === 'en' ? 'white' : 'var(--secondary)',
+                border: 'none',
+                borderRadius: '16px',
+                padding: '0.2rem 0.55rem',
+                cursor: 'pointer',
+                transition: 'all 0.2s',
+                fontWeight: langMode === 'en' ? 'bold' : 'normal',
+              }}
+            >
+              English
+            </button>
+            <span style={{ color: 'rgba(255, 255, 255, 0.2)', alignSelf: 'center' }}>|</span>
+            <button
+              onClick={() => {
+                localStorage.setItem('voca_lang_mode', 'ko');
+                window.dispatchEvent(new Event('voca_lang_change'));
+                setLangMode('ko');
+              }}
+              style={{
+                background: langMode === 'ko' ? 'var(--accent)' : 'none',
+                color: langMode === 'ko' ? 'white' : 'var(--secondary)',
+                border: 'none',
+                borderRadius: '16px',
+                padding: '0.2rem 0.55rem',
+                cursor: 'pointer',
+                transition: 'all 0.2s',
+                fontWeight: langMode === 'ko' ? 'bold' : 'normal',
+              }}
+            >
+              한글
+            </button>
+          </div>
+
           {navItems.map((item) => {
             const isDisabled = item.href === '/study' && !currentUser;
             if (isDisabled) {

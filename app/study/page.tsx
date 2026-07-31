@@ -19,7 +19,21 @@ export default function StudyPage() {
   const [loading, setLoading] = useState(true);
   const [filterPos, setFilterPos] = useState<string | null>('v.');
   const [userId, setUserId] = useState<string>('admin');
+  const [langMode, setLangMode] = useState<'en' | 'ko'>('en');
   const { setStatsDirectly } = useStats();
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedLang = (localStorage.getItem('voca_lang_mode') as 'en' | 'ko') || 'en';
+      setLangMode(storedLang);
+    }
+    const handleLangChange = () => {
+      const storedLang = (localStorage.getItem('voca_lang_mode') as 'en' | 'ko') || 'en';
+      setLangMode(storedLang);
+    };
+    window.addEventListener('voca_lang_change', handleLangChange);
+    return () => window.removeEventListener('voca_lang_change', handleLangChange);
+  }, []);
 
   useEffect(() => {
     const fetchWords = async () => {
@@ -332,44 +346,51 @@ export default function StudyPage() {
                 </span>
               </div>
               
-              {/* Main Text Center Container (Synchronized with Back side) */}
+              {/* Main Text Center Container */}
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '1rem', width: '100%' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
-                  <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', margin: 0, letterSpacing: '1px', color: '#ffffff' }}>
-                    {currentWord.word}
+                {langMode === 'en' ? (
+                  <>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
+                      <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', margin: 0, letterSpacing: '1px', color: '#ffffff' }}>
+                        {currentWord.word}
+                      </h2>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          speak(currentWord.word);
+                        }}
+                        style={{
+                          background: 'none',
+                          border: 'none',
+                          fontSize: '1.5rem',
+                          cursor: 'pointer',
+                          padding: '0.2rem',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          color: 'var(--primary)',
+                        }}
+                        title="발음 듣기"
+                      >
+                        🔊
+                      </button>
+                    </div>
+                    {currentWord.pronunciation && (
+                      <div style={{ color: 'var(--secondary)', fontSize: '1rem', marginTop: '0.4rem' }}>
+                        [{currentWord.pronunciation}]
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <h2 style={{ fontSize: '2.2rem', fontWeight: 'bold', color: 'var(--accent)', margin: 0, textAlign: 'center' }}>
+                    {currentWord.meaning}
                   </h2>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      speak(currentWord.word);
-                    }}
-                    style={{
-                      background: 'none',
-                      border: 'none',
-                      fontSize: '1.5rem',
-                      cursor: 'pointer',
-                      padding: '0.2rem',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      color: 'var(--primary)',
-                    }}
-                    title="발음 듣기"
-                  >
-                    🔊
-                  </button>
-                </div>
-
-                {currentWord.pronunciation && (
-                  <div style={{ color: 'var(--secondary)', fontSize: '1rem', marginTop: '0.4rem' }}>
-                    [{currentWord.pronunciation}]
-                  </div>
                 )}
               </div>
 
               {/* Bottom Tip */}
               <p style={{ color: 'var(--secondary)', fontSize: '0.85rem', marginTop: 'auto', marginBottom: '0.5rem' }}>
-                💡 카드를 클릭하면 뜻을 볼 수 있습니다.
+                💡 카드를 클릭하면 {langMode === 'en' ? '뜻' : '영어단어'}를 볼 수 있습니다.
               </p>
             </div>
 
@@ -401,11 +422,46 @@ export default function StudyPage() {
                 </span>
               </div>
               
-              {/* Main Text Center Container (Synchronized with Front side) */}
+              {/* Main Text Center Container */}
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '1rem', width: '100%' }}>
-                <h3 style={{ fontSize: '2.2rem', fontWeight: 'bold', color: 'var(--accent)', margin: 0, textAlign: 'center' }}>
-                  {currentWord.meaning}
-                </h3>
+                {langMode === 'en' ? (
+                  <h3 style={{ fontSize: '2.2rem', fontWeight: 'bold', color: 'var(--accent)', margin: 0, textAlign: 'center' }}>
+                    {currentWord.meaning}
+                  </h3>
+                ) : (
+                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
+                      <h3 style={{ fontSize: '2.5rem', fontWeight: 'bold', margin: 0, letterSpacing: '1px', color: '#ffffff' }}>
+                        {currentWord.word}
+                      </h3>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          speak(currentWord.word);
+                        }}
+                        style={{
+                          background: 'none',
+                          border: 'none',
+                          fontSize: '1.5rem',
+                          cursor: 'pointer',
+                          padding: '0.2rem',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          color: 'var(--primary)',
+                        }}
+                        title="발음 듣기"
+                      >
+                        🔊
+                      </button>
+                    </div>
+                    {currentWord.pronunciation && (
+                      <div style={{ color: 'var(--secondary)', fontSize: '0.9rem', marginTop: '0.2rem' }}>
+                        [{currentWord.pronunciation}]
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
 
               {/* Bottom Examples Container */}
