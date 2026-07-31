@@ -21,6 +21,15 @@ export default function Home() {
       setLoading(false);
     };
     loadData();
+
+    // 학습 페이지에서 돌아올 때 랭킹 자동 갱신
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        loadData();
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
   }, []);
 
   function getRankEmoji(index: number) {
