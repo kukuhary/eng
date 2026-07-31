@@ -321,7 +321,7 @@ export default function StudyPage() {
         style={{
           width: '100%',
           maxWidth: '600px',
-          height: '390px',
+          height: '340px',
           perspective: '1000px',
           cursor: finished ? 'default' : 'pointer',
           zIndex: 2,
@@ -371,11 +371,11 @@ export default function StudyPage() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              padding: '1.2rem 1rem',
+              padding: '1rem',
               boxSizing: 'border-box'
             }}>
               {/* Top Row: POS Tag */}
-              <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-start', marginBottom: '0.5rem' }}>
+              <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-start', marginBottom: '0.2rem' }}>
                 <span style={{ 
                   fontSize: '0.85rem', 
                   fontWeight: 'bold',
@@ -388,12 +388,12 @@ export default function StudyPage() {
                 </span>
               </div>
               
-              {/* Main Text Center Container (Fixed Top Base Position) */}
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '0.8rem', marginBottom: '0.8rem', width: '100%' }}>
+              {/* Main Text Center Container */}
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '0.4rem', marginBottom: '0.4rem', width: '100%' }}>
                 {langMode === 'en' ? (
                   <>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
-                      <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', margin: 0, letterSpacing: '1px', color: '#ffffff' }}>
+                      <h2 style={{ fontSize: '2.4rem', fontWeight: 'bold', margin: 0, letterSpacing: '1px', color: '#ffffff' }}>
                         {currentWord.word}
                       </h2>
                       <button
@@ -418,7 +418,7 @@ export default function StudyPage() {
                       </button>
                     </div>
                     {currentWord.pronunciation && (
-                      <div style={{ color: 'var(--secondary)', fontSize: '1rem', marginTop: '0.4rem' }}>
+                      <div style={{ color: 'var(--secondary)', fontSize: '0.95rem', marginTop: '0.2rem' }}>
                         [{currentWord.pronunciation}]
                       </div>
                     )}
@@ -431,7 +431,7 @@ export default function StudyPage() {
               </div>
 
               {/* Bottom Tip */}
-              <p style={{ color: 'var(--secondary)', fontSize: '0.85rem', marginTop: 'auto', marginBottom: '0.5rem' }}>
+              <p style={{ color: 'var(--secondary)', fontSize: '0.85rem', marginTop: 'auto', marginBottom: '0.25rem' }}>
                 💡 카드를 클릭하면 {langMode === 'en' ? '뜻' : '영어단어'}를 볼 수 있습니다.
               </p>
             </div>
@@ -447,11 +447,11 @@ export default function StudyPage() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              padding: '1.2rem 1rem',
+              padding: '1rem',
               boxSizing: 'border-box'
             }}>
               {/* Top Row: POS Tag */}
-              <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-start', marginBottom: '0.5rem' }}>
+              <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-start', marginBottom: '0.2rem' }}>
                 <span style={{ 
                   fontSize: '0.85rem', 
                   fontWeight: 'bold',
@@ -464,16 +464,16 @@ export default function StudyPage() {
                 </span>
               </div>
               
-              {/* Main Text Center Container (Fixed Top Base Position) */}
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '0.8rem', marginBottom: '0.8rem', width: '100%' }}>
+              {/* Main Text Center Container */}
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '0.3rem', marginBottom: '0.3rem', width: '100%' }}>
                 {langMode === 'en' ? (
-                  <h3 style={{ fontSize: '2.2rem', fontWeight: 'bold', color: 'var(--accent)', margin: 0, textAlign: 'center' }}>
+                  <h3 style={{ fontSize: '2.1rem', fontWeight: 'bold', color: 'var(--accent)', margin: 0, textAlign: 'center' }}>
                     {currentWord.meaning}
                   </h3>
                 ) : (
                   <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
-                      <h3 style={{ fontSize: '2.5rem', fontWeight: 'bold', margin: 0, letterSpacing: '1px', color: '#ffffff' }}>
+                      <h3 style={{ fontSize: '2.4rem', fontWeight: 'bold', margin: 0, letterSpacing: '1px', color: '#ffffff' }}>
                         {currentWord.word}
                       </h3>
                       <button
@@ -498,7 +498,7 @@ export default function StudyPage() {
                       </button>
                     </div>
                     {currentWord.pronunciation && (
-                      <div style={{ color: 'var(--secondary)', fontSize: '0.9rem', marginTop: '0.2rem' }}>
+                      <div style={{ color: 'var(--secondary)', fontSize: '0.9rem', marginTop: '0.1rem' }}>
                         [{currentWord.pronunciation}]
                       </div>
                     )}
@@ -506,8 +506,8 @@ export default function StudyPage() {
                 )}
               </div>
 
-              {/* Bottom Examples Container (Wider horizontal space & scroll support) */}
-              <div style={{ width: '100%', marginTop: 'auto', marginBottom: '0.25rem' }}>
+              {/* Bottom Examples Container (Attached closely under main text) */}
+              <div style={{ width: '100%', marginTop: '0.3rem', marginBottom: '0.25rem' }}>
                 {currentWord.examples && currentWord.examples.length > 0 ? (
                   <div style={{ 
                     textAlign: 'left', 
@@ -515,7 +515,7 @@ export default function StudyPage() {
                     padding: '0.5rem 0.6rem', 
                     borderRadius: '8px', 
                     fontSize: '0.82rem',
-                    maxHeight: '200px',
+                    maxHeight: '165px',
                     overflowY: 'auto',
                     boxSizing: 'border-box'
                   }}>
