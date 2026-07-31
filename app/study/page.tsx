@@ -209,7 +209,7 @@ export default function StudyPage() {
 
       <div style={{ width: '100%', maxWidth: '600px', marginBottom: '0.5rem', padding: '0 0.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: 'var(--secondary)', fontSize: '0.9rem', boxSizing: 'border-box' }}>
         <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-          <span>Progress: {finished ? words.length : (currentWord ? currentIndex + 1 : 0)} / {words.length}</span>
+          <span>{finished ? words.length : (currentWord ? currentIndex + 1 : 0)} / {words.length}</span>
           <span style={{ color: 'var(--primary)', fontWeight: 'bold' }}>(완료: {masteredCount}개)</span>
         </div>
         <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
