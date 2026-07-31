@@ -10,7 +10,7 @@ import { useStats } from '@/lib/StatsContext';
 
 const POS_ORDER = { 'v.': 0, 'ad.': 1, 'n.': 2, 'a.': 3 };
 
-import { getLocalUserMasteredIds, saveLocalUserMasteredId } from '@/lib/userStorage';
+import { getLocalUserMasteredIds, saveLocalUserMasteredId, clearUserMasteredData } from '@/lib/userStorage';
 
 export default function StudyPage() {
   const [allWords, setAllWords] = useState<Word[]>([]);
@@ -114,6 +114,7 @@ export default function StudyPage() {
       return;
     }
     setLoading(true);
+    clearUserMasteredData(userId);
     await resetAllStatusesAction(userId);
     const data = await getWordsAction(userId) as Word[];
     

@@ -40,6 +40,29 @@ export function saveLocalUserMasteredId(username: string, wordId: string, status
 }
 
 /**
+ * 특정 유저 또는 전체 유저의 LocalStorage 마스터 기록을 삭제합니다.
+ */
+export function clearUserMasteredData(username?: string) {
+  if (typeof window === 'undefined') return;
+  try {
+    if (username) {
+      localStorage.removeItem(`voca_mastered_${username}`);
+      const raw = localStorage.getItem('voca_all_users_stats_v2');
+      if (raw) {
+        const localStatsMap: Record<string, number> = JSON.parse(raw);
+        delete localStatsMap[username];
+        localStorage.setItem('voca_all_users_stats_v2', JSON.stringify(localStatsMap));
+      }
+    } else {
+      DEFAULT_USERS.forEach(u => localStorage.removeItem(`voca_mastered_${u}`));
+      localStorage.removeItem('voca_all_users_stats_v2');
+    }
+  } catch (e) {
+    console.error('Failed to clear local user mastered data', e);
+  }
+}
+
+/**
  * 대시보드 랭킹 통계를 localstorage에 유지 및 병합합니다.
  */
 export function getLocalUsersStats(dbStats: UserStats[]): UserStats[] {
@@ -51,6 +74,13 @@ export function getLocalUsersStats(dbStats: UserStats[]): UserStats[] {
 
     const totalCount = dbStats[0]?.totalCount || 2998;
     const users = DEFAULT_USERS;
+
+    // 모든 DB 카운트가 0인 경우 (DB 초기화 발생 시), LocalStorage 캐시도 싹 클리어!
+    const isTotalDbZero = dbStats.every(u => u.masteredCount === 0);
+    if (isTotalDbZero && dbStats.length > 0) {
+      clearUserMasteredData();
+      return dbStats;
+    }
 
     const mergedMap: Record<string, number> = {};
     
