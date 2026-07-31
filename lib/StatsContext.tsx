@@ -13,6 +13,8 @@ interface StatsContextType {
   totalCount: number;
   /** DB에서 통계 재조회 - mastered 처리 후 호출 */
   refreshStats: () => Promise<void>;
+  /** Server Action이 반환한 최신 통계 직접 주입 */
+  setStatsDirectly: (stats: UserStats[]) => void;
   statsLoading: boolean;
 }
 
@@ -21,6 +23,7 @@ const StatsContext = createContext<StatsContextType>({
   currentUserMasteredCount: 0,
   totalCount: 0,
   refreshStats: async () => {},
+  setStatsDirectly: () => {},
   statsLoading: true,
 });
 
@@ -67,12 +70,19 @@ export function StatsProvider({ children }: { children: React.ReactNode }) {
   // totalCount는 모든 유저에게 동일 (전체 단어 수)
   const totalCount = allUsersStats[0]?.totalCount ?? 0;
 
+  const setStatsDirectly = useCallback((stats: UserStats[]) => {
+    refreshCallId.current++; // 진행 중인 구 요청 응답을 무시하도록 callId 증가
+    setAllUsersStats(stats);
+    setStatsLoading(false);
+  }, []);
+
   return (
     <StatsContext.Provider value={{
       allUsersStats,
       currentUserMasteredCount,
       totalCount,
       refreshStats,
+      setStatsDirectly,
       statsLoading,
     }}>
       {children}

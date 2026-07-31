@@ -20,7 +20,7 @@ export default function StudyPage() {
   const [filterPos, setFilterPos] = useState<string | null>('v.');
   const [userId, setUserId] = useState<string>('admin');
   // 사이트 공통 통계: refreshStats로 mastered 후 대시보드 포함 전체 갱신
-  const { refreshStats, currentUserMasteredCount } = useStats();
+  const { setStatsDirectly } = useStats();
 
   useEffect(() => {
     const fetchWords = async () => {
@@ -38,10 +38,10 @@ export default function StudyPage() {
 
       setAllWords(sorted);
       
-      // Initial filter: Verbs (v.)
+      // Initial filter: Verbs (v.) 미학습 단어만
       const baseList = sorted.filter(w => w.status !== 'mastered');
       const filtered = baseList.filter(w => w.pos === 'v.');
-      setWords(filtered.length > 0 ? filtered : (baseList.length > 0 ? baseList : sorted));
+      setWords(filtered);
       
       setLoading(false);
     };
@@ -52,32 +52,38 @@ export default function StudyPage() {
     setFilterPos(pos);
     const baseList = allWords.filter(w => w.status !== 'mastered');
     const filtered = pos ? baseList.filter(w => w.pos === pos) : baseList;
-    setWords(filtered.length > 0 ? filtered : (pos ? [] : allWords));
+    setWords(filtered);
     setCurrentIndex(0);
     setIsFlipped(false);
     setFinished(false);
   };
 
   const handleNext = async (status?: Word['status']) => {
+    const targetWord = words[currentIndex];
+    if (!targetWord) return;
+
+    const currentActiveUser = typeof window !== 'undefined' ? (localStorage.getItem('voca_user') || 'admin') : userId;
+
     if (status) {
-      await updateWordStatusAction(words[currentIndex].id, status, userId);
-      const updatedId = words[currentIndex].id;
-      // allWords 클라이언트 상태 즉시 반영 (품사 탭 카운트용)
-      setAllWords(prev => prev.map(w => w.id === updatedId ? { ...w, status } : w));
+      // 1. DB 업데이트 및 즉시 최신 통계 수신
+      const res = await updateWordStatusAction(targetWord.id, status, currentActiveUser);
+      if (res.stats) {
+        setStatsDirectly(res.stats);
+      }
+
+      // 2. allWords 클라이언트 상태 반영
+      setAllWords(prev => prev.map(w => w.id === targetWord.id ? { ...w, status } : w));
 
       if (status === 'mastered') {
-        // mastered된 단어를 words 덱에서 즉시 제거하여 상태 일관성 유지
-        const newWords = words.filter(w => w.id !== updatedId);
+        // mastered 단어는 현재 학습 덱에서 즉시 제거
+        const newWords = words.filter(w => w.id !== targetWord.id);
         setWords(newWords);
-        // currentIndex 조정: 제거 후 덱이 비면 완료, 아니면 같은 인덱스 유지(다음 카드가 올라옴)
         if (newWords.length === 0) {
           setFinished(true);
         } else if (currentIndex >= newWords.length) {
           setCurrentIndex(newWords.length - 1);
         }
         setIsFlipped(false);
-        // 공통 통계 갱신 → 대시보드·전체탭 카운트가 DB 기준으로 동기화됨
-        refreshStats();
         return;
       }
     }

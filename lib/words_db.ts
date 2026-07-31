@@ -51,7 +51,7 @@ export function getWordById(id: string, userId: string = 'admin'): DBWord | null
   };
 }
 
-export function updateWordStatus(id: string, status: string, userId: string = 'admin'): boolean {
+export function updateWordStatus(id: string, status: string, userId: string = 'admin'): { success: boolean; stats: UserStats[] } {
   const sql = `
     INSERT INTO user_word_status (userId, wordId, status, updatedAt, reg_dt)
     VALUES (?, ?, ?, ?, ?)
@@ -60,7 +60,8 @@ export function updateWordStatus(id: string, status: string, userId: string = 'a
       updatedAt = excluded.updatedAt
   `;
   const result = db.prepare(sql).run(userId, id, status, Date.now(), Date.now());
-  return result.changes > 0;
+  const stats = getAllUsersStats();
+  return { success: result.changes > 0, stats };
 }
 
 export async function addWord(word: Omit<DBWord, 'id' | 'status' | 'createdAt'>): Promise<DBWord> {

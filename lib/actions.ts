@@ -22,13 +22,11 @@ export async function addWordAction(word: Omit<DBWord, 'id' | 'status' | 'create
 }
 
 export async function updateWordStatusAction(id: string, status: 'new' | 'learning' | 'mastered', userId?: string) {
-  const success = dbUpdateWordStatus(id, status, userId);
-  if (success) {
-    // study 페이지는 순수 Client Component이라 revalidatePath 불필요
-    // revalidatePath('/study')를 호출하면 router.refresh()로 인해 컴포넌트 상태가 초기화되는 버그 발생
+  const result = dbUpdateWordStatus(id, status, userId);
+  if (result.success) {
     revalidatePath('/');
   }
-  return success;
+  return result;
 }
 
 export async function resetAllStatusesAction(userId?: string) {
