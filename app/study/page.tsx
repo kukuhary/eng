@@ -321,7 +321,7 @@ export default function StudyPage() {
         style={{
           width: '100%',
           maxWidth: '600px',
-          height: '340px',
+          height: '390px',
           perspective: '1000px',
           cursor: finished ? 'default' : 'pointer',
           zIndex: 2,
