@@ -207,9 +207,62 @@ export default function StudyPage() {
         <div style={{ width: `${progressPercent}%`, height: '100%', background: 'var(--primary)', transition: 'width 0.3s' }} />
       </div>
 
-      <div style={{ width: '100%', maxWidth: '600px', marginBottom: '0.5rem', padding: '0 0.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: 'var(--secondary)', fontSize: '0.9rem', boxSizing: 'border-box' }}>
-        <span>{finished ? words.length : (currentWord ? currentIndex + 1 : 0)} / {words.length}</span>
-        <span style={{ color: 'var(--primary)', fontWeight: 'bold' }}>(완료: {masteredCount}개)</span>
+      <div style={{ width: '100%', maxWidth: '600px', marginBottom: '0.5rem', padding: '0 0.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxSizing: 'border-box' }}>
+        {/* Left End: Count & Completed */}
+        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', color: 'var(--secondary)', fontSize: '0.9rem' }}>
+          <span>{finished ? words.length : (currentWord ? currentIndex + 1 : 0)} / {words.length}</span>
+          <span style={{ color: 'var(--primary)', fontWeight: 'bold' }}>(완료: {masteredCount}개)</span>
+        </div>
+
+        {/* Right End: English | 한글 Toggle Switch */}
+        <div style={{
+          display: 'flex',
+          background: 'rgba(255, 255, 255, 0.05)',
+          border: '1px solid rgba(255, 255, 255, 0.1)',
+          borderRadius: '20px',
+          padding: '2px',
+          fontSize: '0.75rem',
+          fontWeight: '600',
+          userSelect: 'none',
+        }}>
+          <button
+            onClick={() => {
+              localStorage.setItem('voca_lang_mode', 'en');
+              setLangMode('en');
+            }}
+            style={{
+              background: langMode === 'en' ? 'var(--primary)' : 'none',
+              color: langMode === 'en' ? 'white' : 'var(--secondary)',
+              border: 'none',
+              borderRadius: '16px',
+              padding: '0.2rem 0.55rem',
+              cursor: 'pointer',
+              transition: 'all 0.2s',
+              fontWeight: langMode === 'en' ? 'bold' : 'normal',
+            }}
+          >
+            English
+          </button>
+          <span style={{ color: 'rgba(255, 255, 255, 0.2)', alignSelf: 'center' }}>|</span>
+          <button
+            onClick={() => {
+              localStorage.setItem('voca_lang_mode', 'ko');
+              setLangMode('ko');
+            }}
+            style={{
+              background: langMode === 'ko' ? 'var(--accent)' : 'none',
+              color: langMode === 'ko' ? 'white' : 'var(--secondary)',
+              border: 'none',
+              borderRadius: '16px',
+              padding: '0.2rem 0.55rem',
+              cursor: 'pointer',
+              transition: 'all 0.2s',
+              fontWeight: langMode === 'ko' ? 'bold' : 'normal',
+            }}
+          >
+            한글
+          </button>
+        </div>
       </div>
 
       {/* POS Filter Tabs Row */}
