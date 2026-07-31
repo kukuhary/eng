@@ -40,3 +40,8 @@ export async function resetAllStatusesAction(userId?: string) {
 export async function getAllUsersStatsAction() {
   return getAllUsersStats();
 }
+
+export async function getWordExamplesAction(wordId: string) {
+  const { getWordExamples } = await import('./words_db');
+  return getWordExamples(wordId);
+}

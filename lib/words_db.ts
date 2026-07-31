@@ -28,28 +28,12 @@ export async function getAllWords(userId: string = 'admin'): Promise<DBWord[]> {
   `;
 
   let wordsRaw: any[] = [];
-  let examplesRaw: any[] = [];
 
   if (isTurso && libsqlClient) {
-    const [wordsRes, examplesRes] = await Promise.all([
-      libsqlClient.execute({ sql, args: [userId] }),
-      libsqlClient.execute('SELECT wordId, en, ko FROM examples')
-    ]);
-    wordsRaw = wordsRes.rows as any[];
-    examplesRaw = examplesRes.rows as any[];
+    const res = await libsqlClient.execute({ sql, args: [userId] });
+    wordsRaw = res.rows as any[];
   } else {
     wordsRaw = sqliteDb.prepare(sql).all(userId);
-    examplesRaw = sqliteDb.prepare('SELECT wordId, en, ko FROM examples').all();
-  }
-
-  // 예문을 wordId 별로 그룹화 (Map)
-  const exampleMap = new Map<string, { en: string; ko: string; }[]>();
-  for (const ex of examplesRaw) {
-    const wordId = String(ex.wordId);
-    if (!exampleMap.has(wordId)) {
-      exampleMap.set(wordId, []);
-    }
-    exampleMap.get(wordId)!.push({ en: String(ex.en), ko: String(ex.ko) });
   }
 
   return wordsRaw.map(w => ({
@@ -61,8 +45,18 @@ export async function getAllWords(userId: string = 'admin'): Promise<DBWord[]> {
     createdAt: Number(w.createdAt),
     pronunciation: w.pronunciation ? String(w.pronunciation) : undefined,
     status: w.status as DBWord['status'],
-    examples: exampleMap.get(String(w.id)) || []
+    examples: []
   }));
+}
+
+export async function getWordExamples(wordId: string): Promise<{ en: string; ko: string; }[]> {
+  const sql = 'SELECT en, ko FROM examples WHERE wordId = ?';
+  if (isTurso && libsqlClient) {
+    const res = await libsqlClient.execute({ sql, args: [wordId] });
+    return res.rows.map(r => ({ en: String(r.en), ko: String(r.ko) }));
+  } else {
+    return sqliteDb.prepare(sql).all(wordId) as { en: string; ko: string; }[];
+  }
 }
 
 export async function getWordById(id: string, userId: string = 'admin'): Promise<DBWord | null> {
