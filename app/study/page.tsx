@@ -346,8 +346,8 @@ export default function StudyPage() {
                 </span>
               </div>
               
-              {/* Main Text Center Container */}
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '1rem', width: '100%' }}>
+              {/* Main Text Center Container (Shifted 30px Upwards) */}
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '1rem', transform: 'translateY(-30px)', width: '100%' }}>
                 {langMode === 'en' ? (
                   <>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
@@ -422,8 +422,8 @@ export default function StudyPage() {
                 </span>
               </div>
               
-              {/* Main Text Center Container */}
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '1rem', width: '100%' }}>
+              {/* Main Text Center Container (Shifted 30px Upwards) */}
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '1rem', transform: 'translateY(-30px)', width: '100%' }}>
                 {langMode === 'en' ? (
                   <h3 style={{ fontSize: '2.2rem', fontWeight: 'bold', color: 'var(--accent)', margin: 0, textAlign: 'center' }}>
                     {currentWord.meaning}
