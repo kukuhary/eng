@@ -58,11 +58,25 @@ export default function StudyPage() {
   const handleNext = async (status?: Word['status']) => {
     if (status) {
       await updateWordStatusAction(words[currentIndex].id, status, userId);
-      // 클라이언트 상태도 즉시 반영
       const updatedId = words[currentIndex].id;
+      // allWords 클라이언트 상태 즉시 반영
       setAllWords(prev => prev.map(w => w.id === updatedId ? { ...w, status } : w));
+
+      if (status === 'mastered') {
+        // mastered된 단어를 words 덱에서 즉시 제거하여 상태 일관성 유지
+        const newWords = words.filter(w => w.id !== updatedId);
+        setWords(newWords);
+        // currentIndex 조정: 제거 후 덱이 비면 완료, 아니면 같은 인덱스 유지(다음 카드가 올라옴)
+        if (newWords.length === 0) {
+          setFinished(true);
+        } else if (currentIndex >= newWords.length) {
+          setCurrentIndex(newWords.length - 1);
+        }
+        setIsFlipped(false);
+        return;
+      }
     }
-    
+
     if (currentIndex < words.length - 1) {
       setCurrentIndex(currentIndex + 1);
       setIsFlipped(false);
@@ -103,8 +117,8 @@ export default function StudyPage() {
   const currentWord = words[currentIndex] || null;
   const progressPercent = finished ? 100 : (currentWord ? ((currentIndex) / words.length) * 100 : 0);
 
-  const categoryWords = filterPos ? allWords.filter(w => w.pos === filterPos) : allWords;
-  const masteredCount = categoryWords.filter(w => w.status === 'mastered').length;
+  // masteredCount는 전체 단어 기준으로 집계 (대시보드와 동일한 기준)
+  const masteredCount = allWords.filter(w => w.status === 'mastered').length;
 
   return (
     <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto', padding: '0.4rem 0.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', boxSizing: 'border-box' }}>
