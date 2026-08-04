@@ -10,13 +10,13 @@ import { useStats } from '@/lib/StatsContext';
 
 const POS_ORDER = { 'v.': 0, 'ad.': 1, 'n.': 2, 'a.': 3 };
 
-// 텍스트 길이에 맞춰 폰트 크기를 자동으로 축소하여 줄바꿈 없이 한 줄에 쏙 넣는 헬퍼 함수
+// 텍스트 길이에 맞춰 폰트 크기를 모바일에서도 잘림(...) 없이 100% 다 보여주도록 핏하는 헬퍼 함수
 const getDynamicFontSize = (text: string, baseSizeRem: number = 2.4): string => {
   const len = text ? text.trim().length : 0;
-  if (len <= 10) return `${baseSizeRem}rem`;
-  if (len <= 14) return `${baseSizeRem * 0.75}rem`;
-  if (len <= 20) return `${baseSizeRem * 0.6}rem`;
-  return `${baseSizeRem * 0.48}rem`;
+  if (len <= 8) return `clamp(1.5rem, 6vw, ${baseSizeRem}rem)`;
+  if (len <= 14) return `clamp(1.2rem, 5vw, ${baseSizeRem * 0.75}rem)`;
+  if (len <= 20) return `clamp(1.0rem, 4.2vw, ${baseSizeRem * 0.6}rem)`;
+  return `clamp(0.85rem, 3.6vw, ${baseSizeRem * 0.48}rem)`;
 };
 
 export default function StudyPage() {
@@ -398,7 +398,7 @@ export default function StudyPage() {
               </div>
               
               {/* Main Text Center Container */}
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '0.4rem', marginBottom: '0.4rem', width: '100%', overflow: 'hidden' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '0.4rem', marginBottom: '0.4rem', width: '100%' }}>
                 {langMode === 'en' ? (
                   <>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', width: '100%' }}>
@@ -408,10 +408,7 @@ export default function StudyPage() {
                         margin: 0, 
                         letterSpacing: '1px', 
                         color: '#ffffff',
-                        whiteSpace: 'nowrap',
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                        maxWidth: '85%',
+                        wordBreak: 'break-word',
                         textAlign: 'center'
                       }}>
                         {currentWord.word}
@@ -439,7 +436,7 @@ export default function StudyPage() {
                       </button>
                     </div>
                     {currentWord.pronunciation && (
-                      <div style={{ color: 'var(--secondary)', fontSize: '0.95rem', marginTop: '0.2rem', whiteSpace: 'nowrap' }}>
+                      <div style={{ color: 'var(--secondary)', fontSize: '0.95rem', marginTop: '0.2rem', wordBreak: 'break-word', textAlign: 'center' }}>
                         [{currentWord.pronunciation}]
                       </div>
                     )}
@@ -451,10 +448,8 @@ export default function StudyPage() {
                     color: 'var(--accent)', 
                     margin: 0, 
                     textAlign: 'center',
-                    whiteSpace: 'nowrap',
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis',
-                    maxWidth: '100%'
+                    wordBreak: 'keep-all',
+                    lineHeight: '1.25'
                   }}>
                     {currentWord.meaning}
                   </h2>
@@ -496,7 +491,7 @@ export default function StudyPage() {
               </div>
               
               {/* Main Text Center Container */}
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '0.3rem', marginBottom: '0.3rem', width: '100%', overflow: 'hidden' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '0.3rem', marginBottom: '0.3rem', width: '100%' }}>
                 {langMode === 'en' ? (
                   <h3 style={{ 
                     fontSize: getDynamicFontSize(currentWord.meaning, 2.2), 
@@ -504,10 +499,8 @@ export default function StudyPage() {
                     color: 'var(--accent)', 
                     margin: 0, 
                     textAlign: 'center',
-                    whiteSpace: 'nowrap',
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis',
-                    maxWidth: '100%'
+                    wordBreak: 'keep-all',
+                    lineHeight: '1.25'
                   }}>
                     {currentWord.meaning}
                   </h3>
@@ -520,10 +513,7 @@ export default function StudyPage() {
                         margin: 0, 
                         letterSpacing: '1px', 
                         color: '#ffffff',
-                        whiteSpace: 'nowrap',
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                        maxWidth: '85%',
+                        wordBreak: 'break-word',
                         textAlign: 'center'
                       }}>
                         {currentWord.word}
@@ -551,7 +541,7 @@ export default function StudyPage() {
                       </button>
                     </div>
                     {currentWord.pronunciation && (
-                      <div style={{ color: 'var(--secondary)', fontSize: '0.9rem', marginTop: '0.1rem', whiteSpace: 'nowrap' }}>
+                      <div style={{ color: 'var(--secondary)', fontSize: '0.9rem', marginTop: '0.1rem', wordBreak: 'break-word', textAlign: 'center' }}>
                         [{currentWord.pronunciation}]
                       </div>
                     )}
