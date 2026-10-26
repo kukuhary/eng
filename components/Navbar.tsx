@@ -9,6 +9,7 @@ export default function Navbar() {
   const [currentUser, setCurrentUser] = useState<string | null>(null);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [langMode, setLangMode] = useState<'en' | 'ko'>('en');
+  //설명..
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
